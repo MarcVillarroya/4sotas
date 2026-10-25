@@ -1,0 +1,80 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  SITE_ORIGIN: https://marcvillarroya.github.io
+  SITE_BASE: /4sotas
+
+jobs:
+  build:
+    name: build · check · test · validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Instalar desde lockfile
+        run: npm ci
+      - name: Tipos y esquemas
+        run: npm run check
+      - name: Tests unitarios
+        run: npm test
+      - name: Build estático
+        run: npm run build
+      - name: Integridad de contenido y salida
+        run: npm run validate
+      - name: Guardar informe de validación
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: validate-report
+          path: qa/validate-report.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Guardar sitio construido (auditoría)
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: sitio-dist
+          path: dist
+          retention-days: 14
+
+  deploy:
+    name: deploy · GitHub Pages
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: sitio-dist
+          path: dist
+      - uses: actions/configure-pages@v6.0.0
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

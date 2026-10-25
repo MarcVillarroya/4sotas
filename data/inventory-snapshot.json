@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-26T00:01:46+01:00",
+  "source": "audit/inventory.json (bloque videos, sin rutas locales ni tokens)",
+  "channel": "UCq2xbvKI-0TXaPprjK970OQ",
+  "videos": [
+    {
+      "videoId": "LL1EJttJPrs",
+      "title": " GTA VI: Cómo un videojuego de 1997 se convirtió en un imperio multimillonario",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-25T10:00:34Z",
+      "duration_iso8601": "PT11M14S",
+      "thumbnail_url": "https://i.ytimg.com/vi/LL1EJttJPrs/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "6dp6Y6nTreY",
+      "title": "Fondo de emergencia: ¿cuánto aguantarías sin cobrar? #finanzas #inversiones #libertadfinanciera",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-23T13:30:08Z",
+      "duration_iso8601": "PT53S",
+      "thumbnail_url": "https://i.ytimg.com/vi/6dp6Y6nTreY/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "xZhIn2gYPJQ",
+      "title": "Comprar piso: por qué 40.000 € no llegan para 200.000 €",
+      "privacy_status": "private",
+      "publish_at": "2026-10-30T14:30:00Z",
+      "published_at": "2026-10-22T14:14:06Z",
+      "duration_iso8601": "PT54S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/xZhIn2gYPJQ/maxresdefault.jpg?sqp=CMSR-tYG&rs=AOn4CLDUxosTvRqdLQ9lxouDkOOp5i7NRw",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "t1zPAoZV05M",
+      "title": "La cuenta que no haces: 740 € al año en gastos hormiga #finanzas #inversiones #libertadfinanciera",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-21T13:30:11Z",
+      "duration_iso8601": "PT1M3S",
+      "thumbnail_url": "https://i.ytimg.com/vi/t1zPAoZV05M/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "DzH02NfDqM4",
+      "title": "S&P 500: 4 de cada 10 € van a 10 posiciones",
+      "privacy_status": "private",
+      "publish_at": "2026-10-26T14:30:00Z",
+      "published_at": "2026-10-21T06:05:23Z",
+      "duration_iso8601": "PT52S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg?sqp=CMSR-tYG&rs=AOn4CLBYsCZhuSe_-s332a1-1eFGu7Ae9Q",
+      "default_language": "es-ES",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "1ztXsY1hwNA",
+      "title": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-19T13:30:23Z",
+      "duration_iso8601": "PT1M5S",
+      "thumbnail_url": "https://i.ytimg.com/vi/1ztXsY1hwNA/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "3xz04lRAW0k",
+      "title": "La crisis de 2008: cómo llegó a España",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-18T09:00:32Z",
+      "duration_iso8601": "PT13M33S",
+      "thumbnail_url": "https://i.ytimg.com/vi/3xz04lRAW0k/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "vefjjmzDHyY",
+      "title": "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-16T13:30:18Z",
+      "duration_iso8601": "PT55S",
+      "thumbnail_url": "https://i.ytimg.com/vi/vefjjmzDHyY/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "u0AKp6bpdGo",
+      "title": "¿Deuda o inversión? Qué hacer con 1.000 € (2026)",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-14T13:30:15Z",
+      "duration_iso8601": "PT56S",
+      "thumbnail_url": "https://i.ytimg.com/vi/u0AKp6bpdGo/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "i5fe580iFqk",
+      "title": "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-12T13:30:17Z",
+      "duration_iso8601": "PT51S",
+      "thumbnail_url": "https://i.ytimg.com/vi/i5fe580iFqk/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "M9EhU06FlUA",
+      "title": "Cómo leer una nómina en España (2026): del bruto al neto",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-11T09:00:39Z",
+      "duration_iso8601": "PT9M50S",
+      "thumbnail_url": "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "SrvXlAVnDog",
+      "title": "Los tramos del IRPF no funcionan como crees",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-09T13:30:38Z",
+      "duration_iso8601": "PT1M",
+      "thumbnail_url": "https://i.ytimg.com/vi/SrvXlAVnDog/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "LarTT_rvCGM",
+      "title": "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-07T13:30:05Z",
+      "duration_iso8601": "PT59S",
+      "thumbnail_url": "https://i.ytimg.com/vi/LarTT_rvCGM/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "O1V9_of7g1w",
+      "title": "IRPF en la nómina: qué te retienen y por qué",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-05T13:30:41Z",
+      "duration_iso8601": "PT1M",
+      "thumbnail_url": "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    }
+  ]
+}

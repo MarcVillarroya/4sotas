@@ -1,0 +1,45 @@
+---
+/**
+ * 404 útil: qué ha pasado y tres destinos reales. Se marca noindex (única página
+ * legítimamente noindex junto a las páginas puente de slug antiguo).
+ */
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/rutas.ts';
+
+const titulo = 'Esta carta no está en la baraja';
+const descripcion =
+  'La dirección solicitada no existe en 4 Sotas. Desde aquí puedes volver al inicio, entrar en Sota de Oros o revisar la baraja.';
+---
+
+<Base titulo={titulo} descripcion={descripcion} noindex={true}>
+  <section class="wrap page-intro" aria-labelledby="titulo-404">
+    <p class="eyebrow">Error 404</p>
+    <h1 id="titulo-404">{titulo}.</h1>
+    <p class="lead">
+      La dirección que has pedido no existe (o existió y ya no está). No enlazamos a contenido que no hayamos
+      publicado, así que aquí no encontrarás un borrador disfrazado.
+    </p>
+    <div class="actions">
+      <a class="button" href={url('/')}>Volver al inicio</a>
+      <a class="button secondary" href={url('/oros/')}>Ir a Sota de Oros</a>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="titulo-destinos">
+    <h2 id="titulo-destinos">Tres destinos reales.</h2>
+    <ul class="link-list">
+      <li>
+        <a href={url('/')}>La baraja de 4 Sotas <span aria-hidden="true">↗</span></a>
+        <p>Qué es este proyecto y qué palo está activo hoy.</p>
+      </li>
+      <li>
+        <a href={url('/oros/')}>Sota de Oros <span aria-hidden="true">↗</span></a>
+        <p>Economía cotidiana en España: promesa, estado editorial y límites.</p>
+      </li>
+      <li>
+        <a href={url('/#criterio')}>Criterio editorial <span aria-hidden="true">↗</span></a>
+        <p>Cómo separamos hechos, supuestos y opiniones, y qué no publicamos.</p>
+      </li>
+    </ul>
+  </section>
+</Base>

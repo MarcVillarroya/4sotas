@@ -1,0 +1,24 @@
+---
+/** Footer: enlaces reales a rutas existentes. Sin métricas ni datos inventados. */
+import { MARCA, SECCION, CANAL_YOUTUBE, url } from '../lib/rutas.ts';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p class="footer-brand">4 SOTAS</p>
+      <p>Las cartas claras. Las decisiones, tuyas.</p>
+      <p>{MARCA} es un proyecto editorial independiente sobre economía cotidiana en España.</p>
+    </div>
+    <div>
+      <p>
+        <a href={url('/')}>La baraja</a>
+        <a href={url('/oros/')}>{SECCION}</a>
+        <a href={url('/#criterio')}>Criterio editorial</a>
+        <a href={CANAL_YOUTUBE} rel="noopener">Canal de YouTube</a>
+      </p>
+      <p>Contenido educativo. No es asesoramiento financiero individualizado.</p>
+      <p>Sin analítica, sin cuentas, sin cookies de seguimiento.</p>
+    </div>
+  </div>
+</footer>

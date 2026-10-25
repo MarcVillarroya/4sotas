@@ -1,0 +1,70 @@
+---
+/**
+ * Head + shell accesible. La canónica se deriva aquí y en ningún otro sitio:
+ * exactamente una por página indexable (B-CANONICA).
+ */
+import '../styles/global.css';
+import { MARCA, url } from '../lib/rutas.ts';
+import { ogAbsoluta, tituloDocumento } from '../lib/seo.ts';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import JsonLd from '../components/JsonLd.astro';
+
+interface Props {
+  titulo: string;
+  descripcion: string;
+  actual?: '/' | '/oros/';
+  sufijo?: string;
+  ogType?: string;
+  ogImagen?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>;
+}
+
+const {
+  titulo,
+  descripcion,
+  actual,
+  sufijo = '',
+  ogType = 'website',
+  ogImagen = '/assets/og/4sotas.png',
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const tituloFinal = tituloDocumento(titulo, undefined, sufijo);
+const imagenSocial = ogAbsoluta(canonica, url(ogImagen));
+---
+
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloFinal}</title>
+    <meta name="description" content={descripcion} />
+    <link rel="canonical" href={canonica} />
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={MARCA} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={tituloFinal} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:url" content={canonica} />
+    <meta property="og:image" content={imagenSocial} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href={url('/assets/mark.svg')} type="image/svg+xml" />
+    {jsonLd && <JsonLd data={jsonLd} />}
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <Header actual={actual} />
+    <main id="contenido" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

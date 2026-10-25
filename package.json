@@ -1,0 +1,29 @@
+{
+  "name": "4sotas-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio estático de 4 Sotas (Astro SSG). Repo = fuente de verdad del contenido.",
+  "engines": {
+    "node": ">=22.23.4",
+    "npm": ">=9.6.5"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "validate:content": "node scripts/validate-content.mjs --root . --inventory data/inventory-snapshot.json",
+    "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://marcvillarroya.github.io}\" --base \"${SITE_BASE:-/4sotas}\" --json qa/validate-report.json"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "typescript": "6.0.3",
+    "yaml": "2.9.1"
+  }
+}

@@ -1,0 +1,120 @@
+---
+/**
+ * Home 4 Sotas. Todo dato visible sale de las colecciones o de decisiones editoriales reales.
+ * El friso de palos se genera desde `sotas`; solo el palo activo enlaza.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { MARCA, SECCION, url } from '../lib/rutas.ts';
+import { grafoInicio } from '../lib/jsonld.ts';
+
+const sotas = await getCollection('sotas');
+
+const ORDEN = ['oros', 'copas', 'espadas', 'bastos'];
+const GLIFO: Record<string, string> = {
+  oros: 'O',
+  copas: 'C',
+  espadas: 'E',
+  bastos: 'B',
+};
+
+const palos = [...sotas].sort((a, b) => ORDEN.indexOf(a.data.palo) - ORDEN.indexOf(b.data.palo));
+const activo = palos.find((p) => p.data.estado === 'activa');
+
+const titulo = 'La vida no viene con instrucciones';
+const descripcion =
+  '4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.';
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+
+const jsonLd = grafoInicio({
+  origen: new URL(canonica).origin,
+  url: canonica,
+  nombre: `${MARCA} · ${titulo}`,
+  descripcion,
+});
+---
+
+<Base titulo={titulo} descripcion={descripcion} actual="/" sufijo={MARCA} jsonLd={jsonLd}>
+  <section class="wrap hero" aria-labelledby="titulo-principal">
+    <div>
+      <p class="eyebrow">Cuatro palos. Una mirada curiosa.</p>
+      <h1 id="titulo-principal">{titulo}.</h1>
+      <p class="lead">
+        Ponemos las cartas sobre la mesa: un espacio para entender, preguntar y decidir con más criterio.
+        Empezamos por Oros, el dinero de cada día.
+      </p>
+      <div class="actions">
+        <a class="button" href={url('/oros/')}>Entra en {SECCION}</a>
+        <a class="button secondary" href={url('/#universos')}>Conoce la baraja</a>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img
+        src={url('/assets/baraja.svg')}
+        width="400"
+        height="320"
+        alt="Naipe pixel de la sota con una moneda en la mano y los otros palos alrededor"
+        decoding="async"
+      />
+      <figcaption class="art-note">Empezamos por Oros: economía cotidiana.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap section" id="universos" aria-labelledby="titulo-palos">
+    <div class="section-head">
+      <h2 id="titulo-palos">Una baraja por descubrir.</h2>
+      <p class="muted">Oros abre la partida.</p>
+    </div>
+    <div class="suits">
+      {
+        palos.map((p) => (
+          <article class={p.data.estado === 'activa' ? 'suit active' : 'suit'}>
+            <span class="symbol" aria-hidden="true">
+              [{GLIFO[p.data.palo] ?? '?'}]
+            </span>
+            <h3>
+              {p.data.estado === 'activa' ? <a class="text-link" href={url('/oros/')}>{p.data.nombre}</a> : p.data.nombre}
+            </h3>
+            <p>{p.data.lema}</p>
+            <span class="badge">
+              {p.data.estado === 'activa' ? 'Primera sección' : 'Sin contenido todavía'}
+            </span>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="wrap section editorial-grid" id="criterio" aria-labelledby="titulo-criterio">
+    <div>
+      <p class="eyebrow">Menos ruido. Más contexto.</p>
+      <h2 id="titulo-criterio">Sin trucos bajo la manga.</h2>
+    </div>
+    <div>
+      <p>No buscamos darte la última respuesta, sino ayudarte a hacer mejores preguntas.</p>
+      <ul>
+        <li>Separamos hechos, cálculos, supuestos y opiniones.</li>
+        <li>Cada cifra que publicamos lleva fuente y fecha de vigencia.</li>
+        <li>Explicamos los límites de lo que una guía o una calculadora puede decir.</li>
+        <li>No publicamos vídeos, cifras ni credenciales que no podamos verificar.</li>
+      </ul>
+      <p class="status">
+        Estado del proyecto: la estructura del sitio ya está publicada. Las guías, el catálogo de vídeos y el
+        glosario aparecerán cuando pasen la revisión factual; hasta entonces esta página no enlaza a contenido
+        que no exista.
+      </p>
+      <p><a class="text-link" href={url('/oros/')}>Ver el estado de {SECCION}</a></p>
+    </div>
+  </section>
+
+  {
+    activo && (
+      <section class="wrap section" aria-labelledby="titulo-promesa">
+        <div class="section-head">
+          <h2 id="titulo-promesa">Lo que promete {SECCION}.</h2>
+        </div>
+        <p class="lead">{activo.data.promesa}</p>
+      </section>
+    )
+  }
+</Base>
