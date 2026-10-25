@@ -1,14 +1,27 @@
 ---
 /**
- * 404 útil: qué ha pasado y tres destinos reales. Se marca noindex (única página
- * legítimamente noindex junto a las páginas puente de slug antiguo).
+ * 404 útil: qué ha pasado y destinos reales, derivados de las secciones que existen.
+ * Se marca noindex (única página legítimamente noindex junto a las puentes de slug antiguo).
  */
 import Base from '../layouts/Base.astro';
-import { url } from '../lib/rutas.ts';
+import { ruta, url } from '../lib/rutas.ts';
 
 const titulo = 'Esta carta no está en la baraja';
 const descripcion =
-  'La dirección solicitada no existe en 4 Sotas. Desde aquí puedes volver al inicio, entrar en Sota de Oros o revisar la baraja.';
+  'La dirección solicitada no existe en 4 Sotas. Desde aquí puedes volver al inicio, entrar en Sota de Oros o seguir por temas, guías, vídeos o glosario.';
+
+/** Destinos reales: cada uno es una página que existe en el build. */
+const destinos = [
+  {
+    titulo: 'Sota de Oros',
+    detalle: 'Promesa editorial, estado real de la sección y límites.',
+    ruta: '/oros/',
+  },
+  { titulo: 'Temas troncales', detalle: 'El mapa editorial, con su orden recomendado.', ruta: ruta.temas() },
+  { titulo: 'Guías', detalle: 'Explicadores con fuentes fechadas y revisión factual.', ruta: ruta.guias() },
+  { titulo: 'Vídeos', detalle: 'Fichas con metadata contrastada contra la API.', ruta: ruta.videos() },
+  { titulo: 'Glosario', detalle: 'Términos con definición corta y ejemplo.', ruta: ruta.glosario() },
+];
 ---
 
 <Base titulo={titulo} descripcion={descripcion} noindex={true}>
@@ -26,20 +39,18 @@ const descripcion =
   </section>
 
   <section class="wrap section" aria-labelledby="titulo-destinos">
-    <h2 id="titulo-destinos">Tres destinos reales.</h2>
+    <h2 id="titulo-destinos">Por dónde seguir.</h2>
     <ul class="link-list">
-      <li>
-        <a href={url('/')}>La baraja de 4 Sotas <span aria-hidden="true">↗</span></a>
-        <p>Qué es este proyecto y qué palo está activo hoy.</p>
-      </li>
-      <li>
-        <a href={url('/oros/')}>Sota de Oros <span aria-hidden="true">↗</span></a>
-        <p>Economía cotidiana en España: promesa, estado editorial y límites.</p>
-      </li>
-      <li>
-        <a href={url('/#criterio')}>Criterio editorial <span aria-hidden="true">↗</span></a>
-        <p>Cómo separamos hechos, supuestos y opiniones, y qué no publicamos.</p>
-      </li>
+      {
+        destinos.map((d) => (
+          <li>
+            <a href={url(d.ruta)}>
+              {d.titulo} <span aria-hidden="true">↗</span>
+            </a>
+            <p>{d.detalle}</p>
+          </li>
+        ))
+      }
     </ul>
   </section>
 </Base>

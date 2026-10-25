@@ -19,20 +19,25 @@ npm run dev     # servidor local: http://localhost:4321/4sotas/
 npm run check   # astro check (TS + esquemas de contenido)
 npm test        # tests unitarios de lib/ (node:test + type stripping)
 npm run build   # build estático -> dist/
+npm run build:fixtures       # build de verificación con fixtures en borrador -> dist-fixtures/
+npm run verificar:plantillas # comprueba plantillas, JSON-LD e aislamiento de borradores
 npm run validate # integridad de contenido + comprobaciones sobre dist/
 npm run preview # sirve dist/ con la base real
 ```
 
-Orden obligatorio antes de commit y en CI: `check` → `test` → `build` → `validate`.
+Orden obligatorio antes de commit y en CI: `check` → `test` → `build` → `build:fixtures` →
+`verificar:plantillas` → `validate`.
 
 Resultado actual de referencia (26-oct-2026):
 
 | comando | resultado |
 |---|---|
-| `npm run check` | 0 errores, 0 warnings, 0 hints (20 ficheros) |
-| `npm test` | 15 tests, 15 pasan |
-| `npm run build` | 3 páginas estáticas (`/`, `/oros/`, `404.html`) + `robots.txt` + sitemap |
-| `npm run validate` | `ok · 0 bloqueantes · 12 avisos` (los 12 avisos son vídeos públicos que aún no tienen ficha) |
+| `npm run check` | 0 errores, 0 warnings, 0 hints (38 ficheros) |
+| `npm test` | 59 tests, 59 pasan |
+| `npm run build` | 8 páginas estáticas (`/`, `/oros/`, 5 índices de sección, `404.html`) + `robots.txt` + sitemap |
+| `npm run build:fixtures` | 14 páginas (los 8 públicos + 6 plantillas de detalle con fixture) |
+| `npm run verificar:plantillas` | `ok · 13 comprobaciones · 0 fallos` |
+| `npm run validate` | `ok · 0 bloqueantes · 11 avisos` (los 11 avisos son vídeos públicos que aún no tienen ficha) |
 
 ## Origen y base path
 
@@ -65,16 +70,20 @@ src/
 │  ├─ autores/             # YAML: autoría verificable
 │  └─ temas|articulos|videos|series|herramientas|glosario|fuentes/   # vacías a propósito en F1
 ├─ lib/
-│  ├─ rutas.ts             # url(), canonica(), BASE, rutas de la V1
-│  ├─ publicacion.ts       # única definición de "publicado"
+│  ├─ rutas.ts             # url(), canonica(), BASE, constructoras de ruta tipadas
+│  ├─ publicacion.ts       # única definición de "publicado" + resolución de referencias
+│  ├─ migas.ts             # migas visibles y BreadcrumbList desde una sola lista
 │  ├─ seo.ts               # título ≤65, descripción ≤160, OG absoluta
-│  └─ jsonld.ts            # Organization / WebSite / WebPage / CollectionPage
+│  ├─ format.ts            # fechas en UTC, duraciones ISO y marcas de tiempo
+│  └─ jsonld.ts            # Organization / WebSite / CollectionPage / Article / VideoObject / DefinedTerm / SoftwareApplication
 ├─ layouts/Base.astro      # head completo + skip link + shell
-├─ components/             # Header, Footer, JsonLd
-├─ pages/                  # index, oros/index, 404, robots.txt
-└─ styles/                 # tokens.css (marca F0) + global.css
+├─ layouts/Herramienta.astro # metodología de herramienta (fórmula, parámetros, supuestos, límites)
+├─ components/             # Header, Footer, JsonLd, Breadcrumbs, FacadeVideo
+├─ pages/                  # index, oros/**, 404, robots.txt
+└─ styles/                 # tokens.css (marca F0) + global.css + plantillas.css
 scripts/
 ├─ validate-content.mjs    # validador editorial y de salida (3 capas)
+├─ verificar-plantillas.mjs # plantillas renderizadas, JSON-LD coherente, 0 borradores en dist
 └─ build-og.mjs            # regenera public/assets/og/*.png con Chromium local
 data/inventory-snapshot.json  # copia versionada del bloque `videos` del inventario real
 tests/                        # node:test sobre lib/
@@ -97,20 +106,81 @@ tests/                        # node:test sobre lib/
 2. `npm run check && npm test && npm run build && npm run validate`.
 3. Si `validate` bloquea, no se publica: se corrige el contenido, no el validador.
 
-## Estado de esta fase (F1 · scaffold)
+## Plantillas editoriales
 
-Hecho: repositorio, colecciones, layouts, home `/`, home `/oros/`, SEO técnico, sitemap, robots, 404, CI y tests.
+| ruta | plantilla | se genera desde |
+|---|---|---|
+| `/oros/temas/` | índice en orden editorial (`orden`) | `temas` |
+| `/oros/temas/<slug>/` | tema troncal: introducción, mapa, orden recomendado, herramientas, relacionados | `temas` + referencias |
+| `/oros/guias/` | índice por fecha de publicación descendente | `articulos` |
+| `/oros/guias/<slug>/` | guía: respuesta corta, cuerpo, índice lateral, supuestos, tabla de fuentes, relacionados, preguntas | `articulos` |
+| `/oros/videos/` | catálogo con miniatura diferida y sin iframes | `videos` públicas |
+| `/oros/videos/<slug>/` | watch page con facade de reproductor, resumen propio y metadata real | `videos` públicas |
+| `/oros/glosario/` | glosario agrupado por letra + `DefinedTermSet` | `glosario` |
+| `/oros/glosario/<slug>/` | término: definición, ejemplo, vecinos y guías que lo usan | `glosario` |
+| `/oros/herramientas/` | índice de herramientas y su estado real | `herramientas` |
+| `/oros/herramientas/<slug>/` | metodología (fórmula, parámetros, supuestos, límites, revisión) | `herramientas` |
+
+Reglas que no se negocian en estas plantillas:
+
+- La metadata (título, descripción, canónica, OG, JSON-LD, migas) se **deriva** de la colección; nada se escribe por página.
+- Las migas visibles y el `BreadcrumbList` salen de la misma lista (`lib/migas.ts`); la última miga es la canónica.
+- Los enlaces internos pasan por `ruta.tema()`, `ruta.guia()`, `ruta.video()`… y una referencia a un borrador se descarta
+  (nunca se enlaza algo que el build no ha generado).
+- Listados: cero iframes. La watch page inserta el iframe de `youtube-nocookie` **solo** tras pulsar el botón;
+  sin JS queda el enlace directo a YouTube.
+- Estados vacíos explícitos: un índice sin contenido lo dice y explica por qué, en lugar de mostrar tarjetas de relleno.
+
+### Fixtures y aislamiento de borradores
+
+`src/content/fixture-*` no es una convención: los fixtures viven en las colecciones reales con `status: borrador`,
+`id` y `slug` que llevan `fixture` en el nombre, y textos que dicen que son de prueba.
+
+```bash
+npm run build              # build público: 0 páginas de borradores (8 páginas)
+npm run build:fixtures     # PUBLIC_FIXTURES=1: renderiza cada plantilla con su fixture (14 páginas)
+npm run verificar:plantillas
+```
+
+`PUBLIC_FIXTURES=1` es la única excepción de `visibles()` en `src/lib/publicacion.ts`. `verificar-plantillas.mjs`
+comprueba en el mismo paso que **ninguna** ruta de borrador existe en `dist/` y que **todas** existen en
+`dist-fixtures/`, además de que cada página tiene una sola canónica, un solo bloque JSON-LD parseable, migas
+coherentes y ningún iframe.
+
+### Contrato con la calculadora
+
+`layouts/Herramienta.astro` publica la metodología y deja la interfaz en el slot:
+
+```astro
+<Herramienta ficha={ficha} calcula={true}>
+  <form>…</form>   <!-- el JS interactivo vive aquí, no en el layout -->
+</Herramienta>
+```
+
+`SoftwareApplication` solo se emite cuando `calcula` es `true`. La ruta fija `/oros/herramientas/interes-compuesto/`
+queda reservada a su propia card: `pages/oros/herramientas/[slug].astro` la excluye para no competir con ella.
+
+## Estado de esta fase (F1 · plantillas editoriales)
+
+Hecho: repositorio, colecciones, layouts, homes `/` y `/oros/`, SEO técnico, sitemap, robots, 404 útil, CI y tests;
+y las plantillas de tema, guía, watch page con facade, catálogos, glosario y metodología de herramienta,
+verificadas con fixtures en borrador y con `verificar-plantillas`.
 
 No hecho todavía (cards posteriores, no huecos silenciosos):
 
-- Plantillas de tema, guía, watch page, glosario y calculadora; catálogos `/data/*.json` y `llms.txt`.
-- Fichas de vídeo: el catálogo está vacío y la home lo dice explícitamente; los 12 avisos de
+- Contenido editorial real: las colecciones solo tienen fixtures; la sustitución por guías y temas revisados es la
+  card de ensamblado. La calculadora (motor, UI y vectores) tiene su propia card y usa `layouts/Herramienta.astro`.
+- Catálogos `/data/*.json` y `llms.txt`.
+- Fichas de vídeo: el catálogo está vacío y las páginas lo dicen explícitamente; los 11 avisos de
   `W-VIDEO-SIN-FICHA` son ese estado real, no un fallo.
 - `AGENTS.md`: el contenido está aprobado en `architecture/AGENTS.skeleton.md` y se copia cuando el
   propietario lo autorice.
 - Páginas legales (`/sobre-nosotros/`, `/aviso-legal/`…): necesitan datos reales del titular.
 - El validador calcula mal el prefijo esperado con `SITE_BASE=/` (dominio raíz): compara contra `origin//`.
   Afecta solo a ese modo; el build raíz es correcto (comprobado). Se corrige al migrar de dominio.
+- `B-DRAFT-EN-DIST` del validador canónico no puede dispararse: su set de rutas pierde la barra final y compara
+  contra rutas que sí la llevan. Detectado en esta card y reportado a `staff-engineer`; mientras tanto el
+  aislamiento de borradores lo comprueba `npm run verificar:plantillas`.
 
 ## CI
 

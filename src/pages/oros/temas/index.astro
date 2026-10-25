@@ -1,0 +1,96 @@
+---
+/**
+ * Índice de temas troncales. Orden editorial (`orden`), no alfabético ni por fecha.
+ * Solo se listan entradas visibles: los borradores no generan enlaces.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { visibles } from '../../../lib/publicacion.ts';
+import { absoluta, prepararMigas } from '../../../lib/migas.ts';
+import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
+
+const todos = await getCollection('temas');
+const temas = visibles(todos).sort((a, b) => a.data.orden - b.data.orden);
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const titulo = 'Temas troncales';
+const descripcion =
+  'Mapa en orden editorial de los temas de Sota de Oros: qué cubre cada bloque, con qué guía empieza y qué vídeos y herramientas lo acompañan cuando estén publicados.';
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: titulo, ruta: ruta.temas() },
+  ],
+  canonica,
+);
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  lista({
+    url: canonica,
+    nombre: titulo,
+    elementos: temas.map((t) => ({ url: absoluta(ruta.tema(t.data.slug), origen), nombre: t.data.titulo })),
+  }),
+  jsonld,
+]);
+---
+
+<Base titulo={`${titulo} · ${SECCION}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <div class="wrap page-intro">
+    <p class="eyebrow">{SECCION} · mapa editorial</p>
+    <h1>Temas troncales.</h1>
+    <p class="lead">
+      Cada tema es una puerta de entrada: un orden recomendado con la guía que empieza, los vídeos que contextualizan
+      y las herramientas que permiten probar escenarios.
+    </p>
+    <p class="muted">
+      El orden es editorial, no alfabético. Un tema aparece aquí cuando su página troncal está publicada con revisión
+      factual registrada.
+    </p>
+  </div>
+
+  <div class="wrap section">
+    {
+      temas.length === 0 ? (
+        <div class="empty">
+          <h2>Todavía no hay temas publicados.</h2>
+          <p>
+            Las páginas troncales están en redacción y revisión. Ninguna se publica sin fuentes fechadas, revisión
+            factual y límites declarados, así que este índice no enlaza todavía a contenido.
+          </p>
+          <p>
+            <a class="text-link" href={url(ruta.guias())}>Ver las guías en preparación</a>
+          </p>
+        </div>
+      ) : (
+        <ol class="catalog">
+          {temas.map((tema) => (
+            <li>
+              <p class="orden">Tema {String(tema.data.orden).padStart(2, '0')}</p>
+              <h2>
+                <a href={url(ruta.tema(tema.data.slug))}>{tema.data.titulo}</a>
+              </h2>
+              <p>{tema.data.descripcion_corta}</p>
+              <p class="video-meta">
+                <span>Cluster: {tema.data.cluster}</span>
+                <span>
+                  {tema.data.videos_destacados.length} vídeos · {tema.data.herramientas.length} herramientas enlazadas
+                </span>
+              </p>
+            </li>
+          ))}
+        </ol>
+      )
+    }
+  </div>
+</Base>

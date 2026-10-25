@@ -1,0 +1,104 @@
+---
+/**
+ * Índice de herramientas. Existe para poder declarar el estado real: si no hay ninguna
+ * disponible, lo dice; no se enlaza una calculadora que no calcula.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { visibles } from '../../../lib/publicacion.ts';
+import { absoluta, prepararMigas } from '../../../lib/migas.ts';
+import { aplicacionSoftware, grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
+
+const todas = await getCollection('herramientas');
+const herramientas = visibles(todas).sort((a, b) => a.data.titulo.localeCompare(b.data.titulo, 'es'));
+
+/** Estado legible. `no-implementada` nunca se publica (lo bloquea el validador), pero se declara. */
+const ETIQUETA_ESTADO: Record<string, string> = {
+  'no-implementada': 'En preparación',
+  beta: 'Beta',
+  estable: 'Estable',
+};
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const titulo = 'Herramientas';
+const descripcion =
+  'Herramientas de Sota de Oros: calculadoras locales con fórmula, supuestos y límites publicados. Sin envío de datos y sin promesas de rentabilidad.';
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: titulo, ruta: ruta.herramientas() },
+  ],
+  canonica,
+);
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  lista({
+    url: canonica,
+    nombre: titulo,
+    elementos: herramientas.map((h) => ({ url: absoluta(ruta.herramienta(h.data.slug), origen), nombre: h.data.titulo })),
+  }),
+  ...herramientas
+    .filter((h) => h.data.estado_implementacion !== 'no-implementada')
+    .map((h) =>
+      aplicacionSoftware({
+        url: absoluta(ruta.herramienta(h.data.slug), origen),
+        nombre: h.data.titulo,
+        descripcion: h.data.descripcion,
+        version: h.data.version_motor,
+      }),
+    ),
+  jsonld,
+]);
+---
+
+<Base titulo={`${titulo} · ${SECCION}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <div class="wrap page-intro">
+    <p class="eyebrow">{SECCION} · herramientas</p>
+    <h1>Herramientas.</h1>
+    <p class="lead">
+      Calculadoras que se ejecutan en tu navegador. Cada una publica su fórmula, sus supuestos y sus límites antes de
+      dar un número.
+    </p>
+    <p class="muted">Ninguna herramienta envía tus datos a un servidor: no hay backend en este sitio.</p>
+  </div>
+
+  <div class="wrap section">
+    {
+      herramientas.length === 0 ? (
+        <div class="empty">
+          <h2>Ninguna herramienta disponible todavía.</h2>
+          <p>
+            La calculadora está en desarrollo con sus pruebas. Hasta que su motor responda y sus vectores estén
+            documentados, esta página no anuncia una herramienta que aún no calcula.
+          </p>
+          <p>
+            <a class="text-link" href={url(ruta.guias())}>Leer las guías mientras tanto</a>
+          </p>
+        </div>
+      ) : (
+        <ul class="link-list">
+          {herramientas.map((h) => (
+            <li>
+              <a href={url(ruta.herramienta(h.data.slug))}>
+                {h.data.titulo}
+                <span class="orden">{ETIQUETA_ESTADO[h.data.estado_implementacion] ?? h.data.estado_implementacion}</span>
+              </a>
+              <p>{h.data.descripcion}</p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</Base>

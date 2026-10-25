@@ -1,0 +1,105 @@
+---
+/**
+ * Índice de guías publicadas, orden por fecha de publicación descendente.
+ * Sin paginación (V1) y sin enlaces a borradores.
+ */
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { porFechaDesc, resolver, visibles } from '../../../lib/publicacion.ts';
+import { absoluta, prepararMigas } from '../../../lib/migas.ts';
+import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
+import { fechaLarga } from '../../../lib/format.ts';
+
+const [todos, temas] = await Promise.all([getCollection('articulos'), getCollection('temas')]);
+const articulos = visibles(todos).sort(porFechaDesc);
+const temasVisibles = visibles(temas);
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const titulo = 'Guías';
+const descripcion =
+  'Guías y explicadores de Sota de Oros sobre nómina, IRPF, inflación, ahorro y vivienda: qué dicen los datos, con qué fuente y con qué límites.';
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: titulo, ruta: ruta.guias() },
+  ],
+  canonica,
+);
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  lista({
+    url: canonica,
+    nombre: titulo,
+    elementos: articulos.map((a) => ({ url: absoluta(ruta.guia(a.data.slug), origen), nombre: a.data.titulo })),
+  }),
+  jsonld,
+]);
+---
+
+<Base titulo={`${titulo} · ${SECCION}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <div class="wrap page-intro">
+    <p class="eyebrow">{SECCION} · explicadores</p>
+    <h1>Guías.</h1>
+    <p class="lead">
+      Cada guía responde primero, explica después y separa el dato con fuente del ejemplo y de la hipótesis.
+    </p>
+    <p class="muted">Orden por fecha de publicación, de la más reciente a la más antigua.</p>
+  </div>
+
+  <div class="wrap section">
+    {
+      articulos.length === 0 ? (
+        <div class="empty">
+          <h2>Ninguna guía publicada todavía.</h2>
+          <p>
+            Hay guías redactadas en estado de revisión: no aparecen aquí hasta registrar revisión factual, fuentes
+            fechadas y descripción editorial. Preferimos un índice vacío a un enlace que no existe.
+          </p>
+          <p>
+            <a class="text-link" href={url(ruta.temas())}>Ver los temas troncales en preparación</a>
+          </p>
+        </div>
+      ) : (
+        <ol class="catalog">
+          {articulos.map((art) => {
+            const suyos = resolver(art.data.temas, temasVisibles);
+            return (
+              <li>
+                <p class="orden">{art.data.tipo} · {art.data.nivel}</p>
+                <h2>
+                  <a href={url(ruta.guia(art.data.slug))}>{art.data.titulo}</a>
+                </h2>
+                <p>{art.data.resumen}</p>
+                <p class="video-meta">
+                  <span>Publicada: {fechaLarga(art.data.publicado)}</span>
+                  {suyos.length > 0 && (
+                    <span>
+                      Temas:{' '}
+                      {suyos.map((t, i) => (
+                        <>
+                          {i > 0 && ', '}
+                          <a href={url(ruta.tema(t.data.slug))}>{t.data.titulo}</a>
+                        </>
+                      ))}
+                    </span>
+                  )}
+                </p>
+              </li>
+            );
+          })}
+        </ol>
+      )
+    }
+  </div>
+</Base>

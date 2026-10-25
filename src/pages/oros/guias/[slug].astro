@@ -1,0 +1,247 @@
+---
+/**
+ * Guía / artículo. Todo lo que se muestra sale de la entrada y de sus referencias:
+ * H1 y título del documento, respuesta corta, cuerpo Markdown, tablas, fuentes tipadas,
+ * fechas, autoría, supuestos y límites, relacionados.
+ */
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { resolver, visibles } from '../../../lib/publicacion.ts';
+import { prepararMigas } from '../../../lib/migas.ts';
+import { articulo as articuloJsonLd, grafo, sitioWeb } from '../../../lib/jsonld.ts';
+import { fechaISO, fechaLarga } from '../../../lib/format.ts';
+
+interface Props {
+  articulo: CollectionEntry<'articulos'>;
+}
+
+export async function getStaticPaths() {
+  const articulos = visibles(await getCollection('articulos'));
+  return articulos.map((articulo) => ({ params: { slug: articulo.data.slug }, props: { articulo } }));
+}
+
+const { articulo } = Astro.props;
+
+const [autores, fuentes, videos, glosario, herramientas, temas] = await Promise.all([
+  getCollection('autores'),
+  getCollection('fuentes'),
+  getCollection('videos'),
+  getCollection('glosario'),
+  getCollection('herramientas'),
+  getCollection('temas'),
+]);
+
+const redactor = resolver([articulo.data.autorias.redactor], autores)[0];
+const revisor = resolver([articulo.data.autorias.revisor], autores)[0];
+
+const fuentesPropias = (articulo.data.fuentes ?? []).flatMap((referencia) => {
+  const fuente = resolver([referencia.fuente], fuentes)[0];
+  return fuente ? [{ fuente, dato: referencia.dato }] : [];
+});
+
+const vids = resolver(articulo.data.videos, visibles(videos));
+const terminos = resolver(articulo.data.glosario, visibles(glosario));
+const tools = resolver(articulo.data.herramientas, visibles(herramientas));
+const temasPropios = resolver(articulo.data.temas, visibles(temas));
+
+const { Content, headings } = await render(articulo);
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: 'Guías', ruta: ruta.guias() },
+    { nombre: articulo.data.titulo, ruta: ruta.guia(articulo.data.slug) },
+  ],
+  canonica,
+);
+
+const actualizado = articulo.data.actualizado ?? articulo.data.publicado;
+const esAnalisis = articulo.data.tipo === 'analisis';
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  articuloJsonLd({
+    url: canonica,
+    titular: articulo.data.titulo,
+    descripcion: articulo.data.seo.descripcion ?? articulo.data.resumen,
+    publicadoISO: fechaISO(articulo.data.publicado),
+    actualizadoISO: fechaISO(actualizado),
+    tipo: esAnalisis ? 'BlogPosting' : 'Article',
+    autor: { nombre: redactor?.data.nombre_publico ?? MARCA },
+    seccion: temasPropios[0]?.data.titulo,
+    citas: fuentesPropias.map((f) => f.fuente.data.url),
+  }),
+  jsonld,
+]);
+
+const secciones = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const hayFuentes = fuentesPropias.length > 0;
+const hayRelacionados = vids.length > 0 || terminos.length > 0 || tools.length > 0 || temasPropios.length > 0;
+---
+
+<Base
+  titulo={`${articulo.data.titulo} · ${SECCION}`}
+  descripcion={articulo.data.seo.descripcion ?? articulo.data.resumen}
+  sufijo={MARCA}
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <header class="wrap article-header">
+    <p class="eyebrow">{articulo.data.tipo} · {articulo.data.nivel} · {SECCION}</p>
+    <h1>{articulo.data.titulo}</h1>
+    <div class="callout" id="respuesta-corta">
+      <strong>Respuesta corta</strong>
+      <p>{articulo.data.resumen}</p>
+    </div>
+    <div class="metadata">
+      <span>Publicada: <time datetime={fechaISO(articulo.data.publicado)}>{fechaLarga(articulo.data.publicado)}</time></span>
+      {
+        actualizado && (
+          <span>
+            Actualizada: <time datetime={fechaISO(actualizado)}>{fechaLarga(actualizado)}</time>
+          </span>
+        )
+      }
+      {
+        articulo.data.revisado_factual && (
+          <span>
+            Revisión factual: <time datetime={fechaISO(articulo.data.revisado_factual)}>
+              {fechaLarga(articulo.data.revisado_factual)}
+            </time>
+          </span>
+        )
+      }
+      {redactor && <span>Redacción: {redactor.data.nombre_publico}</span>}
+      {revisor && <span>Revisión: {revisor.data.nombre_publico}</span>}
+      {articulo.data.autorias.revision_externa && <span>Revisión externa: {articulo.data.autorias.revision_externa}</span>}
+    </div>
+  </header>
+
+  <div class="wrap article-layout">
+    <aside class="route-map" aria-labelledby="indice-guia">
+      <h2 id="indice-guia" style="font-size:var(--text-h3)">En esta guía</h2>
+      {secciones.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
+      <a href="#supuestos">Supuestos y límites</a>
+      {hayFuentes && <a href="#fuentes">Fuentes ({fuentesPropias.length})</a>}
+      {hayRelacionados && <a href="#relacionados">Relacionados</a>}
+    </aside>
+
+    <article class="prose" aria-label="Cuerpo de la guía">
+      <Content />
+
+      <section id="supuestos">
+        <h2>Supuestos y límites.</h2>
+        <p>
+          Esta guía es educativa: explica cómo funciona un mecanismo y qué dicen sus fuentes, y no recomienda un
+          producto ni una decisión individual. Las cifras que aparecen son las de la fuente citada en la fecha de
+          consulta; si la norma o el dato cambian, la página se revisa en lugar de quedarse desactualizada.
+        </p>
+        {
+          articulo.data.sensibilidad !== 'baja' && (
+            <p class="honest">
+              Contenido de sensibilidad {articulo.data.sensibilidad}. Cualquier decisión sobre tu caso concreto requiere
+              revisar tu situación completa.
+            </p>
+          )
+        }
+      </section>
+
+      {
+        hayFuentes && (
+          <section id="fuentes">
+            <h2>Fuentes.</h2>
+            <div class="table-wrap">
+              <table class="fuentes">
+                <caption>
+                  Fuentes tipadas de la ficha, consultadas en la fecha indicada. Ninguna afirmación de la guía se apoya
+                  en una fuente que no esté en esta tabla.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Fuente</th>
+                    <th scope="col">Editor</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Consultada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {fuentesPropias.map(({ fuente, dato }) => (
+                    <tr>
+                      <td>
+                        <a href={fuente.data.url} rel="noopener">{fuente.data.titulo}</a>
+                        {dato && <p class="muted">{dato}</p>}
+                      </td>
+                      <td>{fuente.data.editor}</td>
+                      <td>{fuente.data.tipo}</td>
+                      <td>
+                        <time datetime={fechaISO(fuente.data.consultado_en)}>{fechaLarga(fuente.data.consultado_en)}</time>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )
+      }
+
+      {
+        hayRelacionados && (
+          <section id="relacionados">
+            <h2>Relacionados.</h2>
+            <ul class="link-list">
+              {temasPropios.map((t) => (
+                <li>
+                  <a href={url(ruta.tema(t.data.slug))}>Tema: {t.data.titulo}</a>
+                  <p>{t.data.descripcion_corta}</p>
+                </li>
+              ))}
+              {vids.map((v) => (
+                <li>
+                  <a href={url(ruta.video(v.data.slug))}>Vídeo: {v.data.titulo}</a>
+                  <p>{v.data.descripcion_corta}</p>
+                </li>
+              ))}
+              {tools.map((t) => (
+                <li>
+                  <a href={url(ruta.herramienta(t.data.slug))}>Herramienta: {t.data.titulo}</a>
+                  <p>{t.data.descripcion}</p>
+                </li>
+              ))}
+              {terminos.map((t) => (
+                <li>
+                  <a href={url(ruta.termino(t.data.slug))}>Glosario: {t.data.termino}</a>
+                  <p>{t.data.definicion_corta}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        articulo.data.preguntas.length >= 2 && (
+          <section id="preguntas">
+            <h2>Preguntas que responde esta página.</h2>
+            {articulo.data.preguntas.map((p) => (
+              <details>
+                <summary>{p.pregunta}</summary>
+                <p>{p.respuesta}</p>
+              </details>
+            ))}
+          </section>
+        )
+      }
+    </article>
+  </div>
+</Base>

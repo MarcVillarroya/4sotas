@@ -56,20 +56,39 @@ const RUTA = {
   autores: null,
 };
 
-/** Colección destino de cada campo de referencia del modelo. */
+/** Rutas de referencia de `base` en content.config.ts (arrays sin índice). */
+const REFS_BASE = {
+  'autorias.redactor': 'autores',
+  'autorias.revisor': 'autores',
+  'fuentes.fuente': 'fuentes',
+};
+
+/** Colección origen + ruta completa: un mismo nombre puede tener destinos distintos. */
 const REFS = {
-  temas: 'temas',
-  temas_relacionados: 'temas',
-  videos: 'videos',
-  videos_destacados: 'videos',
-  relacionados: 'videos',
-  herramientas: 'herramientas',
-  glosario: 'glosario',
-  serie: 'series',
-  pilar: 'articulos',
-  fuente: 'fuentes',
-  redactor: 'autores',
-  revisor: 'autores',
+  temas: {
+    ...REFS_BASE,
+    pilar: 'articulos',
+    temas_relacionados: 'temas',
+    videos_destacados: 'videos',
+    herramientas: 'herramientas',
+  },
+  articulos: {
+    ...REFS_BASE,
+    temas: 'temas',
+    videos: 'videos',
+    herramientas: 'herramientas',
+    glosario: 'glosario',
+    serie: 'series',
+  },
+  videos: {
+    ...REFS_BASE,
+    temas: 'temas',
+    serie: 'series',
+    relacionados: 'videos',
+  },
+  series: { ...REFS_BASE, temas: 'temas' },
+  herramientas: { ...REFS_BASE, temas: 'temas' },
+  glosario: { ...REFS_BASE, relacionados: 'glosario' },
 };
 
 const PREFIJO = {
@@ -200,27 +219,26 @@ for (const col of COLECCIONES) {
 
 /* ───────────── B3 · referencias: existencia y visibilidad ───────────── */
 
-function* refsDe(data, rutaCampo = '') {
+function* refsDe(data, destinos, rutaCampo = '') {
   if (Array.isArray(data)) {
-    for (const item of data) {
-      if (typeof item === 'string' && REFS[rutaCampo.split('.').pop()]) yield { campo: rutaCampo, valor: item };
-      else yield* refsDe(item, rutaCampo);
-    }
+    for (const item of data) yield* refsDe(item, destinos, rutaCampo);
+    return;
+  }
+  if (typeof data === 'string' && Object.hasOwn(destinos, rutaCampo)) {
+    yield { campo: rutaCampo, valor: data, destino: destinos[rutaCampo] };
     return;
   }
   if (data && typeof data === 'object') {
     for (const [k, v] of Object.entries(data)) {
       const campo = rutaCampo ? `${rutaCampo}.${k}` : k;
-      if (typeof v === 'string' && REFS[k]) yield { campo, valor: v };
-      else yield* refsDe(v, campo);
+      yield* refsDe(v, destinos, campo);
     }
   }
 }
 
 for (const col of COLECCIONES) {
   for (const e of entries[col]) {
-    for (const { campo, valor } of refsDe(e.data)) {
-      const destino = REFS[campo.split('.').pop()];
+    for (const { campo, valor, destino } of refsDe(e.data, REFS[col] ?? {})) {
       if (!indice[destino]?.has(valor)) {
         B('B-REF-COLGANTE', e.file, `${campo} = "${valor}" no existe en ${destino}`);
         continue;

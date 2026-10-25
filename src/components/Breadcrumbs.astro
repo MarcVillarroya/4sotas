@@ -1,0 +1,25 @@
+---
+/** Navegación de migas visible. Los datos y el JSON-LD los prepara `lib/migas.ts`. */
+import type { MigaVisual } from '../lib/migas.ts';
+
+interface Props {
+  migas: MigaVisual[];
+}
+
+const { migas } = Astro.props;
+---
+
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  {
+    migas.map((miga, i) => (
+      <>
+        {i > 0 && <span aria-hidden="true">/</span>}
+        {miga.href ? (
+          <a href={miga.href}>{miga.nombre}</a>
+        ) : (
+          <span aria-current={i === migas.length - 1 ? 'page' : undefined}>{miga.nombre}</span>
+        )}
+      </>
+    ))
+  }
+</nav>

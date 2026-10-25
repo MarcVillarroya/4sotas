@@ -1,0 +1,131 @@
+---
+/**
+ * Ficha de término: definición corta, ejemplo, cuerpo, sinónimos y términos relacionados.
+ * DefinedTerm derivado de la entrada; el conjunto es el índice del glosario.
+ */
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
+import { prepararMigas } from '../../../lib/migas.ts';
+import { NOMBRE_GLOSARIO, grafo, sitioWeb, terminoDefinido } from '../../../lib/jsonld.ts';
+
+interface Props {
+  termino: CollectionEntry<'glosario'>;
+}
+
+export async function getStaticPaths() {
+  const terminos = visibles(await getCollection('glosario'));
+  return terminos.map((termino) => ({ params: { slug: termino.data.slug }, props: { termino } }));
+}
+
+const { termino } = Astro.props;
+
+const [todos, articulos] = await Promise.all([getCollection('glosario'), getCollection('articulos')]);
+const relacionados = resolver(termino.data.relacionados, visibles(todos)).filter((t) => t.id !== termino.id);
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const urlGlosario = new URL(url(ruta.glosario()), origen).href;
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: 'Glosario', ruta: ruta.glosario() },
+    { nombre: termino.data.termino, ruta: ruta.termino(termino.data.slug) },
+  ],
+  canonica,
+);
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  terminoDefinido({
+    url: canonica,
+    nombre: termino.data.termino,
+    descripcion: termino.data.definicion_corta,
+    conjunto: { url: urlGlosario, nombre: NOMBRE_GLOSARIO },
+    sinonimos: termino.data.sinonimos,
+  }),
+  jsonld,
+]);
+
+const { Content } = await render(termino);
+
+/** Guías que enlazan este término: enlaces reales, no inventario manual. */
+const guiasQueLoUsan = visibles(articulos).filter((a) =>
+  (a.data.glosario ?? []).some((ref) => idRef(ref) === termino.id),
+);
+---
+
+<Base
+  titulo={`${termino.data.termino} · ${SECCION}`}
+  descripcion={termino.data.definicion_corta}
+  sufijo={MARCA}
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <header class="wrap article-header">
+    <p class="eyebrow">Glosario · {termino.data.categoria}</p>
+    <h1>{termino.data.termino}</h1>
+    <p class="lead">{termino.data.definicion_corta}</p>
+    <div class="metadata">
+      <span>Categoría: {termino.data.categoria}</span>
+      {termino.data.sinonimos.length > 0 && <span>También: {termino.data.sinonimos.join(', ')}</span>}
+    </div>
+  </header>
+
+  <div class="wrap article-layout">
+    <aside class="route-map" aria-labelledby="indice-termino">
+      <h2 id="indice-termino" style="font-size:var(--text-h3)">En esta ficha</h2>
+      <a href="#ejemplo">Ejemplo</a>
+      {relacionados.length > 0 && <a href="#relacionados">Términos relacionados</a>}
+      {guiasQueLoUsan.length > 0 && <a href="#guias">Dónde se usa</a>}
+      <a href={url(ruta.glosario())}>Todo el glosario</a>
+    </aside>
+
+    <article class="prose" aria-label="Definición del término">
+      <section id="ejemplo">
+        <h2>En la práctica.</h2>
+        <p>{termino.data.ejemplo}</p>
+        <Content />
+      </section>
+
+      {
+        relacionados.length > 0 && (
+          <section id="relacionados">
+            <h2>Términos relacionados.</h2>
+            <ul class="link-list">
+              {relacionados.map((t) => (
+                <li>
+                  <a href={url(ruta.termino(t.data.slug))}>{t.data.termino}</a>
+                  <p>{t.data.definicion_corta}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        guiasQueLoUsan.length > 0 && (
+          <section id="guias">
+            <h2>Dónde se usa.</h2>
+            <ul class="link-list">
+              {guiasQueLoUsan.map((a) => (
+                <li>
+                  <a href={url(ruta.guia(a.data.slug))}>{a.data.titulo}</a>
+                  <p>{a.data.resumen}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </article>
+  </div>
+</Base>

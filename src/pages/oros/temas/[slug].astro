@@ -1,0 +1,229 @@
+---
+/**
+ * Página troncal de un tema: introducción, mapa de contenidos, orden recomendado y herramientas.
+ * Todo el mapa se deriva de las referencias tipadas del tema; lo que no está publicado no se
+ * enlaza y se declara como pendiente en lugar de rellenarse.
+ */
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { resolver, visibles } from '../../../lib/publicacion.ts';
+import { absoluta, prepararMigas } from '../../../lib/migas.ts';
+import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
+import { duracionLegible, fechaLarga } from '../../../lib/format.ts';
+
+interface Props {
+  tema: CollectionEntry<'temas'>;
+}
+
+export async function getStaticPaths() {
+  const temas = visibles(await getCollection('temas'));
+  return temas.map((tema) => ({ params: { slug: tema.data.slug }, props: { tema } }));
+}
+
+const { tema } = Astro.props;
+
+const [temas, articulos, videos, herramientas] = await Promise.all([
+  getCollection('temas'),
+  getCollection('articulos'),
+  getCollection('videos'),
+  getCollection('herramientas'),
+]);
+
+const disponibles = {
+  temas: visibles(temas),
+  articulos: visibles(articulos),
+  videos: visibles(videos),
+  herramientas: visibles(herramientas),
+};
+
+const pilar = resolver([tema.data.pilar], disponibles.articulos)[0];
+const vids = resolver(tema.data.videos_destacados, disponibles.videos);
+const tools = resolver(tema.data.herramientas, disponibles.herramientas);
+const relacionados = resolver(tema.data.temas_relacionados, disponibles.temas);
+
+const { Content, headings } = await render(tema);
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: 'Temas', ruta: ruta.temas() },
+    { nombre: tema.data.titulo, ruta: ruta.tema(tema.data.slug) },
+  ],
+  canonica,
+);
+
+/** Orden recomendado: guía troncal, después vídeos y herramientas en el orden declarado. */
+const recorrido = [
+  ...(pilar ? [{ tipo: 'Guía' as const, titulo: pilar.data.titulo, detalle: pilar.data.resumen, ruta: ruta.guia(pilar.data.slug) }] : []),
+  ...vids.map((v) => ({
+    tipo: 'Vídeo' as const,
+    titulo: v.data.titulo,
+    detalle: v.data.descripcion_corta,
+    ruta: ruta.video(v.data.slug),
+    extra: `${duracionLegible(v.data.duracion_iso)} · ${fechaLarga(v.data.publicado_en)}`,
+  })),
+  ...tools.map((t) => ({
+    tipo: 'Herramienta' as const,
+    titulo: t.data.titulo,
+    detalle: t.data.descripcion,
+    ruta: ruta.herramienta(t.data.slug),
+    extra: t.data.estado_implementacion === 'no-implementada' ? 'En preparación' : t.data.estado_implementacion,
+  })),
+];
+
+const pendiente = !pilar && vids.length === 0 && tools.length === 0;
+
+/** Mapa del tema: sale de lo que la página realmente contiene, sin huecos numerados. */
+const mapa = [
+  { id: 'introduccion', titulo: 'Introducción' },
+  { id: 'recorrido', titulo: 'Orden recomendado' },
+  ...(tools.length > 0 ? [{ id: 'herramientas', titulo: 'Herramientas' }] : []),
+  ...(relacionados.length > 0 ? [{ id: 'relacionados', titulo: 'Temas relacionados' }] : []),
+];
+
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({
+    url: canonica,
+    nombre: `${tema.data.titulo} · ${SECCION}`,
+    descripcion: tema.data.descripcion_corta,
+    tipo: 'CollectionPage',
+  }),
+  lista({
+    url: canonica,
+    nombre: `Recorrido recomendado: ${tema.data.titulo}`,
+    elementos: recorrido.map((r) => ({ url: absoluta(r.ruta, origen), nombre: r.titulo })),
+  }),
+  jsonld,
+]);
+---
+
+<Base
+  titulo={`${tema.data.titulo} · ${SECCION}`}
+  descripcion={tema.data.descripcion_corta}
+  sufijo={MARCA}
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <div class="wrap page-intro">
+    <p class="eyebrow">Tema {String(tema.data.orden).padStart(2, '0')} · {tema.data.cluster}</p>
+    <h1>{tema.data.titulo}.</h1>
+    <p class="lead">{tema.data.descripcion_corta}</p>
+    <p class="muted">
+      Página troncal del tema. El orden de abajo es el recomendado, no una tabla de contenidos alfabética.
+    </p>
+  </div>
+
+  <div class="wrap topic-layout">
+    <aside class="route-map" aria-labelledby="mapa-tema">
+      <h2 id="mapa-tema" style="font-size:var(--text-h3)">Mapa del tema</h2>
+      {
+        mapa.map((paso, i) => (
+          <a href={`#${paso.id}`}>
+            {String(i + 1).padStart(2, '0')} · {paso.titulo}
+          </a>
+        ))
+      }
+      <a href={url(ruta.temas())}>Todos los temas</a>
+    </aside>
+
+    <div>
+      <section id="introduccion" aria-labelledby="titulo-introduccion" style="margin-bottom:3rem">
+        <h2 id="titulo-introduccion" style="font-size:var(--text-h2);margin-bottom:1.5rem">Qué cubre este tema.</h2>
+        <div class="prose">
+          <Content />
+          {
+            headings.length > 0 && (
+              <ul class="link-list">
+                {headings
+                  .filter((h) => h.depth === 2)
+                  .map((h) => (
+                    <li>
+                      <a href={`#${h.slug}`}>{h.text}</a>
+                    </li>
+                  ))}
+              </ul>
+            )
+          }
+        </div>
+      </section>
+
+      <section id="recorrido" aria-labelledby="titulo-recorrido" style="margin-bottom:3rem">
+        <h2 id="titulo-recorrido" style="font-size:var(--text-h2);margin-bottom:1.5rem">Orden recomendado.</h2>
+        {
+          pendiente ? (
+            <p class="honest">
+              Contenido previsto: este tema todavía no tiene guía troncal, vídeos ni herramientas publicadas que se
+              puedan enlazar sin inventar procedencia.
+            </p>
+          ) : (
+            <ol class="steps">
+              {recorrido.map((paso) => (
+                <li>
+                  <div>
+                    <p class="eyebrow">{paso.tipo}</p>
+                    <h3>
+                      <a href={url(paso.ruta)}>{paso.titulo}</a>
+                    </h3>
+                    <p>{paso.detalle}</p>
+                    {'extra' in paso && paso.extra && <p class="video-meta">{paso.extra}</p>}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          )
+        }
+      </section>
+
+      {
+        tools.length > 0 && (
+          <section id="herramientas" aria-labelledby="titulo-herramientas" style="margin-bottom:3rem">
+            <h2 id="titulo-herramientas" style="font-size:var(--text-h2);margin-bottom:1.5rem">
+              Herramientas del tema.
+            </h2>
+            <ul class="link-list">
+              {tools.map((t) => (
+                <li>
+                  <a href={url(ruta.herramienta(t.data.slug))}>
+                    {t.data.titulo}
+                    <span class="orden">
+                      {t.data.estado_implementacion === 'no-implementada' ? 'En preparación' : t.data.estado_implementacion}
+                    </span>
+                  </a>
+                  <p>{t.data.descripcion}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        relacionados.length > 0 && (
+          <section id="relacionados" aria-labelledby="titulo-relacionados">
+            <h2 id="titulo-relacionados" style="font-size:var(--text-h2);margin-bottom:1.5rem">
+              Temas relacionados.
+            </h2>
+            <ul class="link-list">
+              {relacionados.map((t) => (
+                <li>
+                  <a href={url(ruta.tema(t.data.slug))}>{t.data.titulo}</a>
+                  <p>{t.data.descripcion_corta}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </div>
+  </div>
+</Base>

@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-25T23:32:10.508Z",
-  "root": "/home/mvf/4sotas/site",
+  "generated_at": "2026-10-25T23:47:52.203Z",
+  "root": "/home/mvf/4sotas/site/.worktrees/t_7644686c",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
   "entries": {
     "sotas": 4,
-    "temas": 0,
-    "articulos": 0,
-    "videos": 0,
-    "series": 0,
-    "herramientas": 0,
-    "glosario": 0,
-    "fuentes": 0,
+    "temas": 1,
+    "articulos": 1,
+    "videos": 1,
+    "series": 1,
+    "herramientas": 1,
+    "glosario": 2,
+    "fuentes": 1,
     "autores": 1
   },
   "dist": {
-    "htmls": 3,
-    "sitemapLocs": 2
+    "htmls": 8,
+    "sitemapLocs": 7
   },
   "blockers": [],
   "warnings": [
@@ -59,11 +59,6 @@
       "code": "W-VIDEO-SIN-FICHA",
       "where": "audit/inventory.json",
       "msg": "vídeo público sin ficha en el sitio: i5fe580iFqk"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: M9EhU06FlUA"
     },
     {
       "code": "W-VIDEO-SIN-FICHA",

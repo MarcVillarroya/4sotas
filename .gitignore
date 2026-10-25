@@ -1,6 +1,7 @@
 # Dependencias y artefactos de build
 node_modules/
 dist/
+dist-fixtures/
 .astro/
 
 # Entorno y credenciales: el token de YouTube no entra nunca al repo

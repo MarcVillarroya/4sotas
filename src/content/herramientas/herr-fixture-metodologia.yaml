@@ -1,0 +1,35 @@
+id: herr-fixture-metodologia
+status: borrador
+creado: 2026-10-26
+sensibilidad: baja
+autorias:
+  redactor: aut-marc-villarroya
+fuentes:
+  - fuente: src-fixture-demo
+    dato: Ficha de prueba del modelo; no respalda ninguna cifra.
+actualizacion:
+  politica: revision-anual
+slug: herramienta-fixture-demo
+titulo: Herramienta de prueba con layout de metodología
+descripcion: Fixture sin implementar que comprueba el layout de metodología, la tabla de parámetros y los supuestos declarados.
+tipo: calculadora
+estado_implementacion: no-implementada
+version_motor: 0.0.0
+formula: Capital final = capital inicial por uno más la tasa por periodo elevado al número de periodos.
+unidad_salida: EUR
+parametros:
+  - clave: capital
+    etiqueta: Capital inicial
+    tipo: moneda
+    defecto: 1000
+    min: 0
+    max: 1000000
+    paso: 100
+supuestos:
+  - La tasa introducida es una hipótesis del usuario y no una rentabilidad prometida.
+  - No se modelan comisiones, impuestos ni inflación en esta ficha de prueba.
+limites:
+  - "Fixture sin motor de cálculo: no produce resultados hasta la tarjeta de la calculadora."
+tests: tests/fixture.ts
+temas:
+  - tema-fixture-demo

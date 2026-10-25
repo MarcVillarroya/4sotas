@@ -1,0 +1,194 @@
+---
+/**
+ * Layout de metodología de una herramienta: cabecera, interfaz (slot), fórmula, parámetros,
+ * supuestos, límites y estado de implementación. Todo se deriva de la ficha `herramientas`;
+ * la interfaz interactiva la aporta la página que use este layout.
+ *
+ * Contrato para la calculadora (tarjeta hermana):
+ *   <Herramienta ficha={ficha} prueba={resultado}>
+ *     <form ...>...</form>   ← el JS interactivo va aquí, nunca en el layout
+ *   </Herramienta>
+ */
+import type { CollectionEntry } from 'astro:content';
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { MARCA, SECCION, ruta, url } from '../lib/rutas.ts';
+import { prepararMigas } from '../lib/migas.ts';
+import { aplicacionSoftware, grafo, paginaWeb, sitioWeb } from '../lib/jsonld.ts';
+import { fechaLarga } from '../lib/format.ts';
+
+interface Props {
+  ficha: CollectionEntry<'herramientas'>;
+  /** `true` solo cuando la herramienta responde de verdad (beta o estable). */
+  calcula?: boolean;
+}
+
+const { ficha, calcula = false } = Astro.props;
+
+const estados: Record<string, string> = {
+  'no-implementada': 'En preparación',
+  beta: 'Beta',
+  estable: 'Estable',
+};
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+
+const { visual, jsonld } = prepararMigas(
+  [
+    { nombre: 'Inicio', ruta: '/' },
+    { nombre: SECCION, ruta: '/oros/' },
+    { nombre: 'Herramientas', ruta: ruta.herramientas() },
+    { nombre: ficha.data.titulo, ruta: ruta.herramienta(ficha.data.slug) },
+  ],
+  canonica,
+);
+
+/** `SoftwareApplication` solo si la herramienta está disponible: anunciar lo que no existe es bloqueante. */
+const jsonLd = calcula
+  ? grafo([
+      sitioWeb(origen),
+      paginaWeb({ url: canonica, nombre: ficha.data.titulo, descripcion: ficha.data.descripcion }),
+      aplicacionSoftware({
+        url: canonica,
+        nombre: ficha.data.titulo,
+        descripcion: ficha.data.descripcion,
+        version: ficha.data.version_motor,
+      }),
+      jsonld,
+    ])
+  : grafo([
+      sitioWeb(origen),
+      paginaWeb({ url: canonica, nombre: ficha.data.titulo, descripcion: ficha.data.descripcion }),
+      jsonld,
+    ]);
+
+const unidad = {
+  EUR: 'euros',
+  'EUR-por-mes': 'euros al mes',
+  porcentaje: 'porcentaje',
+} as const;
+---
+
+<Base
+  titulo={`${ficha.data.titulo} · ${SECCION}`}
+  descripcion={ficha.data.descripcion}
+  sufijo={MARCA}
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <Breadcrumbs migas={visual} />
+  </div>
+
+  <div class="wrap page-intro">
+    <p class="eyebrow">Herramienta · {estados[ficha.data.estado_implementacion] ?? ficha.data.estado_implementacion}</p>
+    <h1>{ficha.data.titulo}</h1>
+    <p class="lead">{ficha.data.descripcion}</p>
+    <p class="muted">
+      Calcula en tu navegador: no hay envío de datos, ni cuentas, ni cookies. Los supuestos y los límites están
+      escritos más abajo, junto a la fórmula.
+    </p>
+  </div>
+
+  <div class="wrap calc-layout">
+    <div class="calc-form">
+      <slot />
+    </div>
+    <div>
+      <section class="calc-result" aria-labelledby="resultado-herramienta">
+        <p class="eyebrow">Resultado</p>
+        <h2 id="resultado-herramienta" style="font-size:var(--text-h3)">
+          {calcula ? 'Calculado en esta página' : 'Todavía sin cálculo'}
+        </h2>
+        <p class="hint">
+          {
+            calcula
+              ? `El resultado aparece en ${unidad[ficha.data.unidad_salida]} y se redondea al presentar.`
+              : 'La interfaz no calcula nada todavía: el motor y sus pruebas llegan en su propia tarjeta. Esta página declara la metodología, no resultados.'
+          }
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div class="wrap topic-layout">
+    <aside class="route-map" aria-labelledby="indice-metodologia">
+      <h2 id="indice-metodologia" style="font-size:var(--text-h3)">Metodología</h2>
+      <a href="#formula">Fórmula</a>
+      <a href="#parametros">Parámetros</a>
+      <a href="#supuestos">Supuestos</a>
+      <a href="#limites">Límites</a>
+      <a href="#revision">Revisión</a>
+      <a href={url(ruta.herramientas())}>Todas las herramientas</a>
+    </aside>
+
+    <div class="prose">
+      <section id="formula">
+        <h2>Fórmula.</h2>
+        <p>{ficha.data.formula}</p>
+        <p class="honest">
+          La fórmula es la que ejecuta el motor, no una descripción aproximada. Si el motor y esta frase discrepan, el
+          fallo es del sitio.
+        </p>
+      </section>
+
+      <section id="parametros">
+        <h2>Parámetros.</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Entradas de la herramienta, con tipo y rango declarados en la ficha.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Por defecto</th>
+                <th scope="col">Rango</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ficha.data.parametros.map((p) => (
+                <tr>
+                  <td>{p.etiqueta}</td>
+                  <td>{p.tipo}</td>
+                  <td>{p.defecto}</td>
+                  <td>
+                    {p.min} – {p.max}, paso {p.paso}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="supuestos">
+        <h2>Supuestos.</h2>
+        <ul>
+          {ficha.data.supuestos.map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="limites">
+        <h2>Límites.</h2>
+        <ul>
+          {ficha.data.limites.map((l) => (
+            <li>{l}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="revision">
+        <h2>Revisión.</h2>
+        <p>
+          Versión del motor: {ficha.data.version_motor}. Pruebas: <code>{ficha.data.tests}</code>.
+        </p>
+        <p>
+          Revisión factual: {ficha.data.revisado_factual ? fechaLarga(ficha.data.revisado_factual) : 'no registrada'}.
+          Los cambios de fórmula se anotan aquí y suben la versión del motor.
+        </p>
+      </section>
+    </div>
+  </div>
+</Base>

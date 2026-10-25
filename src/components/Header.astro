@@ -1,34 +1,45 @@
 ---
 /**
- * Header compartido. `aria-current="page"` solo en la ruta exacta de la página actual.
+ * Header compartido. `aria-current="page"` se deriva de la ruta real: solo la sección
+ * más específica que contiene la página actual queda marcada.
  * Todos los enlaces pasan por `url()`: la base de Pages va incluida.
  */
-import { MARCA, SECCION, url } from '../lib/rutas.ts';
+import { BASE, MARCA, SECCION, url } from '../lib/rutas.ts';
 
-interface Props {
-  actual?: '/' | '/oros/';
-}
-
-const { actual } = Astro.props;
+const rutaActual = (() => {
+  const p = Astro.url.pathname;
+  const sinBase = BASE && p.startsWith(BASE) ? p.slice(BASE.length) : p;
+  return sinBase === '' ? '/' : sinBase;
+})();
 
 const enlaces = [
-  { href: '/', etiqueta: 'Inicio', exacta: '/' as const },
-  { href: '/oros/', etiqueta: SECCION, exacta: '/oros/' as const },
-  { href: '/#criterio', etiqueta: 'Criterio editorial', exacta: null },
+  { href: '/', etiqueta: 'Inicio', seccion: '/' },
+  { href: '/oros/', etiqueta: SECCION, seccion: '/oros/' },
+  { href: '/oros/temas/', etiqueta: 'Temas', seccion: '/oros/temas/' },
+  { href: '/oros/guias/', etiqueta: 'Guías', seccion: '/oros/guias/' },
+  { href: '/oros/videos/', etiqueta: 'Vídeos', seccion: '/oros/videos/' },
+  { href: '/oros/glosario/', etiqueta: 'Glosario', seccion: '/oros/glosario/' },
 ];
+
+const seccionActiva =
+  [...enlaces]
+    .filter((e) => e.seccion !== '/' && (rutaActual === e.seccion || rutaActual.startsWith(e.seccion)))
+    .sort((a, b) => b.seccion.length - a.seccion.length)[0]?.seccion ?? (rutaActual === '/' ? '/' : null);
+
+const enOros = rutaActual.startsWith('/oros/');
 ---
 
 <header class="site-header">
   <div class="wrap header-row">
     <a class="logo" href={url('/')}>
       <img src={url('/assets/mark.svg')} width="40" height="44" alt="" decoding="async" />
-      {actual === '/oros/' ? `${MARCA} / OROS` : MARCA.toUpperCase()}
+      {enOros ? `${MARCA} / OROS` : MARCA.toUpperCase()}
       <span class="sr-only">, inicio</span>
     </a>
     <nav aria-label="Principal">
       {
         enlaces.map((e) => (
-          <a href={url(e.href)} aria-current={actual && e.exacta === actual ? 'page' : undefined}>
+          <a href={url(e.href)} aria-current={seccionActiva === e.seccion ? 'page' : undefined}>
             {e.etiqueta}
           </a>
         ))

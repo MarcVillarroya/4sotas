@@ -1,0 +1,9 @@
+id: src-fixture-demo
+titulo: Documento de ejemplo del banco de pruebas (no es una fuente editorial)
+editor: Fixture
+url: https://example.org/banco-de-pruebas/documento-de-ejemplo
+tipo: secundaria
+jurisdiccion: ES
+consultado_en: 2026-10-26
+acceso: publico
+nota_verificacion: Ficha de prueba del modelo de datos. No respalda ninguna cifra publicada.

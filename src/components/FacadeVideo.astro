@@ -1,0 +1,77 @@
+---
+/**
+ * Facade del reproductor: sin iframe hasta que el visitante lo pide.
+ * Ninguna página carga YouTube por su cuenta; el único JS del sitio vive aquí y en nada más.
+ * Sin JS el enlace directo a YouTube sigue funcionando.
+ */
+import { verEnYouTube } from '../lib/rutas.ts';
+
+interface Props {
+  youtubeId: string;
+  titulo: string;
+  duracion: string;
+}
+
+const { youtubeId, titulo, duracion } = Astro.props;
+---
+
+<div
+  class="player"
+  id="reproductor"
+  data-facade
+  data-video={youtubeId}
+  data-titulo={titulo}
+  role="group"
+  aria-label={`Reproductor de vídeo: ${titulo}`}
+>
+  <div>
+    <svg viewBox="0 0 72 72" aria-hidden="true" shape-rendering="crispEdges">
+      <path fill="#F0A848" d="M8 8h56v56H8z"></path>
+      <path fill="#0B1526" d="M28 20h8v8h8v8h8v8h-8v8H28z"></path>
+    </svg>
+    <p class="eyebrow">El vídeo no se ha cargado todavía</p>
+    <p>
+      La ficha dura {duracion} y su reproductor se carga desde YouTube solo si lo pides. Hasta entonces esta
+      página no habla con ningún servidor externo.
+    </p>
+    <button class="button" type="button" data-cargar>Cargar el vídeo de YouTube</button>
+    <noscript>
+      <p class="hint">
+        Sin JavaScript no hay reproductor integrado. El enlace directo de abajo abre el vídeo igualmente.
+      </p>
+    </noscript>
+    <p class="sr-only" role="status" aria-live="polite" data-estado></p>
+  </div>
+</div>
+
+<p>
+  <a class="text-link" href={verEnYouTube(youtubeId)} rel="noopener">Ver el vídeo directamente en YouTube</a>
+</p>
+
+<script is:inline>
+  document.querySelectorAll('[data-facade]').forEach((reproductor) => {
+    const boton = reproductor.querySelector('[data-cargar]');
+    const estado = reproductor.querySelector('[data-estado]');
+    if (!boton) return;
+    boton.addEventListener(
+      'click',
+      () => {
+        const id = reproductor.getAttribute('data-video');
+        if (!id) return;
+        const iframe = document.createElement('iframe');
+        iframe.className = 'player-frame';
+        iframe.title = reproductor.getAttribute('data-titulo') || 'Vídeo de 4 Sotas';
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        iframe.allow = 'encrypted-media; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.tabIndex = 0;
+        reproductor.replaceChildren(iframe);
+        reproductor.classList.add('loaded');
+        if (estado) estado.textContent = 'Vídeo cargado desde YouTube.';
+        iframe.focus();
+      },
+      { once: true },
+    );
+  });
+</script>

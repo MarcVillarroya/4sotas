@@ -1,0 +1,26 @@
+id: vid-M9EhU06FlUA
+status: borrador
+creado: 2026-10-26
+sensibilidad: baja
+procedencia: derivado-video
+autorias:
+  redactor: aut-marc-villarroya
+actualizacion:
+  politica: revision-anual
+youtube_id: M9EhU06FlUA
+slug: video-fixture-demo
+titulo: "Cómo leer una nómina en España (2026): del bruto al neto"
+descripcion_corta: Resumen editorial de fixture para probar la watch page; no reutiliza la descripción de YouTube ni afirma cifras.
+publicado_en: 2026-10-11
+duracion_iso: PT9M50S
+miniatura: https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-10-26
+idioma: es
+temas:
+  - tema-fixture-demo
+serie: ser-fixture-demo
+relacionados: []
+transcripcion: false
+capitulos: []

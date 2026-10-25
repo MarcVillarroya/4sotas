@@ -5,8 +5,8 @@
  */
 import { getCollection, getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { MARCA, SECCION, url } from '../../lib/rutas.ts';
-import { cuentaPublicada } from '../../lib/publicacion.ts';
+import { MARCA, SECCION, ruta, url } from '../../lib/rutas.ts';
+import { cuentaPublicada, visibles } from '../../lib/publicacion.ts';
 import { grafoSeccion } from '../../lib/jsonld.ts';
 
 const sota = await getEntry('sotas', 'sota-oros');
@@ -45,14 +45,23 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const jsonLd = grafoSeccion({
   origen: new URL(canonica).origin,
   url: canonica,
-  nombre: `${SECCION} · ${MARCA}`,
+  nombre: titulo,
   descripcion,
 });
 
 const vacio = recuento.articulos === 0 && recuento.videos === 0;
+
+/** Directorio de secciones: existe siempre como página y declara su recuento real. */
+const directorio = [
+  { titulo: 'Temas troncales', detalle: 'Los mapas de cada bloque editorial.', ruta: ruta.temas(), total: visibles(temas).length },
+  { titulo: 'Guías', detalle: 'Explicadores con fuentes fechadas.', ruta: ruta.guias(), total: visibles(articulos).length },
+  { titulo: 'Vídeos', detalle: 'Fichas con metadata contrastada contra la API.', ruta: ruta.videos(), total: visibles(videos).length },
+  { titulo: 'Glosario', detalle: 'Términos con definición corta y ejemplo.', ruta: ruta.glosario(), total: visibles(glosario).length },
+  { titulo: 'Herramientas', detalle: 'Calculadoras con supuestos y límites declarados.', ruta: ruta.herramientas(), total: visibles(herramientas).length },
+];
 ---
 
-<Base titulo={`${SECCION} · ${titulo}`} descripcion={descripcion} actual="/oros/" sufijo={MARCA} jsonLd={jsonLd}>
+<Base titulo={`${SECCION} · ${titulo}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
   <section class="wrap hero" aria-labelledby="titulo-principal">
     <div>
       <p class="eyebrow">{SECCION} · economía cotidiana</p>
@@ -136,6 +145,24 @@ const vacio = recuento.articulos === 0 && recuento.videos === 0;
           </p>
         )
       }
+    </div>
+  </section>
+
+  <section class="wrap section editorial-grid" aria-labelledby="titulo-direcciones">
+    <h2 id="titulo-direcciones">Por dónde seguir.</h2>
+    <div>
+      <ul class="link-list">
+        {
+          directorio.map((d) => (
+            <li>
+              <a href={url(d.ruta)}>
+                {d.titulo} <span class="orden">{d.total} publicadas</span>
+              </a>
+              <p>{d.detalle}</p>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 

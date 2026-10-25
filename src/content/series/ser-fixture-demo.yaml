@@ -1,0 +1,15 @@
+id: ser-fixture-demo
+status: borrador
+creado: 2026-10-26
+sensibilidad: baja
+autorias:
+  redactor: aut-marc-villarroya
+actualizacion:
+  politica: revision-anual
+slug: serie-fixture-demo
+titulo: Serie de prueba del modelo editorial
+descripcion: Serie de fixture con una sola entrega para comprobar el orden de los artículos y los enlaces tipados.
+estado: abierta
+temas:
+  - tema-fixture-demo
+entregas_previstas: 3

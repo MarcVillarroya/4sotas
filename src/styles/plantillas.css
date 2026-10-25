@@ -1,0 +1,156 @@
+/*
+ * 4 Sotas · estilos de las plantillas editoriales.
+ * Complementa tokens.css + global.css (sistema visual F0): aquí solo van patrones nuevos
+ * (catálogos, tarjetas, estados vacíos, tablas de fuentes) construidos con los tokens.
+ */
+
+/* ── estados vacíos honestos ── */
+.empty {
+  border: var(--border-heavy);
+  background: var(--surface);
+  padding: 1.5rem;
+  max-width: 60ch;
+}
+.empty h2 {
+  font-size: var(--text-h3);
+  margin-bottom: 1rem;
+}
+.empty p {
+  font-size: 1rem;
+}
+
+/* ── catálogo de vídeos ── */
+.video-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 2rem;
+}
+.video-card {
+  border: var(--border-heavy);
+  display: flex;
+  flex-direction: column;
+}
+.video-card a {
+  text-decoration: none;
+}
+.video-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: var(--border-heavy);
+  background: var(--surface);
+}
+.video-card-body {
+  padding: 1rem;
+  flex: 1;
+}
+.video-card h3 {
+  font-size: var(--text-h3);
+  margin-bottom: 0.5rem;
+}
+.video-card p {
+  font-size: 1rem;
+  color: var(--muted);
+}
+.video-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* ── catálogos en lista (temas, guías, glosario) ── */
+.catalog {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: var(--border);
+}
+.catalog > li {
+  border-bottom: var(--border);
+  padding-block: 1.5rem;
+}
+.catalog h2,
+.catalog h3 {
+  font-size: var(--text-h3);
+  margin-bottom: 0.5rem;
+}
+.catalog a {
+  text-decoration-thickness: 1px;
+}
+.catalog p {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 70ch;
+}
+.catalog .video-meta {
+  color: var(--ink);
+}
+.orden {
+  font: 700 1rem var(--font-label);
+  color: var(--gold-ink);
+}
+
+/* ── glosario alfabético ── */
+.letter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-block: 1.5rem;
+}
+.letter-nav a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+}
+
+/* ── fuentes y metadatos de artículo ── */
+.fuentes td:first-child {
+  text-align: left;
+}
+.fuentes tbody th {
+  text-align: left;
+  font-weight: 400;
+}
+.fuentes td {
+  text-align: left;
+}
+.fuentes caption {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ── bloques de apoyo ── */
+.stack > * + * {
+  margin-top: 1.5rem;
+}
+.honest {
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.5rem;
+  background: var(--gold-soft);
+  font-size: 1rem;
+}
+.tool-card {
+  border: var(--border-heavy);
+  padding: 1.5rem;
+  background: var(--surface);
+}
+.tool-card h2 {
+  font-size: var(--text-h3);
+  margin-bottom: 0.75rem;
+}
+.migas-article {
+  max-width: 60rem;
+  margin-inline: auto;
+}

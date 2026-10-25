@@ -4,6 +4,7 @@
  * exactamente una por página indexable (B-CANONICA).
  */
 import '../styles/global.css';
+import '../styles/plantillas.css';
 import { MARCA, url } from '../lib/rutas.ts';
 import { ogAbsoluta, tituloDocumento } from '../lib/seo.ts';
 import Header from '../components/Header.astro';
@@ -13,7 +14,6 @@ import JsonLd from '../components/JsonLd.astro';
 interface Props {
   titulo: string;
   descripcion: string;
-  actual?: '/' | '/oros/';
   sufijo?: string;
   ogType?: string;
   ogImagen?: string;
@@ -24,7 +24,6 @@ interface Props {
 const {
   titulo,
   descripcion,
-  actual,
   sufijo = '',
   ogType = 'website',
   ogImagen = '/assets/og/4sotas.png',
@@ -61,7 +60,7 @@ const imagenSocial = ogAbsoluta(canonica, url(ogImagen));
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
-    <Header actual={actual} />
+    <Header />
     <main id="contenido" tabindex="-1">
       <slot />
     </main>
