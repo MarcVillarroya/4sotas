@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Sprite from './Sprite.astro';
 import { ruta, url, CANAL_YOUTUBE } from '../lib/rutas.ts';
 import { fechaLarga, fechaISO, duracionLegible } from '../lib/format.ts';
 interface Props {
@@ -10,53 +11,54 @@ interface Props {
   portal?: boolean;
 }
 const { destacado, recientes, iniciales, calculadora, portal = false } = Astro.props;
+const otrosVideos = recientes.filter(v => v.id !== destacado?.id);
 const miniatura = (v: CollectionEntry<'videos'>) => url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`);
 const srcset = (v: CollectionEntry<'videos'>) => `${miniatura(v).replace(/\.webp$/, '-320.webp')} 320w, ${miniatura(v)} 640w`;
 ---
 {destacado && <section class="wrap section v2-feature" aria-labelledby="destacado-titulo">
   <a class="v2-poster" href={url(ruta.video(destacado.data.slug))} aria-label={`Ver la ficha: ${destacado.data.titulo}`}>
     <img src={miniatura(destacado)} srcset={srcset(destacado)} sizes="(max-width: 1000px) 100vw, 640px" width="640" height="360" alt="" loading="lazy" decoding="async" />
-    <span class="v2-play" aria-hidden="true">▶</span>
+    <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
     <span class="v2-duration">{duracionLegible(destacado.data.duracion_iso)}</span>
   </a>
-  <div><p class="eyebrow">{portal ? 'Vídeo destacado' : 'Para empezar mirando'}</p>
+  <div><p class="eyebrow">{portal ? 'Vídeo destacado' : 'El vídeo para empezar'}</p>
     <h2 id="destacado-titulo">{destacado.data.titulo}</h2>
     <p class="muted"><time datetime={fechaISO(destacado.data.publicado_en)}>{fechaLarga(destacado.data.publicado_en)}</time></p>
     <p>{destacado.data.descripcion_corta}</p>
-    <a class="text-link" href={url(ruta.video(destacado.data.slug))}>Ver la ficha</a>
+    <a class="text-link" href={url(ruta.video(destacado.data.slug))}>Ver el vídeo y su contexto</a>
   </div>
 </section>}
 {calculadora && <section class="wrap section" aria-labelledby="calculadora-titulo">
   <div class="v2-tool">
-    <img src={url('/assets/v2/topic-inversion.svg')} width="80" height="80" alt="" loading="lazy" />
+    <Sprite familia="functional" nombre="calculadora" size={40} />
     <div><p class="eyebrow">Haz la cuenta tú</p><h2 id="calculadora-titulo">{calculadora.data.titulo}.</h2>
       <p>{calculadora.data.descripcion}</p>
       <p class="muted">Una hipótesis no es una promesa. Calcula en tu navegador, sin enviar tus cifras.</p>
       <a class="button" href={url(ruta.herramienta(calculadora.data.slug))}>Abrir la calculadora</a>
-      <p class="v2-note">Beta: fórmula, supuestos y límites en la misma página.</p>
+      <p class="v2-note">Fórmula, supuestos y límites, en la misma página.</p>
     </div>
   </div>
 </section>}
 {iniciales.length > 0 && <section class="wrap section" aria-labelledby="guias-titulo">
   <div class="section-head"><h2 id="guias-titulo">{portal ? 'Empieza por aquí.' : 'Tres puertas de entrada.'}</h2>
-    <a class="text-link" href={url(ruta.guias())}>Todas las guías</a></div>
-  <p class="muted">Entender primero. Cada guía explica sus límites y cita sus fuentes.</p>
+    <a class="text-link" href={url(ruta.guias())}>Ver todas las guías</a></div>
+  <p class="muted">Primero entender. Cada guía dice qué no cubre y de dónde sale cada dato.</p>
   <ol class="v2-guides">{iniciales.map(g => <li><a href={url(ruta.guia(g.data.slug))}>
     <h3>{g.data.titulo}</h3><p>{g.data.resumen}</p><span class="text-link">Leer la guía</span>
   </a></li>)}</ol>
 </section>}
-{recientes.length > 0 && <section class="wrap section" aria-labelledby="recientes-titulo">
+{otrosVideos.length > 0 && <section class="wrap section" aria-labelledby="recientes-titulo">
   <div class="section-head"><h2 id="recientes-titulo">{portal ? 'Últimos vídeos.' : 'Lo último del canal.'}</h2>
-    <a class="text-link" href={url(ruta.videos())}>Explorar todos los vídeos</a></div>
-  <ul class="v2-videos">{recientes.map(v => <li><a href={url(ruta.video(v.data.slug))}>
+    <a class="text-link" href={url(ruta.videos())}>Ver todos los vídeos</a></div>
+  <ul class="v2-videos">{otrosVideos.map(v => <li><a href={url(ruta.video(v.data.slug))}>
     <div class="v2-poster"><img src={miniatura(v)} srcset={srcset(v)} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" width="640" height="360" alt="" loading="lazy" decoding="async" />
       <span class="v2-duration">{duracionLegible(v.data.duracion_iso)}</span></div>
     <h3>{v.data.titulo}</h3><p class="muted"><time datetime={fechaISO(v.data.publicado_en)}>{fechaLarga(v.data.publicado_en)}</time></p>
-    <span class="text-link">Ver la ficha</span>
+    <span class="text-link">Ir a la ficha</span>
   </a></li>)}</ul>
 </section>}
 <section class="wrap section v2-channel" aria-labelledby="canal-titulo">
   <div><p class="eyebrow">Las cartas claras. Las decisiones, tuyas.</p><h2 id="canal-titulo">Sigue aprendiendo en el canal.</h2>
     <p>Economía cotidiana en vídeo, sin promesas de rentabilidad.</p></div>
-  <a class="button" href={CANAL_YOUTUBE} target="_blank" rel="noopener">Canal en YouTube <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
+  <a class="button" href={CANAL_YOUTUBE} target="_blank" rel="noopener"><Sprite familia="functional" nombre="youtube" size={24} /> Ir al canal de YouTube<span class="sr-only"> (se abre en otra pestaña)</span></a>
 </section>

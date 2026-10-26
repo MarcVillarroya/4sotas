@@ -17,6 +17,7 @@ const enlaces = [
   { href: '/oros/', etiqueta: SECCION, seccion: '/oros/' },
   { href: '/oros/videos/', etiqueta: 'Vídeos', seccion: '/oros/videos/' },
   { href: '/oros/herramientas/', etiqueta: 'Herramientas', seccion: '/oros/herramientas/' },
+  { href: '/oros/guias/', etiqueta: 'Guías', seccion: '/oros/guias/' },
   { href: '/oros/glosario/', etiqueta: 'Glosario', seccion: '/oros/glosario/' },
 ];
 
@@ -47,7 +48,7 @@ const enOros = rutaActual.startsWith('/oros/');
     <a class="header-channel" href={CANAL_YOUTUBE} target="_blank" rel="noopener"><span class="channel-long">Canal en </span>YouTube <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
     <details class="mobile-nav">
       <summary>Menú</summary>
-      <nav aria-label="Principal móvil">
+      <nav aria-label="Principal">
         {enlaces.map(e => <a href={url(e.href)} aria-current={rutaActual === e.href ? 'page' : undefined}>{e.etiqueta}</a>)}
       </nav>
     </details>
