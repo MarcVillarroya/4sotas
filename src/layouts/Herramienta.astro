@@ -81,12 +81,15 @@ const unidad = {
   </div>
 
   <div class="wrap page-intro">
-    <p class="eyebrow">Herramienta · {estados[ficha.data.estado_implementacion] ?? ficha.data.estado_implementacion}</p>
+    <p class="eyebrow">Herramienta · {ficha.data.tipo}</p>
     <h1>{ficha.data.titulo}</h1>
     <p class="lead">{ficha.data.descripcion}</p>
     <p class="muted">
-      Calcula en tu navegador: no hay envío de datos, ni cuentas, ni cookies. Los supuestos y los límites están
-      escritos más abajo, junto a la fórmula.
+      {
+        calcula
+          ? `${estados[ficha.data.estado_implementacion] ?? ficha.data.estado_implementacion} · Calcula en tu navegador: no hay envío de datos, ni cuentas, ni cookies. La fórmula, los supuestos y los límites están publicados en esta misma página.`
+          : 'En preparación: esta página publica la metodología que tendrá que cumplir el motor. Todavía no calcula nada.'
+      }
     </p>
   </div>
 

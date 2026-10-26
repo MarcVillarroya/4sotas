@@ -1,0 +1,966 @@
+{
+  "pages": [
+    {
+      "name": "calculadora",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 1,
+      "violations": []
+    },
+    {
+      "name": "guia-dca",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "calculadora",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 1,
+      "violations": []
+    },
+    {
+      "name": "guia-dca",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "calculadora",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 1,
+      "violations": []
+    },
+    {
+      "name": "guia-dca",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "live": 0,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "calculadora-1440-http",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-1440-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-1440-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-1440-cuatro-grupos",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-aria-live",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-cuatro-metricas",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-tabla-10-anios",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-grafico",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-dos-columnas",
+      "pass": true,
+      "extra": {
+        "form": {
+          "x": 80,
+          "y": 658.984375,
+          "width": 616,
+          "height": 1632.390625
+        },
+        "resultado": {
+          "x": 744,
+          "y": 658.984375,
+          "width": 616,
+          "height": 1111.0625
+        }
+      }
+    },
+    {
+      "name": "calculadora-1440-sin-jerga",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-enlace-guia",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-enlace-video",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-enlace-tae",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-enlace-dca",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-editar-retira",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-aviso-neutro",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-vector-v6",
+      "pass": true,
+      "extra": "81.160,90 €"
+    },
+    {
+      "name": "calculadora-1440-tabla-20",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-foco-resultado",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-aviso-oculto",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-error-aviso",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-error-mensaje",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-error-campo",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-aria-invalid",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-error-sin-cifras",
+      "pass": true
+    },
+    {
+      "name": "calculadora-1440-enter-calcula",
+      "pass": true,
+      "extra": "17.065,21 €"
+    },
+    {
+      "name": "calculadora-1440-valor-real",
+      "pass": true,
+      "extra": "12.698,12 €"
+    },
+    {
+      "name": "guia-dca-1440-http",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-1440-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-1440-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-1440-banda-calc",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-banda-enlace",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-sigue-aprendiendo",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-1440-tarjetas-4",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "guia-dca-1440-aside-sigue",
+      "pass": true
+    },
+    {
+      "name": "home-1440-http",
+      "pass": true
+    },
+    {
+      "name": "home-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "home-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "home-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-1440-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-1440-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-1440-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "oros-1440-http",
+      "pass": true
+    },
+    {
+      "name": "oros-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "oros-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "oros-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-1440-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-1440-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-1440-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-http",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-390-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-390-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-390-cuatro-grupos",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-aria-live",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-cuatro-metricas",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-tabla-10-anios",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-grafico",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-una-columna",
+      "pass": true,
+      "extra": {
+        "form": {
+          "x": 21.640625,
+          "y": 695,
+          "width": 346.703125,
+          "height": 2287.890625
+        },
+        "resultado": {
+          "x": 21.640625,
+          "y": 3014.890625,
+          "width": 346.703125,
+          "height": 1292.28125
+        }
+      }
+    },
+    {
+      "name": "calculadora-390-sin-jerga",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-enlace-guia",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-enlace-video",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-enlace-tae",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-enlace-dca",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-editar-retira",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-aviso-neutro",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-vector-v6",
+      "pass": true,
+      "extra": "81.160,90 €"
+    },
+    {
+      "name": "calculadora-390-tabla-20",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-foco-resultado",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-aviso-oculto",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-error-aviso",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-error-mensaje",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-error-campo",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-aria-invalid",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-error-sin-cifras",
+      "pass": true
+    },
+    {
+      "name": "calculadora-390-enter-calcula",
+      "pass": true,
+      "extra": "17.065,21 €"
+    },
+    {
+      "name": "calculadora-390-valor-real",
+      "pass": true,
+      "extra": "12.698,12 €"
+    },
+    {
+      "name": "guia-dca-390-http",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-390-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-390-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-390-banda-calc",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-banda-enlace",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-sigue-aprendiendo",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-390-tarjetas-4",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "guia-dca-390-aside-sigue",
+      "pass": true
+    },
+    {
+      "name": "home-390-http",
+      "pass": true
+    },
+    {
+      "name": "home-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "home-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "home-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-390-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-390-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-390-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "oros-390-http",
+      "pass": true
+    },
+    {
+      "name": "oros-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "oros-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "oros-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-390-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-390-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-390-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-http",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-320-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-320-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "calculadora-320-cuatro-grupos",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-aria-live",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-cuatro-metricas",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-tabla-10-anios",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-grafico",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-una-columna",
+      "pass": true,
+      "extra": {
+        "form": {
+          "x": 20,
+          "y": 857.375,
+          "width": 280,
+          "height": 2576.78125
+        },
+        "resultado": {
+          "x": 20,
+          "y": 3466.15625,
+          "width": 280,
+          "height": 1412.953125
+        }
+      }
+    },
+    {
+      "name": "calculadora-320-sin-jerga",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-enlace-guia",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-enlace-video",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-enlace-tae",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-enlace-dca",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-editar-retira",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-aviso-neutro",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-vector-v6",
+      "pass": true,
+      "extra": "81.160,90 €"
+    },
+    {
+      "name": "calculadora-320-tabla-20",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-foco-resultado",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-aviso-oculto",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-error-aviso",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-error-mensaje",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-error-campo",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-aria-invalid",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-error-sin-cifras",
+      "pass": true
+    },
+    {
+      "name": "calculadora-320-enter-calcula",
+      "pass": true,
+      "extra": "17.065,21 €"
+    },
+    {
+      "name": "calculadora-320-valor-real",
+      "pass": true,
+      "extra": "12.698,12 €"
+    },
+    {
+      "name": "guia-dca-320-http",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-320-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-320-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "guia-dca-320-banda-calc",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-banda-enlace",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-sigue-aprendiendo",
+      "pass": true
+    },
+    {
+      "name": "guia-dca-320-tarjetas-4",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "guia-dca-320-aside-sigue",
+      "pass": true
+    },
+    {
+      "name": "home-320-http",
+      "pass": true
+    },
+    {
+      "name": "home-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "home-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "home-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-320-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-320-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "home-320-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "oros-320-http",
+      "pass": true
+    },
+    {
+      "name": "oros-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "oros-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "oros-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-320-axe-sin-graves",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-320-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "oros-320-modulo-calculadora",
+      "pass": true
+    },
+    {
+      "name": "sin-js-1440-capital",
+      "pass": true
+    },
+    {
+      "name": "sin-js-1440-tabla",
+      "pass": true
+    },
+    {
+      "name": "sin-js-1440-enlaces",
+      "pass": true
+    },
+    {
+      "name": "sin-js-1440-noscript",
+      "pass": true
+    },
+    {
+      "name": "sin-js-guia-1440-banda",
+      "pass": true
+    },
+    {
+      "name": "sin-js-390-capital",
+      "pass": true
+    },
+    {
+      "name": "sin-js-390-tabla",
+      "pass": true
+    },
+    {
+      "name": "sin-js-390-enlaces",
+      "pass": true
+    },
+    {
+      "name": "sin-js-390-noscript",
+      "pass": true
+    },
+    {
+      "name": "sin-js-guia-390-banda",
+      "pass": true
+    }
+  ],
+  "browser": "156.0.8078.4",
+  "failures": 0
+}

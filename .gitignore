@@ -28,3 +28,7 @@ qa/f1-revision/cache/
 
 # capturas de QA (pesadas; se regeneran con qa/f1-integral/browser-qa.mjs)
 qa/**/evidence*/
+
+# Capturas por ronda de QA V2 (pesadas; se regeneran con scripts/qa-v2-*.mjs).
+# Solo el informe JSON de cada ronda va al repo.
+qa/v2-*/*.png

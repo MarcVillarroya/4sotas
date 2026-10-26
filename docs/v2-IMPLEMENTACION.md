@@ -107,3 +107,52 @@ El navegador elige 640 w en la mayoría de viewports (slot de 406 px a 1440 y 33
 - `embedUrl` se mantiene en VideoObject para las 11 piezas por coherencia del modelo; en `O1V9_of7g1w` la página no ofrece inserción y así se explica al visitante. No se afirma que ese vídeo sea reproducible embebido.
 - Solo Chromium; sin Safari/Firefox ni lector de pantalla. axe no demuestra accesibilidad completa.
 - Las capturas no equivalen a aprobación del arte por el propietario. Sin push ni despliegue.
+
+# Implementación V2-F · calculadora protagonista y conexiones contextuales
+
+## Alcance y decisiones
+
+- **Motor intacto.** No se ha tocado `src/lib/calculadora.ts`, sus fórmulas, límites ni los vectores de `tests/calculadora.ts`. El cambio es de presentación, copy, accesibilidad y enlaces.
+- **Presentación separada y probada.** Todo el texto visible (métricas, resumen del caso, avisos, supuestos, destinos educativos) vive en `src/lib/calculadora-presentacion.ts`, que solo formatea y elige palabras: no calcula nada. Así el texto se prueba sin navegador y no hay un segundo motor.
+- **Apertura en una frase.** Bajo el H1, la calculadora declara qué calcula y para qué antes del primer campo, y separa lo aportado de lo generado. El eyebrow pasa a «Herramienta · calculadora» y el estado (Beta) se explica en el microcopy, no en la etiqueta.
+- **Formulario agrupado.** Cuatro `fieldset` numerados: con cuánto empiezas, durante cuánto tiempo, la rentabilidad que quieres probar y el bloque opcional de euros de hoy. Unidades visibles en la etiqueta (`€`, `€ por periodo`, `%`) y ayuda por campo con el rango real del motor.
+- **Resultado legible.** Cifra grande en números tabulares sobre superficie teal solo cuando hay resultado válido; cuatro métricas con su ayuda (capital aportado, interés generado, tasa por periodo, euros de hoy), frase de honestidad y gráfico. La tabla anual sigue siendo la fuente de verdad del dato.
+- **`aria-live` de verdad.** `#estado-calculo` es una región `role="status"` `aria-live="polite"` que anuncia el resultado con las tres cifras, y también el motivo cuando no se puede calcular. Al enviar, el foco pasa al encabezado del resultado.
+- **Estado vacío y erróneo comprensibles.** Tras editar, la cifra se retira y aparece un aviso neutro («los datos han cambiado»). Con datos inválidos, el aviso es visible, con tono de error, dice qué falla en una frase y marca `aria-invalid` en el control real: el error de plazo se asocia a «Años», y el aviso de plazo vive junto a los campos de plazo.
+- **Enlaces educativos desde el resultado.** Tarjetas a la guía `dca-interes-compuesto`, al vídeo `deuda-o-inversion-1000`, al término TAE y al término DCA. Los títulos salen de la colección: si una entrada desaparece, la tarjeta no se pinta. No se inventa un término «interés compuesto» que no existe en el glosario.
+- **Supuestos en lenguaje de usuario.** Un `details` «Qué asume esta cifra» explica hipótesis constante, reinversión, aportación fija, ausencia de comisiones e inflación como lectura. La metodología técnica (fórmula, parámetros, límites declarados) sigue en su sección.
+- **Conexión con el resto del sitio.** El módulo de la calculadora de Home y Oros ya apuntaba a la herramienta (V2-D): se verifica, no se duplica. La guía estrena un bloque «Calcula tu caso» justo después del encabezado y el pie de artículo pasa de «Relacionados» a «Sigue aprendiendo» con tarjetas de tipo (un vídeo, una herramienta y hasta tres términos), sin repetir «Vídeo:» en cada línea y sin muro de enlaces.
+
+## Archivos
+
+- `src/lib/calculadora-presentacion.ts` (nuevo): resumen del caso, métricas, filas, avisos, supuestos y destinos educativos.
+- `src/components/CalculadoraInteresCompuesto.astro`: formulario agrupado, resultado, `aria-live`, avisos y enlaces.
+- `src/layouts/Herramienta.astro`: eyebrow por tipo de herramienta y microcopy con el estado real.
+- `src/pages/oros/guias/[slug].astro`: bloque «Calcula tu caso» y módulo «Sigue aprendiendo» con tarjetas.
+- `src/styles/v2.css` (bloque V2-F): grupos del formulario, superficie teal del resultado, avisos, supuestos, tarjetas y banda de la guía.
+- `tests/calculadora-presentacion.test.ts` (nuevo, 11 tests), `scripts/qa-v2-f.mjs`.
+- Evidencias: `qa/v2-f/report.json`, `qa/v2-f/{calculadora,guia-dca,home,oros}-{1440,390}.png`.
+
+## Verificación de que lo visible sigue cuadrando con los vectores
+
+- Las cifras esperadas de la presentación **no se copiaron del motor**: para el caso por defecto (1.000 €, 100 €/mes, 5 % anual, 10 años) se dedujeron fuera del código con `decimal.Decimal` a 40 dígitos (capital final `17065,210756924033`; año 4 `6505,140572475548`), y para V6/V13 se reutilizan las cifras ya publicadas.
+- La prueba compara el texto exacto que pinta la página: `17.065,21 €` de capital final, `13.000,00 €` aportados, `4065,21 €` de intereses, `0,4074 %` de tasa por periodo, `81.160,90 €` y `44.936,82 €` en los casos V6 y V13.
+- Además, la prueba lee el HTML construido (`dist/`) y comprueba que esas mismas cifras, los cuatro ids de métrica, el `aria-live` y los enlaces educativos están en la página publicada; si falta el `dist`, se salta en lugar de fingir que pasó.
+- El QA de navegador recalcula por la interfaz el vector V6 (`200 €/mes`, 20 años) y exige `81.160,90 €`, y el caso por defecto con Enter (`17.065,21 €`).
+
+## Validación ejecutada
+
+- `npm run test:calculadora`: 27/27 OK, motor y vectores intactos.
+- `npm test`: 140/140 OK (11 nuevos de presentación).
+- `npm run check`: 0 errores, 0 warnings, 5 hints preexistentes.
+- `npm run build`: 50 HTML.
+- `npm run validate`: 0 bloqueantes, 1 aviso previo `W-VIDEO-SIN-FICHA` (`LL1EJttJPrs`).
+- `node scripts/qa-v2-f.mjs`: Chromium 156.0.8078.4; 12 vistas (calculadora, guía, home y Oros a 1440/390/320); 187 checks; 0 fallos; 0 violaciones axe (wcag2a/2aa/21aa/22aa); sin overflow; un H1; dos columnas a 1440 y una a 390/320; vector V6 por la interfaz; estado vacío y erróneo; foco en el resultado; Enter calcula; sin peticiones de terceros; sin errores de consola; sin JavaScript se mantiene el ejemplo, la tabla y los cuatro enlaces.
+- `git diff --check`: OK.
+
+## Límites honestos
+
+- Solo Chromium; axe no demuestra accesibilidad completa y no se ha probado con lector de pantalla ni con Safari/Firefox.
+- El gráfico es SVG de barras decorativo-informativo: la tabla es la fuente de verdad y el SVG no se anuncia como dato único.
+- La prueba del HTML depende de un `dist/` recién construido; con un `dist` viejo falla (es intencionado) o se salta si no existe.
+- Las capturas no equivalen a aprobación de arte por el propietario. Sin push ni despliegue.

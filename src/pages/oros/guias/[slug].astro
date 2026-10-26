@@ -11,7 +11,7 @@ import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { articulo as articuloJsonLd, grafo, sitioWeb } from '../../../lib/jsonld.ts';
-import { fechaISO, fechaLarga } from '../../../lib/format.ts';
+import { duracionLegible, fechaISO, fechaLarga } from '../../../lib/format.ts';
 
 interface Props {
   articulo: CollectionEntry<'articulos'>;
@@ -82,7 +82,19 @@ const jsonLd = grafo([
 
 const secciones = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const hayFuentes = fuentesPropias.length > 0;
-const hayRelacionados = vids.length > 0 || terminos.length > 0 || tools.length > 0 || temasPropios.length > 0;
+
+/**
+ * Módulo «Sigue aprendiendo»: un vídeo, una herramienta y hasta tres términos, como máximo,
+ * en tarjetas con etiqueta de tipo. Lo que sobre (una guía puede declarar tres vídeos) se
+ * queda como enlaces compactos al final, para no perder navegación ni convertir el pie en
+ * un muro de tarjetas.
+ */
+const videoPrincipal = vids[0];
+const videosExtra = vids.slice(1);
+const herramientaPrincipal = tools[0];
+const terminosVisibles = terminos.slice(0, 3);
+const hayRelacionados =
+  Boolean(videoPrincipal) || Boolean(herramientaPrincipal) || terminosVisibles.length > 0 || temasPropios.length > 0;
 ---
 
 <Base
@@ -127,13 +139,29 @@ const hayRelacionados = vids.length > 0 || terminos.length > 0 || tools.length >
     </div>
   </header>
 
+  {
+    herramientaPrincipal && (
+      <section class="wrap v2-calc-band" aria-labelledby="calcula-tu-caso">
+        <div>
+          <p class="eyebrow">Herramienta</p>
+          <h2 id="calcula-tu-caso">Calcula tu caso.</h2>
+          <p>
+            Esta guía explica el mecanismo; la calculadora lo aplica a tus cifras, en tu navegador y sin enviar nada.
+            Fórmula, supuestos y límites, en la misma página.
+          </p>
+        </div>
+        <a class="button" href={url(ruta.herramienta(herramientaPrincipal.data.slug))}>Calcular mi caso</a>
+      </section>
+    )
+  }
+
   <div class="wrap article-layout">
     <aside class="route-map" aria-labelledby="indice-guia">
       <h2 id="indice-guia" style="font-size:var(--text-h3)">En esta guía</h2>
       {secciones.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
       <a href="#supuestos">Supuestos y límites</a>
       {hayFuentes && <a href="#fuentes">Fuentes ({fuentesPropias.length})</a>}
-      {hayRelacionados && <a href="#relacionados">Relacionados</a>}
+      {hayRelacionados && <a href="#relacionados">Sigue aprendiendo</a>}
     </aside>
 
     <article class="prose" aria-label="Cuerpo de la guía">
@@ -197,34 +225,54 @@ const hayRelacionados = vids.length > 0 || terminos.length > 0 || tools.length >
 
       {
         hayRelacionados && (
-          <section id="relacionados">
-            <h2>Relacionados.</h2>
-            <ul class="link-list">
-              {temasPropios.map((t) => (
+          <section id="relacionados" aria-labelledby="sigue-aprendiendo">
+            <h2 id="sigue-aprendiendo">Sigue aprendiendo.</h2>
+            <p class="muted">
+              Tres formas de seguir: si prefieres verlo, probarlo o consultar el término exacto.
+            </p>
+            <ul class="v2-learn">
+              {videoPrincipal && (
                 <li>
-                  <a href={url(ruta.tema(t.data.slug))}>Tema: {t.data.titulo}</a>
-                  <p>{t.data.descripcion_corta}</p>
+                  <p class="v2-learn-tipo">Vídeo · {duracionLegible(videoPrincipal.data.duracion_iso)}</p>
+                  <h3>
+                    <a href={url(ruta.video(videoPrincipal.data.slug))}>{videoPrincipal.data.titulo}</a>
+                  </h3>
+                  <p>{videoPrincipal.data.descripcion_corta}</p>
                 </li>
-              ))}
-              {vids.map((v) => (
+              )}
+              {herramientaPrincipal && (
                 <li>
-                  <a href={url(ruta.video(v.data.slug))}>Vídeo: {v.data.titulo}</a>
-                  <p>{v.data.descripcion_corta}</p>
+                  <p class="v2-learn-tipo">Herramienta</p>
+                  <h3>
+                    <a href={url(ruta.herramienta(herramientaPrincipal.data.slug))}>{herramientaPrincipal.data.titulo}</a>
+                  </h3>
+                  <p>{herramientaPrincipal.data.descripcion}</p>
                 </li>
-              ))}
-              {tools.map((t) => (
+              )}
+              {terminosVisibles.map((t) => (
                 <li>
-                  <a href={url(ruta.herramienta(t.data.slug))}>Herramienta: {t.data.titulo}</a>
-                  <p>{t.data.descripcion}</p>
-                </li>
-              ))}
-              {terminos.map((t) => (
-                <li>
-                  <a href={url(ruta.termino(t.data.slug))}>Glosario: {t.data.termino}</a>
+                  <p class="v2-learn-tipo">Glosario</p>
+                  <h3>
+                    <a href={url(ruta.termino(t.data.slug))}>{t.data.termino}</a>
+                  </h3>
                   <p>{t.data.definicion_corta}</p>
                 </li>
               ))}
             </ul>
+            {(temasPropios.length > 0 || videosExtra.length > 0) && (
+              <ul class="v2-learn-more">
+                {temasPropios.map((t) => (
+                  <li>
+                    <a href={url(ruta.tema(t.data.slug))}>Tema: {t.data.titulo}</a>
+                  </li>
+                ))}
+                {videosExtra.map((v) => (
+                  <li>
+                    <a href={url(ruta.video(v.data.slug))}>Vídeo: {v.data.titulo}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
         )
       }
