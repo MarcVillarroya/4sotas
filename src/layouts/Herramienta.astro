@@ -26,9 +26,9 @@ interface Props {
 const { ficha, calcula = false } = Astro.props;
 
 const estados: Record<string, string> = {
-  'no-implementada': 'En preparación',
-  beta: 'Beta',
-  estable: 'Estable',
+  'no-implementada': 'Todavía no calcula',
+  beta: 'Calcula aquí',
+  estable: 'Disponible',
 };
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
@@ -81,14 +81,14 @@ const unidad = {
   </div>
 
   <div class="wrap page-intro">
-    <p class="eyebrow">Herramienta · {ficha.data.tipo}</p>
+    <p class="eyebrow">Herramienta · {SECCION}</p>
     <h1>{ficha.data.titulo}</h1>
     <p class="lead">{ficha.data.descripcion}</p>
     <p class="muted">
       {
         calcula
-          ? `${estados[ficha.data.estado_implementacion] ?? ficha.data.estado_implementacion} · Calcula en tu navegador: no hay envío de datos, ni cuentas, ni cookies. La fórmula, los supuestos y los límites están publicados en esta misma página.`
-          : 'En preparación: esta página publica la metodología que tendrá que cumplir el motor. Todavía no calcula nada.'
+          ? `${estados[ficha.data.estado_implementacion] ?? ficha.data.estado_implementacion} · Calcula en tu navegador: no se envía nada, no hay cuentas ni cookies. Fórmula, supuestos y límites, en esta misma página.`
+          : 'Todavía no calcula: aquí explicamos cómo funcionará y con qué límites.'
       }
     </p>
   </div>
@@ -111,7 +111,7 @@ const unidad = {
               {
                 calcula
                   ? `El resultado aparece en ${unidad[ficha.data.unidad_salida]} y se redondea al presentar.`
-                  : 'La interfaz no calcula nada todavía: el motor y sus pruebas llegan en su propia tarjeta. Esta página declara la metodología, no resultados.'
+                  : 'Todavía no hay resultados: esta página explica el método, no calcula.'
               }
             </p>
           </section>
@@ -130,6 +130,8 @@ const unidad = {
       {Astro.slots.has('ejemplos') && <a href="#ejemplos">Ejemplos</a>}
       <a href="#revision">Revisión</a>
       <a href={url(ruta.herramientas())}>Todas las herramientas</a>
+      <a href={url(ruta.guias())}>Ver las guías</a>
+      <a href={url(ruta.videos())}>Ver los vídeos</a>
     </aside>
 
     <div class="prose">
@@ -137,8 +139,7 @@ const unidad = {
         <h2>Fórmula.</h2>
         <p>{ficha.data.formula}</p>
         <p class="honest">
-          La fórmula es la que ejecuta el motor, no una descripción aproximada. Si el motor y esta frase discrepan, el
-          fallo es del sitio.
+          Esta es la fórmula exacta que aplica la calculadora, no un resumen.
         </p>
       </section>
 
@@ -146,7 +147,7 @@ const unidad = {
         <h2>Parámetros.</h2>
         <div class="table-wrap">
           <table>
-            <caption>Entradas de la herramienta, con tipo y rango declarados en la ficha.</caption>
+            <caption>Qué admite cada campo y dentro de qué valores.</caption>
             <thead>
               <tr>
                 <th scope="col">Parámetro</th>
@@ -201,11 +202,12 @@ const unidad = {
       <section id="revision">
         <h2>Revisión.</h2>
         <p>
-          Versión del motor: {ficha.data.version_motor}. Pruebas: <code>{ficha.data.tests}</code>.
+          Versión de la fórmula: {ficha.data.version_motor}.
         </p>
         <p>
-          Revisión factual: {ficha.data.revisado_factual ? fechaLarga(ficha.data.revisado_factual) : 'no registrada'}.
-          Los cambios de fórmula se anotan aquí y suben la versión del motor.
+          Revisado por última vez:{' '}
+          {ficha.data.revisado_factual ? fechaLarga(ficha.data.revisado_factual) : 'todavía sin fecha'}. Si la fórmula
+          cambia, se anota aquí y sube el número de versión.
         </p>
       </section>
     </div>

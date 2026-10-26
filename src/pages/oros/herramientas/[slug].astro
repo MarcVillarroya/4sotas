@@ -34,21 +34,18 @@ const esCalculadora = ficha.data.slug === 'interes-compuesto';
     <CalculadoraInteresCompuesto ficha={ficha} />
   ) : (
     <Herramienta ficha={ficha} calcula={calcula}>
-      <p class="eyebrow">Interfaz</p>
       {calcula ? (
         <p>
-          Esta herramienta está marcada como <strong>{ficha.data.estado_implementacion}</strong> en la ficha, pero su
-          interfaz interactiva se publica en su propia página. Desde aquí puedes revisar la metodología completa antes de
-          usarla.
+          Esta herramienta se calcula en su propia página. Aquí está la metodología completa, por si quieres revisarla
+          antes de usarla.
         </p>
       ) : (
         <p>
-          Esta herramienta está en preparación: no hay formulario porque no hay motor que responder. Lo que sí está
-          publicado es la metodología que el motor tendrá que cumplir.
+          Todavía no hay formulario porque todavía no hay cálculo. Aquí está la metodología que seguirá cuando lo haya.
         </p>
       )}
       <p class="hint">
-        Nada de lo que escribas aquí se envía a un servidor. La página no incluye analítica ni peticiones de terceros.
+        Nada de lo que escribas aquí se envía a ningún sitio: esta página no usa analítica ni carga nada de terceros.
       </p>
     </Herramienta>
   )

@@ -121,7 +121,7 @@ test('el aviso de error dice qué falla sin hablar de campos ni de vectores', ()
   assert.equal(respuesta.ok, false);
   if (respuesta.ok) throw new Error('inaccesible');
   const aviso = textoError(respuesta.errores);
-  assert.match(aviso, /^No se puede calcular todavía: /);
+  assert.match(aviso, /^Para calcular, revisa esto: /);
   assert.match(aviso, /al menos un periodo/);
   assert.ok(!/vector|campo|build/i.test(aviso), 'sin jerga de proceso');
 

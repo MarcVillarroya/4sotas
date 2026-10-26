@@ -11,12 +11,14 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FacadeVideo from '../../../components/FacadeVideo.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { MARCA, SECCION, embedYouTube, ruta, url } from '../../../lib/rutas.ts';
 import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { grafo, sitioWeb, videoObjeto } from '../../../lib/jsonld.ts';
 import { duracionLegible, fechaISO, fechaLarga, marcaTiempo } from '../../../lib/format.ts';
-import { SIZES_PORTADA, duracionReloj, formato, srcsetMiniatura } from '../../../lib/videos.ts';
+import { SIZES_PORTADA, duracionReloj, formatoLegible, srcsetMiniatura } from '../../../lib/videos.ts';
+import { iconoDeCluster } from '../../../lib/iconos.ts';
 
 interface Props {
   video: CollectionEntry<'videos'>;
@@ -85,9 +87,19 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const duracion = duracionLegible(video.data.duracion_iso);
 const reloj = duracionReloj(video.data.duracion_iso);
-const etiquetaFormato = formato(video.data.duracion_iso);
+const etiquetaFormato = formatoLegible(video.data.duracion_iso);
 const miniLocal = video.data.miniatura_local ?? `/assets/videos/${video.data.youtube_id}.webp`;
 const insertable = video.data.insercion !== 'deshabilitada';
+
+/** Objeto temático del primer tema del vídeo: ilustra de qué va sin repetir el personaje en 11 fichas. */
+const iconoTema = temasPropios[0] ? iconoDeCluster(temasPropios[0].data.cluster) : null;
+
+/** Texto del enlace de continuación: dice qué encontrará, no «ver más». */
+const ETIQUETA_CONTINUACION: Record<string, string> = {
+  Guía: 'Leer la guía completa',
+  Calculadora: 'Abrir la calculadora',
+  Vídeo: 'Ver la ficha del vídeo relacionado',
+};
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -164,11 +176,11 @@ const jsonLd = grafo([
         {
           continuaciones[0] && (
             <a class="text-link" href={continuaciones[0].href}>
-              Abrir {continuaciones[0].tipo.toLowerCase()}
+              {ETIQUETA_CONTINUACION[continuaciones[0].tipo] ?? 'Seguir por aquí'}
             </a>
           )
         }
-        <img src={url('/assets/v2/sota-read.svg')} width="80" height="112" alt="" />
+        {iconoTema && <Sprite familia="topics" nombre={iconoTema} size={40} />}
       </aside>
     </div>
   </div>
@@ -178,16 +190,15 @@ const jsonLd = grafo([
       <h2 id="contexto-titulo">De qué trata.</h2>
       <p>{video.data.descripcion_corta}</p>
       <p class="v2-meta">
-        El resumen es editorial: describe el tema de la pieza, no cada minuto. El título, la duración y la fecha son los
+        Este resumen cuenta de qué va el vídeo, no lo que dice cada minuto. El título, la duración y la fecha son los
         del vídeo publicado en el canal.
       </p>
       {
         video.data.transcripcion ? (
-          <p>La transcripción revisada se publica en esta misma página.</p>
+          <p>La transcripción revisada está más abajo, en esta misma página.</p>
         ) : (
           <p class="honest">
-            Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no
-            cada minuto del vídeo.
+            Este vídeo no tiene transcripción. El resumen de arriba cuenta el tema, no cada minuto.
           </p>
         )
       }
@@ -213,13 +224,19 @@ const jsonLd = grafo([
         <section id="seguir" aria-labelledby="seguir-titulo">
           <h2 id="seguir-titulo">Sigue aprendiendo.</h2>
           <p class="v2-meta">
-            Relaciones declaradas en el contenido: guías que citan este vídeo, la calculadora de su tema y piezas
-            enlazadas del catálogo.
+            Guías que citan este vídeo, la calculadora de su tema y otros vídeos que lo acompañan.
           </p>
           <ul class="v2-learn">
             {continuaciones.map((c) => (
               <li>
-                <p class="v2-learn-tipo">{c.tipo}</p>
+                <p class="v2-learn-tipo">
+                  <Sprite
+                    familia="functional"
+                    nombre={c.tipo === 'Guía' ? 'guia' : c.tipo === 'Calculadora' ? 'calculadora' : 'video'}
+                    size={24}
+                  />
+                  {c.tipo}
+                </p>
                 <h3>
                   <a href={c.href}>{c.titulo}</a>
                 </h3>
@@ -234,18 +251,17 @@ const jsonLd = grafo([
     <section id="ficha" aria-labelledby="ficha-titulo">
       <h2 id="ficha-titulo">Sobre esta ficha.</h2>
       <p>
-        Última revisión editorial:{' '}
+        Revisado por última vez el{' '}
         <time datetime={fechaISO(video.data.revisado_factual ?? video.data.verificado_en)}>
           {fechaLarga(video.data.revisado_factual ?? video.data.verificado_en)}
-        </time>. La fuente de los datos de la pieza es el canal de {SECCION} en YouTube; los resúmenes y las relaciones con
-        guías y calculadoras son de esta casa.
+        </time>. Los datos del vídeo vienen del canal de {SECCION} en YouTube; el resumen y las relaciones con guías y
+        calculadoras son nuestros.
       </p>
       <p>
-        Si una pieza deja de ser pública, su ficha desaparece del sitio en la siguiente actualización en lugar de
-        quedarse publicada sin contenido real.
+        Si un vídeo deja de estar disponible, su ficha desaparece de aquí.
       </p>
       <p>
-        <a class="text-link" href={url(ruta.videos())}>Volver al catálogo de vídeos</a>
+        <a class="text-link" href={url(ruta.videos())}>Volver a todos los vídeos</a>
       </p>
     </section>
   </div>

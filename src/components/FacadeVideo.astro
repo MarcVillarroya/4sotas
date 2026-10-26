@@ -10,6 +10,7 @@
  * «Ver en YouTube» es un enlace normal: funciona sin JavaScript y nunca depende del iframe.
  */
 import { verEnYouTube } from '../lib/rutas.ts';
+import Sprite from './Sprite.astro';
 
 interface Props {
   youtubeId: string;
@@ -49,7 +50,7 @@ const enlace = verEnYouTube(youtubeId);
       <img src={miniatura} srcset={miniaturaSrcset} sizes={sizes} width="640" height="360" alt="" decoding="async" />
       {
         insertable ? (
-          <span class="v2-play" aria-hidden="true">▶</span>
+          <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
         ) : (
           <span class="v2-badge">Solo en YouTube</span>
         )
@@ -62,7 +63,7 @@ const enlace = verEnYouTube(youtubeId);
       <div class="v2-notice" data-aviso>
         <p>
           <strong>Este vídeo no se puede ver dentro de esta página.</strong> El canal no permite la reproducción
-          insertada en otros sitios. Se ve completo en YouTube, con la misma cuenta de siempre.
+          incrustada en otros sitios. Se ve completo en YouTube, como siempre.
         </p>
       </div>
     )
@@ -76,13 +77,15 @@ const enlace = verEnYouTube(youtubeId);
             Reproducir aquí
           </button>
           <a class="button secondary" data-youtube href={enlace} rel="noopener">
-            Ver en YouTube <span aria-hidden="true">↗</span>
+            <Sprite familia="functional" nombre="youtube" size={24} /> Ver en YouTube
+            <span aria-hidden="true">↗</span>
             <span class="sr-only"> (se abre en otra pestaña)</span>
           </a>
         </>
       ) : (
         <a class="button" data-youtube href={enlace} rel="noopener">
-          Ver en YouTube <span aria-hidden="true">↗</span>
+          <Sprite familia="functional" nombre="youtube" size={24} /> Ver en YouTube
+          <span aria-hidden="true">↗</span>
           <span class="sr-only"> (se abre en otra pestaña)</span>
         </a>
       )
@@ -93,13 +96,11 @@ const enlace = verEnYouTube(youtubeId);
     {
       insertable ? (
         <>
-          El reproductor se carga desde YouTube solo si lo pides; hasta entonces esta página no le pide nada. El
-          enlace directo funciona sin JavaScript y sin reproductor.
+          El reproductor solo se carga si lo pides; hasta entonces esta página no pide nada a YouTube. El enlace directo funciona siempre, también sin reproductor.
         </>
       ) : (
         <>
-          La ficha conserva el título, la duración y la descripción del vídeo. La reproducción ocurre en YouTube, donde
-          se aplican sus condiciones.
+          Aquí tienes el título, la duración y el resumen. La reproducción ocurre en YouTube, con sus condiciones.
         </>
       )
     }

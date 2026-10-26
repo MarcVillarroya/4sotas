@@ -1,0 +1,14 @@
+---
+import { url } from '../lib/rutas.ts';
+interface Props {
+  familia: 'topics' | 'functional' | 'emblems' | 'decor' | 'sota-oros';
+  nombre: string;
+  size?: 24 | 32 | 40 | 64 | 128;
+  personaje?: boolean;
+  inmediato?: boolean;
+}
+const { familia, nombre, size = 40, personaje = false, inmediato = false } = Astro.props;
+const archivo = personaje || familia === 'decor' || size === 64 ? nombre : `${nombre}-${size}`;
+---
+<img class:list={['sprite', { 'sprite-personaje': personaje }]} src={url(`/assets/v2.1/${familia}/${archivo}.svg`)} width={personaje ? 128 : size} height={personaje ? 160 : size} alt="" loading={inmediato ? 'eager' : 'lazy'} decoding="async" />
+<style>.sprite{display:inline-block;flex:none;image-rendering:pixelated;max-width:none}</style>

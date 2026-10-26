@@ -20,7 +20,7 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Guías';
 const descripcion =
-  'Guías y explicadores de Sota de Oros sobre nómina, IRPF, inflación, ahorro y vivienda: qué dicen los datos, con qué fuente y con qué límites.';
+  'Guías de Sota de Oros sobre nómina, IRPF, inflación, ahorro y vivienda: qué dicen los datos, con qué fuente y con qué límites.';
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -49,7 +49,7 @@ const jsonLd = grafo([
   </div>
 
   <div class="wrap page-intro">
-    <p class="eyebrow">{SECCION} · explicadores</p>
+    <p class="eyebrow">{SECCION} · guías</p>
     <h1>Guías.</h1>
     <p class="lead">
       Cada guía responde primero, explica después y separa el dato con fuente del ejemplo y de la hipótesis.
@@ -63,11 +63,11 @@ const jsonLd = grafo([
         <div class="empty">
           <h2>Ninguna guía publicada todavía.</h2>
           <p>
-            Hay guías redactadas en estado de revisión: no aparecen aquí hasta registrar revisión factual, fuentes
-            fechadas y descripción editorial. Preferimos un índice vacío a un enlace que no existe.
+            Estamos escribiendo las primeras. Cada una sale cuando sus datos están comprobados y sus fuentes fechadas:
+            preferimos un índice vacío a un enlace que no lleva a nada.
           </p>
           <p>
-            <a class="text-link" href={url(ruta.temas())}>Ver los temas troncales en preparación</a>
+            <a class="text-link" href={url(ruta.temas())}>Ver los temas</a>
           </p>
         </div>
       ) : (

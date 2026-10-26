@@ -7,6 +7,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
@@ -73,7 +74,12 @@ const recorrido = [
     titulo: t.data.titulo,
     detalle: t.data.descripcion,
     ruta: ruta.herramienta(t.data.slug),
-    extra: t.data.estado_implementacion === 'no-implementada' ? 'En preparación' : t.data.estado_implementacion,
+    extra:
+      t.data.estado_implementacion === 'no-implementada'
+        ? 'Todavía no calcula'
+        : t.data.estado_implementacion === 'beta'
+          ? 'Calcula aquí'
+          : 'Disponible',
   })),
 ];
 
@@ -82,7 +88,7 @@ const pendiente = !pilar && vids.length === 0 && tools.length === 0;
 /** Mapa del tema: sale de lo que la página realmente contiene, sin huecos numerados. */
 const mapa = [
   { id: 'introduccion', titulo: 'Introducción' },
-  { id: 'recorrido', titulo: 'Orden recomendado' },
+  { id: 'recorrido', titulo: 'En este orden' },
   ...(tools.length > 0 ? [{ id: 'herramientas', titulo: 'Herramientas' }] : []),
   ...(relacionados.length > 0 ? [{ id: 'relacionados', titulo: 'Temas relacionados' }] : []),
 ];
@@ -115,17 +121,17 @@ const jsonLd = grafo([
   </div>
 
   <div class="wrap page-intro">
-    <p class="eyebrow">Tema {String(tema.data.orden).padStart(2, '0')} · {tema.data.cluster}</p>
+    <p class="eyebrow">Tema {String(tema.data.orden).padStart(2, '0')}</p>
     <h1>{tema.data.titulo}.</h1>
     <p class="lead">{tema.data.descripcion_corta}</p>
     <p class="muted">
-      Página troncal del tema. El orden de abajo es el recomendado, no una tabla de contenidos alfabética.
+      El orden de abajo está pensado para leerlo de arriba abajo: primero lo que explica, después lo que se practica.
     </p>
   </div>
 
   <div class="wrap topic-layout">
     <aside class="route-map" aria-labelledby="mapa-tema">
-      <h2 id="mapa-tema" style="font-size:var(--text-h3)">Mapa del tema</h2>
+      <h2 id="mapa-tema" style="font-size:var(--text-h3)">En este tema</h2>
       {
         mapa.map((paso, i) => (
           <a href={`#${paso.id}`}>
@@ -162,15 +168,21 @@ const jsonLd = grafo([
         {
           pendiente ? (
             <p class="honest">
-              Contenido previsto: este tema todavía no tiene guía troncal, vídeos ni herramientas publicadas que se
-              puedan enlazar sin inventar procedencia.
+              Estamos escribiendo este tema. Todavía no hay guía, vídeos ni calculadora que podamos enlazar aquí.
             </p>
           ) : (
             <ol class="steps">
               {recorrido.map((paso) => (
                 <li>
                   <div>
-                    <p class="eyebrow">{paso.tipo}</p>
+                    <p class="eyebrow">
+                      <Sprite
+                        familia="functional"
+                        nombre={paso.tipo === 'Guía' ? 'guia' : paso.tipo === 'Herramienta' ? 'calculadora' : 'video'}
+                        size={24}
+                      />
+                      {paso.tipo}
+                    </p>
                     <h3>
                       <a href={url(paso.ruta)}>{paso.titulo}</a>
                     </h3>
@@ -196,7 +208,11 @@ const jsonLd = grafo([
                   <a href={url(ruta.herramienta(t.data.slug))}>
                     {t.data.titulo}
                     <span class="orden">
-                      {t.data.estado_implementacion === 'no-implementada' ? 'En preparación' : t.data.estado_implementacion}
+                      {t.data.estado_implementacion === 'no-implementada'
+                        ? 'Todavía no calcula'
+                        : t.data.estado_implementacion === 'beta'
+                          ? 'Calcula aquí'
+                          : 'Disponible'}
                     </span>
                   </a>
                   <p>{t.data.descripcion}</p>
