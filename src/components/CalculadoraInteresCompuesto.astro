@@ -1,0 +1,489 @@
+---
+/**
+ * Calculadora de interés compuesto · interfaz interactiva.
+ *
+ * Se renderiza desde `pages/oros/herramientas/[slug].astro` cuando la ficha es la de
+ * interés compuesto. La ruta no es un archivo fijo a propósito: así la página aparece
+ * exactamente cuando la ficha es visible (`visibles()`), igual que el resto de plantillas,
+ * y un borrador no puede filtrarse al build público.
+ *
+ * La página es HTML estático: el resultado inicial se calcula en el build con el mismo
+ * motor puro (`src/lib/calculadora.ts`), de modo que sin JavaScript se ve un ejemplo
+ * completo, la tabla y la metodología. El `<script>` solo recalcula al cambiar el
+ * formulario: no hay envío a servidor, ni cookies, ni peticiones de terceros.
+ *
+ * La tabla HTML es la fuente de verdad del resultado. El SVG resume las mismas filas y
+ * nunca es el único sitio donde está el dato.
+ */
+import type { CollectionEntry } from 'astro:content';
+import Herramienta from '../layouts/Herramienta.astro';
+import {
+  FRECUENCIAS,
+  LIMITES,
+  calcularInteresCompuesto,
+  filasAnuales,
+  formatearEuros,
+  formatearPorcentaje,
+  type EntradaCalculo,
+} from '../lib/calculadora.ts';
+import { svgEvolucion } from '../lib/calculadora-svg.ts';
+
+interface Props {
+  ficha: CollectionEntry<'herramientas'>;
+}
+
+const { ficha } = Astro.props;
+
+/** Ejemplo por defecto, verificado en docs/CALCULADORA.md §5 (vector V5). */
+const DEFECTO: EntradaCalculo = {
+  capitalInicial: 1000,
+  aportacionPeriodica: 100,
+  anios: 10,
+  meses: 0,
+  rentabilidadAnual: 5,
+  frecuencia: 'mensual',
+  momentoAportacion: 'fin',
+  inflacionAnual: null,
+};
+
+const inicial = calcularInteresCompuesto(DEFECTO);
+if (!inicial.ok) throw new Error(`Ejemplo por defecto inválido: ${inicial.errores[0]?.mensaje ?? 'sin detalle'}`);
+const ejemplo = inicial.resultado;
+const ejemploFilas = filasAnuales(ejemplo.tabla);
+
+const miles = (n: number): string => n.toLocaleString('es-ES', { maximumFractionDigits: 0 });
+
+/**
+ * Ejemplos verificados que se publican en la metodología. Se calculan en el build con el
+ * mismo motor, así que el texto no puede envejecer respecto al código; los vectores están
+ * fijados (y comprobados con Decimal) en tests/calculadora.ts y docs/CALCULADORA.md §5.
+ */
+const EJEMPLOS: { titulo: string; entrada: EntradaCalculo; nota: string }[] = [
+  {
+    titulo: 'Capital único: 1.000 € al 5 % EA durante 10 años',
+    entrada: { ...DEFECTO, aportacionPeriodica: 0, frecuencia: 'anual' },
+    nota: 'Sin aportaciones no hay diferencia entre capitalizar cada mes o cada año: el 5 % es efectivo anual.',
+  },
+  {
+    titulo: 'Aportación al final: 200 € al mes durante 20 años al 5 % EA',
+    entrada: { ...DEFECTO, capitalInicial: 0, aportacionPeriodica: 200, anios: 20 },
+    nota: 'Se aportan 48.000 € y el capital final es la cifra de contraste del equipo editorial (vector V6).',
+  },
+  {
+    titulo: 'El mismo caso con un 3 % de inflación',
+    entrada: { ...DEFECTO, capitalInicial: 0, aportacionPeriodica: 200, anios: 20, inflacionAnual: 3 },
+    nota: 'El valor real puede quedar por debajo de lo aportado: la inflación también juega (vector V13).',
+  },
+];
+
+const ejemplos = EJEMPLOS.map((ejemplo) => {
+  const respuesta = calcularInteresCompuesto(ejemplo.entrada);
+  if (!respuesta.ok) throw new Error(`Ejemplo publicado inválido: ${ejemplo.titulo}`);
+  return { ...ejemplo, resultado: respuesta.resultado };
+});
+---
+
+<Herramienta ficha={ficha} calcula={ficha.data.estado_implementacion !== 'no-implementada'}>
+  <form id="formulario-calculo" novalidate>
+    <fieldset>
+      <legend>Datos de la simulación</legend>
+
+      <div class="fields">
+        <div class="field">
+          <label for="capitalInicial">Capital inicial (€)</label>
+          <input
+            id="capitalInicial"
+            name="capitalInicial"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            value={String(DEFECTO.capitalInicial)}
+            aria-describedby="ayuda-capitalInicial error-capitalInicial"
+          />
+          <p class="hint" id="ayuda-capitalInicial">Lo que ya tienes hoy. De 0 a {miles(LIMITES.capitalMax)} €.</p>
+          <p class="error" id="error-capitalInicial" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="aportacionPeriodica">Aportación por periodo (€)</label>
+          <input
+            id="aportacionPeriodica"
+            name="aportacionPeriodica"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            value={String(DEFECTO.aportacionPeriodica)}
+            aria-describedby="ayuda-aportacionPeriodica error-aportacionPeriodica"
+          />
+          <p class="hint" id="ayuda-aportacionPeriodica">
+            Se ingresa en cada periodo de capitalización, no necesariamente cada mes. De 0 a {miles(LIMITES.aportacionMax)} €.
+          </p>
+          <p class="error" id="error-aportacionPeriodica" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="anios">Plazo en años</label>
+          <input
+            id="anios"
+            name="anios"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            value={String(DEFECTO.anios)}
+            aria-describedby="ayuda-plazo error-anios"
+          />
+          <p class="hint" id="ayuda-plazo">Entero de 0 a {LIMITES.aniosMax}. Los meses sueltos van aparte.</p>
+          <p class="error" id="error-anios" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="meses">Meses sueltos</label>
+          <select id="meses" name="meses" aria-describedby="ayuda-meses error-meses">
+            {
+              Array.from({ length: 12 }, (_, m) => (
+                <option value={String(m)} selected={m === DEFECTO.meses}>
+                  {m} {m === 1 ? 'mes' : 'meses'}
+                </option>
+              ))
+            }
+          </select>
+          <p class="hint" id="ayuda-meses">Se suman a los años. Deben completar un periodo de capitalización.</p>
+          <p class="error" id="error-meses" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="rentabilidadAnual">Rentabilidad anual (%, efectiva)</label>
+          <input
+            id="rentabilidadAnual"
+            name="rentabilidadAnual"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            value={String(DEFECTO.rentabilidadAnual)}
+            aria-describedby="ayuda-rentabilidadAnual error-rentabilidadAnual"
+          />
+          <p class="hint" id="ayuda-rentabilidadAnual">
+            Tasa efectiva anual: el 5 % es un 5 % al año, se capitalice mensual o anualmente. De {LIMITES.tasaMin} % a {LIMITES.tasaMax} %.
+          </p>
+          <p class="error" id="error-rentabilidadAnual" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="frecuencia">Frecuencia de capitalización</label>
+          <select id="frecuencia" name="frecuencia" aria-describedby="ayuda-frecuencia error-frecuencia">
+            {
+              FRECUENCIAS.map((f) => (
+                <option value={f.clave} selected={f.clave === DEFECTO.frecuencia}>
+                  {f.etiqueta} ({f.periodosPorAnio} {f.periodosPorAnio === 1 ? 'vez' : 'veces'} al año)
+                </option>
+              ))
+            }
+          </select>
+          <p class="hint" id="ayuda-frecuencia">Marca cada cuánto se abonan los intereses y, por tanto, cada cuánto aportas.</p>
+          <p class="error" id="error-frecuencia" hidden></p>
+        </div>
+
+        <div class="field full">
+          <fieldset>
+            <legend class="legend-inline">¿Cuándo entra cada aportación?</legend>
+            <div class="radio-row">
+              <label for="momento-fin">
+                <input id="momento-fin" type="radio" name="momentoAportacion" value="fin" checked={DEFECTO.momentoAportacion === 'fin'} />
+                Al final de cada periodo
+              </label>
+              <label for="momento-inicio">
+                <input
+                  id="momento-inicio"
+                  type="radio"
+                  name="momentoAportacion"
+                  value="inicio"
+                  checked={DEFECTO.momentoAportacion === 'inicio'}
+                />
+                Al inicio de cada periodo
+              </label>
+            </div>
+            <p class="hint" id="ayuda-momentoAportacion">
+              Al inicio, la aportación devenga el interés del periodo en el que entra; al final, no.
+            </p>
+            <p class="error" id="error-momentoAportacion" hidden></p>
+          </fieldset>
+        </div>
+
+        <div class="field full">
+          <label for="inflacionAnual">Inflación anual (%, opcional)</label>
+          <input
+            id="inflacionAnual"
+            name="inflacionAnual"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            value=""
+            aria-describedby="ayuda-inflacionAnual error-inflacionAnual"
+          />
+          <p class="hint" id="ayuda-inflacionAnual">
+            Déjalo vacío para no calcular el valor real. Si lo rellenas, el capital final se muestra también en euros de hoy.
+          </p>
+          <p class="error" id="error-inflacionAnual" hidden></p>
+        </div>
+      </div>
+
+      <p class="error" id="error-plazo" hidden></p>
+
+      <div class="actions">
+        <button class="button" type="submit">Calcular</button>
+      </div>
+      <p class="hint">El cálculo se actualiza al cambiar un campo: no se recarga la página ni se envía nada.</p>
+    </fieldset>
+  </form>
+
+  <Fragment slot="ejemplos">
+    <ul>
+      {
+        ejemplos.map((e) => (
+          <li>
+            <strong>{e.titulo}</strong>: {formatearEuros(e.resultado.capitalFinal)} de capital final,{' '}
+            {formatearEuros(e.resultado.aportado)} aportados y {formatearEuros(e.resultado.ganancia)} de intereses
+            {e.resultado.valorReal === null
+              ? '.'
+              : `; en euros de hoy, ${formatearEuros(e.resultado.valorReal)}.`}{' '}
+            {e.nota}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="hint">
+      Estas tres cifras se recalculan en cada build con el mismo motor que usa el formulario y están fijadas como
+      vectores de prueba en <code>tests/calculadora.ts</code>, con la deducción en <code>docs/CALCULADORA.md</code> §5.
+    </p>
+  </Fragment>
+
+  <Fragment slot="resultado">
+    <section class="calc-result" aria-labelledby="resultado-herramienta">
+      <p class="eyebrow">Resultado</p>
+      <h2 id="resultado-herramienta" style="font-size:var(--text-h3)">Capital final</h2>
+      <p class="big-number" id="capital-final">{formatearEuros(ejemplo.capitalFinal)}</p>
+      <p class="hint" id="resumen-entrada">
+        {miles(DEFECTO.capitalInicial)} € iniciales y {miles(DEFECTO.aportacionPeriodica)} € cada periodo, durante
+        {ejemplo.periodos} periodos al {formatearPorcentaje(ejemplo.tasaEfectivaAnual)} efectivo anual.
+      </p>
+
+      <dl class="metrics">
+        <div>
+          <dt>Aportado (capital + aportaciones)</dt>
+          <dd id="total-aportado">{formatearEuros(ejemplo.aportado)}</dd>
+        </div>
+        <div>
+          <dt>Ganancia por intereses</dt>
+          <dd id="total-ganancia">{formatearEuros(ejemplo.ganancia)}</dd>
+        </div>
+        <div>
+          <dt>Tasa por periodo</dt>
+          <dd id="tasa-periodo">{formatearPorcentaje(ejemplo.tasaPeriodo, 4)}</dd>
+        </div>
+        <div>
+          <dt>Valor real (euros de hoy)</dt>
+          <dd id="valor-real">Sin inflación</dd>
+        </div>
+      </dl>
+
+      <p class="sr-only" role="status" id="estado-calculo">Resultado calculado con los valores del formulario.</p>
+
+      <div class="chart" id="grafico">
+        <Fragment set:html={svgEvolucion(ejemploFilas)} />
+        <p class="hint">Barra clara: lo aportado. Barra dorada: el capital si la rentabilidad se mantiene. Datos exactos en la tabla.</p>
+      </div>
+    </section>
+
+    <div class="table-wrap calc-table">
+      <table id="tabla-evolucion">
+        <caption>Evolución al cierre de cada año, con los supuestos de la simulación.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Año</th>
+            <th scope="col">Aportado (€)</th>
+            <th scope="col">Interés acumulado (€)</th>
+            <th scope="col">Capital (€)</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-evolucion-cuerpo">
+          {
+            ejemploFilas.map((fila) => (
+              <tr>
+                <th scope="row">{fila.anio}</th>
+                <td>{formatearEuros(fila.aportadoAcumulado)}</td>
+                <td>{formatearEuros(fila.interesAcumulado)}</td>
+                <td>{formatearEuros(fila.capital)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </Fragment>
+</Herramienta>
+
+<style>
+  .legend-inline {
+    font-size: 1rem;
+    font-weight: 650;
+    margin-bottom: 0;
+  }
+  .radio-row {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .radio-row label {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 400;
+  }
+  .radio-row input {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    accent-color: var(--gold-ink);
+  }
+  .calc-table {
+    background: var(--surface);
+    border: var(--border-heavy);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<script>
+  import {
+    calcularInteresCompuesto,
+    filasAnuales,
+    formatearEuros,
+    formatearPorcentaje,
+    parsearNumero,
+    type ClaveFrecuencia,
+    type EntradaCalculo,
+    type MomentoAportacion,
+  } from '../lib/calculadora.ts';
+  import { svgEvolucion } from '../lib/calculadora-svg.ts';
+
+  const formulario = document.getElementById('formulario-calculo') as HTMLFormElement | null;
+  const cuerpoTabla = document.getElementById('tabla-evolucion-cuerpo');
+  const grafico = document.getElementById('grafico');
+
+  const porId = (id: string): HTMLElement | null => document.getElementById(id);
+  const valorDe = (id: string): string => (porId(id) as HTMLInputElement | HTMLSelectElement | null)?.value ?? '';
+
+  const leerEntrada = (): EntradaCalculo => {
+    const inflacion = valorDe('inflacionAnual').trim();
+    return {
+      capitalInicial: parsearNumero(valorDe('capitalInicial')),
+      aportacionPeriodica: parsearNumero(valorDe('aportacionPeriodica')),
+      anios: parsearNumero(valorDe('anios')),
+      meses: parsearNumero(valorDe('meses') || '0'),
+      rentabilidadAnual: parsearNumero(valorDe('rentabilidadAnual')),
+      frecuencia: (valorDe('frecuencia') || 'mensual') as ClaveFrecuencia,
+      momentoAportacion: ((formulario?.querySelector('input[name="momentoAportacion"]:checked') as HTMLInputElement | null)?.value ??
+        'fin') as MomentoAportacion,
+      inflacionAnual: inflacion === '' ? null : parsearNumero(inflacion),
+    };
+  };
+
+  const CAMPOS = [
+    'capitalInicial',
+    'aportacionPeriodica',
+    'anios',
+    'meses',
+    'rentabilidadAnual',
+    'frecuencia',
+    'momentoAportacion',
+    'inflacionAnual',
+    'plazo',
+  ] as const;
+
+  const limpiarErrores = (): void => {
+    for (const campo of CAMPOS) {
+      const parrafo = porId(`error-${campo}`);
+      if (parrafo) {
+        parrafo.textContent = '';
+        parrafo.hidden = true;
+      }
+      porId(campo)?.removeAttribute('aria-invalid');
+    }
+  };
+
+  const pintarErrores = (errores: { campo: string; mensaje: string }[]): void => {
+    limpiarErrores();
+    for (const error of errores) {
+      const parrafo = porId(`error-${error.campo}`);
+      if (parrafo) {
+        parrafo.textContent = error.mensaje;
+        parrafo.hidden = false;
+      }
+      const control = porId(error.campo);
+      if (control) control.setAttribute('aria-invalid', 'true');
+    }
+  };
+
+  const miles = (n: number): string => n.toLocaleString('es-ES', { maximumFractionDigits: 0 });
+
+  const pintarTabla = (filas: ReturnType<typeof filasAnuales>): void => {
+    if (!cuerpoTabla) return;
+    cuerpoTabla.replaceChildren(
+      ...filas.map((fila) => {
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
+        th.scope = 'row';
+        th.textContent = String(fila.anio);
+        tr.append(th);
+        for (const valor of [fila.aportadoAcumulado, fila.interesAcumulado, fila.capital]) {
+          const td = document.createElement('td');
+          td.textContent = formatearEuros(valor);
+          tr.append(td);
+        }
+        return tr;
+      }),
+    );
+  };
+
+  const escribir = (id: string, texto: string): void => {
+    const nodo = porId(id);
+    if (nodo) nodo.textContent = texto;
+  };
+
+  const actualizar = (): void => {
+    if (!formulario) return;
+    const entrada = leerEntrada();
+    const respuesta = calcularInteresCompuesto(entrada);
+    if (!respuesta.ok) {
+      pintarErrores(respuesta.errores);
+      escribir('estado-calculo', `No se puede calcular: ${respuesta.errores[0]?.mensaje ?? 'revisa los campos'}`);
+      return;
+    }
+    limpiarErrores();
+    const r = respuesta.resultado;
+    const filas = filasAnuales(r.tabla);
+
+    escribir('capital-final', formatearEuros(r.capitalFinal));
+    escribir('total-aportado', formatearEuros(r.aportado));
+    escribir('total-ganancia', formatearEuros(r.ganancia));
+    escribir('tasa-periodo', formatearPorcentaje(r.tasaPeriodo, 4));
+    escribir('valor-real', r.valorReal === null ? 'Sin inflación' : formatearEuros(r.valorReal));
+    escribir(
+      'resumen-entrada',
+      `${miles(entrada.capitalInicial)} € iniciales y ${miles(entrada.aportacionPeriodica)} € cada periodo, durante ${
+        r.periodos
+      } periodos al ${formatearPorcentaje(r.tasaEfectivaAnual)} efectivo anual.`,
+    );
+    if (grafico) grafico.innerHTML = svgEvolucion(filas);
+    pintarTabla(filas);
+    escribir('estado-calculo', `Resultado actualizado: ${formatearEuros(r.capitalFinal)} de capital final.`);
+  };
+
+  formulario?.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    actualizar();
+  });
+  formulario?.addEventListener('input', actualizar);
+  formulario?.addEventListener('change', actualizar);
+</script>

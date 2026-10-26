@@ -2,6 +2,9 @@
 node_modules/
 dist/
 dist-fixtures/
+# Build de fixtures con base raíz (SITE_BASE=/), el único servible desde file:// o :puerto raíz
+# para comprobar la calculadora en el navegador. Artefacto local, nunca se publica.
+dist-qa/
 .astro/
 
 # Entorno y credenciales: el token de YouTube no entra nunca al repo

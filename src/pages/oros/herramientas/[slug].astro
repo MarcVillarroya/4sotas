@@ -1,12 +1,18 @@
 ---
 /**
- * Página de metodología de una herramienta generada desde la colección.
- * La calculadora de interés compuesto tiene ruta fija propia (`interes-compuesto.astro`, tarjeta
- * hermana) porque su interfaz interactiva no se deriva de datos: se excluye aquí para no competir
- * con esa ruta.
+ * Página de una herramienta generada desde la colección.
+ *
+ * Dos formas, una sola ruta:
+ *  - `interes-compuesto` renderiza la interfaz interactiva desde `CalculadoraInteresCompuesto`
+ *    (motor probado en `src/lib/calculadora.ts`, vectores en `docs/CALCULADORA.md`).
+ *  - el resto renderiza la metodología sin interfaz mientras su motor no exista.
+ *
+ * La ruta se genera con `visibles()`, así que la página aparece exactamente cuando la ficha
+ * es visible en el build actual: un borrador nunca tiene página pública.
  */
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Herramienta from '../../../layouts/Herramienta.astro';
+import CalculadoraInteresCompuesto from '../../../components/CalculadoraInteresCompuesto.astro';
 import { visibles } from '../../../lib/publicacion.ts';
 
 interface Props {
@@ -14,33 +20,36 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  /** Slugs con página propia fuera de este archivo (la calculadora publica su interfaz fija). */
-  const rutasFijas = new Set(['interes-compuesto']);
-  const herramientas = visibles(await getCollection('herramientas')).filter((h) => !rutasFijas.has(h.data.slug));
+  const herramientas = visibles(await getCollection('herramientas'));
   return herramientas.map((ficha) => ({ params: { slug: ficha.data.slug }, props: { ficha } }));
 }
 
 const { ficha } = Astro.props;
 const calcula = ficha.data.estado_implementacion !== 'no-implementada';
+const esCalculadora = ficha.data.slug === 'interes-compuesto';
 ---
 
-<Herramienta ficha={ficha} calcula={calcula}>
-  <p class="eyebrow">Interfaz</p>
-  {
-    calcula ? (
-      <p>
-        Esta herramienta está marcada como <strong>{ficha.data.estado_implementacion}</strong> en la ficha, pero su
-        interfaz interactiva se publica en su propia página. Desde aquí puedes revisar la metodología completa antes de
-        usarla.
+{
+  esCalculadora ? (
+    <CalculadoraInteresCompuesto ficha={ficha} />
+  ) : (
+    <Herramienta ficha={ficha} calcula={calcula}>
+      <p class="eyebrow">Interfaz</p>
+      {calcula ? (
+        <p>
+          Esta herramienta está marcada como <strong>{ficha.data.estado_implementacion}</strong> en la ficha, pero su
+          interfaz interactiva se publica en su propia página. Desde aquí puedes revisar la metodología completa antes de
+          usarla.
+        </p>
+      ) : (
+        <p>
+          Esta herramienta está en preparación: no hay formulario porque no hay motor que responder. Lo que sí está
+          publicado es la metodología que el motor tendrá que cumplir.
+        </p>
+      )}
+      <p class="hint">
+        Nada de lo que escribas aquí se envía a un servidor. La página no incluye analítica ni peticiones de terceros.
       </p>
-    ) : (
-      <p>
-        Esta herramienta está en preparación: no hay formulario porque no hay motor que responder. Lo que sí está
-        publicado es la metodología que el motor tendrá que cumplir.
-      </p>
-    )
-  }
-  <p class="hint">
-    Nada de lo que escribas aquí se envía a un servidor. La página no incluye analítica ni peticiones de terceros.
-  </p>
-</Herramienta>
+    </Herramienta>
+  )
+}

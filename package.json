@@ -14,7 +14,8 @@
     "build:fixtures": "PUBLIC_FIXTURES=1 astro build --outDir dist-fixtures",
     "preview": "astro preview",
     "check": "astro check",
-    "test": "node --test \"tests/**/*.test.ts\" \"tests/**/*.test.mjs\"",
+    "test": "node --test \"tests/**/*.test.ts\" \"tests/**/*.test.mjs\" \"tests/calculadora.ts\"",
+    "test:calculadora": "node --test \"tests/calculadora.ts\"",
     "verificar:plantillas": "node scripts/verificar-plantillas.mjs",
     "validate:content": "node scripts/validate-content.mjs --root . --inventory data/inventory-snapshot.json",
     "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://marcvillarroya.github.io}\" --base \"${SITE_BASE:-/4sotas}\" --json qa/validate-report.json"

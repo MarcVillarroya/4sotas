@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-25T23:47:52.203Z",
-  "root": "/home/mvf/4sotas/site/.worktrees/t_7644686c",
+  "generated_at": "2026-10-26T00:07:42.113Z",
+  "root": "/home/mvf/4sotas/site/.worktrees/t_a85e410a",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
   "entries": {
@@ -9,7 +9,7 @@
     "articulos": 1,
     "videos": 1,
     "series": 1,
-    "herramientas": 1,
+    "herramientas": 2,
     "glosario": 2,
     "fuentes": 1,
     "autores": 1

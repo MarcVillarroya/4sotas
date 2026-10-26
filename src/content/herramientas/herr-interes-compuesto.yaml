@@ -1,0 +1,74 @@
+id: herr-interes-compuesto
+status: revision
+universo: oros
+creado: 2026-10-26
+revisado_factual: 2026-10-26
+procedencia: original
+sensibilidad: baja
+autorias:
+  redactor: aut-marc-villarroya
+fuentes: []
+seo:
+  descripcion: Calculadora de interés compuesto con aportaciones periódicas, tabla anual y valor real tras inflación. Fórmula y límites publicados.
+actualizacion:
+  politica: revision-anual
+slug: interes-compuesto
+titulo: Calculadora de interés compuesto
+descripcion: Simula capital final, aportaciones y ganancia con una tasa efectiva anual, aportaciones al inicio o al fin de cada periodo y valor real tras inflación.
+tipo: calculadora
+estado_implementacion: beta
+version_motor: 1.0.0
+formula: >-
+  C(k) = P · (1+i)^k + A · ((1+i)^k − 1) / i · (1+i si la aportación es al inicio del periodo). P es el capital
+  inicial, A la aportación por periodo, i la tasa por periodo derivada de la tasa efectiva anual (i = (1+r)^(1/m) − 1)
+  y k el número de periodos de capitalización.
+unidad_salida: EUR
+parametros:
+  - clave: capitalInicial
+    etiqueta: Capital inicial
+    tipo: moneda
+    defecto: 1000
+    min: 0
+    max: 1000000
+    paso: 100
+  - clave: aportacionPeriodica
+    etiqueta: Aportación por periodo
+    tipo: moneda
+    defecto: 100
+    min: 0
+    max: 20000
+    paso: 10
+  - clave: plazoAnios
+    etiqueta: Plazo en años
+    tipo: entero
+    defecto: 10
+    min: 0
+    max: 60
+    paso: 1
+  - clave: rentabilidadAnual
+    etiqueta: Rentabilidad anual (efectiva)
+    tipo: porcentaje
+    defecto: 5
+    min: -20
+    max: 30
+    paso: 0.1
+  - clave: inflacionAnual
+    etiqueta: Inflación anual (opcional)
+    tipo: porcentaje
+    defecto: 0
+    min: -5
+    max: 20
+    paso: 0.1
+supuestos:
+  - "La rentabilidad anual introducida es una tasa efectiva anual, no nominal, y se convierte a tasa por periodo con i = (1+r)^(1/m) − 1."
+  - "La rentabilidad se mantiene constante durante todo el plazo: es una hipótesis de simulación, no una predicción de mercado."
+  - "La aportación es por periodo de capitalización (mensual si la frecuencia es mensual) y se repite sin interrupciones."
+  - "No se modelan comisiones, impuestos, retenciones ni inflación sobre las aportaciones. La inflación solo se usa para expresar el resultado en euros de hoy."
+limites:
+  - "El resultado es una simulación aritmética, no una recomendación de inversión ni una promesa de rentabilidad."
+  - "No incluye fiscalidad ni comisiones porque no se modelan en el motor; si existen en tu caso, el resultado real será menor."
+  - "Frecuencia limitada a anual, semestral, trimestral y mensual; plazo máximo de 60 años o 720 periodos de capitalización."
+  - "Los cambios reales de rentabilidad año a año no son una curva suave, así que dos simulaciones con la misma media pueden dar resultados distintos."
+tests: tests/calculadora.ts
+temas:
+  - tema-fixture-demo

@@ -18,6 +18,7 @@ npm ci          # instalación reproducible desde package-lock.json
 npm run dev     # servidor local: http://localhost:4321/4sotas/
 npm run check   # astro check (TS + esquemas de contenido)
 npm test        # tests unitarios de lib/ (node:test + type stripping)
+npm run test:calculadora     # solo los 27 vectores del motor de interés compuesto
 npm run build   # build estático -> dist/
 npm run build:fixtures       # build de verificación con fixtures en borrador -> dist-fixtures/
 npm run verificar:plantillas # comprueba plantillas, JSON-LD e aislamiento de borradores
@@ -32,10 +33,10 @@ Resultado actual de referencia (26-oct-2026):
 
 | comando | resultado |
 |---|---|
-| `npm run check` | 0 errores, 0 warnings, 0 hints (38 ficheros) |
-| `npm test` | 59 tests, 59 pasan |
+| `npm run check` | 0 errores, 0 warnings, 0 hints (44 ficheros) |
+| `npm test` | 86 tests, 86 pasan (59 previos + 27 de la calculadora) |
 | `npm run build` | 8 páginas estáticas (`/`, `/oros/`, 5 índices de sección, `404.html`) + `robots.txt` + sitemap |
-| `npm run build:fixtures` | 14 páginas (los 8 públicos + 6 plantillas de detalle con fixture) |
+| `npm run build:fixtures` | 15 páginas (los 8 públicos + 7 detalles con fixture, calculadora incluida) |
 | `npm run verificar:plantillas` | `ok · 13 comprobaciones · 0 fallos` |
 | `npm run validate` | `ok · 0 bloqueantes · 11 avisos` (los 11 avisos son vídeos públicos que aún no tienen ficha) |
 
@@ -75,10 +76,12 @@ src/
 │  ├─ migas.ts             # migas visibles y BreadcrumbList desde una sola lista
 │  ├─ seo.ts               # título ≤65, descripción ≤160, OG absoluta
 │  ├─ format.ts            # fechas en UTC, duraciones ISO y marcas de tiempo
+│  ├─ calculadora.ts       # motor puro de interés compuesto: tasa EA→periodo, validación, tabla
+│  ├─ calculadora-svg.ts   # SVG de barras generado desde las filas de la tabla
 │  └─ jsonld.ts            # Organization / WebSite / CollectionPage / Article / VideoObject / DefinedTerm / SoftwareApplication
 ├─ layouts/Base.astro      # head completo + skip link + shell
 ├─ layouts/Herramienta.astro # metodología de herramienta (fórmula, parámetros, supuestos, límites)
-├─ components/             # Header, Footer, JsonLd, Breadcrumbs, FacadeVideo
+├─ components/             # Header, Footer, JsonLd, Breadcrumbs, FacadeVideo, CalculadoraInteresCompuesto
 ├─ pages/                  # index, oros/**, 404, robots.txt
 └─ styles/                 # tokens.css (marca F0) + global.css + plantillas.css
 scripts/
@@ -138,7 +141,7 @@ Reglas que no se negocian en estas plantillas:
 
 ```bash
 npm run build              # build público: 0 páginas de borradores (8 páginas)
-npm run build:fixtures     # PUBLIC_FIXTURES=1: renderiza cada plantilla con su fixture (14 páginas)
+npm run build:fixtures     # PUBLIC_FIXTURES=1: renderiza cada plantilla con su fixture (15 páginas)
 npm run verificar:plantillas
 ```
 
@@ -149,16 +152,36 @@ coherentes y ningún iframe.
 
 ### Contrato con la calculadora
 
-`layouts/Herramienta.astro` publica la metodología y deja la interfaz en el slot:
+`layouts/Herramienta.astro` publica la metodología (fórmula, parámetros, supuestos, límites) y deja la interfaz en
+slots: el formulario va en el slot por defecto, los resultados en `resultado` y los ejemplos verificados en
+`ejemplos`. El JS interactivo vive en el componente, nunca en el layout:
 
 ```astro
 <Herramienta ficha={ficha} calcula={true}>
-  <form>…</form>   <!-- el JS interactivo vive aquí, no en el layout -->
+  <form>…</form>
+  <Fragment slot="resultado">…</Fragment>
+  <Fragment slot="ejemplos">…</Fragment>
 </Herramienta>
 ```
 
-`SoftwareApplication` solo se emite cuando `calcula` es `true`. La ruta fija `/oros/herramientas/interes-compuesto/`
-queda reservada a su propia card: `pages/oros/herramientas/[slug].astro` la excluye para no competir con ella.
+`SoftwareApplication` solo se emite cuando `calcula` es `true`. La calculadora de interés compuesto **no** tiene
+archivo de ruta propio: `pages/oros/herramientas/[slug].astro` monta `components/CalculadoraInteresCompuesto.astro`
+cuando la ficha es `interes-compuesto`, de modo que la página aparece y desaparece con el filtro `visibles()` igual
+que el resto de plantillas.
+
+## Calculadora de interés compuesto
+
+Motor puro en `src/lib/calculadora.ts` (versión 1.0.0), gráfico en `src/lib/calculadora-svg.ts`, interfaz en
+`src/components/CalculadoraInteresCompuesto.astro` y ficha en `src/content/herramientas/herr-interes-compuesto.yaml`.
+
+- **Tasa efectiva anual**, convertida a tasa por periodo con `i = (1+r)^(1/m) − 1`. No se divide la tasa entre la
+  frecuencia: capital único al 5 % EA da el mismo resultado con capitalización anual o mensual.
+- Funciones puras, sin estado global, sin envío de datos y sin dependencias de gráficos: el SVG se genera desde la
+  tabla.
+- 27 pruebas con vectores calculados fuera del motor (`decimal.Decimal`, 40 dígitos) y tolerancias documentadas.
+
+Metodología completa, decisiones y tabla de vectores: `docs/CALCULADORA.md`.
+Verificación ejecutada (comandos y salidas reales): `qa/f1-calculadora/VERIFICACION.md`.
 
 ## Estado de esta fase (F1 · plantillas editoriales)
 
@@ -169,7 +192,8 @@ verificadas con fixtures en borrador y con `verificar-plantillas`.
 No hecho todavía (cards posteriores, no huecos silenciosos):
 
 - Contenido editorial real: las colecciones solo tienen fixtures; la sustitución por guías y temas revisados es la
-  card de ensamblado. La calculadora (motor, UI y vectores) tiene su propia card y usa `layouts/Herramienta.astro`.
+  card de ensamblado. La calculadora ya está implementada (motor, UI, vectores y metodología) y su ficha queda en
+  `revision` hasta que exista el tema al que apunta.
 - Catálogos `/data/*.json` y `llms.txt`.
 - Fichas de vídeo: el catálogo está vacío y las páginas lo dicen explícitamente; los 11 avisos de
   `W-VIDEO-SIN-FICHA` son ese estado real, no un fallo.

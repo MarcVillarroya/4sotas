@@ -95,19 +95,25 @@ const unidad = {
       <slot />
     </div>
     <div>
-      <section class="calc-result" aria-labelledby="resultado-herramienta">
-        <p class="eyebrow">Resultado</p>
-        <h2 id="resultado-herramienta" style="font-size:var(--text-h3)">
-          {calcula ? 'Calculado en esta página' : 'Todavía sin cálculo'}
-        </h2>
-        <p class="hint">
-          {
-            calcula
-              ? `El resultado aparece en ${unidad[ficha.data.unidad_salida]} y se redondea al presentar.`
-              : 'La interfaz no calcula nada todavía: el motor y sus pruebas llegan en su propia tarjeta. Esta página declara la metodología, no resultados.'
-          }
-        </p>
-      </section>
+      {
+        Astro.slots.has('resultado') ? (
+          <slot name="resultado" />
+        ) : (
+          <section class="calc-result" aria-labelledby="resultado-herramienta">
+            <p class="eyebrow">Resultado</p>
+            <h2 id="resultado-herramienta" style="font-size:var(--text-h3)">
+              {calcula ? 'Calculado en esta página' : 'Todavía sin cálculo'}
+            </h2>
+            <p class="hint">
+              {
+                calcula
+                  ? `El resultado aparece en ${unidad[ficha.data.unidad_salida]} y se redondea al presentar.`
+                  : 'La interfaz no calcula nada todavía: el motor y sus pruebas llegan en su propia tarjeta. Esta página declara la metodología, no resultados.'
+              }
+            </p>
+          </section>
+        )
+      }
     </div>
   </div>
 
@@ -118,6 +124,7 @@ const unidad = {
       <a href="#parametros">Parámetros</a>
       <a href="#supuestos">Supuestos</a>
       <a href="#limites">Límites</a>
+      {Astro.slots.has('ejemplos') && <a href="#ejemplos">Ejemplos</a>}
       <a href="#revision">Revisión</a>
       <a href={url(ruta.herramientas())}>Todas las herramientas</a>
     </aside>
@@ -178,6 +185,15 @@ const unidad = {
           ))}
         </ul>
       </section>
+
+      {
+        Astro.slots.has('ejemplos') && (
+          <section id="ejemplos">
+            <h2>Ejemplos verificados.</h2>
+            <slot name="ejemplos" />
+          </section>
+        )
+      }
 
       <section id="revision">
         <h2>Revisión.</h2>
