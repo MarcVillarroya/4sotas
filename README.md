@@ -33,12 +33,13 @@ Resultado actual de referencia (26-oct-2026):
 
 | comando | resultado |
 |---|---|
-| `npm run check` | 0 errores, 0 warnings, 0 hints (44 ficheros) |
-| `npm test` | 86 tests, 86 pasan (59 previos + 27 de la calculadora) |
-| `npm run build` | 8 páginas estáticas (`/`, `/oros/`, 5 índices de sección, `404.html`) + `robots.txt` + sitemap |
-| `npm run build:fixtures` | 15 páginas (los 8 públicos + 7 detalles con fixture, calculadora incluida) |
+| `npm run check` | 0 errores, 0 warnings, 0 hints (48 ficheros) |
+| `npm test` | 116 tests, 116 pasan |
+| `npm run build` | 8 páginas estáticas (`/`, `/oros/`, 5 índices de sección, `404.html`) + `robots.txt` + `llms.txt` + 4 catálogos `/data/*.json` + sitemap |
+| `npm run build:fixtures` | 52 páginas (todo el contenido importado, publicado o no) |
 | `npm run verificar:plantillas` | `ok · 13 comprobaciones · 0 fallos` |
-| `npm run validate` | `ok · 0 bloqueantes · 11 avisos` (los 11 avisos son vídeos públicos que aún no tienen ficha) |
+| `npm run validate` | `ok · 0 bloqueantes · 1 aviso` (el aviso es el vídeo `LL1EJttJPrs`, público y fuera de alcance V1, sin ficha) |
+| `npm run publicacion:pendiente` | informe de lo que falta para publicar el contenido importado (no publica nada) |
 
 ## Origen y base path
 
@@ -69,10 +70,11 @@ src/
 ├─ content/
 │  ├─ sotas/               # YAML: universo/palo
 │  ├─ autores/             # YAML: autoría verificable
-│  └─ temas|articulos|videos|series|herramientas|glosario|fuentes/   # vacías a propósito en F1
+│  └─ temas|articulos|videos|series|herramientas|glosario|fuentes/   # contenido real importado + fixtures en borrador
 ├─ lib/
 │  ├─ rutas.ts             # url(), canonica(), BASE, constructoras de ruta tipadas
 │  ├─ publicacion.ts       # única definición de "publicado" + resolución de referencias
+│  ├─ catalogos.ts         # constructores de /data/*.json (misma regla de publicación)
 │  ├─ migas.ts             # migas visibles y BreadcrumbList desde una sola lista
 │  ├─ seo.ts               # título ≤65, descripción ≤160, OG absoluta
 │  ├─ format.ts            # fechas en UTC, duraciones ISO y marcas de tiempo
@@ -87,9 +89,11 @@ src/
 scripts/
 ├─ validate-content.mjs    # validador editorial y de salida (3 capas)
 ├─ verificar-plantillas.mjs # plantillas renderizadas, JSON-LD coherente, 0 borradores en dist
+├─ pendiente-publicacion.mjs # informe de lo que falta para publicar (no publica)
+├─ remark-enlaces-base.mjs # prefija con la base del build los enlaces raíz del cuerpo Markdown
 └─ build-og.mjs            # regenera public/assets/og/*.png con Chromium local
 data/inventory-snapshot.json  # copia versionada del bloque `videos` del inventario real
-tests/                        # node:test sobre lib/
+tests/                        # node:test sobre lib/ (incluye catalogos.test.ts)
 ```
 
 ## Contenido y publicación
@@ -108,6 +112,28 @@ tests/                        # node:test sobre lib/
 1. Crear `src/content/articulos/<slug>.md` con el frontmatter del modelo (`architecture/DATA-MODEL.md` §2.3).
 2. `npm run check && npm test && npm run build && npm run validate`.
 3. Si `validate` bloquea, no se publica: se corrige el contenido, no el validador.
+
+## Catálogos, `llms.txt` y enlaces del cuerpo
+
+Todo sale de las mismas colecciones y del mismo filtro (`publicados()`), así que un catálogo no puede listar
+lo que el HTML no publica:
+
+| endpoint | contenido | filtro añadido |
+|---|---|---|
+| `/data/catalog.json` | artículos | `status: publicado` |
+| `/data/topics.json` | temas troncales | `status: publicado` |
+| `/data/videos.json` | vídeos | publicados **y** `estado_youtube: publico` + `privacidad_api: public` |
+| `/data/tools.json` | herramientas | publicadas **y** `estado_implementacion != no-implementada` |
+| `/llms.txt` | resumen para agentes con conteos y URLs | mismas reglas, incluidos los cuatro catálogos |
+
+Cabecera común: `schema_version` (semver, `1.0.0`), `generated_at` ISO-8601 y `universo`. Los constructores
+viven en `src/lib/catalogos.ts` y se prueban en `tests/catalogos.test.ts` con entradas sintéticas, porque un
+build público vacío también es un estado válido y un catálogo vacío no demuestra nada.
+
+Los enlaces escritos dentro del Markdown (`[texto](/oros/guias/x/)`) se prefijan en build con la base real
+mediante `scripts/remark-enlaces-base.mjs` (remark sobre `@astrojs/markdown-remark`, el procesador clásico; el
+nuevo procesador por defecto de Astro 7 no ejecuta plugins remark). Sin ese prefijo, el cuerpo publicado
+apuntaría a `/oros/...` fuera de `/4sotas/` y el validador lo bloquearía con `B-ENLACE-SIN-BASE`.
 
 ## Plantillas editoriales
 
@@ -183,28 +209,34 @@ Motor puro en `src/lib/calculadora.ts` (versión 1.0.0), gráfico en `src/lib/ca
 Metodología completa, decisiones y tabla de vectores: `docs/CALCULADORA.md`.
 Verificación ejecutada (comandos y salidas reales): `qa/f1-calculadora/VERIFICACION.md`.
 
-## Estado de esta fase (F1 · plantillas editoriales)
+## Estado de esta fase (F1 · ensamblado de contenido)
 
-Hecho: repositorio, colecciones, layouts, homes `/` y `/oros/`, SEO técnico, sitemap, robots, 404 útil, CI y tests;
-y las plantillas de tema, guía, watch page con facade, catálogos, glosario y metodología de herramienta,
-verificadas con fixtures en borrador y con `verificar-plantillas`.
+Hecho en esta card:
 
-No hecho todavía (cards posteriores, no huecos silenciosos):
+- Contenido importado al modelo real desde `content/grupo-a/` y `content/grupo-b/`: **7 temas** troncales,
+  **8 artículos** (guías y explicadores), **12 términos** de glosario y **43 fuentes** con id permanente.
+  Cinco fuentes del carril B duplicaban por URL fuentes del carril A: se conservó el id descriptivo del carril A
+  y se reescribieron las referencias del carril B (`src-s2-01` → `src-ine-ipc-septiembre-2026`, etc.).
+- **11 fichas de vídeo** creadas desde `data/inventory-snapshot.json`, solo con IDs reales y `privacy_status:
+  public` (excluido `LL1EJttJPrs`, GTA VI, sin encaje; excluidos los dos privados del inventario).
+- Catálogos `/data/*.json`, `llms.txt`, enlaces del cuerpo con base y JSON-LD de tema ajustado al nombre visible.
+- Corregido un enlace roto real del contenido (`/oros/videos/crisis-de-2008/` → `crisis-de-2008-espana/`).
 
-- Contenido editorial real: las colecciones solo tienen fixtures; la sustitución por guías y temas revisados es la
-  card de ensamblado. La calculadora ya está implementada (motor, UI, vectores y metodología) y su ficha queda en
-  `revision` hasta que exista el tema al que apunta.
-- Catálogos `/data/*.json` y `llms.txt`.
-- Fichas de vídeo: el catálogo está vacío y las páginas lo dicen explícitamente; los 11 avisos de
-  `W-VIDEO-SIN-FICHA` son ese estado real, no un fallo.
-- `AGENTS.md`: el contenido está aprobado en `architecture/AGENTS.skeleton.md` y se copia cuando el
-  propietario lo autorice.
-- Páginas legales (`/sobre-nosotros/`, `/aviso-legal/`…): necesitan datos reales del titular.
-- El validador calcula mal el prefijo esperado con `SITE_BASE=/` (dominio raíz): compara contra `origin//`.
-  Afecta solo a ese modo; el build raíz es correcto (comprobado). Se corrige al migrar de dominio.
-- `B-DRAFT-EN-DIST` del validador canónico no puede dispararse: su set de rutas pierde la barra final y compara
-  contra rutas que sí la llevan. Detectado en esta card y reportado a `staff-engineer`; mientras tanto el
-  aislamiento de borradores lo comprueba `npm run verificar:plantillas`.
+Estado editorial honesto: **todo el contenido sigue en `status: revision`**. Publicar exige fecha de revisión
+factual registrada y, en YMYL, fuentes tipadas; ni la revisión factual ni el revisor están asignados todavía
+(`content/grupo-a/README-HANDOFF.md`, `content/grupo-b/README.md`). No se ha inventado ninguna fecha de revisión.
+
+Consecuencia estructural (verificada, no supuesta): el grafo editorial está conectado, así que publicar una sola
+pieza produce `B-REF-PRIVADA` (fuga de borrador) en el validador. La publicación es un interruptor único, no una
+tarea por fichero. `npm run publicacion:pendiente` genera el informe exacto de qué falta entrada por entrada.
+
+No hecho (fuera de alcance o dependiente de un humano):
+
+- Revisión factual con revisor asignado y paso a `publicado` del bloque editorial.
+- Comprobación HTTP real de las 24 URLs del carril A (el dossier solo verificó fragmentos de índice).
+- Cifras de vivienda: no se publican hasta re-ejecutar `calculos.py` y corregir los tres datos marcados `CORREGIR`.
+- `AGENTS.md`, páginas legales y despliegue: cards posteriores.
+- El aviso `W-VIDEO-SIN-FICHA` de `LL1EJttJPrs` es intencional: vídeo público real fuera del alcance V1.
 
 ## CI
 

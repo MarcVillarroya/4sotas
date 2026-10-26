@@ -71,4 +71,4 @@ limites:
   - "Los cambios reales de rentabilidad año a año no son una curva suave, así que dos simulaciones con la misma media pueden dar resultados distintos."
 tests: tests/calculadora.ts
 temas:
-  - tema-fixture-demo
+  - tema-ahorro

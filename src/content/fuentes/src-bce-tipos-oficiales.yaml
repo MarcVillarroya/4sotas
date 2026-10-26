@@ -1,0 +1,10 @@
+id: src-bce-tipos-oficiales
+titulo: Key ECB interest rates
+editor: BCE
+url: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html
+tipo: primaria
+jurisdiccion: UE
+consultado_en: 2026-10-26
+publicado_en: 2026-09-16
+acceso: publico
+nota_verificacion: Página oficial de tipos; el detalle de la decisión de septiembre está en src-bce-decision-tipos-sep-2026.

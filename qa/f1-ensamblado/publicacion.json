@@ -1,0 +1,1238 @@
+{
+  "generated_at": "2026-10-26T02:50:03.060Z",
+  "contenido_total": 45,
+  "publicadas": 0,
+  "sin_publicar": 45,
+  "publicables_sin_tocar_metadata": 0,
+  "con_referencias_a_no_publicadas": 45,
+  "entradas": [
+    {
+      "id": "tema-ahorro",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/temas/tema-ahorro.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-primeros-1000-euros",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-inflacion",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-6dp6Y6nTreY",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-1ztXsY1hwNA",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-t1zPAoZV05M",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-interes-compuesto",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-banca",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/temas/tema-banca.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-tarjetas-comisiones",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-inversion",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-vivienda",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-vefjjmzDHyY",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-burbujas",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/temas/tema-burbujas.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-inversion",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-vivienda",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-3xz04lRAW0k",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-fixture-demo",
+      "coleccion": "temas",
+      "status": "borrador",
+      "sensibilidad": "media",
+      "fichero": "src/content/temas/tema-fixture-demo.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-fixture-demo",
+          "estado": "borrador"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-fixture-metodologia",
+          "estado": "borrador"
+        }
+      ]
+    },
+    {
+      "id": "tema-inflacion",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/temas/tema-inflacion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-inflacion-poder-adquisitivo",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-i5fe580iFqk",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-inversion",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/temas/tema-inversion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-fondos-vs-etf",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-banca",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-vivienda",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-burbujas",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-u0AKp6bpdGo",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-interes-compuesto",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-nomina",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/temas/tema-nomina.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-bruto-a-neto",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-LarTT_rvCGM",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos_destacados",
+          "id": "vid-SrvXlAVnDog",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "tema-vivienda",
+      "coleccion": "temas",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/temas/tema-vivienda.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "pilar",
+          "id": "art-comprar-piso-coste",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-banca",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas_relacionados",
+          "id": "tema-inversion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-bruto-a-neto",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/articulos/art-bruto-a-neto.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-LarTT_rvCGM",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-O1V9_of7g1w",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-base-de-cotizacion",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tipo-de-retencion",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tipo-marginal",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-comprar-piso-coste",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/articulos/art-comprar-piso-coste.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-vivienda",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tae",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-amortizacion-francesa",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-dca-interes-compuesto",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/articulos/art-dca-interes-compuesto.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-inversion",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-u0AKp6bpdGo",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-interes-compuesto",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-dca",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-traspaso-fondos",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-fixture-demo",
+      "coleccion": "articulos",
+      "status": "borrador",
+      "sensibilidad": "media",
+      "fichero": "src/content/articulos/art-fixture-demo.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-fixture-demo",
+          "estado": "borrador"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-fixture-metodologia",
+          "estado": "borrador"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-fixture-demo",
+          "estado": "borrador"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-fixture-demo-dos",
+          "estado": "borrador"
+        },
+        {
+          "campo": "serie",
+          "id": "ser-fixture-demo",
+          "estado": "borrador"
+        }
+      ]
+    },
+    {
+      "id": "art-fondos-vs-etf",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/articulos/art-fondos-vs-etf.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-inversion",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-u0AKp6bpdGo",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-traspaso-fondos",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-diversificacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-inflacion-poder-adquisitivo",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-inflacion",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-i5fe580iFqk",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-ipc",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-inflacion-subyacente",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-primeros-1000-euros",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/articulos/art-primeros-1000-euros.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-6dp6Y6nTreY",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-u0AKp6bpdGo",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-1ztXsY1hwNA",
+          "estado": "revision"
+        },
+        {
+          "campo": "herramientas",
+          "id": "herr-interes-compuesto",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-fondo-de-emergencia",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-ipc",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-tarjetas-comisiones",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/articulos/art-tarjetas-comisiones.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-banca",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-vefjjmzDHyY",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tae",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tin",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "art-tramos-irpf-y-retencion",
+      "coleccion": "articulos",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-SrvXlAVnDog",
+          "estado": "revision"
+        },
+        {
+          "campo": "videos",
+          "id": "vid-O1V9_of7g1w",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tipo-marginal",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-tipo-de-retencion",
+          "estado": "revision"
+        },
+        {
+          "campo": "glosario",
+          "id": "glo-base-de-cotizacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-1ztXsY1hwNA",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-1ztXsY1hwNA.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-6dp6Y6nTreY",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-t1zPAoZV05M",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-3xz04lRAW0k",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-3xz04lRAW0k.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-burbujas",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-6dp6Y6nTreY",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-6dp6Y6nTreY.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-t1zPAoZV05M",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-LarTT_rvCGM",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-LarTT_rvCGM.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-SrvXlAVnDog",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-M9EhU06FlUA",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-M9EhU06FlUA.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-LarTT_rvCGM",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-O1V9_of7g1w",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-O1V9_of7g1w",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-O1V9_of7g1w.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-M9EhU06FlUA",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-SrvXlAVnDog",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-SrvXlAVnDog",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-SrvXlAVnDog.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-nomina",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-LarTT_rvCGM",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-O1V9_of7g1w",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-i5fe580iFqk",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-i5fe580iFqk.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-inflacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-t1zPAoZV05M",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-t1zPAoZV05M.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-6dp6Y6nTreY",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-u0AKp6bpdGo",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-u0AKp6bpdGo.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        },
+        {
+          "campo": "temas",
+          "id": "tema-inversion",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "vid-i5fe580iFqk",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "vid-vefjjmzDHyY",
+      "coleccion": "videos",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/videos/vid-vefjjmzDHyY.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-banca",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-amortizacion-francesa",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-amortizacion-francesa.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tae",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-base-de-cotizacion",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/glosario/glo-base-de-cotizacion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tipo-de-retencion",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "glo-tipo-marginal",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-dca",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-dca.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-diversificacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-diversificacion",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-diversificacion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-dca",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "glo-traspaso-fondos",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-fixture-demo-dos",
+      "coleccion": "glosario",
+      "status": "borrador",
+      "sensibilidad": "baja",
+      "fichero": "src/content/glosario/glo-fixture-demo-dos.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-fixture-demo",
+          "estado": "borrador"
+        }
+      ]
+    },
+    {
+      "id": "glo-fixture-demo",
+      "coleccion": "glosario",
+      "status": "borrador",
+      "sensibilidad": "baja",
+      "fichero": "src/content/glosario/glo-fixture-demo.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-fixture-demo-dos",
+          "estado": "borrador"
+        }
+      ]
+    },
+    {
+      "id": "glo-fondo-de-emergencia",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/glosario/glo-fondo-de-emergencia.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-ipc",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-inflacion-subyacente",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-inflacion-subyacente.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-ipc",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-ipc",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-ipc.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-inflacion-subyacente",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-tae",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-tae.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tin",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-tin",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-tin.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tae",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-tipo-de-retencion",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/glosario/glo-tipo-de-retencion.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tipo-marginal",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "glo-base-de-cotizacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-tipo-marginal",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "alta",
+      "fichero": "src/content/glosario/glo-tipo-marginal.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-tipo-de-retencion",
+          "estado": "revision"
+        },
+        {
+          "campo": "relacionados",
+          "id": "glo-base-de-cotizacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "glo-traspaso-fondos",
+      "coleccion": "glosario",
+      "status": "revision",
+      "sensibilidad": "media",
+      "fichero": "src/content/glosario/glo-traspaso-fondos.md",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "relacionados",
+          "id": "glo-diversificacion",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "herr-fixture-metodologia",
+      "coleccion": "herramientas",
+      "status": "borrador",
+      "sensibilidad": "baja",
+      "fichero": "src/content/herramientas/herr-fixture-metodologia.yaml",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-fixture-demo",
+          "estado": "borrador"
+        }
+      ]
+    },
+    {
+      "id": "herr-interes-compuesto",
+      "coleccion": "herramientas",
+      "status": "revision",
+      "sensibilidad": "baja",
+      "fichero": "src/content/herramientas/herr-interes-compuesto.yaml",
+      "falta": [
+        "publicado (fecha)"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-ahorro",
+          "estado": "revision"
+        }
+      ]
+    },
+    {
+      "id": "ser-fixture-demo",
+      "coleccion": "series",
+      "status": "borrador",
+      "sensibilidad": "baja",
+      "fichero": "src/content/series/ser-fixture-demo.yaml",
+      "falta": [
+        "publicado (fecha)",
+        "revisado_factual (fecha)",
+        "seo.descripcion"
+      ],
+      "refs_sin_publicar": [
+        {
+          "campo": "temas",
+          "id": "tema-fixture-demo",
+          "estado": "borrador"
+        }
+      ]
+    }
+  ]
+}

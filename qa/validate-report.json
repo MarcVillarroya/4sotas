@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-26T00:07:42.113Z",
-  "root": "/home/mvf/4sotas/site/.worktrees/t_a85e410a",
+  "generated_at": "2026-10-26T02:50:01.400Z",
+  "root": "/home/mvf/4sotas/site/.worktrees/t_89e4e004",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
   "entries": {
     "sotas": 4,
-    "temas": 1,
-    "articulos": 1,
-    "videos": 1,
+    "temas": 8,
+    "articulos": 9,
+    "videos": 11,
     "series": 1,
     "herramientas": 2,
-    "glosario": 2,
-    "fuentes": 1,
+    "glosario": 14,
+    "fuentes": 44,
     "autores": 1
   },
   "dist": {
@@ -24,56 +24,6 @@
       "code": "W-VIDEO-SIN-FICHA",
       "where": "audit/inventory.json",
       "msg": "vídeo público sin ficha en el sitio: LL1EJttJPrs"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: 6dp6Y6nTreY"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: t1zPAoZV05M"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: 1ztXsY1hwNA"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: 3xz04lRAW0k"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: vefjjmzDHyY"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: u0AKp6bpdGo"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: i5fe580iFqk"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: SrvXlAVnDog"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: LarTT_rvCGM"
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: O1V9_of7g1w"
     }
   ],
   "verdict": "ok"

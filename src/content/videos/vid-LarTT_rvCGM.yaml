@@ -1,0 +1,34 @@
+id: vid-LarTT_rvCGM
+status: revision
+universo: oros
+creado: 2026-10-26
+revisado_factual: 2026-10-26
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+fuentes: []
+seo:
+  descripcion: "Vídeo corto de Sota de Oros: bruto frente a neto y por qué de 2.000 € brutos quedan 1.630 € netos en el caso que plantea."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: LarTT_rvCGM
+slug: bruto-vs-neto-2000
+titulo: "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €"
+descripcion_corta: "Pieza corta de 59 s: el vídeo plantea por qué de 2.000 € brutos quedan 1.630 € netos. El desarrollo está en la guía de nómina."
+publicado_en: 2026-10-07
+duracion_iso: PT59S
+miniatura: https://i.ytimg.com/vi/LarTT_rvCGM/maxresdefault.jpg
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-10-26
+vistas_al_verificar: 73
+idioma: es
+temas:
+  - tema-nomina
+relacionados:
+  - vid-M9EhU06FlUA
+  - vid-SrvXlAVnDog
+transcripcion: false
+capitulos: []

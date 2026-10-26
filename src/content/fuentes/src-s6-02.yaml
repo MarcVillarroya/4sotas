@@ -1,0 +1,9 @@
+id: src-s6-02
+titulo: "S&P 500 (serie SP500), cierre diario"
+editor: FRED (Federal Reserve Bank of St. Louis)
+url: https://fred.stlouisfed.org/series/SP500
+tipo: oficial
+jurisdiccion: OTRA
+consultado_en: 2026-10-26
+acceso: publico
+nota_verificacion: "AVISO: por el acuerdo con S&P Dow Jones, FRED solo mantiene ~10 años, así que 2007-2009 puede faltar. Cifras 1.565,15 (9-oct-2007) y 676,53 (9-mar-2009) concordantes en tres secundarias; verificar en histórico completo antes de publicar."

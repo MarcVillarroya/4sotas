@@ -317,8 +317,10 @@ if (DIST) {
     const htmls = walk(DIST, new Set(['.html']));
     const rutas = new Set(
       htmls.map((f) => {
+        // index.html representa el directorio con barra final; los HTML sueltos
+        // conservan su nombre (p. ej. /404.html). Igual que las rutas de RUTA.
         const rel = path.relative(DIST, f).replace(/\\/g, '/').replace(/(^|\/)index\.html$/, '$1');
-        return `/${rel.replace(/\/$/, '')}${rel === '/' || rel.endsWith('/') ? '' : '/'}`.replace(/\/+/g, '/');
+        return `/${rel}`.replace(/\/+/g, '/');
       }),
     );
 

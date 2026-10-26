@@ -1,26 +1,34 @@
 id: vid-M9EhU06FlUA
-status: borrador
+status: revision
+universo: oros
 creado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: baja
-procedencia: derivado-video
+procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+fuentes: []
+seo:
+  descripcion: "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto."
+  noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: M9EhU06FlUA
-slug: video-fixture-demo
+slug: como-leer-una-nomina
 titulo: "Cómo leer una nómina en España (2026): del bruto al neto"
-descripcion_corta: Resumen editorial de fixture para probar la watch page; no reutiliza la descripción de YouTube ni afirma cifras.
+descripcion_corta: "Pieza de 9 min 50 s del canal Sota de Oros: recorre una nómina española de 2026 línea a línea, del salario bruto al neto."
 publicado_en: 2026-10-11
 duracion_iso: PT9M50S
 miniatura: https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26
+vistas_al_verificar: 59
 idioma: es
 temas:
-  - tema-fixture-demo
-serie: ser-fixture-demo
-relacionados: []
+  - tema-nomina
+relacionados:
+  - vid-LarTT_rvCGM
+  - vid-O1V9_of7g1w
 transcripcion: false
 capitulos: []

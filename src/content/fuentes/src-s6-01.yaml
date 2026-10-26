@@ -1,0 +1,9 @@
+id: src-s6-01
+titulo: "NASDAQ Composite Index (serie NASDAQCOM), cierre diario"
+editor: FRED / ALFRED (Federal Reserve Bank of St. Louis)
+url: https://alfred.stlouisfed.org/series?seid=NASDAQCOM
+tipo: oficial
+jurisdiccion: OTRA
+consultado_en: 2026-10-26
+acceso: publico
+nota_verificacion: "Serie oficial hasta 2026-10-23. Los valores 5.048,62 (10-mar-2000) y 1.114,11 (9-oct-2002) los confirman dos secundarias que dicen usar esta serie; el CSV no se ha descargado. Descargar antes de publicar."

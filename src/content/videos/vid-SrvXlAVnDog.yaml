@@ -1,0 +1,34 @@
+id: vid-SrvXlAVnDog
+status: revision
+universo: oros
+creado: 2026-10-26
+revisado_factual: 2026-10-26
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+fuentes: []
+seo:
+  descripcion: "Vídeo corto de Sota de Oros sobre los tramos del IRPF: por qué un tipo marginal más alto no implica cobrar menos neto."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: SrvXlAVnDog
+slug: tramos-del-irpf
+titulo: "Los tramos del IRPF no funcionan como crees"
+descripcion_corta: "Pieza corta de 1 minuto: el vídeo desmonta la idea de que subir de tramo de IRPF haga perder dinero en conjunto."
+publicado_en: 2026-10-09
+duracion_iso: PT1M
+miniatura: https://i.ytimg.com/vi/SrvXlAVnDog/maxresdefault.jpg
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-10-26
+vistas_al_verificar: 23
+idioma: es
+temas:
+  - tema-nomina
+relacionados:
+  - vid-LarTT_rvCGM
+  - vid-O1V9_of7g1w
+transcripcion: false
+capitulos: []

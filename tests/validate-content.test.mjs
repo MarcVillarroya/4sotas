@@ -1,5 +1,5 @@
 /**
- * 4 Sotas · regresiones CLI de referencias por colección (B3).
+ * 4 Sotas · regresiones CLI de referencias (B3) y aislamiento de salida (B6).
  *
  * Invoca el validador real por subprocess y comprueba exit code + reporte --json.
  * Sin dependencias nuevas: node:test, node:assert, node:fs, node:child_process.
@@ -47,11 +47,28 @@ function materializar(files) {
   return root;
 }
 
-function ejecutar(files) {
+function ejecutar(files, distFiles = null) {
   assert.ok(fs.existsSync(VALIDATOR), `no existe el validador en ${VALIDATOR} (usa VALIDATOR_PATH)`);
   const root = materializar(files);
   const jsonOut = path.join(root, 'report.json');
-  const res = spawnSync(process.execPath, [VALIDATOR, '--root', root, '--json', jsonOut], {
+  const args = [VALIDATOR, '--root', root, '--json', jsonOut];
+  if (distFiles !== null) {
+    const dist = path.join(root, 'dist');
+    const salida = {
+      'index.html': htmlSalida('/'),
+      '404.html': '<!doctype html><title>No encontrado</title>',
+      'robots.txt': 'User-agent: *\nAllow: /\n',
+      'sitemap-index.xml': '<sitemapindex></sitemapindex>',
+      ...distFiles,
+    };
+    for (const [rel, html] of Object.entries(salida)) {
+      const destino = path.join(dist, rel);
+      fs.mkdirSync(path.dirname(destino), { recursive: true });
+      fs.writeFileSync(destino, html);
+    }
+    args.push('--dist', dist);
+  }
+  const res = spawnSync(process.execPath, args, {
     encoding: 'utf8',
     env: { ...process.env, SITE_ORIGIN: undefined, SITE_BASE: undefined },
   });
@@ -81,6 +98,10 @@ function assertSinBloqueantes(report, status) {
 }
 
 const clonar = (files) => JSON.parse(JSON.stringify(files));
+
+function htmlSalida(ruta) {
+  return `<!doctype html><link rel="canonical" href="https://marcvillarroya.github.io/4sotas${ruta}"><title>Fixture sintético</title>`;
+}
 
 /* ─────────────────────── fixture sintético: matriz válida ─────────────────────── */
 
@@ -500,4 +521,83 @@ test('referencias de fuentes en varias entradas se validan una a una', () => {
   assert.equal(status, 1);
   assert.equal(refs(report).length, 1, JSON.stringify(report.blockers));
   assertColgante(report, 'fuentes.fuente', 'src-inexistente', 'fuentes');
+});
+
+/* ─────────────────── B6 · aislamiento de salida estática ─────────────────── */
+
+// Tabla independiente del mapa RUTA del validador: contrato de rutas públicas.
+const RUTAS_SALIDA = [
+  ['temas', 'tema-prueba', '/oros/temas/prueba/'],
+  ['articulos', 'art-prueba', '/oros/guias/prueba/'],
+  ['videos', VID_A, '/oros/videos/prueba/'],
+  ['series', 'ser-prueba', '/oros/series/prueba/'],
+  ['herramientas', 'herr-prueba', '/oros/herramientas/prueba/'],
+  ['glosario', 'glo-prueba', '/oros/glosario/prueba/'],
+];
+
+for (const [col, id, ruta] of RUTAS_SALIDA) {
+  test(`${col}: borrador con index.html en dist bloquea con B-DRAFT-EN-DIST`, () => {
+    const file = `${col}/entrada.json`;
+    const { status, report } = ejecutar(
+      { [file]: { id, slug: 'prueba', status: 'borrador' } },
+      { [`${ruta.slice(1)}index.html`]: htmlSalida(ruta) },
+    );
+    assert.equal(status, 1);
+    assert.equal(report.verdict, 'bloqueado');
+    assert.deepEqual(report.blockers, [{
+      code: 'B-DRAFT-EN-DIST',
+      where: `src/content/${file}`,
+      msg: `entrada con status=borrador tiene página en dist: ${ruta}`,
+    }]);
+    assert.equal(report.dist.htmls, 3);
+  });
+
+  test(`${col}: borrador sin página propia en dist no bloquea`, () => {
+    const { status, report } = ejecutar(
+      { [`${col}/entrada.json`]: { id, slug: 'prueba', status: 'borrador' } },
+      { 'oros/temas/prueba-distinta/index.html': htmlSalida('/oros/temas/prueba-distinta/') },
+    );
+    assertSinBloqueantes(report, status);
+  });
+
+  test(`${col}: publicado con página propia en dist no se confunde con borrador`, () => {
+    const data = { ...CAMPOS_PUBLICADO, id, slug: 'prueba' };
+    const files = { [`${col}/entrada.json`]: data };
+    if (col === 'articulos') {
+      data.temas = ['tema-publicado'];
+      files['temas/publicado.json'] = { ...CAMPOS_PUBLICADO, id: 'tema-publicado', slug: 'publicado' };
+    }
+    if (col === 'videos') Object.assign(data, { youtube_id: 'AAAAAAAAAAA', estado_youtube: 'publico' });
+    const { status, report } = ejecutar(files, { [`${ruta.slice(1)}index.html`]: htmlSalida(ruta) });
+    assertSinBloqueantes(report, status);
+  });
+}
+
+for (const st of ['revision', 'archivado', undefined]) {
+  test(`tema con status=${st} y página en dist también bloquea`, () => {
+    const { status, report } = ejecutar(
+      { 'temas/entrada.json': { id: 'tema-prueba', slug: 'prueba', status: st } },
+      { 'oros/temas/prueba/index.html': htmlSalida('/oros/temas/prueba/') },
+    );
+    assert.equal(status, 1);
+    assert.equal(report.verdict, 'bloqueado');
+    assert.deepEqual(report.blockers.map((b) => b.code), ['B-DRAFT-EN-DIST']);
+  });
+}
+
+test('index raíz, 404.html e índices de colección no se confunden con página de borrador', () => {
+  const { status, report } = ejecutar(
+    { 'temas/entrada.json': { id: 'tema-prueba', slug: 'prueba', status: 'borrador' } },
+    { 'oros/temas/index.html': htmlSalida('/oros/temas/') },
+  );
+  assertSinBloqueantes(report, status);
+  assert.equal(report.dist.htmls, 3);
+});
+
+test('B6 no omite checks de canónica y enlaces rotos de la salida', () => {
+  const { status, report } = ejecutar({}, {
+    'index.html': '<!doctype html><a href="/4sotas/no-existe/">Roto</a>',
+  });
+  assert.equal(status, 1);
+  assert.deepEqual(report.blockers.map((b) => b.code), ['B-CANONICA', 'B-ENLACE-ROTO']);
 });

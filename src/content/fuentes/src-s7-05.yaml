@@ -1,0 +1,10 @@
+id: src-s7-05
+titulo: "Tarifas, tipos impositivos y cuota tributaria del ITP y AJD (TPO)"
+editor: Agència Tributària de Catalunya (ATC)
+url: https://atc.gencat.cat/es/tributs/itpajd/tpo/tarifes-tipus/
+tipo: primaria
+jurisdiccion: ES-CT
+consultado_en: 2026-10-26
+acceso: publico
+cita: "La transmisión de inmuebles que tienen un valor total que no supera los 600.000 € tributa al tipo impositivo del 10 %"
+nota_verificacion: "Verificado 26-oct-2026 por descarga directa (HTTP 200): 10 % hasta 600.000 €; tipo medio 11/12/13 % por encima; 20 % grandes tenedores y edificios enteros; 5 % reducido (VPO, monoparental, numerosa, joven, discapacidad, violencia machista)."

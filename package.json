@@ -17,10 +17,12 @@
     "test": "node --test \"tests/**/*.test.ts\" \"tests/**/*.test.mjs\" \"tests/calculadora.ts\"",
     "test:calculadora": "node --test \"tests/calculadora.ts\"",
     "verificar:plantillas": "node scripts/verificar-plantillas.mjs",
+    "publicacion:pendiente": "node scripts/pendiente-publicacion.mjs --json qa/f1-ensamblado/publicacion.json --md qa/f1-ensamblado/PUBLICACION-PENDIENTE.md",
     "validate:content": "node scripts/validate-content.mjs --root . --inventory data/inventory-snapshot.json",
     "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://marcvillarroya.github.io}\" --base \"${SITE_BASE:-/4sotas}\" --json qa/validate-report.json"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "7.3.4",
     "@astrojs/sitemap": "3.7.4",
     "astro": "7.4.2"
   },
