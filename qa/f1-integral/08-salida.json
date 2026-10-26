@@ -1,0 +1,213 @@
+{
+ "html": 47,
+ "fugasFixture": [],
+ "externosUnicos": 98,
+ "jsonldNodos": 46,
+ "tiposJsonLd": {
+  "Organization": 1,
+  "WebSite": 46,
+  "WebPage": 2,
+  "DefinedTerm": 12,
+  "BreadcrumbList": 44,
+  "DefinedTermSet": 1,
+  "Article": 8,
+  "CollectionPage": 12,
+  "ItemList": 11,
+  "SoftwareApplication": 2,
+  "VideoObject": 11
+ },
+ "conRatingOPrecios": [
+  "oros/herramientas/index.html",
+  "oros/herramientas/interes-compuesto/index.html"
+ ],
+ "externosNoOk": [
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/404/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/amortizacion-francesa/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/base-de-cotizacion/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/dca-aportacion-periodica/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/diversificacion/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/fondo-de-emergencia/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/inflacion-subyacente/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/ipc/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/tae/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/tin/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-de-retencion/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-marginal/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/glosario/traspaso-de-fondos/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/bruto-a-neto/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/comprar-piso-coste-real/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/dca-interes-compuesto/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/fondos-indexados-vs-etf/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/inflacion-poder-adquisitivo/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/primeros-1000-euros/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/tarjetas-y-comisiones/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/herramientas/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/ahorro/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/banca-y-credito/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/burbujas/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/inflacion/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/inversion-desde-cero/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/nomina/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/temas/vivienda-y-hipoteca/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+   "status": 404
+  },
+  {
+   "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+   "status": 404
+  }
+ ]
+}

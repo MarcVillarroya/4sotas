@@ -5,18 +5,13 @@
  */
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import SuitIcon from '../components/SuitIcon.astro';
 import { MARCA, SECCION, url } from '../lib/rutas.ts';
 import { grafoInicio } from '../lib/jsonld.ts';
 
 const sotas = await getCollection('sotas');
 
 const ORDEN = ['oros', 'copas', 'espadas', 'bastos'];
-const GLIFO: Record<string, string> = {
-  oros: 'O',
-  copas: 'C',
-  espadas: 'E',
-  bastos: 'B',
-};
 
 const palos = [...sotas].sort((a, b) => ORDEN.indexOf(a.data.palo) - ORDEN.indexOf(b.data.palo));
 const activo = palos.find((p) => p.data.estado === 'activa');
@@ -70,7 +65,7 @@ const jsonLd = grafoInicio({
         palos.map((p) => (
           <article class={p.data.estado === 'activa' ? 'suit active' : 'suit'}>
             <span class="symbol" aria-hidden="true">
-              [{GLIFO[p.data.palo] ?? '?'}]
+              <SuitIcon palo={p.data.palo} />
             </span>
             <h3>
               {p.data.estado === 'activa' ? <a class="text-link" href={url('/oros/')}>{p.data.nombre}</a> : p.data.nombre}

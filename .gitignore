@@ -25,3 +25,6 @@ qa/*.local.json
 
 # Cuerpos descargados de las fuentes citadas: material de terceros, nunca al repo
 qa/f1-revision/cache/
+
+# capturas de QA (pesadas; se regeneran con qa/f1-integral/browser-qa.mjs)
+qa/**/evidence*/

@@ -40,7 +40,7 @@ const { youtubeId, titulo, duracion } = Astro.props;
         Sin JavaScript no hay reproductor integrado. El enlace directo de abajo abre el vídeo igualmente.
       </p>
     </noscript>
-    <p class="sr-only" role="status" aria-live="polite" data-estado></p>
+    <p role="status" aria-live="polite" data-estado></p>
   </div>
 </div>
 
@@ -53,25 +53,42 @@ const { youtubeId, titulo, duracion } = Astro.props;
     const boton = reproductor.querySelector('[data-cargar]');
     const estado = reproductor.querySelector('[data-estado]');
     if (!boton) return;
-    boton.addEventListener(
-      'click',
-      () => {
-        const id = reproductor.getAttribute('data-video');
-        if (!id) return;
-        const iframe = document.createElement('iframe');
-        iframe.className = 'player-frame';
-        iframe.title = reproductor.getAttribute('data-titulo') || 'Vídeo de 4 Sotas';
-        iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-        iframe.allow = 'encrypted-media; picture-in-picture; fullscreen';
-        iframe.allowFullscreen = true;
-        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-        iframe.tabIndex = 0;
-        reproductor.replaceChildren(iframe);
+    boton.addEventListener('click', () => {
+      const id = reproductor.getAttribute('data-video');
+      if (!id) return;
+      const iframe = document.createElement('iframe');
+      iframe.className = 'player-frame';
+      iframe.title = reproductor.getAttribute('data-titulo') || 'Vídeo de 4 Sotas';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0';
+      iframe.allow = 'encrypted-media; picture-in-picture; fullscreen';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.tabIndex = 0;
+      iframe.hidden = true;
+      boton.disabled = true;
+      reproductor.setAttribute('aria-busy', 'true');
+      estado.textContent = 'Conectando con YouTube…';
+      const recuperar = () => {
+        clearTimeout(espera);
+        iframe.remove();
+        reproductor.removeAttribute('aria-busy');
+        boton.disabled = false;
+        boton.textContent = 'Reintentar la carga';
+        estado.textContent = 'No se ha podido confirmar la carga. Reintenta o usa el enlace directo a YouTube.';
+      };
+      const espera = setTimeout(recuperar, 12000);
+      iframe.addEventListener('error', recuperar, { once: true });
+      iframe.addEventListener('load', () => {
+        if (!iframe.isConnected) return;
+        clearTimeout(espera);
+        reproductor.removeAttribute('aria-busy');
+        const conservarFoco = document.activeElement === boton;
+        reproductor.querySelector('div').hidden = true;
+        iframe.hidden = false;
         reproductor.classList.add('loaded');
-        if (estado) estado.textContent = 'Vídeo cargado desde YouTube.';
-        iframe.focus();
-      },
-      { once: true },
-    );
+        if (conservarFoco) iframe.focus();
+      }, { once: true });
+      reproductor.append(iframe);
+    });
   });
 </script>

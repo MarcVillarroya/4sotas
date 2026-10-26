@@ -1,0 +1,29 @@
+{
+ "total": 94,
+ "porColeccion": {
+  "temas": 8,
+  "articulos": 9,
+  "videos": 11,
+  "glosario": 14,
+  "fuentes": 44,
+  "autores": 1,
+  "herramientas": 2,
+  "series": 1,
+  "sotas": 4
+ },
+ "ids": 94,
+ "slugs": 44,
+ "refs": 101,
+ "refsRotasReales": 0,
+ "estados": {
+  "revision": 39,
+  "borrador": 6
+ },
+ "publicados": 0,
+ "publicadosSinPagina": [],
+ "publicadosSinRevisor": [],
+ "publicadosSinFechaRevision": [],
+ "problemas": [
+  "slug duplicado fondo-de-emergencia en glosario/glo-fondo-de-emergencia.md y videos/vid-6dp6Y6nTreY.yaml"
+ ]
+}

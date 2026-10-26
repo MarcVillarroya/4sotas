@@ -9,8 +9,8 @@
  *
  * La página es HTML estático: el resultado inicial se calcula en el build con el mismo
  * motor puro (`src/lib/calculadora.ts`), de modo que sin JavaScript se ve un ejemplo
- * completo, la tabla y la metodología. El `<script>` solo recalcula al cambiar el
- * formulario: no hay envío a servidor, ni cookies, ni peticiones de terceros.
+ * completo, la tabla y la metodología. El `<script>` retira la salida al editar y calcula
+ * al enviar el formulario: no hay envío a servidor, ni cookies, ni peticiones de terceros.
  *
  * La tabla HTML es la fuente de verdad del resultado. El SVG resume las mismas filas y
  * nunca es el único sitio donde está el dato.
@@ -232,7 +232,8 @@ const ejemplos = EJEMPLOS.map((ejemplo) => {
       <div class="actions">
         <button class="button" type="submit">Calcular</button>
       </div>
-      <p class="hint">El cálculo se actualiza al cambiar un campo: no se recarga la página ni se envía nada.</p>
+      <p class="hint">Al editar, el resultado se retira. Pulsa Calcular para actualizarlo; nada se envía.</p>
+      <noscript><p class="honest">Sin JavaScript se muestra únicamente el ejemplo inicial; los cambios no se calculan.</p></noscript>
     </fieldset>
   </form>
 
@@ -263,8 +264,7 @@ const ejemplos = EJEMPLOS.map((ejemplo) => {
       <h2 id="resultado-herramienta" style="font-size:var(--text-h3)">Capital final</h2>
       <p class="big-number" id="capital-final">{formatearEuros(ejemplo.capitalFinal)}</p>
       <p class="hint" id="resumen-entrada">
-        {miles(DEFECTO.capitalInicial)} € iniciales y {miles(DEFECTO.aportacionPeriodica)} € cada periodo, durante
-        {ejemplo.periodos} periodos al {formatearPorcentaje(ejemplo.tasaEfectivaAnual)} efectivo anual.
+        {`${miles(DEFECTO.capitalInicial)} € iniciales y ${miles(DEFECTO.aportacionPeriodica)} € cada periodo, durante ${ejemplo.periodos} periodos al ${formatearPorcentaje(ejemplo.tasaEfectivaAnual)} efectivo anual.`}
       </p>
 
       <dl class="metrics">
@@ -294,7 +294,7 @@ const ejemplos = EJEMPLOS.map((ejemplo) => {
       </div>
     </section>
 
-    <div class="table-wrap calc-table">
+    <div class="table-wrap calc-table" tabindex="0" role="region" aria-label="Evolución anual de la simulación">
       <table id="tabla-evolucion">
         <caption>Evolución al cierre de cada año, con los supuestos de la simulación.</caption>
         <thead>
@@ -451,13 +451,27 @@ const ejemplos = EJEMPLOS.map((ejemplo) => {
     if (nodo) nodo.textContent = texto;
   };
 
+  const retirarResultado = (): void => {
+    for (const id of ['capital-final', 'total-aportado', 'total-ganancia', 'tasa-periodo', 'valor-real']) {
+      escribir(id, '—');
+    }
+    grafico?.replaceChildren();
+    cuerpoTabla?.replaceChildren();
+    escribir('resumen-entrada', 'Los datos han cambiado. Pulsa Calcular para ver el resultado.');
+    escribir('estado-calculo', 'Calcula para actualizar.');
+  };
+
   const actualizar = (): void => {
     if (!formulario) return;
     const entrada = leerEntrada();
     const respuesta = calcularInteresCompuesto(entrada);
     if (!respuesta.ok) {
+      retirarResultado();
       pintarErrores(respuesta.errores);
       escribir('estado-calculo', `No se puede calcular: ${respuesta.errores[0]?.mensaje ?? 'revisa los campos'}`);
+      const campo = respuesta.errores[0]?.campo;
+      const control = campo === 'plazo' ? porId('anios') : campo === 'momentoAportacion' ? porId('momento-fin') : porId(campo ?? '');
+      control?.focus();
       return;
     }
     limpiarErrores();
@@ -484,6 +498,10 @@ const ejemplos = EJEMPLOS.map((ejemplo) => {
     evento.preventDefault();
     actualizar();
   });
-  formulario?.addEventListener('input', actualizar);
-  formulario?.addEventListener('change', actualizar);
+  const editar = (): void => {
+    limpiarErrores();
+    retirarResultado();
+  };
+  formulario?.addEventListener('input', editar);
+  formulario?.addEventListener('change', editar);
 </script>

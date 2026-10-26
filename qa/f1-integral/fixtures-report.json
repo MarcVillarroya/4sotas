@@ -1,0 +1,668 @@
+{
+ "root": "dist-fixtures",
+ "files": 69,
+ "html": 52,
+ "h1": {
+  "/404.html": 1,
+  "/": 1,
+  "/oros/glosario/amortizacion-francesa/": 1,
+  "/oros/glosario/base-de-cotizacion/": 1,
+  "/oros/glosario/dca-aportacion-periodica/": 1,
+  "/oros/glosario/diversificacion/": 1,
+  "/oros/glosario/fondo-de-emergencia/": 1,
+  "/oros/glosario/": 1,
+  "/oros/glosario/inflacion-subyacente/": 1,
+  "/oros/glosario/ipc/": 1,
+  "/oros/glosario/segundo-termino-fixture/": 1,
+  "/oros/glosario/tae/": 1,
+  "/oros/glosario/termino-fixture-demo/": 1,
+  "/oros/glosario/tin/": 1,
+  "/oros/glosario/tipo-de-retencion/": 1,
+  "/oros/glosario/tipo-marginal/": 1,
+  "/oros/glosario/traspaso-de-fondos/": 1,
+  "/oros/guias/bruto-a-neto/": 1,
+  "/oros/guias/comprar-piso-coste-real/": 1,
+  "/oros/guias/dca-interes-compuesto/": 1,
+  "/oros/guias/fondos-indexados-vs-etf/": 1,
+  "/oros/guias/guia-fixture-demo/": 1,
+  "/oros/guias/": 1,
+  "/oros/guias/inflacion-poder-adquisitivo/": 1,
+  "/oros/guias/primeros-1000-euros/": 1,
+  "/oros/guias/tarjetas-y-comisiones/": 1,
+  "/oros/guias/tramos-irpf-y-retencion/": 1,
+  "/oros/herramientas/herramienta-fixture-demo/": 1,
+  "/oros/herramientas/": 1,
+  "/oros/herramientas/interes-compuesto/": 1,
+  "/oros/": 1,
+  "/oros/temas/ahorro/": 1,
+  "/oros/temas/banca-y-credito/": 1,
+  "/oros/temas/burbujas/": 1,
+  "/oros/temas/": 1,
+  "/oros/temas/inflacion/": 1,
+  "/oros/temas/inversion-desde-cero/": 1,
+  "/oros/temas/nomina/": 1,
+  "/oros/temas/tema-fixture-demo/": 1,
+  "/oros/temas/vivienda-y-hipoteca/": 1,
+  "/oros/videos/bruto-vs-neto-2000/": 1,
+  "/oros/videos/como-leer-una-nomina/": 1,
+  "/oros/videos/crisis-de-2008-espana/": 1,
+  "/oros/videos/deuda-o-inversion-1000/": 1,
+  "/oros/videos/fondo-de-emergencia/": 1,
+  "/oros/videos/gastos-hormiga/": 1,
+  "/oros/videos/": 1,
+  "/oros/videos/inflacion-sobre-10000/": 1,
+  "/oros/videos/irpf-en-la-nomina/": 1,
+  "/oros/videos/quien-se-queda-tu-dinero-tarjeta/": 1,
+  "/oros/videos/tramos-del-irpf/": 1,
+  "/oros/videos/tres-cuentas-un-sueldo/": 1
+ },
+ "langs": [
+  "es-ES"
+ ],
+ "canonicals": [
+  [
+   "/404.html",
+   "https://marcvillarroya.github.io/4sotas/404/",
+   1
+  ],
+  [
+   "/",
+   "https://marcvillarroya.github.io/4sotas/",
+   1
+  ],
+  [
+   "/oros/glosario/amortizacion-francesa/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/amortizacion-francesa/",
+   1
+  ],
+  [
+   "/oros/glosario/base-de-cotizacion/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/base-de-cotizacion/",
+   1
+  ],
+  [
+   "/oros/glosario/dca-aportacion-periodica/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/dca-aportacion-periodica/",
+   1
+  ],
+  [
+   "/oros/glosario/diversificacion/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/diversificacion/",
+   1
+  ],
+  [
+   "/oros/glosario/fondo-de-emergencia/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/fondo-de-emergencia/",
+   1
+  ],
+  [
+   "/oros/glosario/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/",
+   1
+  ],
+  [
+   "/oros/glosario/inflacion-subyacente/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/inflacion-subyacente/",
+   1
+  ],
+  [
+   "/oros/glosario/ipc/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/ipc/",
+   1
+  ],
+  [
+   "/oros/glosario/segundo-termino-fixture/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/segundo-termino-fixture/",
+   1
+  ],
+  [
+   "/oros/glosario/tae/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/tae/",
+   1
+  ],
+  [
+   "/oros/glosario/termino-fixture-demo/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/termino-fixture-demo/",
+   1
+  ],
+  [
+   "/oros/glosario/tin/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/tin/",
+   1
+  ],
+  [
+   "/oros/glosario/tipo-de-retencion/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-de-retencion/",
+   1
+  ],
+  [
+   "/oros/glosario/tipo-marginal/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-marginal/",
+   1
+  ],
+  [
+   "/oros/glosario/traspaso-de-fondos/",
+   "https://marcvillarroya.github.io/4sotas/oros/glosario/traspaso-de-fondos/",
+   1
+  ],
+  [
+   "/oros/guias/bruto-a-neto/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/bruto-a-neto/",
+   1
+  ],
+  [
+   "/oros/guias/comprar-piso-coste-real/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/comprar-piso-coste-real/",
+   1
+  ],
+  [
+   "/oros/guias/dca-interes-compuesto/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/dca-interes-compuesto/",
+   1
+  ],
+  [
+   "/oros/guias/fondos-indexados-vs-etf/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/fondos-indexados-vs-etf/",
+   1
+  ],
+  [
+   "/oros/guias/guia-fixture-demo/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/guia-fixture-demo/",
+   1
+  ],
+  [
+   "/oros/guias/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/",
+   1
+  ],
+  [
+   "/oros/guias/inflacion-poder-adquisitivo/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/inflacion-poder-adquisitivo/",
+   1
+  ],
+  [
+   "/oros/guias/primeros-1000-euros/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/primeros-1000-euros/",
+   1
+  ],
+  [
+   "/oros/guias/tarjetas-y-comisiones/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/tarjetas-y-comisiones/",
+   1
+  ],
+  [
+   "/oros/guias/tramos-irpf-y-retencion/",
+   "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/",
+   1
+  ],
+  [
+   "/oros/herramientas/herramienta-fixture-demo/",
+   "https://marcvillarroya.github.io/4sotas/oros/herramientas/herramienta-fixture-demo/",
+   1
+  ],
+  [
+   "/oros/herramientas/",
+   "https://marcvillarroya.github.io/4sotas/oros/herramientas/",
+   1
+  ],
+  [
+   "/oros/herramientas/interes-compuesto/",
+   "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/",
+   1
+  ],
+  [
+   "/oros/",
+   "https://marcvillarroya.github.io/4sotas/oros/",
+   1
+  ],
+  [
+   "/oros/temas/ahorro/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/ahorro/",
+   1
+  ],
+  [
+   "/oros/temas/banca-y-credito/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/banca-y-credito/",
+   1
+  ],
+  [
+   "/oros/temas/burbujas/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/burbujas/",
+   1
+  ],
+  [
+   "/oros/temas/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/",
+   1
+  ],
+  [
+   "/oros/temas/inflacion/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/inflacion/",
+   1
+  ],
+  [
+   "/oros/temas/inversion-desde-cero/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/inversion-desde-cero/",
+   1
+  ],
+  [
+   "/oros/temas/nomina/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/nomina/",
+   1
+  ],
+  [
+   "/oros/temas/tema-fixture-demo/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/tema-fixture-demo/",
+   1
+  ],
+  [
+   "/oros/temas/vivienda-y-hipoteca/",
+   "https://marcvillarroya.github.io/4sotas/oros/temas/vivienda-y-hipoteca/",
+   1
+  ],
+  [
+   "/oros/videos/bruto-vs-neto-2000/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+   1
+  ],
+  [
+   "/oros/videos/como-leer-una-nomina/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+   1
+  ],
+  [
+   "/oros/videos/crisis-de-2008-espana/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+   1
+  ],
+  [
+   "/oros/videos/deuda-o-inversion-1000/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+   1
+  ],
+  [
+   "/oros/videos/fondo-de-emergencia/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+   1
+  ],
+  [
+   "/oros/videos/gastos-hormiga/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+   1
+  ],
+  [
+   "/oros/videos/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/",
+   1
+  ],
+  [
+   "/oros/videos/inflacion-sobre-10000/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+   1
+  ],
+  [
+   "/oros/videos/irpf-en-la-nomina/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+   1
+  ],
+  [
+   "/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+   1
+  ],
+  [
+   "/oros/videos/tramos-del-irpf/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+   1
+  ],
+  [
+   "/oros/videos/tres-cuentas-un-sueldo/",
+   "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+   1
+  ]
+ ],
+ "jsonld": 51,
+ "jsonldBad": 0,
+ "iframes": 0,
+ "imgs": 65,
+ "imgsNoAlt": 0,
+ "forms": 1,
+ "inputs": 9,
+ "skip": 52,
+ "sitemapUrls": [
+  "https://marcvillarroya.github.io/4sotas/",
+  "https://marcvillarroya.github.io/4sotas/oros/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/amortizacion-francesa/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/base-de-cotizacion/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/dca-aportacion-periodica/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/diversificacion/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/fondo-de-emergencia/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/inflacion-subyacente/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/ipc/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/segundo-termino-fixture/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/tae/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/termino-fixture-demo/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/tin/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-de-retencion/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/tipo-marginal/",
+  "https://marcvillarroya.github.io/4sotas/oros/glosario/traspaso-de-fondos/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/bruto-a-neto/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/comprar-piso-coste-real/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/dca-interes-compuesto/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/fondos-indexados-vs-etf/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/guia-fixture-demo/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/inflacion-poder-adquisitivo/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/primeros-1000-euros/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/tarjetas-y-comisiones/",
+  "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/",
+  "https://marcvillarroya.github.io/4sotas/oros/herramientas/",
+  "https://marcvillarroya.github.io/4sotas/oros/herramientas/herramienta-fixture-demo/",
+  "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/ahorro/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/banca-y-credito/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/burbujas/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/inflacion/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/inversion-desde-cero/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/nomina/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/tema-fixture-demo/",
+  "https://marcvillarroya.github.io/4sotas/oros/temas/vivienda-y-hipoteca/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+  "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/"
+ ],
+ "robots": [
+  "# 4 Sotas — V1 (origen de proyecto GitHub Pages)",
+  "User-agent: *",
+  "Allow: /",
+  "# Búsqueda: permitida explícitamente",
+  "User-agent: Googlebot",
+  "Allow: /",
+  "User-agent: Bingbot",
+  "Allow: /",
+  "User-agent: OAI-SearchBot",
+  "Allow: /",
+  "User-agent: PerplexityBot",
+  "Allow: /",
+  "User-agent: ChatGPT-User",
+  "Allow: /",
+  "# Entrenamiento: denegado por defecto (decisión del propietario)",
+  "User-agent: GPTBot",
+  "Disallow: /",
+  "User-agent: ClaudeBot",
+  "Disallow: /",
+  "User-agent: Google-Extended",
+  "Disallow: /",
+  "User-agent: CCBot",
+  "Disallow: /",
+  "User-agent: Bytespider",
+  "Disallow: /",
+  "Sitemap: https://marcvillarroya.github.io/4sotas/sitemap-index.xml"
+ ],
+ "catalogs": {
+  "catalog.json": {
+   "keys": [
+    "schema_version",
+    "generated_at",
+    "universo",
+    "items"
+   ],
+   "items": 8,
+   "schema": null
+  },
+  "tools.json": {
+   "keys": [
+    "schema_version",
+    "generated_at",
+    "universo",
+    "items"
+   ],
+   "items": 1,
+   "schema": null
+  },
+  "topics.json": {
+   "keys": [
+    "schema_version",
+    "generated_at",
+    "universo",
+    "items"
+   ],
+   "items": 7,
+   "schema": null
+  },
+  "videos.json": {
+   "keys": [
+    "schema_version",
+    "generated_at",
+    "universo",
+    "items"
+   ],
+   "items": 11,
+   "schema": null
+  }
+ },
+ "llmsLen": 6073,
+ "nojsContent": [
+  [
+   "/404.html",
+   566
+  ],
+  [
+   "/",
+   1460
+  ],
+  [
+   "/oros/glosario/amortizacion-francesa/",
+   2252
+  ],
+  [
+   "/oros/glosario/base-de-cotizacion/",
+   2647
+  ],
+  [
+   "/oros/glosario/dca-aportacion-periodica/",
+   1971
+  ],
+  [
+   "/oros/glosario/diversificacion/",
+   2043
+  ],
+  [
+   "/oros/glosario/fondo-de-emergencia/",
+   2498
+  ],
+  [
+   "/oros/glosario/",
+   3043
+  ],
+  [
+   "/oros/glosario/inflacion-subyacente/",
+   2073
+  ],
+  [
+   "/oros/glosario/ipc/",
+   2481
+  ],
+  [
+   "/oros/glosario/segundo-termino-fixture/",
+   868
+  ],
+  [
+   "/oros/glosario/tae/",
+   2107
+  ],
+  [
+   "/oros/glosario/termino-fixture-demo/",
+   994
+  ],
+  [
+   "/oros/glosario/tin/",
+   1783
+  ],
+  [
+   "/oros/glosario/tipo-de-retencion/",
+   2618
+  ],
+  [
+   "/oros/glosario/tipo-marginal/",
+   2585
+  ],
+  [
+   "/oros/glosario/traspaso-de-fondos/",
+   2034
+  ],
+  [
+   "/oros/guias/bruto-a-neto/",
+   12509
+  ],
+  [
+   "/oros/guias/comprar-piso-coste-real/",
+   12510
+  ],
+  [
+   "/oros/guias/dca-interes-compuesto/",
+   10562
+  ],
+  [
+   "/oros/guias/fondos-indexados-vs-etf/",
+   11105
+  ],
+  [
+   "/oros/guias/guia-fixture-demo/",
+   2985
+  ],
+  [
+   "/oros/guias/",
+   3099
+  ],
+  [
+   "/oros/guias/inflacion-poder-adquisitivo/",
+   10147
+  ],
+  [
+   "/oros/guias/primeros-1000-euros/",
+   12386
+  ],
+  [
+   "/oros/guias/tarjetas-y-comisiones/",
+   12018
+  ],
+  [
+   "/oros/guias/tramos-irpf-y-retencion/",
+   10678
+  ],
+  [
+   "/oros/herramientas/herramienta-fixture-demo/",
+   1788
+  ],
+  [
+   "/oros/herramientas/",
+   654
+  ],
+  [
+   "/oros/herramientas/interes-compuesto/",
+   5869
+  ],
+  [
+   "/oros/",
+   1872
+  ],
+  [
+   "/oros/temas/ahorro/",
+   5547
+  ],
+  [
+   "/oros/temas/banca-y-credito/",
+   8427
+  ],
+  [
+   "/oros/temas/burbujas/",
+   6202
+  ],
+  [
+   "/oros/temas/",
+   2058
+  ],
+  [
+   "/oros/temas/inflacion/",
+   4774
+  ],
+  [
+   "/oros/temas/inversion-desde-cero/",
+   8967
+  ],
+  [
+   "/oros/temas/nomina/",
+   5138
+  ],
+  [
+   "/oros/temas/tema-fixture-demo/",
+   1647
+  ],
+  [
+   "/oros/temas/vivienda-y-hipoteca/",
+   9175
+  ],
+  [
+   "/oros/videos/bruto-vs-neto-2000/",
+   3884
+  ],
+  [
+   "/oros/videos/como-leer-una-nomina/",
+   3912
+  ],
+  [
+   "/oros/videos/crisis-de-2008-espana/",
+   3440
+  ],
+  [
+   "/oros/videos/deuda-o-inversion-1000/",
+   3861
+  ],
+  [
+   "/oros/videos/fondo-de-emergencia/",
+   3847
+  ],
+  [
+   "/oros/videos/gastos-hormiga/",
+   3856
+  ],
+  [
+   "/oros/videos/",
+   2528
+  ],
+  [
+   "/oros/videos/inflacion-sobre-10000/",
+   3581
+  ],
+  [
+   "/oros/videos/irpf-en-la-nomina/",
+   3872
+  ],
+  [
+   "/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+   3425
+  ],
+  [
+   "/oros/videos/tramos-del-irpf/",
+   3857
+  ],
+  [
+   "/oros/videos/tres-cuentas-un-sueldo/",
+   3979
+  ]
+ ],
+ "missingLinks": [],
+ "issues": []
+}

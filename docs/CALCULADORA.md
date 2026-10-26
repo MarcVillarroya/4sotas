@@ -174,8 +174,9 @@ cero y plazo que no completa un periodo de capitalización.
   una **tabla HTML** con `caption` y `th scope`; el SVG es un resumen de esas mismas filas, con
   `role="img"`, `<title>` y `<desc>`, y nunca el único sitio donde está el dato.
 - Sin JavaScript la página sigue mostrando un ejemplo completo (calculado en el build con el mismo
-  motor), la tabla y la metodología. El `<script>` solo recalcula al cambiar un campo: no hay
-  recarga ni envío.
+  motor), la tabla y la metodología, con aviso explícito de ejemplo estático. Al editar se
+  retiran la salida, el gráfico y las filas; Calcular ejecuta el motor sin recarga ni envío.
+  Un error enfoca el primer campo inválido. La tabla tiene región nombrada y foco para scroll por teclado.
 - Formulario con `label` para cada control, ayudas ligadas con `aria-describedby`, foco visible
   (`outline` de 3 px), objetivos táctiles de 44 px y teclado completo.
 

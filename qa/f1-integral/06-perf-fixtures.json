@@ -1,0 +1,80 @@
+[
+ {
+  "ancho": 390,
+  "ruta": "/oros/herramientas/interes-compuesto/",
+  "lcp_ms": 76,
+  "cls": 0.0218,
+  "ttfb_ms": 6,
+  "load_ms": 87,
+  "recursos": 7,
+  "transfer_bytes": 95582,
+  "js_bytes": 8946,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ },
+ {
+  "ancho": 390,
+  "ruta": "/oros/videos/como-leer-una-nomina/",
+  "lcp_ms": 32,
+  "cls": 0,
+  "ttfb_ms": 2,
+  "load_ms": 33,
+  "recursos": 6,
+  "transfer_bytes": 86636,
+  "js_bytes": 0,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ },
+ {
+  "ancho": 390,
+  "ruta": "/oros/guias/bruto-a-neto/",
+  "lcp_ms": 48,
+  "cls": 0.0186,
+  "ttfb_ms": 2,
+  "load_ms": 16,
+  "recursos": 6,
+  "transfer_bytes": 86636,
+  "js_bytes": 0,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ },
+ {
+  "ancho": 1440,
+  "ruta": "/oros/herramientas/interes-compuesto/",
+  "lcp_ms": 84,
+  "cls": 0.0001,
+  "ttfb_ms": 3,
+  "load_ms": 72,
+  "recursos": 7,
+  "transfer_bytes": 95582,
+  "js_bytes": 8946,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ },
+ {
+  "ancho": 1440,
+  "ruta": "/oros/videos/como-leer-una-nomina/",
+  "lcp_ms": 52,
+  "cls": 0.0025,
+  "ttfb_ms": 2,
+  "load_ms": 31,
+  "recursos": 6,
+  "transfer_bytes": 86636,
+  "js_bytes": 0,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ },
+ {
+  "ancho": 1440,
+  "ruta": "/oros/guias/bruto-a-neto/",
+  "lcp_ms": 48,
+  "cls": 0.0006,
+  "ttfb_ms": 2,
+  "load_ms": 16,
+  "recursos": 6,
+  "transfer_bytes": 86636,
+  "js_bytes": 0,
+  "css_bytes": 17972,
+  "font_bytes": 67524
+ }
+]
