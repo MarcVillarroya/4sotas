@@ -1,0 +1,325 @@
+{
+  "jsonld": {
+    "home": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "Organization",
+        "WebSite",
+        "WebPage"
+      ],
+      "errors": []
+    },
+    "oros": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "CollectionPage"
+      ],
+      "errors": []
+    },
+    "videos": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "CollectionPage",
+        "ItemList",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "ficha": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "VideoObject",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "ficha_no_insertable": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "VideoObject",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "guia": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "calculadora": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "WebPage",
+        "SoftwareApplication",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "glosario": {
+      "bloques": 1,
+      "parse_ok": true,
+      "tipos": [
+        "WebSite",
+        "DefinedTermSet",
+        "BreadcrumbList"
+      ],
+      "errors": []
+    },
+    "sobre": {
+      "bloques": 0,
+      "parse_ok": true,
+      "tipos": [],
+      "errors": []
+    },
+    "metodologia": {
+      "bloques": 0,
+      "parse_ok": true,
+      "tipos": [],
+      "errors": []
+    },
+    "privacidad": {
+      "bloques": 0,
+      "parse_ok": true,
+      "tipos": [],
+      "errors": []
+    }
+  },
+  "videoobject": {
+    "insertable": [
+      {
+        "contentUrl": "https://www.youtube.com/watch?v=1ztXsY1hwNA",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/1ztXsY1hwNA",
+        "thumbnailUrl": [
+          "https://marcvillarroya.github.io/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "https://i.ytimg.com/vi/1ztXsY1hwNA/maxresdefault.jpg"
+        ],
+        "uploadDate": "2026-10-19",
+        "duration": "PT1M5S",
+        "name": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+        "description": "Vídeo de Sota de Oros sobre el método de tres cuentas para r",
+        "publisher": "Organization"
+      }
+    ],
+    "no_insertable": [
+      {
+        "contentUrl": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/O1V9_of7g1w",
+        "thumbnailUrl": [
+          "https://marcvillarroya.github.io/4sotas/assets/videos/O1V9_of7g1w.webp",
+          "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg"
+        ],
+        "uploadDate": "2026-10-05",
+        "duration": "PT1M",
+        "name": "IRPF en la nómina: qué te retienen y por qué",
+        "description": "Vídeo corto de Sota de Oros sobre la retención de IRPF en la",
+        "publisher": "Organization"
+      }
+    ]
+  },
+  "terminos": [],
+  "glosario": {
+    "categorias": [],
+    "tambien": [
+      "sistema francés, cuota constante",
+      "base de cotizacion, base mensual de cotizacion",
+      "aportación periódica, inversión programada",
+      "reparto de riesgo",
+      "colchon de emergencia, fondo de reserva"
+    ]
+  },
+  "robots": "# 4 Sotas — sitio de proyecto en GitHub Pages (/4sotas/)\n# Aviso: en un sitio de proyecto, los rastreadores solo leen /robots.txt en la raíz del origen\n# (marcvillarroya.github.io), no en /4sotas/robots.txt. Estas reglas quedan como documentación de\n# intención; el control efectivo se hace con <meta name=\"robots\"> en cada página.\nUser-agent: *\nAllow: /\n\n# Búsqueda: permitida explícitamente\nUser-agent: Googlebot\nAllow: /\nUser-agent: Bingbot\nAllow: /\nUser-agent: OAI-SearchBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: ChatGPT-User\nAllow: /\n\n# Entrenamiento: denegado por defecto (decisión del propietario)\nUser-agent: GPTBot\nDisallow: /\nUser-agent: ClaudeBot\nDisallow: /\nUser-agent: Google-Extended\nDisallow: /\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\n\nSitemap: https://marcvillarroya.github.io/4sotas/sitemap-index.xml\n",
+  "docs": [
+    "AGENTS-draft.md",
+    "CALCULADORA.md",
+    "MAINTENANCE.md",
+    "v2-IMPLEMENTACION.md"
+  ],
+  "vitals": {
+    "home-1440": {
+      "lcp_ms": 104,
+      "cls": 0.0001
+    },
+    "videos-1440": {
+      "lcp_ms": 48,
+      "cls": 0.0075
+    },
+    "ficha-1440": {
+      "lcp_ms": 40,
+      "cls": 0.0016
+    },
+    "guia-1440": {
+      "lcp_ms": 44,
+      "cls": 0.0005
+    },
+    "calculadora-1440": {
+      "lcp_ms": 44,
+      "cls": 0.0001
+    },
+    "home-390": {
+      "lcp_ms": 60,
+      "cls": 0.0314
+    },
+    "videos-390": {
+      "lcp_ms": 36,
+      "cls": 0.0004
+    },
+    "ficha-390": {
+      "lcp_ms": 32,
+      "cls": 0.0006
+    },
+    "guia-390": {
+      "lcp_ms": 36,
+      "cls": 0.0196
+    },
+    "calculadora-390": {
+      "lcp_ms": 36,
+      "cls": 0.0268
+    }
+  },
+  "calculadora": {
+    "estado": "Resultado actualizado. Capital final 17.065,21 €, 13.000,00 € aportados e 4065,21 € de intereses.",
+    "metrics": [
+      "13.000,00 €Lo que sale de tu bolsillo: c",
+      "13.000,00 €",
+      "4065,21 €Capital final menos lo aportado",
+      "4065,21 €",
+      "0,4074 %El porcentaje anual repartido en",
+      "0,4074 %",
+      "Sin inflaciónEl capital final descontand",
+      "Sin inflación"
+    ],
+    "foco": "H2:Capital final",
+    "filas_tabla": 15,
+    "aria_live": "polite",
+    "campos": [
+      {
+        "name": "capitalInicial",
+        "type": "text",
+        "value": "1000",
+        "id": "capitalInicial"
+      },
+      {
+        "name": "aportacionPeriodica",
+        "type": "text",
+        "value": "100",
+        "id": "aportacionPeriodica"
+      },
+      {
+        "name": "anios",
+        "type": "text",
+        "value": "10",
+        "id": "anios"
+      },
+      {
+        "name": "rentabilidadAnual",
+        "type": "text",
+        "value": "5",
+        "id": "rentabilidadAnual"
+      },
+      {
+        "name": "momentoAportacion",
+        "type": "radio",
+        "value": "fin",
+        "id": "momento-fin"
+      },
+      {
+        "name": "momentoAportacion",
+        "type": "radio",
+        "value": "inicio",
+        "id": "momento-inicio"
+      },
+      {
+        "name": "inflacionAnual",
+        "type": "text",
+        "value": "",
+        "id": "inflacionAnual"
+      }
+    ],
+    "usados": {
+      "inicial": false,
+      "mensual": false,
+      "anios": true,
+      "rentabilidad": false
+    },
+    "peticiones_externas": []
+  },
+  "reduced_motion": 0,
+  "ficha_no_insertable": {
+    "parrafos_aviso": [
+      "Sota de Oros en YouTube · Publicado el 5 de octubre de 2026 · 1 min",
+      "Este vídeo no se puede ver dentro de esta página. El canal no permite la reproducción insertada en otros sitios. Se ve completo en YouTube, con la misma cuenta de siempre.",
+      "Este vídeo no se puede ver dentro de esta página. El canal no permite la reproducción insertada en otros sitios. Se ve completo en YouTube, con la misma cuenta de siempre.",
+      "La ficha conserva el título, la duración y la descripción del vídeo. La reproducción ocurre en YouTube, donde se aplican sus condiciones.",
+      "Última revisión editorial: 26 de octubre de 2026. La fuente de los datos de la pieza es el canal de Sota de Oros en YouTube; los resúmenes y las relaciones con guías y calculadoras son de esta casa.",
+      "La barajaSota de OrosSobre 4 SotasMetodología y fuentesPrivacidadCanal en YouTube (se abre en otra pestaña)"
+    ],
+    "acciones": [
+      {
+        "t": "Inicio",
+        "href": "https://marcvillarroya.github.io/4sotas/",
+        "h": 44
+      },
+      {
+        "t": "Sota de Oros",
+        "href": "https://marcvillarroya.github.io/4sotas/oros/",
+        "h": 44
+      },
+      {
+        "t": "Vídeos",
+        "href": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+        "h": 44
+      },
+      {
+        "t": "Ver en YouTube ↗ (se abre en otra pestaña)",
+        "href": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+        "h": 54
+      },
+      {
+        "t": "Abrir guía",
+        "href": "/4sotas/oros/guias/bruto-a-neto/",
+        "h": 46
+      },
+      {
+        "t": "Bruto y neto: cómo se calcula tu nómina en Es",
+        "href": "/4sotas/oros/guias/bruto-a-neto/",
+        "h": 46
+      },
+      {
+        "t": "Tramos del IRPF: por qué subir de tramo no te",
+        "href": "/4sotas/oros/guias/tramos-irpf-y-retencion/",
+        "h": 46
+      },
+      {
+        "t": "Cómo leer una nómina en España (2026): del br",
+        "href": "/4sotas/oros/videos/como-leer-una-nomina/",
+        "h": 46
+      },
+      {
+        "t": "Los tramos del IRPF no funcionan como crees",
+        "href": "/4sotas/oros/videos/tramos-del-irpf/",
+        "h": 46
+      },
+      {
+        "t": "Volver al catálogo de vídeos",
+        "href": "/4sotas/oros/videos/",
+        "h": 46
+      }
+    ]
+  }
+}

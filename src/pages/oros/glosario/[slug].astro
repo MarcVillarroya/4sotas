@@ -10,6 +10,7 @@ import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { NOMBRE_GLOSARIO, grafo, sitioWeb, terminoDefinido } from '../../../lib/jsonld.ts';
+import { etiquetaCategoria } from '../../../lib/glosario-presentacion.ts';
 
 interface Props {
   termino: CollectionEntry<'glosario'>;
@@ -70,11 +71,11 @@ const guiasQueLoUsan = visibles(articulos).filter((a) =>
   </div>
 
   <header class="wrap article-header">
-    <p class="eyebrow">Glosario · {termino.data.categoria}</p>
+    <p class="eyebrow">Glosario · {etiquetaCategoria(termino.data.categoria)}</p>
     <h1>{termino.data.termino}</h1>
     <p class="lead">{termino.data.definicion_corta}</p>
     <div class="metadata">
-      <span>Categoría: {termino.data.categoria}</span>
+      <span>Categoría: {etiquetaCategoria(termino.data.categoria)}</span>
       {termino.data.sinonimos.length > 0 && <span>También: {termino.data.sinonimos.join(', ')}</span>}
     </div>
   </header>

@@ -10,7 +10,10 @@ export const GET: APIRoute = ({ site }) => {
   const sitemap = new URL(url('/sitemap-index.xml'), origen).href;
 
   const cuerpo = [
-    '# 4 Sotas — V1 (origen de proyecto GitHub Pages)',
+    '# 4 Sotas — sitio de proyecto en GitHub Pages (/4sotas/)',
+    '# Aviso: en un sitio de proyecto, los rastreadores solo leen /robots.txt en la raíz del origen',
+    '# (marcvillarroya.github.io), no en /4sotas/robots.txt. Estas reglas quedan como documentación de',
+    '# intención; el control efectivo se hace con <meta name="robots"> en cada página.',
     'User-agent: *',
     'Allow: /',
     '',

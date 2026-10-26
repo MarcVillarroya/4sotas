@@ -93,3 +93,21 @@ gh api repos/MarcVillarroya/4sotas/deployments --jq '.[0] | {sha,environment}'
 curl -sI https://marcvillarroya.github.io/4sotas/ | head -1
 curl -s https://marcvillarroya.github.io/4sotas/sitemap-0.xml | grep -c '<loc>'
 ```
+
+## Límite conocido: `robots.txt` en un sitio de proyecto de GitHub Pages
+
+Los rastreadores solo leen `robots.txt` en la **raíz del origen**. Aquí el origen es
+`https://marcvillarroya.github.io` (host compartido que no se puede publicar desde este repositorio),
+así que el archivo servido en `https://marcvillarroya.github.io/4sotas/robots.txt` (HTTP 200) **no anuncia
+la política a ningún rastreador**: sus reglas de búsqueda y de entrenamiento son hoy decorativas.
+
+Consecuencias y control real:
+
+- Lo que sí se aplica es el `<meta name="robots">` de cada página, y el `404.html` es el único con
+  `noindex`. El resto de páginas públicas no bloquea indexación.
+- Para que la política sea efectiva hay que cambiar de modelo de publicación (dominio propio o repositorio
+  `<usuario>.github.io`, donde la raíz sí es del propietario) o servir el `robots.txt` desde una capa
+  propia. Ninguna de las dos está en este repositorio.
+- `src/pages/robots.txt.ts` deja el aviso en el propio archivo y mantiene el `Sitemap:`, útil si algún día
+  se sirve desde la raíz del origen.
+

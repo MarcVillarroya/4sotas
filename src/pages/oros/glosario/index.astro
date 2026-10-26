@@ -10,6 +10,7 @@ import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { NOMBRE_GLOSARIO, conjuntoTerminos, grafo, sitioWeb } from '../../../lib/jsonld.ts';
+import { etiquetaCategoria } from '../../../lib/glosario-presentacion.ts';
 
 const todos = await getCollection('glosario');
 const terminos = visibles(todos).sort((a, b) => a.data.termino.localeCompare(b.data.termino, 'es'));
@@ -95,7 +96,7 @@ const jsonLd = grafo([
                     </h3>
                     <p>{t.data.definicion_corta}</p>
                     <p class="video-meta">
-                      <span>Categoría: {t.data.categoria}</span>
+                      <span>Categoría: {etiquetaCategoria(t.data.categoria)}</span>
                       {t.data.sinonimos.length > 0 && <span>También: {t.data.sinonimos.join(', ')}</span>}
                     </p>
                   </li>
