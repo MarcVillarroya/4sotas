@@ -7,6 +7,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
@@ -127,7 +128,7 @@ const hayRelacionados =
       {
         articulo.data.revisado_factual && (
           <span>
-            Revisión factual: <time datetime={fechaISO(articulo.data.revisado_factual)}>
+            Revisado: <time datetime={fechaISO(articulo.data.revisado_factual)}>
               {fechaLarga(articulo.data.revisado_factual)}
             </time>
           </span>
@@ -177,8 +178,7 @@ const hayRelacionados =
         {
           articulo.data.sensibilidad !== 'baja' && (
             <p class="honest">
-              Contenido de sensibilidad {articulo.data.sensibilidad}. Cualquier decisión sobre tu caso concreto requiere
-              revisar tu situación completa.
+              Este tema afecta a decisiones importantes. Antes de aplicarlo a tu caso, revisa tu situación completa.
             </p>
           )
         }
@@ -191,8 +191,8 @@ const hayRelacionados =
             <div class="table-wrap">
               <table class="fuentes">
                 <caption>
-                  Fuentes tipadas de la ficha, consultadas en la fecha indicada. Ninguna afirmación de la guía se apoya
-                  en una fuente que no esté en esta tabla.
+                  Fuentes consultadas en la fecha indicada. Ninguna afirmación de la guía se apoya en una fuente que no
+                  esté aquí.
                 </caption>
                 <thead>
                   <tr>
@@ -233,7 +233,10 @@ const hayRelacionados =
             <ul class="v2-learn">
               {videoPrincipal && (
                 <li>
-                  <p class="v2-learn-tipo">Vídeo · {duracionLegible(videoPrincipal.data.duracion_iso)}</p>
+                  <p class="v2-learn-tipo">
+                    <Sprite familia="functional" nombre="video" size={24} /> Vídeo ·{' '}
+                    {duracionLegible(videoPrincipal.data.duracion_iso)}
+                  </p>
                   <h3>
                     <a href={url(ruta.video(videoPrincipal.data.slug))}>{videoPrincipal.data.titulo}</a>
                   </h3>
@@ -242,7 +245,7 @@ const hayRelacionados =
               )}
               {herramientaPrincipal && (
                 <li>
-                  <p class="v2-learn-tipo">Herramienta</p>
+                  <p class="v2-learn-tipo"><Sprite familia="functional" nombre="calculadora" size={24} /> Herramienta</p>
                   <h3>
                     <a href={url(ruta.herramienta(herramientaPrincipal.data.slug))}>{herramientaPrincipal.data.titulo}</a>
                   </h3>

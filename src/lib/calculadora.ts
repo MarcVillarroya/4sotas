@@ -188,46 +188,46 @@ export const validarEntrada = (e: EntradaCalculo): ErrorCalculo[] => {
   if (!esFinito(e.capitalInicial) || e.capitalInicial < 0 || e.capitalInicial > LIMITES.capitalMax)
     errores.push({
       campo: 'capitalInicial',
-      mensaje: `El capital inicial debe estar entre 0 y ${LIMITES.capitalMax.toLocaleString('es-ES')} €.`,
+      mensaje: `Escribe un capital inicial entre 0 y ${LIMITES.capitalMax.toLocaleString('es-ES')} €.`,
     });
 
   if (!esFinito(e.aportacionPeriodica) || e.aportacionPeriodica < 0 || e.aportacionPeriodica > LIMITES.aportacionMax)
     errores.push({
       campo: 'aportacionPeriodica',
-      mensaje: `La aportación por periodo debe estar entre 0 y ${LIMITES.aportacionMax.toLocaleString('es-ES')} €.`,
+      mensaje: `Escribe una aportación por periodo entre 0 y ${LIMITES.aportacionMax.toLocaleString('es-ES')} €.`,
     });
 
   if (!esFinito(e.rentabilidadAnual) || e.rentabilidadAnual < LIMITES.tasaMin || e.rentabilidadAnual > LIMITES.tasaMax)
     errores.push({
       campo: 'rentabilidadAnual',
-      mensaje: `La rentabilidad anual debe estar entre ${LIMITES.tasaMin} % y ${LIMITES.tasaMax} % (tasa efectiva anual).`,
+      mensaje: `Escribe una rentabilidad anual entre ${LIMITES.tasaMin} % y ${LIMITES.tasaMax} % (tasa efectiva anual).`,
     });
 
   if (!Number.isInteger(e.anios) || e.anios < 0 || e.anios > LIMITES.aniosMax)
-    errores.push({ campo: 'anios', mensaje: `Los años deben ser un entero entre 0 y ${LIMITES.aniosMax}.` });
+    errores.push({ campo: 'anios', mensaje: `Escribe los años como número entero, entre 0 y ${LIMITES.aniosMax}.` });
 
   if (!Number.isInteger(e.meses) || e.meses < 0 || e.meses > 11)
-    errores.push({ campo: 'meses', mensaje: 'Los meses sueltos deben ser un entero entre 0 y 11.' });
+    errores.push({ campo: 'meses', mensaje: 'Elige los meses sueltos como número entero, entre 0 y 11.' });
 
   const f = FRECUENCIAS.find((x) => x.clave === e.frecuencia);
   if (!f) {
-    errores.push({ campo: 'frecuencia', mensaje: 'Frecuencia de capitalización no soportada.' });
+    errores.push({ campo: 'frecuencia', mensaje: 'Elige una de las frecuencias disponibles.' });
     return errores;
   }
   if (e.momentoAportacion !== 'inicio' && e.momentoAportacion !== 'fin')
-    errores.push({ campo: 'momentoAportacion', mensaje: 'El momento de la aportación solo puede ser inicio o fin.' });
+    errores.push({ campo: 'momentoAportacion', mensaje: 'Elige si la aportación entra al principio o al final del periodo.' });
 
   const inflacion = e.inflacionAnual ?? null;
   if (inflacion !== null && (!esFinito(inflacion) || inflacion < LIMITES.inflacionMin || inflacion > LIMITES.inflacionMax))
     errores.push({
       campo: 'inflacionAnual',
-      mensaje: `La inflación debe estar entre ${LIMITES.inflacionMin} % y ${LIMITES.inflacionMax} %, o dejarse vacía.`,
+      mensaje: `Escribe una inflación entre ${LIMITES.inflacionMin} % y ${LIMITES.inflacionMax} %, o déjala vacía.`,
     });
 
   // Plazo: total de meses positivo y múltiplo exacto del periodo de capitalización.
   const mesesTotales = (Number.isInteger(e.anios) ? e.anios : 0) * 12 + (Number.isInteger(e.meses) ? e.meses : 0);
   if (mesesTotales <= 0) {
-    errores.push({ campo: 'plazo', mensaje: 'El plazo debe ser de al menos un periodo de capitalización.' });
+    errores.push({ campo: 'plazo', mensaje: 'El plazo debe cubrir al menos un periodo de capitalización.' });
   } else if (mesesTotales % f.mesesPorPeriodo !== 0) {
     errores.push({
       campo: 'plazo',
@@ -238,7 +238,7 @@ export const validarEntrada = (e: EntradaCalculo): ErrorCalculo[] => {
   } else if (mesesTotales / f.mesesPorPeriodo > LIMITES.periodosMax) {
     errores.push({
       campo: 'plazo',
-      mensaje: `El plazo no puede superar ${LIMITES.periodosMax} periodos de capitalización.`,
+      mensaje: `El plazo no puede pasar de ${LIMITES.periodosMax} periodos de capitalización.`,
     });
   }
 

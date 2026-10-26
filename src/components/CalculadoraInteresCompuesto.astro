@@ -78,7 +78,7 @@ const EJEMPLOS: { titulo: string; entrada: EntradaCalculo; nota: string }[] = [
   {
     titulo: 'Aportación al final: 200 € al mes durante 20 años al 5 % anual',
     entrada: { ...DEFECTO, capitalInicial: 0, aportacionPeriodica: 200, anios: 20 },
-    nota: 'Se aportan 48.000 € y el resultado multiplica esa cifra por la acción de los intereses.',
+    nota: 'Se aportan 48.000 €; el resto sale de los intereses.',
   },
   {
     titulo: 'El mismo caso con un 3 % de inflación',
@@ -116,13 +116,13 @@ const aprender = DESTINOS_APRENDER.flatMap((destino) => {
 
 <Herramienta ficha={ficha} calcula={ficha.data.estado_implementacion !== 'no-implementada'}>
   <p class="v2-calc-intro">
-    En una frase: calcula cuánto tendrías al final si dejas un capital y/o vas aportando lo mismo cada periodo, con una
-    rentabilidad anual que eliges tú. Separa lo que has puesto de lo que han generado los intereses.
+    Calcula cuánto tendrías al final si partes de un capital, vas aportando lo mismo cada periodo y eliges tú la
+    rentabilidad. Debajo verás, separado, cuánto has puesto y cuánto han generado los intereses.
   </p>
 
   <form id="formulario-calculo" novalidate aria-describedby="ayuda-formulario">
     <p class="hint" id="ayuda-formulario">
-      Cuatro datos y tres ajustes opcionales. Nada de lo que escribas sale de esta página.
+      Escribe tus cifras; los ajustes son opcionales. Nada de lo que escribas sale de esta página.
     </p>
 
     <fieldset class="v2-calc-group">
@@ -194,7 +194,7 @@ const aprender = DESTINOS_APRENDER.flatMap((destino) => {
               ))
             }
           </select>
-          <p class="hint" id="ayuda-meses">Se suman a los años y deben completar un periodo de capitalización.</p>
+          <p class="hint" id="ayuda-meses">Se suman a los años. El plazo total debe completar un periodo entero.</p>
           <p class="error" id="error-meses" hidden></p>
         </div>
       </div>
@@ -300,12 +300,12 @@ const aprender = DESTINOS_APRENDER.flatMap((destino) => {
       <button class="button" type="submit">Calcular</button>
     </div>
     <p class="hint">
-      Al editar un campo, el resultado se retira. Pulsa Calcular para actualizarlo. Nada se envía.
+      Si cambias un dato, el resultado se oculta. Pulsa Calcular para verlo de nuevo. No se envía nada.
     </p>
     <noscript>
       <p class="honest">
-        Sin JavaScript se muestra un ejemplo completo y su tabla; tus cambios no se calculan. El resto de la página
-        (fórmula, supuestos y límites) funciona igual.
+        Tu navegador no está ejecutando el cálculo: verás un ejemplo completo con su tabla, pero no tus propias cifras.
+        La fórmula, los supuestos y los límites están igualmente a la vista.
       </p>
     </noscript>
   </form>
@@ -326,8 +326,7 @@ const aprender = DESTINOS_APRENDER.flatMap((destino) => {
       }
     </ul>
     <p class="hint">
-      Las tres cifras se recalculan con el mismo motor que usa el formulario cada vez que se publica la página, así que
-      no pueden quedarse atrás respecto al código.
+      Estas cifras se recalculan cada vez que publicamos la página, con la misma fórmula que usa el formulario.
     </p>
   </Fragment>
 
@@ -416,7 +415,7 @@ const aprender = DESTINOS_APRENDER.flatMap((destino) => {
 
     <section class="v2-calc-learn" aria-labelledby="aprender-titulo">
       <h2 id="aprender-titulo" style="font-size:var(--text-h3)">Sigue con la explicación.</h2>
-      <p class="hint">Si la calculadora te ha dejado una duda, estos textos explican de dónde sale la cifra y qué asume.</p>
+      <p class="hint">Si te queda una duda, aquí está de dónde sale la cifra y qué asume.</p>
       <ul class="v2-learn">
         {
           aprender.map((destino) => (

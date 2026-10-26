@@ -25,6 +25,9 @@ export type Formato = 'Short' | 'Largo';
 /** Rótulo editorial de duración derivado del dato, nunca escrito a mano. */
 export const formato = (iso: string): Formato => (esShort(iso) ? 'Short' : 'Largo');
 
+/** Rótulo visible: el valor de `formato()` se queda para atributos y filtros, no para leerlo. */
+export const formatoLegible = (iso: string): string => (esShort(iso) ? 'Corto' : 'Largo');
+
 /** Duración en reloj (`0:53`, `9:50`, `1:02:05`) para el rótulo de la portada. */
 export const duracionReloj = (iso: string): string => {
   const total = Math.max(0, segundosDeDuracion(iso));

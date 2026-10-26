@@ -6,10 +6,12 @@
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
+import { iconoDeCluster } from '../../../lib/iconos.ts';
 
 const todos = await getCollection('temas');
 const temas = visibles(todos).sort((a, b) => a.data.orden - b.data.orden);
@@ -47,15 +49,15 @@ const jsonLd = grafo([
   </div>
 
   <div class="wrap page-intro">
-    <p class="eyebrow">{SECCION} · mapa editorial</p>
+    <p class="eyebrow">{SECCION} · temas</p>
     <h1>Temas troncales.</h1>
     <p class="lead">
       Cada tema es una puerta de entrada: un orden recomendado con la guía que empieza, los vídeos que contextualizan
       y las herramientas que permiten probar escenarios.
     </p>
     <p class="muted">
-      El orden es editorial, no alfabético. Un tema aparece aquí cuando su página troncal está publicada con revisión
-      factual registrada.
+      El orden no es alfabético: va de lo básico a lo específico. Un tema aparece aquí cuando su página está lista para
+      leerse.
     </p>
   </div>
 
@@ -65,26 +67,30 @@ const jsonLd = grafo([
         <div class="empty">
           <h2>Todavía no hay temas publicados.</h2>
           <p>
-            Las páginas troncales están en redacción y revisión. Ninguna se publica sin fuentes fechadas, revisión
-            factual y límites declarados, así que este índice no enlaza todavía a contenido.
+            Estamos escribiendo las primeras páginas de tema. Cada una sale cuando sus datos están comprobados y sus
+            fuentes fechadas.
           </p>
           <p>
-            <a class="text-link" href={url(ruta.guias())}>Ver las guías en preparación</a>
+            <a class="text-link" href={url(ruta.guias())}>Ver las guías</a>
           </p>
         </div>
       ) : (
         <ol class="catalog">
           {temas.map((tema) => (
             <li>
-              <p class="orden">Tema {String(tema.data.orden).padStart(2, '0')}</p>
+              <p class="orden">
+                Tema {String(tema.data.orden).padStart(2, '0')}
+                {iconoDeCluster(tema.data.cluster) && (
+                  <Sprite familia="topics" nombre={iconoDeCluster(tema.data.cluster) as string} size={40} />
+                )}
+              </p>
               <h2>
                 <a href={url(ruta.tema(tema.data.slug))}>{tema.data.titulo}</a>
               </h2>
               <p>{tema.data.descripcion_corta}</p>
               <p class="video-meta">
-                <span>Cluster: {tema.data.cluster}</span>
                 <span>
-                  {tema.data.videos_destacados.length} vídeos · {tema.data.herramientas.length} herramientas enlazadas
+                  {tema.data.videos_destacados.length} vídeos · {tema.data.herramientas.length} herramientas
                 </span>
               </p>
             </li>

@@ -113,9 +113,9 @@ export const TEXTO_RETIRADO = 'Los datos han cambiado. Pulsa Calcular para ver e
 
 /** Estado vacío/erróneo: qué bloquea el cálculo, en una frase sin jerga. */
 export const textoError = (errores: ErrorCalculo[]): string => {
-  if (errores.length === 0) return 'No se puede calcular todavía: revisa los datos.';
-  if (errores.length === 1) return `No se puede calcular todavía: ${errores[0].mensaje}`;
-  return `No se puede calcular todavía: ${errores[0].mensaje} Hay ${errores.length - 1} ${
+  if (errores.length === 0) return 'Para calcular, revisa los datos.';
+  if (errores.length === 1) return `Para calcular, revisa esto: ${errores[0].mensaje}`;
+  return `Para calcular, revisa esto: ${errores[0].mensaje} Hay ${errores.length - 1} ${
     errores.length === 2 ? 'dato más que revisar' : 'datos más que revisar'
   }.`;
 };
@@ -155,7 +155,7 @@ export const SUPUESTOS_CLAVE: { titulo: string; texto: string }[] = [
   },
   {
     titulo: 'Sin comisiones ni impuestos',
-    texto: 'El motor no los modela. Si tu producto los tiene, el resultado real será menor que esta cifra.',
+    texto: 'Esta cuenta no los incluye. Si tu producto los tiene, el resultado real será menor que esta cifra.',
   },
   {
     titulo: 'La inflación solo cambia la lectura',

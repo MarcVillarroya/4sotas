@@ -6,6 +6,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
@@ -16,9 +17,9 @@ const herramientas = visibles(todas).sort((a, b) => a.data.titulo.localeCompare(
 
 /** Estado legible. `no-implementada` nunca se publica (lo bloquea el validador), pero se declara. */
 const ETIQUETA_ESTADO: Record<string, string> = {
-  'no-implementada': 'En preparación',
-  beta: 'Beta',
-  estable: 'Estable',
+  'no-implementada': 'Todavía no calcula',
+  beta: 'Calcula aquí',
+  estable: 'Disponible',
 };
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
@@ -70,17 +71,17 @@ const jsonLd = grafo([
       Calculadoras que se ejecutan en tu navegador. Cada una publica su fórmula, sus supuestos y sus límites antes de
       dar un número.
     </p>
-    <p class="muted">Ninguna herramienta envía tus datos a un servidor: no hay backend en este sitio.</p>
+    <p class="muted">Ninguna herramienta envía tus datos a ningún sitio: el cálculo ocurre en tu navegador.</p>
   </div>
 
   <div class="wrap section">
     {
       herramientas.length === 0 ? (
         <div class="empty">
-          <h2>Ninguna herramienta disponible todavía.</h2>
+          <h2>Todavía no hay ninguna herramienta disponible.</h2>
           <p>
-            La calculadora está en desarrollo con sus pruebas. Hasta que su motor responda y sus vectores estén
-            documentados, esta página no anuncia una herramienta que aún no calcula.
+            Preferimos no anunciar una calculadora hasta que calcule y podamos enseñar sus cuentas. Mientras tanto, las
+            guías tienen las cuentas hechas paso a paso.
           </p>
           <p>
             <a class="text-link" href={url(ruta.guias())}>Leer las guías mientras tanto</a>
@@ -91,6 +92,7 @@ const jsonLd = grafo([
           {herramientas.map((h) => (
             <li>
               <a href={url(ruta.herramienta(h.data.slug))}>
+                <Sprite familia="functional" nombre="calculadora" size={24} />
                 {h.data.titulo}
                 <span class="orden">{ETIQUETA_ESTADO[h.data.estado_implementacion] ?? h.data.estado_implementacion}</span>
               </a>

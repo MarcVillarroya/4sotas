@@ -7,6 +7,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Sprite from '../../../components/Sprite.astro';
 import { CANAL_YOUTUBE, MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { porFechaDesc, resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
@@ -18,6 +19,7 @@ import {
   duracionReloj,
   esShort,
   formato,
+  formatoLegible,
   srcsetMiniatura,
 } from '../../../lib/videos.ts';
 
@@ -45,7 +47,7 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Vídeos';
 const descripcion =
-  'Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.';
+  'Videoteca de Sota de Oros: todos los vídeos del canal con su ficha, su duración real y la guía o calculadora con la que seguir.';
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -78,8 +80,8 @@ const jsonLd = grafo([
       <p class="eyebrow">La videoteca de {SECCION}</p>
       <h1 id="videoteca-titulo">Una idea.<br /><span class="v2-gold">Más clara.</span></h1>
       <p class="lead">
-        {videos.length} piezas del canal, cada una con su ficha: qué cuenta, cuánto dura y con qué guía o calculadora
-        seguir. Eliges tú cuándo se carga el reproductor.
+        {videos.length} vídeos, cada uno con su ficha: qué cuenta, cuánto dura y con qué guía o calculadora seguir. Tú
+        decides cuándo se carga el reproductor.
       </p>
       <p class="v2-actions">
         <a class="button" href={CANAL_YOUTUBE} rel="noopener">
@@ -89,8 +91,8 @@ const jsonLd = grafo([
       </p>
     </div>
     <div class="v2-hub-art" aria-hidden="true">
-      <img src={url('/assets/v2/play.svg')} width="112" height="112" alt="" />
-      <img src={url('/assets/v2/emblem-oros.svg')} width="64" height="64" alt="" />
+      <Sprite familia="functional" nombre="video" size={40} inmediato />
+      <Sprite familia="emblems" nombre="oros" size={40} inmediato />
     </div>
   </section>
 
@@ -112,9 +114,9 @@ const jsonLd = grafo([
               alt=""
               decoding="async"
             />
-            <span class="v2-play" aria-hidden="true">▶</span>
+            <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
             <span class="v2-duration">
-              {formato(portada.data.duracion_iso)} · {duracionReloj(portada.data.duracion_iso)}
+              {formatoLegible(portada.data.duracion_iso)} · {duracionReloj(portada.data.duracion_iso)}
             </span>
           </a>
           <p class="v2-meta">
@@ -127,17 +129,17 @@ const jsonLd = grafo([
           <p>{portada.data.descripcion_corta}</p>
           <p class="v2-actions">
             <a class="button secondary" href={url(ruta.video(portada.data.slug))}>
-              Ver la ficha
+              Ir a la ficha
             </a>
           </p>
         </div>
-        <aside class="v2-queue" aria-labelledby="cola-titulo">
+        <div class="v2-queue" role="group" aria-labelledby="cola-titulo">
           <p class="eyebrow" id="cola-titulo">También nuevo</p>
           <ul>
             {novedades.map((v) => (
               <li>
                 <p class="v2-meta">
-                  {formato(v.data.duracion_iso)} · {duracionReloj(v.data.duracion_iso)} ·{' '}
+                  {formatoLegible(v.data.duracion_iso)} · {duracionReloj(v.data.duracion_iso)} ·{' '}
                   <time datetime={fechaISO(v.data.publicado_en)}>{fechaLarga(v.data.publicado_en)}</time>
                 </p>
                 <h3>
@@ -146,7 +148,7 @@ const jsonLd = grafo([
               </li>
             ))}
           </ul>
-        </aside>
+        </div>
       </section>
     )
   }
@@ -154,21 +156,21 @@ const jsonLd = grafo([
   <section class="wrap section" aria-labelledby="catalogo-titulo">
     <div class="section-head">
       <div>
-        <p class="eyebrow">Catálogo completo</p>
+        <p class="eyebrow">Todo el canal</p>
         <h2 id="catalogo-titulo">Todos los vídeos.</h2>
       </div>
       <p class="v2-meta">
-        Short: {shorts.length} piezas de un minuto o menos · Largo: {largos.length} de más de un minuto
+        Cortos (1 minuto o menos): {shorts.length} · Largos (más de un minuto): {largos.length}
       </p>
     </div>
     <p class="v2-meta">
-      El rótulo se calcula con la duración real de cada pieza; no afirma cómo la clasifica YouTube.
+      La etiqueta sale de la duración real de cada vídeo, no de cómo lo clasifica YouTube.
     </p>
 
     <div class="v2-filters" data-filtros hidden>
-      <div class="v2-segments" role="group" aria-label="Filtrar por formato">
+      <div class="v2-segments" role="group" aria-label="Filtrar por duración">
         <button type="button" data-formato="todos" aria-pressed="true">Todos ({videos.length})</button>
-        <button type="button" data-formato="Short" aria-pressed="false">Shorts ({shorts.length})</button>
+        <button type="button" data-formato="Short" aria-pressed="false">Cortos ({shorts.length})</button>
         <button type="button" data-formato="Largo" aria-pressed="false">Largos ({largos.length})</button>
       </div>
       <p class="v2-select">
@@ -188,14 +190,13 @@ const jsonLd = grafo([
     {
       videos.length === 0 ? (
         <div class="empty">
-          <h2>Ninguna ficha de vídeo publicada.</h2>
+          <h2>Todavía no hay vídeos con ficha.</h2>
           <p>
-            Una ficha solo se publica cuando su estado real en YouTube es público y el resumen es propio. Hoy no hay
-            ninguna que cumpla las dos cosas.
+            Un vídeo aparece aquí cuando está público en el canal y tenemos un resumen propio que contar.
           </p>
           <p>
             <a class="text-link" href={url(ruta.temas())}>
-              Ver los temas troncales
+              Ver los temas
             </a>
           </p>
         </div>
@@ -225,9 +226,9 @@ const jsonLd = grafo([
                     loading="lazy"
                     decoding="async"
                   />
-                  <span class="v2-play" aria-hidden="true">▶</span>
+                  <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
                   <span class="v2-duration">
-                    {formato(video.data.duracion_iso)} · {duracionReloj(video.data.duracion_iso)}
+                    {formatoLegible(video.data.duracion_iso)} · {duracionReloj(video.data.duracion_iso)}
                   </span>
                 </a>
                 <p class="v2-video-tema">
@@ -259,10 +260,10 @@ const jsonLd = grafo([
     <div>
       <p class="eyebrow">{SECCION} en YouTube</p>
       <h2 id="canal-titulo">Otra forma de ver las cuentas.</h2>
-      <p class="v2-meta">Las piezas nuevas aparecen antes en el canal. Aquí llegan con su ficha y su contexto.</p>
+      <p class="v2-meta">Los vídeos nuevos salen antes en el canal; aquí llegan con su ficha y su contexto.</p>
     </div>
     <a class="button secondary" href={CANAL_YOUTUBE} rel="noopener">
-      Canal en YouTube <span aria-hidden="true">↗</span>
+      <Sprite familia="functional" nombre="youtube" size={24} /> Ir al canal de YouTube
       <span class="sr-only"> (se abre en otra pestaña)</span>
     </a>
   </section>

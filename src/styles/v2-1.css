@@ -34,3 +34,16 @@
 @media(min-width:768px) and (max-width:1000px){.v21-cover{grid-template-columns:minmax(0,1fr) 288px;gap:1.5rem}.v21-character{padding:1rem}.v21-cover h1{font-size:3rem}.v21-cover .actions{gap:1rem}.v21-card-label{gap:.5rem;letter-spacing:.04em}}
 @media(max-width:360px){.header-row{gap:.25rem}.logo{font-size:.8rem;gap:.25rem}.logo img{width:24px;height:28px}.header-channel{font-size:.875rem}.mobile-nav summary{padding-inline:.2rem}}
 @media(max-width:767px){.v21-cover{grid-template-columns:1fr;gap:1.5rem;padding-block:2rem}.v21-cover h1{font-size:2.625rem;max-width:15ch}.v21-cover .lead{font-size:1.125rem;margin-top:1rem}.v21-cover .eyebrow{font-size:.875rem}.v21-cover .actions{gap:.5rem;margin-top:1.25rem}.v21-cover .actions .text-link{width:100%;text-align:center;min-height:44px}.v21-character{grid-template-columns:128px minmax(0,1fr);column-gap:1rem;row-gap:.5rem;padding:1rem;max-width:none}.v21-character>.sprite-personaje{width:128px;height:160px;grid-row:1/3;grid-column:1}.v21-card-label{grid-column:2;display:block;font-size:.75rem;letter-spacing:.04em}.v21-card-label .sprite{display:block;margin-bottom:.5rem}.v21-character figcaption{grid-column:2;font-size:.875rem;text-align:left}.suits{gap:.75rem}.suit,.suit.active{padding:1rem}.suit h3{font-size:1rem}.suit:nth-child(-n+2){border-bottom:1px solid var(--border-decorative)}.suit.active{border-bottom-color:var(--gold)}.v2-tool{grid-template-columns:1fr;gap:1rem}.v2-tool>.sprite{width:40px;height:40px}.v2-tool h2{font-size:2rem}.v2-videos{grid-template-columns:1fr}.v21-topics{grid-template-columns:1fr}.v21-topics li:first-child{grid-column:auto}.v21-topics a{display:grid;grid-template-columns:32px minmax(0,1fr);gap:.5rem 1rem;padding:1.25rem}.v21-topics picture{grid-row:1/4}.v21-topics picture,.v21-topics picture img{width:32px;height:32px}.v21-topics h3,.v21-topics p{margin:0}.header-row{gap:.5rem}.v2-channel .button{white-space:normal}}
+
+/* V2.1-F: videoteca, ficha y herramientas. Arte a escala entera y continuidad legible. */
+.v2-hub-art{display:flex;align-items:center;gap:.75rem}
+.v2-hub-art img,.v2-hub-art img:first-child,.v2-hub-art img:last-child{width:40px;height:40px}
+.v2-play .sprite{width:32px;height:32px;object-fit:contain}
+.v2-watch-aside .sprite{display:block;margin-top:1.5rem;width:40px;height:40px}
+.v2-learn-tipo .sprite,.v2-tool .text-link .sprite{vertical-align:-6px;margin-right:.5rem}
+.button .sprite{vertical-align:-5px;margin-right:.5rem}
+.v2-tool .sprite{width:40px;height:40px}
+.catalog .orden{display:flex;align-items:center;gap:.75rem}
+.catalog .orden .sprite{width:40px;height:40px}
+@media(max-width:767px){.v2-learn-tipo{letter-spacing:.06em}.v2-watch-aside .sprite{margin-top:1rem}}
+@media(max-width:700px){.v2-hub-art{display:none}}
