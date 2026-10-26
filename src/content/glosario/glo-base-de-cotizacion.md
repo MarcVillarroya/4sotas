@@ -1,12 +1,15 @@
 ---
 id: glo-base-de-cotizacion
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-boe-orden-pjc-297-2026
     dato: Tope máximo 5.101,20 €/mes y bases mínimas por grupo en 2026

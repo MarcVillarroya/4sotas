@@ -1,12 +1,15 @@
 ---
 id: art-primeros-1000-euros
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-bde-ecf-2021-resultados
     dato: 6 % aguantaría menos de una semana; 57 % seis meses o más
@@ -20,8 +23,8 @@ fuentes:
     dato: Guías oficiales de presupuesto, ahorro y endeudamiento
   - fuente: src-ine-ipc-septiembre-2026
     dato: IPC 4,9 % anual en septiembre de 2026
-  - fuente: src-legia-art66-escala-ahorro
-    dato: Tributación de los rendimientos del ahorro (19 a 30 %)
+  - fuente: src-boe-ley-35-2006-lirpf
+    dato: "Art. 66 LIRPF: escala del ahorro 19, 21, 23, 27 y 30 % vigente desde el 1-ene-2025"
 seo:
   titulo: "Tus primeros 1.000 euros: orden, deuda y colchón"
   descripcion: "Plan con números para los primeros 1.000 euros: cuánto colchón necesitas, por qué amortizar deuda cara gana a invertir y cómo funciona el interés compuesto."

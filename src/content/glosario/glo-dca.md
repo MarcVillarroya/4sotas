@@ -1,15 +1,20 @@
 ---
 id: glo-dca
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s4-03
     dato: La rentabilidad pasada no garantiza la futura.
-seo: {}
+seo:
+  descripcion: "Aportación periódica (DCA): qué hace y qué no con la aritmética del interés compuesto, sin promesas de rentabilidad."
+  noindex: false
 actualizacion:
   politica: revision-anual
 slug: dca-aportacion-periodica

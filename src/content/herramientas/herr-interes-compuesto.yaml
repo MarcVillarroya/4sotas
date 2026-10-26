@@ -1,12 +1,14 @@
 id: herr-interes-compuesto
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
 revisado_factual: 2026-10-26
 procedencia: original
 sensibilidad: baja
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes: []
 seo:
   descripcion: Calculadora de interés compuesto con aportaciones periódicas, tabla anual y valor real tras inflación. Fórmula y límites publicados.

@@ -6,4 +6,4 @@ tipo: oficial
 jurisdiccion: OTRA
 consultado_en: 2026-10-26
 acceso: publico
-nota_verificacion: "AVISO: por el acuerdo con S&P Dow Jones, FRED solo mantiene ~10 años, así que 2007-2009 puede faltar. Cifras 1.565,15 (9-oct-2007) y 676,53 (9-mar-2009) concordantes en tres secundarias; verificar en histórico completo antes de publicar."
+nota_verificacion: "FRED solo sirve 10 años de SP500 (24-oct-2016 a 21-oct-2026), comprobado el 26-oct-2026. Los cierres 1.565,15 (9-oct-2007) y 676,53 (9-mar-2009) se verificaron con el histórico de ^GSPC en Yahoo Finance."

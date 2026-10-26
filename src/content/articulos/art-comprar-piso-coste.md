@@ -1,11 +1,14 @@
 ---
 id: art-comprar-piso-coste
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s7-01
     dato: Julio de 2026, hipoteca media de 180.785 € al 3,01 % a 26 años.
@@ -16,7 +19,7 @@ fuentes:
   - fuente: src-s7-04
     dato: La financiación habitual de hasta el 80 % del valor de tasación es práctica bancaria, no límite legal.
   - fuente: src-s7-05
-    dato: Escala de ITP de Cataluña vigente desde el 27 de junio de 2025, pendiente de confirmar en la ATC.
+    dato: Escala de ITP de Cataluña desde el 27 de junio de 2025; 10 % hasta 600.000 € y tipo medio por encima, verificado en la ATC.
   - fuente: src-s7-06
     dato: IVA del 10 % en obra nueva y 4 % en VPO de régimen especial; la segunda mano tributa por ITP autonómico.
   - fuente: src-s7-07
@@ -25,7 +28,9 @@ fuentes:
     dato: Definición legal de TAE del artículo 4 de la Ley 5/2019.
   - fuente: src-bde-euribor-septiembre-2026
     dato: Euríbor a 12 meses en el 3,247 % en septiembre de 2026.
-seo: {}
+seo:
+  descripcion: "Qué cuesta de verdad un piso de 200.000 €: entrada, ITP catalán, gastos y cuota con amortización francesa paso a paso."
+  noindex: false
 actualizacion:
   politica: revision-semestral
 slug: comprar-piso-coste-real

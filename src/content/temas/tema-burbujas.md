@@ -1,11 +1,14 @@
 ---
 id: tema-burbujas
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s6-01
     dato: Nasdaq Composite, pico de 5.048,62 el 10 de marzo de 2000 y suelo de 1.114,11 el 9 de octubre de 2002.
@@ -13,7 +16,9 @@ fuentes:
     dato: S&P 500, 1.565,15 el 9 de octubre de 2007 y 676,53 el 9 de marzo de 2009.
   - fuente: src-s6-03
     dato: Garber (1989) reconstruye series de precios de bulbos y matiza la lectura de la tulipamanía.
-seo: {}
+seo:
+  descripcion: "Tres episodios históricos —tulipanes, Nasdaq y S&P 500— con cifras verificables y las lecciones que sí se pueden aplicar a tu dinero."
+  noindex: false
 actualizacion:
   politica: puntual
 slug: burbujas

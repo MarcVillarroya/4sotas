@@ -1,11 +1,14 @@
 ---
 id: art-fondos-vs-etf
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s4-01
     dato: El traspaso entre fondos no tributa ni soporta retención y conserva valor y fecha de adquisición; el diferimiento no aplica a ETF; retención del 19 % a cuenta en el reembolso.
@@ -13,9 +16,9 @@ fuentes:
     dato: Plazos máximos de traspaso de 5 días hábiles en la misma gestora y hasta 8 entre gestoras.
   - fuente: src-s4-03
     dato: El folleto y el DFI informan de riesgo, costes y escenario; la rentabilidad pasada no garantiza la futura.
-  - fuente: src-legia-art66-escala-ahorro
-    dato: Escala de la base del ahorro del 19 % al 30 % vigente desde 2025.
-seo: {}
+seo:
+  descripcion: "Traspaso sin tributar, diferimiento y costes: qué cambia entre un fondo indexado y un ETF al mover el dinero."
+  noindex: false
 actualizacion:
   politica: revision-anual
 slug: fondos-indexados-vs-etf
@@ -82,7 +85,7 @@ Cifra concreta `[cálculo]`. Supón 10.000 € que se convierten en 15.000 €:
 Ojo con dos matices que se suelen omitir:
 
 1. El 19 % es una **retención a cuenta**, no el tipo final. La ganancia se integra en la base del
-   ahorro, con tipos del 19 % al 30 % según el importe `[hecho]` (`src-legia-art66-escala-ahorro`). Si tu tipo final es
+   ahorro, con tipos del 19 % al 30 % según el importe `[hecho]` (`src-boe-ley-35-2006-lirpf`). Si tu tipo final es
    mayor, regularizas en la declaración.
 2. Diferir no es regalar. Si un día reembolsas todo, tributarás por la ganancia acumulada entera.
    La ventaja es que decides **cuándo** y puedes compensar pérdidas con ganancias.

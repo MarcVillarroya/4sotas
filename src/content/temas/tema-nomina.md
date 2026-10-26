@@ -1,12 +1,15 @@
 ---
 id: tema-nomina
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-aeat-escala-general-irpf-2025
     dato: Escala general estatal del IRPF vigente, sin cambio publicado para 2026

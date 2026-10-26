@@ -1,0 +1,6 @@
+id: aut-revision-factual-qa
+nombre_publico: Revisión factual QA
+rol: [revisor-factual]
+bio: "Pasada de verificación del 26-oct-2026: comprobación HTTP de las 44 URL de las fichas de fuente, lectura de las citas literales y recálculo independiente de todas las cifras etiquetadas como cálculo."
+creditos_verificados: false
+creado: 2026-10-26

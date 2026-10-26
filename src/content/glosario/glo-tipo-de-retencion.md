@@ -1,12 +1,15 @@
 ---
 id: glo-tipo-de-retencion
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-aeat-retenciones-2026
     dato: El tipo de retención se calcula con el algoritmo oficial del art. 101 LIRPF

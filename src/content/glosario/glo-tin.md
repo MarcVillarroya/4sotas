@@ -1,17 +1,22 @@
 ---
 id: glo-tin
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s5-06
     dato: La TAE del artículo 4 de la Ley 5/2019 incluye los costes aparejados, a diferencia del tipo nominal.
   - fuente: src-s5-01
     dato: Equivalencia del Banco de España entre 1,5 % mensual y 18 % nominal anual.
-seo: {}
+seo:
+  descripcion: "Tipo de interés nominal: el precio sin comisiones ni productos vinculados, y por qué no sirve para comparar ofertas."
+  noindex: false
 actualizacion:
   politica: cuando-cambie-normativa
 slug: tin

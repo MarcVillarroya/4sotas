@@ -1,0 +1,1018 @@
+[
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-boe-orden-pjc-297-2026",
+  "dato": "Tope máximo de la base de cotización 5.101,20 €/mes en 2026",
+  "numeros": [
+   "5.101,20",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-seg-social-bases-tipos-2026",
+  "dato": "Bases mínimas por grupo y tipos de cotización del Régimen General",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-aeat-escala-general-irpf-2025",
+  "dato": "Escala general estatal del IRPF por tramos",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-aeat-retenciones-2026",
+  "dato": "El tipo de retención se calcula con el algoritmo oficial y no es el IRPF final",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-aeat-rdl-4-2024-art20",
+  "dato": "Reducción por rendimientos del trabajo y límites de obligación de declarar",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-aeat-minimo-contribuyente",
+  "dato": "Mínimo del contribuyente de 5.550 euros",
+  "numeros": [
+   "5.550"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-boe-ley-35-2006-lirpf",
+  "dato": "\"Art. 96.3 LIRPF: límites de 22.000 €, 15.876 € y excepción de 1.500 € del segundo pagador\"",
+  "numeros": [
+   "96.3",
+   "22.000",
+   "15.876",
+   "1.500"
+  ],
+  "no_encontrados": [
+   "96.3"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuente": "src-boe-la-rioja-ley-9-2025",
+  "dato": "Ejemplo de deflactación del tramo autonómico por ley propia",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-01",
+  "dato": "Julio de 2026, hipoteca media de 180.785 € al 3,01 % a 26 años.",
+  "numeros": [
+   "2026",
+   "180.785",
+   "3,01",
+   "26"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-02",
+  "dato": "IPV del segundo trimestre de 2026, +12,2 % anual.",
+  "numeros": [
+   "2026",
+   "12,2"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-03",
+  "dato": "Tasación obligatoria y reparto de gastos del artículo 14.1.e de la Ley 5/2019.",
+  "numeros": [
+   "14.1",
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-04",
+  "dato": "La financiación habitual de hasta el 80 % del valor de tasación es práctica bancaria, no límite legal.",
+  "numeros": [
+   "80"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-05",
+  "dato": "Escala de ITP de Cataluña desde el 27 de junio de 2025; 10 % hasta 600.000 € y tipo medio por encima, verificado en la ATC.",
+  "numeros": [
+   "27",
+   "2025",
+   "10",
+   "600.000"
+  ],
+  "no_encontrados": [
+   "27"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-06",
+  "dato": "IVA del 10 % en obra nueva y 4 % en VPO de régimen especial; la segunda mano tributa por ITP autonómico.",
+  "numeros": [
+   "10"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s7-07",
+  "dato": "Arras confirmatorias por defecto en el Código Civil de Cataluña y desistimiento por financiación según contrato.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-s5-06",
+  "dato": "Definición legal de TAE del artículo 4 de la Ley 5/2019.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuente": "src-bde-euribor-septiembre-2026",
+  "dato": "Euríbor a 12 meses en el 3,247 % en septiembre de 2026.",
+  "numeros": [
+   "12",
+   "3,247",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-dca-interes-compuesto.md",
+  "fuente": "src-s4-03",
+  "dato": "La rentabilidad pasada no garantiza la futura; el folleto y el DFI informan de riesgo y costes.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-dca-interes-compuesto.md",
+  "fuente": "src-s4-01",
+  "dato": "La ganancia del reembolso se integra en la base del ahorro y soporta una retención del 19 % a cuenta.",
+  "numeros": [
+   "19"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-dca-interes-compuesto.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC general de septiembre de 2026 en el 4,9 % anual, con la subyacente en el 3,1 %.",
+  "numeros": [
+   "2026",
+   "4,9",
+   "3,1"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-fixture-demo.md",
+  "fuente": "src-fixture-demo",
+  "dato": "Ficha de prueba del modelo; no respalda ninguna cifra.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-fondos-vs-etf.md",
+  "fuente": "src-s4-01",
+  "dato": "El traspaso entre fondos no tributa ni soporta retención y conserva valor y fecha de adquisición; el diferimiento no aplica a ETF; retención del 19 % a cuenta en el reembolso.",
+  "numeros": [
+   "19"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-fondos-vs-etf.md",
+  "fuente": "src-s4-02",
+  "dato": "Plazos máximos de traspaso de 5 días hábiles en la misma gestora y hasta 8 entre gestoras.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-fondos-vs-etf.md",
+  "fuente": "src-s4-03",
+  "dato": "El folleto y el DFI informan de riesgo, costes y escenario; la rentabilidad pasada no garantiza la futura.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC general 4,9 % anual, subyacente 3,1 %, mensual 0,3 %, IPCA 5,0 %",
+  "numeros": [
+   "4,9",
+   "3,1",
+   "0,3",
+   "5,0"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-ine-ipc-adelantado-septiembre-2026",
+  "dato": "El avance del 30-sep-2026 ya señalaba el 4,9 % anual",
+  "numeros": [
+   "30",
+   "2026",
+   "4,9"
+  ],
+  "no_encontrados": [
+   "30"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-bce-decision-tipos-sep-2026",
+  "dato": "Tipos BCE de referencia vigentes desde el 16-sep-2026",
+  "numeros": [
+   "16",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-bce-tipos-oficiales",
+  "dato": "Serie oficial de tipos del BCE",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-bde-euribor-septiembre-2026",
+  "dato": "Euríbor a 12 meses 3,247 % en septiembre de 2026",
+  "numeros": [
+   "12",
+   "3,247",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "No existe un tipo oficial de cuenta remunerada; el BdE publica comparador",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuente": "src-bde-estadisticas-tipos-interes",
+  "dato": "Estadísticas oficiales de tipos de interés de depósitos y crédito",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-bde-ecf-2021-resultados",
+  "dato": "6 % aguantaría menos de una semana; 57 % seis meses o más",
+  "numeros": [
+   "57"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-bde-ecf-presentacion",
+  "dato": "Encuesta de Competencias Financieras, segunda edición 2021",
+  "numeros": [
+   "2021"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-bde-cuentas-financieras-2t2026",
+  "dato": "Deuda de hogares 41,9 % del PIB; riqueza financiera neta 161,8 % del PIB",
+  "numeros": [
+   "41,9",
+   "161,8"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-bde-consulta-endeudamiento-40",
+  "dato": "El total de deudas no debería superar el 40 % de los ingresos netos",
+  "numeros": [
+   "40"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-plan-educacion-financiera-guias",
+  "dato": "Guías oficiales de presupuesto, ahorro y endeudamiento",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC 4,9 % anual en septiembre de 2026",
+  "numeros": [
+   "4,9",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuente": "src-boe-ley-35-2006-lirpf",
+  "dato": "\"Art. 66 LIRPF: escala del ahorro 19, 21, 23, 27 y 30 % vigente desde el 1-ene-2025\"",
+  "numeros": [
+   "66",
+   "19",
+   "21",
+   "23",
+   "27",
+   "30",
+   "2025"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-03",
+  "dato": "Definiciones oficiales de débito, crédito, revolving y prepago.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-01",
+  "dato": "Modalidades de pago aplazado, riesgo de que la cuota no cubra los intereses y equivalencia 1,5 % mensual = 18 % nominal anual.",
+  "numeros": [
+   "1,5",
+   "18"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-02",
+  "dato": "Pago total a fin de mes frente a revolving, con el capital devuelto disponible otra vez.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-04",
+  "dato": "Las comisiones de emisión y mantenimiento son libres, con información previa y aceptación.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-05",
+  "dato": "Lista de servicios más representativos de una cuenta de pago y comparador de comisiones del BdE.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-s5-06",
+  "dato": "Definición legal de TAE en el artículo 4 de la Ley 5/2019.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "Simuladores oficiales, incluido el cálculo de fecha de fin de una revolving.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "Comparador del BdE de tipos y comisiones, alimentado por las entidades.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuente": "src-bde-consulta-endeudamiento-40",
+  "dato": "Referencia de que la deuda total no debería superar el 40 % de los ingresos netos mensuales.",
+  "numeros": [
+   "40"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-aeat-escala-general-irpf-2025",
+  "dato": "Escala general estatal de seis tramos (9,50 a 24,50 %)",
+  "numeros": [
+   "9,50",
+   "24,50"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-aeat-minimo-contribuyente",
+  "dato": "Mínimo del contribuyente de 5.550 euros",
+  "numeros": [
+   "5.550"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-aeat-rdl-4-2024-art20",
+  "dato": "Reducción del art. 20 y elevación a 15.876 € del límite de obligación de declarar",
+  "numeros": [
+   "20",
+   "15.876"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-boe-ley-35-2006-lirpf",
+  "dato": "Arts. 63, 66, 96 y 101 LIRPF (escala, escala del ahorro, límites de 22.000/15.876/1.500 € y pagos a cuenta)",
+  "numeros": [
+   "63",
+   "66",
+   "96",
+   "101",
+   "22.000",
+   "15.876",
+   "1.500"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-aeat-algoritmo-retenciones-2026",
+  "dato": "El RDL 23/2026 no cambia la escala general; la reducción excepcional afecta a La Palma",
+  "numeros": [
+   "23",
+   "2026"
+  ],
+  "no_encontrados": [
+   "23",
+   "2026"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuente": "src-aeat-novedades-normativa-irpf-2026",
+  "dato": "Sin modificación de la escala general estatal en 2026",
+  "numeros": [
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-amortizacion-francesa.md",
+  "fuente": "src-s5-06",
+  "dato": "Ley 5/2019, régimen de los préstamos hipotecarios a tipo fijo y de la información precontractual.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-base-de-cotizacion.md",
+  "fuente": "src-boe-orden-pjc-297-2026",
+  "dato": "Tope máximo 5.101,20 €/mes y bases mínimas por grupo en 2026",
+  "numeros": [
+   "5.101,20",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-base-de-cotizacion.md",
+  "fuente": "src-seg-social-bases-tipos-2026",
+  "dato": "Tablas oficiales de bases y tipos de cotización 2026",
+  "numeros": [
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-dca.md",
+  "fuente": "src-s4-03",
+  "dato": "La rentabilidad pasada no garantiza la futura.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-diversificacion.md",
+  "fuente": "src-s4-03",
+  "dato": "Los folletos de fondos informan de la política de inversión y del riesgo de concentración.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-fondo-de-emergencia.md",
+  "fuente": "src-bde-ecf-2021-resultados",
+  "dato": "6 % aguantaría menos de una semana sin endeudarse y 57 % seis meses o más",
+  "numeros": [
+   "57"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-fondo-de-emergencia.md",
+  "fuente": "src-plan-educacion-financiera-guias",
+  "dato": "Guías oficiales de presupuesto, ahorro y endeudamiento",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-fondo-de-emergencia.md",
+  "fuente": "src-bde-cuentas-financieras-2t2026",
+  "dato": "Deuda de los hogares en el 41,9 % del PIB en el 2T2026",
+  "numeros": [
+   "41,9",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-inflacion-subyacente.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "Inflación subyacente 3,1 % anual frente al 4,9 % del índice general",
+  "numeros": [
+   "3,1",
+   "4,9"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-ipc.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC general 4,9 % anual en septiembre de 2026",
+  "numeros": [
+   "4,9",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-tae.md",
+  "fuente": "src-s5-06",
+  "dato": "Artículo 4 de la Ley 5/2019, definición de TAE como coste total del préstamo en porcentaje anual, incluidos los costes aparejados.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-tin.md",
+  "fuente": "src-s5-06",
+  "dato": "La TAE del artículo 4 de la Ley 5/2019 incluye los costes aparejados, a diferencia del tipo nominal.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-tin.md",
+  "fuente": "src-s5-01",
+  "dato": "Equivalencia del Banco de España entre 1,5 % mensual y 18 % nominal anual.",
+  "numeros": [
+   "1,5",
+   "18"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-tipo-de-retencion.md",
+  "fuente": "src-aeat-retenciones-2026",
+  "dato": "El tipo de retención se calcula con el algoritmo oficial del art. 101 LIRPF",
+  "numeros": [
+   "101"
+  ],
+  "no_encontrados": [
+   "101"
+  ]
+ },
+ {
+  "file": "src/content/glosario/glo-tipo-de-retencion.md",
+  "fuente": "src-aeat-algoritmo-retenciones-2026",
+  "dato": "El RDL 23/2026 no modifica la escala general",
+  "numeros": [
+   "23",
+   "2026"
+  ],
+  "no_encontrados": [
+   "23",
+   "2026"
+  ]
+ },
+ {
+  "file": "src/content/glosario/glo-tipo-marginal.md",
+  "fuente": "src-aeat-escala-general-irpf-2025",
+  "dato": "Escala general estatal por tramos, de 9,50 % a 24,50 %",
+  "numeros": [
+   "9,50",
+   "24,50"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-tipo-marginal.md",
+  "fuente": "src-aeat-minimo-contribuyente",
+  "dato": "Mínimo del contribuyente de 5.550 euros",
+  "numeros": [
+   "5.550"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-traspaso-fondos.md",
+  "fuente": "src-s4-01",
+  "dato": "El traspaso no tributa ni soporta retención y las nuevas participaciones conservan valor y fecha de adquisición.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/glosario/glo-traspaso-fondos.md",
+  "fuente": "src-s4-02",
+  "dato": "Plazos máximos de 5 días hábiles en la misma gestora y hasta 8 entre gestoras.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuente": "src-bde-ecf-2021-resultados",
+  "dato": "6 % aguantaría menos de una semana sin endeudarse; 57 % seis meses o más",
+  "numeros": [
+   "57"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuente": "src-bde-cuentas-financieras-2t2026",
+  "dato": "Deuda de hogares 729 mil millones (41,9 % del PIB) y riqueza financiera neta 161,8 % del PIB",
+  "numeros": [
+   "729",
+   "41,9",
+   "161,8"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuente": "src-bde-consulta-endeudamiento-40",
+  "dato": "El total de deudas no debería superar el 40 % de los ingresos netos mensuales",
+  "numeros": [
+   "40"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuente": "src-plan-educacion-financiera-guias",
+  "dato": "Guías oficiales de presupuesto, ahorro y endeudamiento",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC 4,9 % anual en septiembre de 2026 para medir el coste de dejar el dinero parado",
+  "numeros": [
+   "4,9",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-01",
+  "dato": "Modalidades de pago de la tarjeta y equivalencia 1,5 % mensual = 18 % nominal anual; una cuota que no cubre intereses hace crecer la deuda.",
+  "numeros": [
+   "1,5",
+   "18"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-02",
+  "dato": "Pago total a fin de mes frente a pago aplazado; en revolving el capital devuelto vuelve a estar disponible.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-03",
+  "dato": "Definiciones oficiales de débito, crédito, revolving y prepago.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-04",
+  "dato": "Las comisiones de emisión y mantenimiento de tarjeta son libres, con información previa y aceptación.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-05",
+  "dato": "El BdE publica la lista de servicios más representativos de una cuenta de pago y un comparador de comisiones.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-s5-06",
+  "dato": "Artículo 4 de la Ley 5/2019, que define la TAE como coste total del préstamo en porcentaje anual.",
+  "numeros": [
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "Simuladores oficiales, incluido el de fecha de fin de una revolving y el de TAE de préstamo y depósito.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "Comparador del BdE de tipos de interés y comisiones, alimentado por las entidades.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuente": "src-bde-consulta-endeudamiento-40",
+  "dato": "Referencia de que el total de deudas no debería superar el 40 % de los ingresos netos mensuales.",
+  "numeros": [
+   "40"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-burbujas.md",
+  "fuente": "src-s6-01",
+  "dato": "Nasdaq Composite, pico de 5.048,62 el 10 de marzo de 2000 y suelo de 1.114,11 el 9 de octubre de 2002.",
+  "numeros": [
+   "5.048,62",
+   "10",
+   "2000",
+   "1.114,11",
+   "2002"
+  ],
+  "no_encontrados": [
+   "5.048,62",
+   "10",
+   "2000",
+   "1.114,11",
+   "2002"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-burbujas.md",
+  "fuente": "src-s6-02",
+  "dato": "S&P 500, 1.565,15 el 9 de octubre de 2007 y 676,53 el 9 de marzo de 2009.",
+  "numeros": [
+   "500",
+   "1.565,15",
+   "2007",
+   "676,53",
+   "2009"
+  ],
+  "no_encontrados": [
+   "500",
+   "1.565,15",
+   "2007",
+   "676,53",
+   "2009"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-burbujas.md",
+  "fuente": "src-s6-03",
+  "dato": "Garber (1989) reconstruye series de precios de bulbos y matiza la lectura de la tulipamanía.",
+  "numeros": [
+   "1989"
+  ],
+  "no_encontrados": [
+   "1989"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-fixture-demo.md",
+  "fuente": "src-fixture-demo",
+  "dato": "Ficha de prueba del modelo; no respalda ninguna cifra.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inflacion.md",
+  "fuente": "src-ine-ipc-septiembre-2026",
+  "dato": "IPC general 4,9 % anual, subyacente 3,1 %, mensual 0,3 %, IPCA 5,0 %",
+  "numeros": [
+   "4,9",
+   "3,1",
+   "0,3",
+   "5,0"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inflacion.md",
+  "fuente": "src-bce-decision-tipos-sep-2026",
+  "dato": "Facilidad de depósito 2,50 %, MRO 2,65 %, marginal 2,90 % desde el 16-sep-2026",
+  "numeros": [
+   "2,50",
+   "2,65",
+   "2,90",
+   "16",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inflacion.md",
+  "fuente": "src-bde-euribor-septiembre-2026",
+  "dato": "Euríbor a 12 meses 3,247 % en septiembre de 2026",
+  "numeros": [
+   "12",
+   "3,247",
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inflacion.md",
+  "fuente": "src-bde-comparador-tipos-comisiones",
+  "dato": "No existe un tipo oficial de cuenta remunerada; el BdE publica un comparador",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inversion.md",
+  "fuente": "src-s4-01",
+  "dato": "Traspaso entre fondos sin tributar ni retención; conservación de valor y fecha de adquisición; el diferimiento no aplica a ETF.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inversion.md",
+  "fuente": "src-s4-02",
+  "dato": "Plazos máximos de traspaso, 5 días hábiles en la misma gestora y hasta 8 entre gestoras.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-inversion.md",
+  "fuente": "src-s4-03",
+  "dato": "Folleto, comisiones y principios de la inversión colectiva.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-nomina.md",
+  "fuente": "src-aeat-escala-general-irpf-2025",
+  "dato": "Escala general estatal del IRPF vigente, sin cambio publicado para 2026",
+  "numeros": [
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-nomina.md",
+  "fuente": "src-seg-social-bases-tipos-2026",
+  "dato": "Bases y tipos de cotización del Régimen General en 2026",
+  "numeros": [
+   "2026"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-nomina.md",
+  "fuente": "src-aeat-retenciones-2026",
+  "dato": "El tipo de retención lo fija el algoritmo oficial, no la escala",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-nomina.md",
+  "fuente": "src-aeat-rdl-4-2024-art20",
+  "dato": "Reducción del art. 20 y límite de 15.876 euros con más de un pagador",
+  "numeros": [
+   "20",
+   "15.876"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-01",
+  "dato": "Julio de 2026, 43.372 hipotecas sobre viviendas, importe medio 180.785 €, tipo medio 3,01 % y plazo medio 26 años.",
+  "numeros": [
+   "2026",
+   "43.372",
+   "180.785",
+   "3,01",
+   "26"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-02",
+  "dato": "IPV del segundo trimestre de 2026, +12,2 % anual.",
+  "numeros": [
+   "2026",
+   "12,2"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-03",
+  "dato": "Artículos 13 y 14.1.e de la Ley 5/2019, tasación previa y reparto de gastos.",
+  "numeros": [
+   "13",
+   "14.1",
+   "2019"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-04",
+  "dato": "La financiación habitual es de hasta el 80 % del valor de tasación como práctica bancaria, no como límite legal.",
+  "numeros": [
+   "80"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-05",
+  "dato": "Escala de ITP en Cataluña desde el 27 de junio de 2025; 10 % hasta 600.000 € y tipo medio por encima, verificado en la ATC.",
+  "numeros": [
+   "27",
+   "2025",
+   "10",
+   "600.000"
+  ],
+  "no_encontrados": [
+   "27"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-06",
+  "dato": "IVA del 10 % en obra nueva y 4 % en vivienda de protección oficial de régimen especial; la segunda mano tributa por ITP autonómico.",
+  "numeros": [
+   "10"
+  ],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-s7-07",
+  "dato": "Arras confirmatorias por defecto en el Código Civil de Cataluña y desistimiento por negativa de financiación solo si el contrato lo prevé.",
+  "numeros": [],
+  "no_encontrados": []
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuente": "src-bde-euribor-septiembre-2026",
+  "dato": "Euríbor a 12 meses en el 3,247 % en septiembre de 2026, no oficial hasta su publicación en el BOE.",
+  "numeros": [
+   "12",
+   "3,247",
+   "2026"
+  ],
+  "no_encontrados": []
+ }
+]

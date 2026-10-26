@@ -1,12 +1,15 @@
 ---
 id: glo-tipo-marginal
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-aeat-escala-general-irpf-2025
     dato: Escala general estatal por tramos, de 9,50 % a 24,50 %

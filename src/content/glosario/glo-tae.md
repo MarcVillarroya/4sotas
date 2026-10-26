@@ -1,15 +1,20 @@
 ---
 id: glo-tae
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s5-06
     dato: Artículo 4 de la Ley 5/2019, definición de TAE como coste total del préstamo en porcentaje anual, incluidos los costes aparejados.
-seo: {}
+seo:
+  descripcion: "Tasa anual equivalente: el coste real de un préstamo o tarjeta, con comisiones y capitalización, frente al TIN del anuncio."
+  noindex: false
 actualizacion:
   politica: cuando-cambie-normativa
 slug: tae

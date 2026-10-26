@@ -1,11 +1,14 @@
 ---
 id: art-tarjetas-comisiones
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s5-03
     dato: Definiciones oficiales de débito, crédito, revolving y prepago.
@@ -25,7 +28,9 @@ fuentes:
     dato: Comparador del BdE de tipos y comisiones, alimentado por las entidades.
   - fuente: src-bde-consulta-endeudamiento-40
     dato: Referencia de que la deuda total no debería superar el 40 % de los ingresos netos mensuales.
-seo: {}
+seo:
+  descripcion: "Débito, crédito y revolving: cuándo sale el dinero, cuánto cuesta aplazar y por qué el 1,5 % mensual es un 18 % nominal."
+  noindex: false
 actualizacion:
   politica: cuando-cambie-normativa
 slug: tarjetas-y-comisiones
@@ -142,7 +147,7 @@ orden correcto es: primero comisiones e intereses, después la devolución.
 ## 6. Cuánta deuda es demasiada
 
 La referencia del Banco de España es que el total de deudas no debería sobrepasar el **40 % de los
-ingresos netos mensuales** `[hecho]` (`src-bde-consulta-endeudamiento-40`; fuente pendiente de re-verificación literal).
+ingresos netos mensuales** `[hecho]` (`src-bde-consulta-endeudamiento-40`; frase literal comprobada el 26-oct-2026).
 
 Con 1.500 € netos, el 40 % son **600 €** de cuota total `[cálculo]`. Si ya pagas 350 € de hipoteca,
 el margen teórico para el resto es de 250 €. Es una referencia de prudencia, no un requisito legal ni
@@ -183,8 +188,8 @@ pagar (cuotas × meses) y réstale el saldo actual. Ese es el precio de haber ap
 - El ejemplo de revolving supone tipo fijo del 1,5 % mensual y cuota constante; los contratos reales
   pueden tener comisiones añadidas y modificar el tipo con preaviso.
 - El cálculo de cashback usa cifras de escenario, no una oferta real.
-- La referencia del 40 % es del Banco de España y está pendiente de re-verificación literal en la
-  fuente.
+- La referencia del 40 % es del Banco de España y su formulación literal se comprobó en la fuente
+  el 26-oct-2026.
 - No es asesoramiento financiero individualizado.
 
 **Aviso**: contenido formativo sobre productos y costes bancarios. No sustituye el asesoramiento de

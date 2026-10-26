@@ -1,11 +1,14 @@
 ---
 id: tema-vivienda
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s7-01
     dato: Julio de 2026, 43.372 hipotecas sobre viviendas, importe medio 180.785 €, tipo medio 3,01 % y plazo medio 26 años.
@@ -16,14 +19,16 @@ fuentes:
   - fuente: src-s7-04
     dato: La financiación habitual es de hasta el 80 % del valor de tasación como práctica bancaria, no como límite legal.
   - fuente: src-s7-05
-    dato: Escala de ITP en Cataluña desde el 27 de junio de 2025, pendiente de confirmación manual en la ATC.
+    dato: Escala de ITP en Cataluña desde el 27 de junio de 2025; 10 % hasta 600.000 € y tipo medio por encima, verificado en la ATC.
   - fuente: src-s7-06
     dato: IVA del 10 % en obra nueva y 4 % en vivienda de protección oficial de régimen especial; la segunda mano tributa por ITP autonómico.
   - fuente: src-s7-07
     dato: Arras confirmatorias por defecto en el Código Civil de Cataluña y desistimiento por negativa de financiación solo si el contrato lo prevé.
   - fuente: src-bde-euribor-septiembre-2026
     dato: Euríbor a 12 meses en el 3,247 % en septiembre de 2026, no oficial hasta su publicación en el BOE.
-seo: {}
+seo:
+  descripcion: "Del precio de salida al último recibo: entrada, impuestos, gastos y cuota de la hipoteca con la aritmética hecha."
+  noindex: false
 actualizacion:
   politica: revision-semestral
 slug: vivienda-y-hipoteca
@@ -170,8 +175,8 @@ y de lo pactado: no se universaliza.
 - No es asesoramiento financiero ni recomendación de compra.
 - El 80 % de financiación es práctica bancaria, no límite legal; y el 3,01 % es una media del INE,
   no una oferta vigente.
-- El ITP citado es el catalán y está pendiente de confirmación manual en la ATC; **no** se extrapola
-  a otras comunidades.
+- El ITP citado es el catalán y se verificó en la ATC el 26-oct-2026; **no** se extrapola a otras
+  comunidades, que tienen sus propias escalas y reducciones.
 - Los 3.000 € de otros gastos son una hipótesis de escenario, no una tarifa.
 - Comprar no es «mejor» que alquilar en general: depende de horizonte, precio relativo y movilidad.
 

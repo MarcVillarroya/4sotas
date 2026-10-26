@@ -1,12 +1,15 @@
 ---
 id: art-bruto-a-neto
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-boe-orden-pjc-297-2026
     dato: Tope máximo de la base de cotización 5.101,20 €/mes en 2026
@@ -20,6 +23,8 @@ fuentes:
     dato: Reducción por rendimientos del trabajo y límites de obligación de declarar
   - fuente: src-aeat-minimo-contribuyente
     dato: Mínimo del contribuyente de 5.550 euros
+  - fuente: src-boe-ley-35-2006-lirpf
+    dato: "Art. 96.3 LIRPF: límites de 22.000 €, 15.876 € y excepción de 1.500 € del segundo pagador"
   - fuente: src-boe-la-rioja-ley-9-2025
     dato: Ejemplo de deflactación del tramo autonómico por ley propia
 seo:
@@ -83,7 +88,7 @@ Los tipos de 2026 para un contrato indefinido, sin horas extra ni contingencias 
 | FOGASA | 0,20 % | — |
 | MEI | 0,75 % | 0,15 % |
 
-Suma de tu parte: 4,70 + 1,55 + 0,10 + 0,15 = **6,50 %** de la base [cálculo]. La empresa aporta un 30,20 % adicional que no aparece en tu nómina y que, por tanto, no forma parte de tu salario disponible, aunque sí del coste de tu puesto.
+Suma de tu parte: 4,70 + 1,55 + 0,10 + 0,15 = **6,50 %** de la base [cálculo]. La empresa aporta un 30,65 % adicional que no aparece en tu nómina y que, por tanto, no forma parte de tu salario disponible, aunque sí del coste de tu puesto.
 
 ## 4. Ejemplo completo con 2.000 € brutos
 

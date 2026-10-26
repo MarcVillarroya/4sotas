@@ -1,11 +1,14 @@
 ---
 id: tema-inversion
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s4-01
     dato: Traspaso entre fondos sin tributar ni retención; conservación de valor y fecha de adquisición; el diferimiento no aplica a ETF.
@@ -13,9 +16,9 @@ fuentes:
     dato: Plazos máximos de traspaso, 5 días hábiles en la misma gestora y hasta 8 entre gestoras.
   - fuente: src-s4-03
     dato: Folleto, comisiones y principios de la inversión colectiva.
-  - fuente: src-legia-art66-escala-ahorro
-    dato: Escala de la base del ahorro 19/21/23/27/30 % vigente desde 2025.
-seo: {}
+seo:
+  descripcion: "Interés compuesto, aportación periódica, fondos y ETF con las cuentas a la vista y sin promesas de rentabilidad."
+  noindex: false
 actualizacion:
   politica: revision-anual
 slug: inversion-desde-cero
@@ -76,7 +79,7 @@ La diferencia clave no es «cuál renta más», sino **cuándo pasa por caja Hac
 mover dinero de un fondo a otro no genera peaje fiscal; en un ETF, cada venta realiza ganancia o
 pérdida. La retención a cuenta en el reembolso es del 19 % sobre la ganancia (porcentaje de 2025,
 que la propia CNMV advierte que puede variar) y después la ganancia se integra en la base del
-ahorro, con tipos del 19 % al 30 % `[hecho]` (`src-s4-01`, `src-legia-art66-escala-ahorro`).
+ahorro, con tipos del 19 % al 30 % `[hecho]` (`src-s4-01`, `src-boe-ley-35-2006-lirpf`).
 
 Ejemplo cerrado `[cálculo]`: 10.000 € que valen 15.000 €. Si vendes el ETF, tributas el 19 % de
 5.000 € = 950 €, y te quedan 14.050 € líquidos. Si en un fondo haces traspaso, no tributas nada

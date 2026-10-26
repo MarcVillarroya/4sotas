@@ -1,12 +1,15 @@
 ---
 id: tema-ahorro
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-bde-ecf-2021-resultados
     dato: 6 % aguantaría menos de una semana sin endeudarse; 57 % seis meses o más

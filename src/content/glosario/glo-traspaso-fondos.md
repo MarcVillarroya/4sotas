@@ -1,17 +1,22 @@
 ---
 id: glo-traspaso-fondos
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s4-01
     dato: El traspaso no tributa ni soporta retención y las nuevas participaciones conservan valor y fecha de adquisición.
   - fuente: src-s4-02
     dato: Plazos máximos de 5 días hábiles en la misma gestora y hasta 8 entre gestoras.
-seo: {}
+seo:
+  descripcion: "Cambio de un fondo a otro sin tributar ni perder la fecha de adquisición: requisitos, plazos y qué no aplica a los ETF."
+  noindex: false
 actualizacion:
   politica: cuando-cambie-normativa
 slug: traspaso-de-fondos

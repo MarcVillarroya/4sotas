@@ -6,4 +6,4 @@ tipo: oficial
 jurisdiccion: OTRA
 consultado_en: 2026-10-26
 acceso: publico
-nota_verificacion: "Serie oficial hasta 2026-10-23. Los valores 5.048,62 (10-mar-2000) y 1.114,11 (9-oct-2002) los confirman dos secundarias que dicen usar esta serie; el CSV no se ha descargado. Descargar antes de publicar."
+nota_verificacion: "CSV completo descargado el 26-oct-2026 (fredgraph.csv, HTTP 200): 751,96 (30-dic-1994), 5.048,62 (10-mar-2000) y 1.114,11 (9-oct-2002) confirmados; último dato 2026-10-23."

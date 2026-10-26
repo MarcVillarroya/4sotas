@@ -1,12 +1,15 @@
 ---
 id: glo-ipc
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-ine-ipc-septiembre-2026
     dato: IPC general 4,9 % anual en septiembre de 2026

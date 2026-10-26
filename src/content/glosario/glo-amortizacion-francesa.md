@@ -1,15 +1,20 @@
 ---
 id: glo-amortizacion-francesa
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s5-06
     dato: Ley 5/2019, régimen de los préstamos hipotecarios a tipo fijo y de la información precontractual.
-seo: {}
+seo:
+  descripcion: "Sistema de cuota constante en el que al principio casi todo son intereses: definición, fórmula y ejemplo con 180.000 € al 3,01 %."
+  noindex: false
 actualizacion:
   politica: revision-anual
 slug: amortizacion-francesa

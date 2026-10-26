@@ -1,11 +1,14 @@
 ---
 id: tema-banca
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s5-01
     dato: Modalidades de pago de la tarjeta y equivalencia 1,5 % mensual = 18 % nominal anual; una cuota que no cubre intereses hace crecer la deuda.
@@ -25,7 +28,9 @@ fuentes:
     dato: Comparador del BdE de tipos de interés y comisiones, alimentado por las entidades.
   - fuente: src-bde-consulta-endeudamiento-40
     dato: Referencia de que el total de deudas no debería superar el 40 % de los ingresos netos mensuales.
-seo: {}
+seo:
+  descripcion: "Tarjetas, cuentas y comisiones: cuánto cuesta de verdad el dinero del banco y cómo se compara un 1,5 % mensual con una TAE."
+  noindex: false
 actualizacion:
   politica: cuando-cambie-normativa
 slug: banca-y-credito
@@ -135,7 +140,7 @@ tiene simuladores oficiales de TAE de préstamo y depósito, y de fecha de fin d
 ## 6. Endeudamiento: el 40 % como referencia, no como ley
 
 La referencia habitual del Banco de España es que el total de deudas no debería sobrepasar el **40 %
-de los ingresos netos mensuales** `[hecho]` (`src-bde-consulta-endeudamiento-40`, fuente pendiente de re-verificación
+de los ingresos netos mensuales** `[hecho]` (`src-bde-consulta-endeudamiento-40`, frase literal comprobada el 26-oct-2026;
 literal). Es una referencia de prudencia, no un requisito legal ni un límite de concesión: cada
 entidad aplica sus propios criterios y algunos productos quedan fuera de ese cálculo según cómo se
 computen.

@@ -1,0 +1,466 @@
+[
+ {
+  "file": "src/content/articulos/art-bruto-a-neto.md",
+  "fuentes": [
+   "src-boe-orden-pjc-297-2026",
+   "src-seg-social-bases-tipos-2026",
+   "src-aeat-escala-general-irpf-2025",
+   "src-aeat-retenciones-2026",
+   "src-aeat-rdl-4-2024-art20",
+   "src-aeat-minimo-contribuyente",
+   "src-boe-la-rioja-ley-9-2025"
+  ],
+  "cifras_body": 52,
+  "no_en_fuentes": [
+   "19.747,50",
+   "28.000,00",
+   "2.000,00",
+   "1.820,00",
+   "1.630,00",
+   "331,58",
+   "22.000",
+   "28.000",
+   "36537",
+   "240,00",
+   "130,00",
+   "30,20",
+   "94,00",
+   "240",
+   "6,50"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-comprar-piso-coste.md",
+  "fuentes": [
+   "src-s7-01",
+   "src-s7-02",
+   "src-s7-03",
+   "src-s7-04",
+   "src-s7-05",
+   "src-s7-06",
+   "src-s7-07",
+   "src-s5-06",
+   "src-bde-euribor-septiembre-2026"
+  ],
+  "cifras_body": 40,
+  "no_en_fuentes": [
+   "103.554,90",
+   "260.875,78",
+   "143.739,01",
+   "13.806,01",
+   "84.526,79",
+   "80.090,78",
+   "9.990,12",
+   "4.635,72",
+   "180.000",
+   "929,89",
+   "843,21",
+   "20.000",
+   "381,01",
+   "832,51",
+   "836,14",
+   "451,50",
+   "40.000",
+   "954,83",
+   "948,42",
+   "63.000",
+   "97,38",
+   "72,65",
+   "3.000",
+   "4,00",
+   "3,00",
+   "31,5"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-dca-interes-compuesto.md",
+  "fuentes": [
+   "src-s4-03",
+   "src-s4-01",
+   "src-ine-ipc-septiembre-2026"
+  ],
+  "cifras_body": 28,
+  "no_en_fuentes": [
+   "244.612,77",
+   "48.000,00",
+   "0,407412",
+   "33.160,90",
+   "81.160,90",
+   "17.370,89",
+   "12.272,58",
+   "65.370,89",
+   "160.000",
+   "108.000",
+   "2.653,30",
+   "1.628,89",
+   "16.000",
+   "31.177",
+   "36.000",
+   "12.600",
+   "81.160",
+   "48.000",
+   "6.300",
+   "1.009",
+   "240",
+   "14,4",
+   "300"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-fixture-demo.md",
+  "fuentes": [
+   "src-fixture-demo"
+  ],
+  "cifras_body": 0,
+  "no_en_fuentes": []
+ },
+ {
+  "file": "src/content/articulos/art-fondos-vs-etf.md",
+  "fuentes": [
+   "src-s4-01",
+   "src-s4-02",
+   "src-s4-03",
+   "src-legia-art66-escala-ahorro"
+  ],
+  "cifras_body": 11,
+  "no_en_fuentes": [
+   "15.000",
+   "14.050",
+   "5.000",
+   "0,10"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-inflacion-poder-adquisitivo.md",
+  "fuentes": [
+   "src-ine-ipc-septiembre-2026",
+   "src-ine-ipc-adelantado-septiembre-2026",
+   "src-bce-decision-tipos-sep-2026",
+   "src-bce-tipos-oficiales",
+   "src-bde-euribor-septiembre-2026",
+   "src-bde-comparador-tipos-comisiones",
+   "src-bde-estadisticas-tipos-interes"
+  ],
+  "cifras_body": 29,
+  "no_en_fuentes": [
+   "1,270216",
+   "7.872,68",
+   "1.336,90",
+   "1,03247",
+   "8.663,10",
+   "9.532,89",
+   "1.553,86",
+   "260910",
+   "508016",
+   "467,11",
+   "953,29",
+   "10.000",
+   "1,025",
+   "3243",
+   "1.630",
+   "1,049",
+   "0926",
+   "46,71",
+   "21,27",
+   "1.000",
+   "4,67",
+   "314",
+   "580",
+   "2,29",
+   "1,58"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-primeros-1000-euros.md",
+  "fuentes": [
+   "src-bde-ecf-2021-resultados",
+   "src-bde-ecf-presentacion",
+   "src-bde-cuentas-financieras-2t2026",
+   "src-bde-consulta-endeudamiento-40",
+   "src-plan-educacion-financiera-guias",
+   "src-ine-ipc-septiembre-2026",
+   "src-legia-art66-escala-ahorro"
+  ],
+  "cifras_body": 39,
+  "no_en_fuentes": [
+   "15.436,32",
+   "1.195,62",
+   "3.436,32",
+   "1.628,89",
+   "628,89",
+   "195,62",
+   "0,4074",
+   "12.000",
+   "1,015",
+   "9.000",
+   "1.800",
+   "3.000",
+   "19,56",
+   "1.500",
+   "1,049",
+   "0926",
+   "46,71",
+   "50,00",
+   "4.500",
+   "14,4",
+   "0,40",
+   "720"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-tarjetas-comisiones.md",
+  "fuentes": [
+   "src-s5-03",
+   "src-s5-01",
+   "src-s5-02",
+   "src-s5-04",
+   "src-s5-05",
+   "src-s5-06",
+   "src-bde-comparador-tipos-comisiones",
+   "src-bde-comparador-tipos-comisiones",
+   "src-bde-consulta-endeudamiento-40"
+  ],
+  "cifras_body": 14,
+  "no_en_fuentes": [
+   "2.586,71",
+   "2.800",
+   "0,015",
+   "6.000",
+   "19,56",
+   "45,00",
+   "250",
+   "350",
+   "600"
+  ]
+ },
+ {
+  "file": "src/content/articulos/art-tramos-irpf-y-retencion.md",
+  "fuentes": [
+   "src-aeat-escala-general-irpf-2025",
+   "src-aeat-minimo-contribuyente",
+   "src-aeat-rdl-4-2024-art20",
+   "src-aeat-algoritmo-retenciones-2026",
+   "src-legia-art66-escala-ahorro",
+   "src-aeat-novedades-normativa-irpf-2026"
+  ],
+  "cifras_body": 39,
+  "no_en_fuentes": [
+   "19.747,50",
+   "300.000",
+   "3.582,75",
+   "1.470,00",
+   "3.055,50",
+   "2.112,90",
+   "527,25",
+   "930,00",
+   "22.000",
+   "20.200",
+   "12.450",
+   "35.200",
+   "60.000",
+   "20.201",
+   "30.000",
+   "10,19",
+   "9.800",
+   "7.750",
+   "1.000",
+   "6,50",
+   "0,15",
+   "0,12"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-ahorro.md",
+  "fuentes": [
+   "src-bde-ecf-2021-resultados",
+   "src-bde-cuentas-financieras-2t2026",
+   "src-bde-consulta-endeudamiento-40",
+   "src-plan-educacion-financiera-guias",
+   "src-ine-ipc-septiembre-2026"
+  ],
+  "cifras_body": 24,
+  "no_en_fuentes": [
+   "15.436,32",
+   "3.436,32",
+   "1.628,89",
+   "628,89",
+   "12.000",
+   "1.800",
+   "46,71",
+   "14,4",
+   "720"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-banca.md",
+  "fuentes": [
+   "src-s5-01",
+   "src-s5-02",
+   "src-s5-03",
+   "src-s5-04",
+   "src-s5-05",
+   "src-s5-06",
+   "src-bde-comparador-tipos-comisiones",
+   "src-bde-comparador-tipos-comisiones",
+   "src-bde-consulta-endeudamiento-40"
+  ],
+  "cifras_body": 9,
+  "no_en_fuentes": [
+   "2.586,71",
+   "6.000",
+   "19,56",
+   "250",
+   "350",
+   "600"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-burbujas.md",
+  "fuentes": [
+   "src-s6-01",
+   "src-s6-02",
+   "src-s6-03"
+  ],
+  "cifras_body": 22,
+  "no_en_fuentes": [
+   "5.048,62",
+   "1.565,15",
+   "1.114,11",
+   "676,53",
+   "751,96",
+   "2007",
+   "1637",
+   "1995",
+   "1989",
+   "2009",
+   "2008",
+   "2002",
+   "1994",
+   "571,4",
+   "2013",
+   "1634",
+   "2000",
+   "500",
+   "77,9",
+   "4,53",
+   "56,8",
+   "353"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-fixture-demo.md",
+  "fuentes": [
+   "src-fixture-demo"
+  ],
+  "cifras_body": 0,
+  "no_en_fuentes": []
+ },
+ {
+  "file": "src/content/temas/tema-inflacion.md",
+  "fuentes": [
+   "src-ine-ipc-septiembre-2026",
+   "src-bce-decision-tipos-sep-2026",
+   "src-bde-euribor-septiembre-2026",
+   "src-bde-comparador-tipos-comisiones"
+  ],
+  "cifras_body": 19,
+  "no_en_fuentes": [
+   "7.872,68",
+   "1.336,90",
+   "9.532,89",
+   "951,00",
+   "953,29",
+   "10.000",
+   "1,025",
+   "1,049",
+   "1.000",
+   "4,67",
+   "21,3",
+   "580",
+   "2,29"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-inversion.md",
+  "fuentes": [
+   "src-s4-01",
+   "src-s4-02",
+   "src-s4-03",
+   "src-legia-art66-escala-ahorro"
+  ],
+  "cifras_body": 20,
+  "no_en_fuentes": [
+   "0,407412",
+   "33.160,90",
+   "81.160,90",
+   "26.532,98",
+   "1.628,89",
+   "953,29",
+   "48.000",
+   "14.050",
+   "15.000",
+   "5.000",
+   "14,4"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-nomina.md",
+  "fuentes": [
+   "src-aeat-escala-general-irpf-2025",
+   "src-seg-social-bases-tipos-2026",
+   "src-aeat-retenciones-2026",
+   "src-aeat-rdl-4-2024-art20"
+  ],
+  "cifras_body": 21,
+  "no_en_fuentes": [
+   "1.630,00",
+   "240,00",
+   "130,00",
+   "2.000",
+   "31,00",
+   "1.000",
+   "94,00",
+   "240",
+   "3,00",
+   "6,50"
+  ]
+ },
+ {
+  "file": "src/content/temas/tema-vivienda.md",
+  "fuentes": [
+   "src-s7-01",
+   "src-s7-02",
+   "src-s7-03",
+   "src-s7-04",
+   "src-s7-05",
+   "src-s7-06",
+   "src-s7-07",
+   "src-bde-euribor-septiembre-2026"
+  ],
+  "cifras_body": 35,
+  "no_en_fuentes": [
+   "103.554,90",
+   "143.739,01",
+   "13.806,01",
+   "84.526,79",
+   "93.549,02",
+   "79.743,01",
+   "9.990,12",
+   "4.635,72",
+   "180.000",
+   "759,86",
+   "843,21",
+   "20.000",
+   "832,51",
+   "381,01",
+   "451,50",
+   "40.000",
+   "954,83",
+   "948,42",
+   "63.000",
+   "72,65",
+   "3.000",
+   "250"
+  ]
+ }
+]

@@ -1,12 +1,14 @@
 id: vid-vefjjmzDHyY
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
 revisado_factual: 2026-10-26
 sensibilidad: baja
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes: []
 seo:
   descripcion: "Vídeo corto de Sota de Oros: el recorrido de un pago con tarjeta y quién se queda parte del importe en comisiones."

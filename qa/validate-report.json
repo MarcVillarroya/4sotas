@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T02:50:59.768Z",
-  "root": "/home/mvf/4sotas/site/.worktrees/t_89e4e004",
+  "generated_at": "2026-10-26T03:06:32.449Z",
+  "root": "/home/mvf/.hermes/kanban/workspaces/t_13d5dbeb",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
   "entries": {
@@ -12,11 +12,11 @@
     "herramientas": 2,
     "glosario": 14,
     "fuentes": 44,
-    "autores": 1
+    "autores": 2
   },
   "dist": {
-    "htmls": 8,
-    "sitemapLocs": 7
+    "htmls": 47,
+    "sitemapLocs": 46
   },
   "blockers": [],
   "warnings": [

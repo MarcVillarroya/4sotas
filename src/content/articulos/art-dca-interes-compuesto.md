@@ -1,11 +1,14 @@
 ---
 id: art-dca-interes-compuesto
-status: revision
+status: publicado
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: media
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-s4-03
     dato: La rentabilidad pasada no garantiza la futura; el folleto y el DFI informan de riesgo y costes.
@@ -13,7 +16,9 @@ fuentes:
     dato: La ganancia del reembolso se integra en la base del ahorro y soporta una retención del 19 % a cuenta.
   - fuente: src-ine-ipc-septiembre-2026
     dato: IPC general de septiembre de 2026 en el 4,9 % anual, con la subyacente en el 3,1 %.
-seo: {}
+seo:
+  descripcion: "El interés compuesto con aportación mensual, tres escenarios de tasa y la corrección por inflación y por impuestos."
+  noindex: false
 actualizacion:
   politica: revision-anual
 slug: dca-interes-compuesto

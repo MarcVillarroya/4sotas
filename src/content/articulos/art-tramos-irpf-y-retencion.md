@@ -1,23 +1,26 @@
 ---
 id: art-tramos-irpf-y-retencion
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-26
+publicado: 2026-10-26
+revisado_factual: 2026-10-26
 sensibilidad: alta
 procedencia: original
 autorias:
   redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
 fuentes:
   - fuente: src-aeat-escala-general-irpf-2025
     dato: Escala general estatal de seis tramos (9,50 a 24,50 %)
   - fuente: src-aeat-minimo-contribuyente
     dato: Mínimo del contribuyente de 5.550 euros
   - fuente: src-aeat-rdl-4-2024-art20
-    dato: Reducción del art. 20 y límites de obligación de declarar 22.000 y 15.876 euros
+    dato: Reducción del art. 20 y elevación a 15.876 € del límite de obligación de declarar
+  - fuente: src-boe-ley-35-2006-lirpf
+    dato: Arts. 63, 66, 96 y 101 LIRPF (escala, escala del ahorro, límites de 22.000/15.876/1.500 € y pagos a cuenta)
   - fuente: src-aeat-algoritmo-retenciones-2026
     dato: El RDL 23/2026 no cambia la escala general; la reducción excepcional afecta a La Palma
-  - fuente: src-legia-art66-escala-ahorro
-    dato: Escala de la base del ahorro 19, 21, 23, 27 y 30 %
   - fuente: src-aeat-novedades-normativa-irpf-2026
     dato: Sin modificación de la escala general estatal en 2026
 seo:
@@ -99,7 +102,7 @@ No hay ningún punto en el que ganar un euro te haga perder dinero con la escala
 
 El **tipo de retención** no sale de la tabla: sale del algoritmo del art. 101 LIRPF y de los arts. 80-89 RIRPF, que tiene en cuenta el sueldo anual, la situación familiar, la discapacidad, las anualidades por alimentos y otras variables [hecho]. Por eso dos compañeros con el mismo bruto pueden tener retenciones distintas, y por eso la nómina se regulariza en la declaración.
 
-Conviene añadir que los cambios de retención del **10-sep-2026 no son una reforma de la escala**: el RDL 23/2026 amplía un régimen excepcional de reducción del tipo a residentes en La Palma; el resto de contribuyentes mantiene el algoritmo general [hecho] ([algoritmo 2026](https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo+Retenciones-2026_10sept.pdf)).
+Conviene añadir que los cambios de retención del **10-sep-2026 no son una reforma de la escala**: el RDL 23/2026 amplía un régimen excepcional de reducción del tipo a residentes en La Palma; el resto de contribuyentes mantiene el algoritmo general [hecho] ([algoritmo 2026](https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf)).
 
 ## 5. Reducciones y umbrales que sí mueven el resultado
 
@@ -124,7 +127,7 @@ Si quieres ver de dónde sale el bruto antes de llegar a la escala, la guía [Br
 - AEAT. *Gravamen estatal del IRPF (escala general, art. 63 LIRPF)*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c15-calculo-impuesto-determinacion-cuotas-integras/gravamen-base-liquidable-general/gravamen-estatal.html
 - AEAT. *Mínimo del contribuyente*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/ciudadanos-familias-personas-discapacidad/minimo-personal-familiar/minimo-contribuyente.html
 - AEAT. *Novedades del RDL 4/2024 (art. 20 y límite de 15.876 €)*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/irpf/novedades-impuesto/novedades-normativa-2024/principales-novedades-real-decreto-ley-junio.html
-- AEAT. *Algoritmo de retenciones 2026 desde el 10 de septiembre*. Publicado en septiembre de 2026. https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo+Retenciones-2026_10sept.pdf
+- AEAT. *Algoritmo de retenciones 2026 desde el 10 de septiembre*. Publicado en septiembre de 2026. https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf
 - AEAT. *Novedades de normativa IRPF 2026*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/irpf/novedades-impuesto/novedades-normativa-2026.html
 - Legia (espejo del BOE). *Art. 66 LIRPF, escala del ahorro*. Actualizado el 21-dic-2024. https://legia.es/normativa-boe/lirpf/articulo-66
 
