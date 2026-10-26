@@ -10,12 +10,12 @@ interface Props {
   portal?: boolean;
 }
 const { destacado, recientes, iniciales, calculadora, portal = false } = Astro.props;
-const miniatura = (v: CollectionEntry<'videos'>) => v.data.miniatura_local
-  ? url(v.data.miniatura_local) : `https://i.ytimg.com/vi/${v.data.youtube_id}/hqdefault.jpg`;
+const miniatura = (v: CollectionEntry<'videos'>) => url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`);
+const srcset = (v: CollectionEntry<'videos'>) => `${miniatura(v).replace(/\.webp$/, '-320.webp')} 320w, ${miniatura(v)} 640w`;
 ---
 {destacado && <section class="wrap section v2-feature" aria-labelledby="destacado-titulo">
   <a class="v2-poster" href={url(ruta.video(destacado.data.slug))} aria-label={`Ver la ficha: ${destacado.data.titulo}`}>
-    <img src={miniatura(destacado)} width="480" height="270" alt="" loading="lazy" decoding="async" />
+    <img src={miniatura(destacado)} srcset={srcset(destacado)} sizes="(max-width: 1000px) 100vw, 640px" width="640" height="360" alt="" loading="lazy" decoding="async" />
     <span class="v2-play" aria-hidden="true">▶</span>
     <span class="v2-duration">{duracionLegible(destacado.data.duracion_iso)}</span>
   </a>
@@ -49,7 +49,7 @@ const miniatura = (v: CollectionEntry<'videos'>) => v.data.miniatura_local
   <div class="section-head"><h2 id="recientes-titulo">{portal ? 'Últimos vídeos.' : 'Lo último del canal.'}</h2>
     <a class="text-link" href={url(ruta.videos())}>Explorar todos los vídeos</a></div>
   <ul class="v2-videos">{recientes.map(v => <li><a href={url(ruta.video(v.data.slug))}>
-    <div class="v2-poster"><img src={miniatura(v)} width="480" height="270" alt="" loading="lazy" decoding="async" />
+    <div class="v2-poster"><img src={miniatura(v)} srcset={srcset(v)} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" width="640" height="360" alt="" loading="lazy" decoding="async" />
       <span class="v2-duration">{duracionLegible(v.data.duracion_iso)}</span></div>
     <h3>{v.data.titulo}</h3><p class="muted"><time datetime={fechaISO(v.data.publicado_en)}>{fechaLarga(v.data.publicado_en)}</time></p>
     <span class="text-link">Ver la ficha</span>

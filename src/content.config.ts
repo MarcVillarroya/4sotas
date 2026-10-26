@@ -37,10 +37,11 @@ const idConPrefijo = (prefijo: string) =>
     .max(80)
     .regex(new RegExp(`^${prefijo}-[a-z0-9]+(?:-[a-z0-9]+)*$`), `id permanente: "${prefijo}-" + kebab-case`);
 
-/** Ruta de asset relativa a la raíz del sitio, SIN base path (la base se añade al renderizar). */
+/** Ruta de asset relativa a la raíz del sitio, SIN base path (la base se añade al renderizar).
+ *  Admite mayúsculas porque los nombres de miniatura son el `youtube_id` real, tal cual. */
 const rutaAsset = z
   .string()
-  .regex(/^\/(?:[a-z0-9._-]+\/)*[a-z0-9._-]+\.(?:png|jpg|jpeg|webp|avif|svg)$/, 'asset: ruta /... con extensión de imagen, sin base path');
+  .regex(/^\/(?:[A-Za-z0-9._-]+\/)*[A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|avif|svg)$/, 'asset: ruta /... con extensión de imagen, sin base path');
 
 const seo = z
   .object({
@@ -211,6 +212,11 @@ const videos = defineCollection({
       duracion_iso: z.string().regex(/^PT(?:\d+H)?(?:\d+M)?(?:\d+S)?$/),
       miniatura: z.url(),
       miniatura_local: rutaAsset.optional(),
+      /**
+       * Capacidad de inserción comprobada con oEmbed. `deshabilitada` es un caso conocido y
+       * declarado: la ficha muestra el aviso y ofrece YouTube como acción principal.
+       */
+      insercion: z.enum(['disponible', 'deshabilitada']).default('disponible'),
       estado_youtube: z.enum(['publico', 'programado', 'oculto', 'eliminado']),
       privacidad_api: z.enum(['public', 'unlisted', 'private']),
       verificado_en: fecha, // último contraste con la API

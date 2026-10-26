@@ -1,0 +1,2187 @@
+{
+  "pages": [
+    {
+      "name": "hub",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+              "name": "Vídeos · Sota de Oros",
+              "description": "Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#lista",
+              "name": "Vídeos",
+              "numberOfItems": 11,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+                  "name": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+                  "name": "La crisis de 2008: cómo llegó a España"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+                  "name": "Fondo de emergencia: ¿cuánto aguantarías sin cobrar? #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+                  "name": "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+                  "name": "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+                  "name": "IRPF en la nómina: qué te retienen y por qué"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 8,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+                  "name": "Los tramos del IRPF no funcionan como crees"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+                  "name": "La cuenta que no haces: 740 € al año en gastos hormiga #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 10,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+                  "name": "¿Deuda o inversión? Qué hacer con 1.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 11,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+                  "name": "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 11,
+      "violations": []
+    },
+    {
+      "name": "ficha-insertable",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#video",
+              "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+              "description": "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/M9EhU06FlUA.webp",
+                "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-11",
+              "duration": "PT9M50S",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/M9EhU06FlUA",
+              "contentUrl": "https://www.youtube.com/watch?v=M9EhU06FlUA",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "ficha-no-insertable",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#video",
+              "name": "IRPF en la nómina: qué te retienen y por qué",
+              "description": "Vídeo corto de Sota de Oros sobre la retención de IRPF en la nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota final.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/O1V9_of7g1w.webp",
+                "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-05",
+              "duration": "PT1M",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/O1V9_of7g1w",
+              "contentUrl": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "IRPF en la nómina: qué te retienen y por qué",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "hub",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+              "name": "Vídeos · Sota de Oros",
+              "description": "Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#lista",
+              "name": "Vídeos",
+              "numberOfItems": 11,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+                  "name": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+                  "name": "La crisis de 2008: cómo llegó a España"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+                  "name": "Fondo de emergencia: ¿cuánto aguantarías sin cobrar? #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+                  "name": "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+                  "name": "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+                  "name": "IRPF en la nómina: qué te retienen y por qué"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 8,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+                  "name": "Los tramos del IRPF no funcionan como crees"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+                  "name": "La cuenta que no haces: 740 € al año en gastos hormiga #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 10,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+                  "name": "¿Deuda o inversión? Qué hacer con 1.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 11,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+                  "name": "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 11,
+      "violations": []
+    },
+    {
+      "name": "ficha-insertable",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#video",
+              "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+              "description": "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/M9EhU06FlUA.webp",
+                "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-11",
+              "duration": "PT9M50S",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/M9EhU06FlUA",
+              "contentUrl": "https://www.youtube.com/watch?v=M9EhU06FlUA",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "ficha-no-insertable",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#video",
+              "name": "IRPF en la nómina: qué te retienen y por qué",
+              "description": "Vídeo corto de Sota de Oros sobre la retención de IRPF en la nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota final.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/O1V9_of7g1w.webp",
+                "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-05",
+              "duration": "PT1M",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/O1V9_of7g1w",
+              "contentUrl": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "IRPF en la nómina: qué te retienen y por qué",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "hub",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+              "name": "Vídeos · Sota de Oros",
+              "description": "Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#lista",
+              "name": "Vídeos",
+              "numberOfItems": 11,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+                  "name": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+                  "name": "La crisis de 2008: cómo llegó a España"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+                  "name": "Fondo de emergencia: ¿cuánto aguantarías sin cobrar? #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+                  "name": "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+                  "name": "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+                  "name": "IRPF en la nómina: qué te retienen y por qué"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 8,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+                  "name": "Los tramos del IRPF no funcionan como crees"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+                  "name": "La cuenta que no haces: 740 € al año en gastos hormiga #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 10,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+                  "name": "¿Deuda o inversión? Qué hacer con 1.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 11,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+                  "name": "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 11,
+      "violations": []
+    },
+    {
+      "name": "ficha-insertable",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#video",
+              "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+              "description": "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/M9EhU06FlUA.webp",
+                "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-11",
+              "duration": "PT9M50S",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/M9EhU06FlUA",
+              "contentUrl": "https://www.youtube.com/watch?v=M9EhU06FlUA",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "ficha-no-insertable",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#video",
+              "name": "IRPF en la nómina: qué te retienen y por qué",
+              "description": "Vídeo corto de Sota de Oros sobre la retención de IRPF en la nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota final.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/O1V9_of7g1w.webp",
+                "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-05",
+              "duration": "PT1M",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/O1V9_of7g1w",
+              "contentUrl": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "IRPF en la nómina: qué te retienen y por qué",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "hub",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/",
+              "name": "Vídeos · Sota de Oros",
+              "description": "Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#lista",
+              "name": "Vídeos",
+              "numberOfItems": 11,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+                  "name": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/crisis-de-2008-espana/",
+                  "name": "La crisis de 2008: cómo llegó a España"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/fondo-de-emergencia/",
+                  "name": "Fondo de emergencia: ¿cuánto aguantarías sin cobrar? #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/inflacion-sobre-10000/",
+                  "name": "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/bruto-vs-neto-2000/",
+                  "name": "Bruto vs. neto: por qué de 2.000 € te quedan 1.630 €"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+                  "name": "IRPF en la nómina: qué te retienen y por qué"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 8,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/tramos-del-irpf/",
+                  "name": "Los tramos del IRPF no funcionan como crees"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/gastos-hormiga/",
+                  "name": "La cuenta que no haces: 740 € al año en gastos hormiga #finanzas #inversiones #libertadfinanciera"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 10,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/deuda-o-inversion-1000/",
+                  "name": "¿Deuda o inversión? Qué hacer con 1.000 € (2026)"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 11,
+                  "url": "https://marcvillarroya.github.io/4sotas/oros/videos/quien-se-queda-tu-dinero-tarjeta/",
+                  "name": "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 11,
+      "violations": []
+    },
+    {
+      "name": "ficha-insertable",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#video",
+              "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+              "description": "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/M9EhU06FlUA.webp",
+                "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-11",
+              "duration": "PT9M50S",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/M9EhU06FlUA",
+              "contentUrl": "https://www.youtube.com/watch?v=M9EhU06FlUA",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Cómo leer una nómina en España (2026): del bruto al neto",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/como-leer-una-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    },
+    {
+      "name": "ficha-no-insertable",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "VideoObject",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#video",
+              "name": "IRPF en la nómina: qué te retienen y por qué",
+              "description": "Vídeo corto de Sota de Oros sobre la retención de IRPF en la nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota final.",
+              "thumbnailUrl": [
+                "https://marcvillarroya.github.io/4sotas/assets/videos/O1V9_of7g1w.webp",
+                "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg"
+              ],
+              "uploadDate": "2026-10-05",
+              "duration": "PT1M",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/O1V9_of7g1w",
+              "contentUrl": "https://www.youtube.com/watch?v=O1V9_of7g1w",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/",
+              "dateModified": "2026-10-26",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion",
+                "@type": "Organization",
+                "name": "4 Sotas",
+                "url": "https://marcvillarroya.github.io/"
+              },
+              "isPartOf": {
+                "@type": "WebPage",
+                "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#pagina",
+                "url": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/#migas",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://marcvillarroya.github.io/4sotas/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Sota de Oros",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Vídeos",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "IRPF en la nómina: qué te retienen y por qué",
+                  "item": "https://marcvillarroya.github.io/4sotas/oros/videos/irpf-en-la-nomina/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ytimg": 0,
+      "iframes": 0,
+      "srcset": 0,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "hub-1440-http",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-1440-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-1440-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-srcset-11",
+      "pass": true,
+      "extra": 11
+    },
+    {
+      "name": "hub-1440-canal-hero",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-canal-final",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-filtro-shorts",
+      "pass": true,
+      "extra": 7
+    },
+    {
+      "name": "hub-1440-cuenta-shorts",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-filtro-largos",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "hub-1440-combinacion-vacia",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-vacio-visible",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-limpiar",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-filtro-tema",
+      "pass": true
+    },
+    {
+      "name": "hub-1440-vacio-oculto",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-1440-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-1440-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-1440-sin-terceros",
+      "pass": true,
+      "extra": [
+        "https://www.youtube-nocookie.com/embed/M9EhU06FlUA?rel=0",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/www-player.css",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/ss/k=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQABj/d=1/br=1/rs=AGKMywE71IoLG1yvAAHx_KxRaIKCmomv8w/m=root,base",
+        "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/am=AAAAQABj/d=1/excm=base,root/br=1/rs=AGKMywFNcVEhN699rLSHYwnVGPFomGY6fg/m=root,base",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/player_embed.vflset/es_ES/base.js",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/ck=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQABj/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywEbdzGV2Nff35BC4QT8VVClLYFT3w/m=r78Drb",
+        "https://www.google.com/js/th/RhCOukr6vuP8scOtrq5AQMAag3l6HzGkBzbJDB83tio.js",
+        "https://i.ytimg.com/vi_webp/M9EhU06FlUA/default.webp",
+        "https://www.youtube-nocookie.com/generate_204?LPNC7Q",
+        "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+        "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg"
+      ]
+    },
+    {
+      "name": "ficha-1440-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-1440-youtube-visible",
+      "pass": true
+    },
+    {
+      "name": "ficha-1440-youtube-secundario",
+      "pass": true
+    },
+    {
+      "name": "ficha-1440-enlace-directo",
+      "pass": true,
+      "extra": "https://www.youtube.com/watch?v=M9EhU06FlUA"
+    },
+    {
+      "name": "ficha-1440-iframe-tras-clic",
+      "pass": true
+    },
+    {
+      "name": "jsonld-videoobject",
+      "pass": true
+    },
+    {
+      "name": "jsonld-contenturl-youtube",
+      "pass": true
+    },
+    {
+      "name": "jsonld-embedurl",
+      "pass": true
+    },
+    {
+      "name": "jsonld-miniatura-absoluta",
+      "pass": true
+    },
+    {
+      "name": "jsonld-fechas",
+      "pass": true
+    },
+    {
+      "name": "ficha-texto-visible",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-1440-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-1440-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-1440-sin-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-1440-aviso",
+      "pass": true
+    },
+    {
+      "name": "ficha-1440-youtube-principal",
+      "pass": true,
+      "extra": "button"
+    },
+    {
+      "name": "ficha-1440-sin-iframe",
+      "pass": true
+    },
+    {
+      "name": "hub-768-http",
+      "pass": true
+    },
+    {
+      "name": "hub-768-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "hub-768-un-h1",
+      "pass": true
+    },
+    {
+      "name": "hub-768-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-768-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "hub-768-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "hub-768-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-768-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-768-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-768-srcset-11",
+      "pass": true,
+      "extra": 11
+    },
+    {
+      "name": "hub-768-canal-hero",
+      "pass": true
+    },
+    {
+      "name": "hub-768-canal-final",
+      "pass": true
+    },
+    {
+      "name": "hub-768-filtro-shorts",
+      "pass": true,
+      "extra": 7
+    },
+    {
+      "name": "hub-768-cuenta-shorts",
+      "pass": true
+    },
+    {
+      "name": "hub-768-filtro-largos",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "hub-768-combinacion-vacia",
+      "pass": true
+    },
+    {
+      "name": "hub-768-vacio-visible",
+      "pass": true
+    },
+    {
+      "name": "hub-768-limpiar",
+      "pass": true
+    },
+    {
+      "name": "hub-768-filtro-tema",
+      "pass": true
+    },
+    {
+      "name": "hub-768-vacio-oculto",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-768-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-768-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-768-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-768-sin-terceros",
+      "pass": true,
+      "extra": [
+        "https://www.youtube-nocookie.com/embed/M9EhU06FlUA?rel=0",
+        "https://www.youtube-nocookie.com/s/player/dce23b30/www-player.css",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/ss/k=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQABj/d=1/br=1/rs=AGKMywE71IoLG1yvAAHx_KxRaIKCmomv8w/m=root,base",
+        "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/am=AAAAQABj/d=1/excm=base,root/br=1/rs=AGKMywFNcVEhN699rLSHYwnVGPFomGY6fg/m=root,base",
+        "https://www.youtube-nocookie.com/s/player/dce23b30/player_embed.vflset/es_ES/base.js",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/ck=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQABj/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywEbdzGV2Nff35BC4QT8VVClLYFT3w/m=r78Drb",
+        "https://www.google.com/js/th/RhCOukr6vuP8scOtrq5AQMAag3l6HzGkBzbJDB83tio.js",
+        "https://i.ytimg.com/vi_webp/M9EhU06FlUA/default.webp",
+        "https://www.youtube-nocookie.com/generate_204?iWpfVw",
+        "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+        "https://yt3.ggpht.com/G3Gl9Hgv8MY1_WjmhIOLVBQEJp4vI18T84KzkxE7m-MyIbhDfDWcmnI8pccuhMjz586jdcZKnQ=s68-c-k-c0x00ffffff-no-rj",
+        "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg"
+      ]
+    },
+    {
+      "name": "ficha-768-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-768-youtube-visible",
+      "pass": true
+    },
+    {
+      "name": "ficha-768-youtube-secundario",
+      "pass": true
+    },
+    {
+      "name": "ficha-768-enlace-directo",
+      "pass": true,
+      "extra": "https://www.youtube.com/watch?v=M9EhU06FlUA"
+    },
+    {
+      "name": "ficha-768-iframe-tras-clic",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-768-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-768-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-768-sin-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-768-aviso",
+      "pass": true
+    },
+    {
+      "name": "ficha-768-youtube-principal",
+      "pass": true,
+      "extra": "button"
+    },
+    {
+      "name": "ficha-768-sin-iframe",
+      "pass": true
+    },
+    {
+      "name": "hub-390-http",
+      "pass": true
+    },
+    {
+      "name": "hub-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "hub-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "hub-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-390-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "hub-390-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "hub-390-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-390-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-390-srcset-11",
+      "pass": true,
+      "extra": 11
+    },
+    {
+      "name": "hub-390-canal-hero",
+      "pass": true
+    },
+    {
+      "name": "hub-390-canal-final",
+      "pass": true
+    },
+    {
+      "name": "hub-390-filtro-shorts",
+      "pass": true,
+      "extra": 7
+    },
+    {
+      "name": "hub-390-cuenta-shorts",
+      "pass": true
+    },
+    {
+      "name": "hub-390-filtro-largos",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "hub-390-combinacion-vacia",
+      "pass": true
+    },
+    {
+      "name": "hub-390-vacio-visible",
+      "pass": true
+    },
+    {
+      "name": "hub-390-limpiar",
+      "pass": true
+    },
+    {
+      "name": "hub-390-filtro-tema",
+      "pass": true
+    },
+    {
+      "name": "hub-390-vacio-oculto",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-390-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-390-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-390-sin-terceros",
+      "pass": true,
+      "extra": [
+        "https://www.youtube-nocookie.com/embed/M9EhU06FlUA?rel=0",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/www-player.css",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/ss/k=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQA/d=1/br=1/rs=AGKMywE2gvDaiqpgAAck_AdbYTxiiYoLSQ/m=root,base",
+        "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywGvGKw2rZYCgNFZJc0Yt-gVyeN-FA/m=root,base",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/player_embed.vflset/es_ES/base.js",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/ck=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywE6Ef4o6TIRAumrO6VvHIg02eRamQ/m=r78Drb",
+        "https://www.google.com/js/th/RhCOukr6vuP8scOtrq5AQMAag3l6HzGkBzbJDB83tio.js",
+        "https://i.ytimg.com/vi_webp/M9EhU06FlUA/sddefault.webp",
+        "https://yt3.ggpht.com/G3Gl9Hgv8MY1_WjmhIOLVBQEJp4vI18T84KzkxE7m-MyIbhDfDWcmnI8pccuhMjz586jdcZKnQ=s68-c-k-c0x00ffffff-no-rj",
+        "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+        "https://www.youtube-nocookie.com/generate_204?1K-mjw",
+        "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT"
+      ]
+    },
+    {
+      "name": "ficha-390-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-390-youtube-visible",
+      "pass": true
+    },
+    {
+      "name": "ficha-390-youtube-secundario",
+      "pass": true
+    },
+    {
+      "name": "ficha-390-enlace-directo",
+      "pass": true,
+      "extra": "https://www.youtube.com/watch?v=M9EhU06FlUA"
+    },
+    {
+      "name": "ficha-390-iframe-tras-clic",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-390-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-390-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-390-sin-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-390-aviso",
+      "pass": true
+    },
+    {
+      "name": "ficha-390-youtube-principal",
+      "pass": true,
+      "extra": "button"
+    },
+    {
+      "name": "ficha-390-sin-iframe",
+      "pass": true
+    },
+    {
+      "name": "hub-320-http",
+      "pass": true
+    },
+    {
+      "name": "hub-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "hub-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "hub-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-320-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "hub-320-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "hub-320-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "hub-320-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-320-srcset-11",
+      "pass": true,
+      "extra": 11
+    },
+    {
+      "name": "hub-320-canal-hero",
+      "pass": true
+    },
+    {
+      "name": "hub-320-canal-final",
+      "pass": true
+    },
+    {
+      "name": "hub-320-filtro-shorts",
+      "pass": true,
+      "extra": 7
+    },
+    {
+      "name": "hub-320-cuenta-shorts",
+      "pass": true
+    },
+    {
+      "name": "hub-320-filtro-largos",
+      "pass": true,
+      "extra": 4
+    },
+    {
+      "name": "hub-320-combinacion-vacia",
+      "pass": true
+    },
+    {
+      "name": "hub-320-vacio-visible",
+      "pass": true
+    },
+    {
+      "name": "hub-320-limpiar",
+      "pass": true
+    },
+    {
+      "name": "hub-320-filtro-tema",
+      "pass": true
+    },
+    {
+      "name": "hub-320-vacio-oculto",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-320-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-insertable-320-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-insertable-320-sin-terceros",
+      "pass": true,
+      "extra": [
+        "https://www.youtube-nocookie.com/embed/M9EhU06FlUA?rel=0",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/www-player.css",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/ss/k=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQA/d=1/br=1/rs=AGKMywE2gvDaiqpgAAck_AdbYTxiiYoLSQ/m=root,base",
+        "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywGvGKw2rZYCgNFZJc0Yt-gVyeN-FA/m=root,base",
+        "https://www.youtube-nocookie.com/s/player/cbcfbf2f/player_embed.vflset/es_ES/base.js",
+        "https://www.youtube-nocookie.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.0hpw0gG48bI.es5.O/ck=ytembeds.base.SKK5Z7LAK_Y.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywE6Ef4o6TIRAumrO6VvHIg02eRamQ/m=r78Drb",
+        "https://www.google.com/js/th/RhCOukr6vuP8scOtrq5AQMAag3l6HzGkBzbJDB83tio.js",
+        "https://i.ytimg.com/vi_webp/M9EhU06FlUA/default.webp",
+        "https://www.youtube-nocookie.com/generate_204?Y2gacA",
+        "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+        "https://yt3.ggpht.com/G3Gl9Hgv8MY1_WjmhIOLVBQEJp4vI18T84KzkxE7m-MyIbhDfDWcmnI8pccuhMjz586jdcZKnQ=s68-c-k-c0x00ffffff-no-rj",
+        "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg"
+      ]
+    },
+    {
+      "name": "ficha-320-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-320-youtube-visible",
+      "pass": true
+    },
+    {
+      "name": "ficha-320-youtube-secundario",
+      "pass": true
+    },
+    {
+      "name": "ficha-320-enlace-directo",
+      "pass": true,
+      "extra": "https://www.youtube.com/watch?v=M9EhU06FlUA"
+    },
+    {
+      "name": "ficha-320-iframe-tras-clic",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-http",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-overflow",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-un-h1",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-imagenes-rotas",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-ytimg",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-iframe-inicial",
+      "pass": true
+    },
+    {
+      "name": "ficha-no-insertable-320-axe",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-errores-js",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-no-insertable-320-sin-terceros",
+      "pass": true,
+      "extra": []
+    },
+    {
+      "name": "ficha-320-sin-reproducir",
+      "pass": true
+    },
+    {
+      "name": "ficha-320-aviso",
+      "pass": true
+    },
+    {
+      "name": "ficha-320-youtube-principal",
+      "pass": true,
+      "extra": "button"
+    },
+    {
+      "name": "ficha-320-sin-iframe",
+      "pass": true
+    },
+    {
+      "name": "hub-sin-js-1440-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-sin-js-1440-filtros-ocultos",
+      "pass": true
+    },
+    {
+      "name": "ficha-sin-js-1440-enlace",
+      "pass": true
+    },
+    {
+      "name": "ficha-sin-js-1440-sin-iframe",
+      "pass": true
+    },
+    {
+      "name": "hub-sin-js-390-11-tarjetas",
+      "pass": true
+    },
+    {
+      "name": "hub-sin-js-390-filtros-ocultos",
+      "pass": true
+    },
+    {
+      "name": "ficha-sin-js-390-enlace",
+      "pass": true
+    },
+    {
+      "name": "ficha-sin-js-390-sin-iframe",
+      "pass": true
+    }
+  ],
+  "browser": "156.0.8078.4",
+  "failures": 0
+}

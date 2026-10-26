@@ -22,6 +22,7 @@ descripcion_corta: "Pieza corta de 59 s: el vídeo plantea por qué de 2.000 €
 publicado_en: 2026-10-07
 duracion_iso: PT59S
 miniatura: https://i.ytimg.com/vi/LarTT_rvCGM/maxresdefault.jpg
+miniatura_local: /assets/videos/LarTT_rvCGM.webp
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26

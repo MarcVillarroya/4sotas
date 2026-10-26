@@ -1,29 +1,51 @@
 ---
 /**
- * Catálogo de vídeos: una tarjeta por ficha verificada, con miniatura ligera y sin iframes.
- * Ningún reproductor se inserta en el listado; el iframe solo existe tras la interacción
- * en la watch page.
+ * Videoteca: portada de entrada, cola de novedades y catálogo completo sin iframes.
+ * Todo se deriva del catálogo real: la duración de la API decide el rótulo Short/Largo y
+ * la miniatura se sirve en local (WebP 640/320) para no pedir nada a i.ytimg.com.
  */
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
-import { porFechaDesc, visibles } from '../../../lib/publicacion.ts';
+import { CANAL_YOUTUBE, MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { porFechaDesc, resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
-import { duracionLegible, fechaLarga } from '../../../lib/format.ts';
+import { duracionLegible, fechaISO, fechaLarga } from '../../../lib/format.ts';
+import {
+  SIZES_CATALOGO,
+  SIZES_PORTADA,
+  duracionReloj,
+  esShort,
+  formato,
+  srcsetMiniatura,
+} from '../../../lib/videos.ts';
 
-const todos = await getCollection('videos');
+const [todas, todosTemas] = await Promise.all([getCollection('videos'), getCollection('temas')]);
 /** Un vídeo solo entra si su ficha está publicada y su estado real en YouTube es público. */
-const videos = visibles(todos)
+const videos = visibles(todas)
   .filter((v) => v.data.estado_youtube === 'publico' && v.data.privacidad_api === 'public')
   .sort(porFechaDesc);
+const temas = visibles(todosTemas);
+
+const temasDe = (v: (typeof videos)[number]) => resolver(v.data.temas, temas);
+const shorts = videos.filter((v) => esShort(v.data.duracion_iso));
+const largos = videos.filter((v) => !esShort(v.data.duracion_iso));
+
+/** Temas que de verdad tienen vídeo, con su recuento real. */
+const temasConVideo = temas
+  .map((t) => ({ tema: t, total: videos.filter((v) => temasDe(v).some((x) => x.id === t.id)).length }))
+  .filter((t) => t.total > 0)
+  .sort((a, b) => b.total - a.total || a.tema.data.titulo.localeCompare(b.tema.data.titulo, 'es'));
+
+const [portada, ...resto] = videos;
+const novedades = resto.slice(0, 3);
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Vídeos';
 const descripcion =
-  'Catálogo de vídeos de Sota de Oros con ficha propia: título, duración y fecha contrastados contra la API de YouTube, resumen editorial y contexto de lectura.';
+  'Videoteca de Sota de Oros: todas las piezas del canal con su ficha, su duración real y la guía o calculadora con la que seguir. Sin reproductores cargados de serie.';
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -51,59 +73,246 @@ const jsonLd = grafo([
     <Breadcrumbs migas={visual} />
   </div>
 
-  <div class="wrap page-intro">
-    <p class="eyebrow">{SECCION} · catálogo</p>
-    <h1>Vídeos.</h1>
-    <p class="lead">
-      Cada vídeo tiene su ficha: metadata contrastada con la API, un resumen escrito aquí y el contexto que el vídeo
-      solo no da.
-    </p>
-    <p class="muted">
-      El listado no inserta reproductores. Las miniaturas se cargan de forma diferida y el vídeo se abre en su ficha.
-    </p>
-  </div>
+  <section class="wrap v2-hub-head" aria-labelledby="videoteca-titulo">
+    <div>
+      <p class="eyebrow">La videoteca de {SECCION}</p>
+      <h1 id="videoteca-titulo">Una idea.<br /><span class="v2-gold">Más clara.</span></h1>
+      <p class="lead">
+        {videos.length} piezas del canal, cada una con su ficha: qué cuenta, cuánto dura y con qué guía o calculadora
+        seguir. Eliges tú cuándo se carga el reproductor.
+      </p>
+      <p class="v2-actions">
+        <a class="button" href={CANAL_YOUTUBE} rel="noopener">
+          Ir al canal de YouTube <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (se abre en otra pestaña)</span>
+        </a>
+      </p>
+    </div>
+    <div class="v2-hub-art" aria-hidden="true">
+      <img src={url('/assets/v2/play.svg')} width="112" height="112" alt="" />
+      <img src={url('/assets/v2/emblem-oros.svg')} width="64" height="64" alt="" />
+    </div>
+  </section>
 
-  <div class="wrap section">
+  {
+    portada && (
+      <section class="wrap section v2-hub-feature" aria-labelledby="portada-titulo">
+        <div>
+          <a
+            class="v2-poster"
+            href={url(ruta.video(portada.data.slug))}
+            aria-label={`Ver la ficha: ${portada.data.titulo}`}
+          >
+            <img
+              src={url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`)}
+              srcset={srcsetMiniatura(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
+              sizes={SIZES_PORTADA}
+              width="640"
+              height="360"
+              alt=""
+              decoding="async"
+            />
+            <span class="v2-play" aria-hidden="true">▶</span>
+            <span class="v2-duration">
+              {formato(portada.data.duracion_iso)} · {duracionReloj(portada.data.duracion_iso)}
+            </span>
+          </a>
+          <p class="v2-meta">
+            Lo más reciente ·{' '}
+            <time datetime={fechaISO(portada.data.publicado_en)}>{fechaLarga(portada.data.publicado_en)}</time>
+          </p>
+          <h2 id="portada-titulo" class="v2-hub-feature-title">
+            <a href={url(ruta.video(portada.data.slug))}>{portada.data.titulo}</a>
+          </h2>
+          <p>{portada.data.descripcion_corta}</p>
+          <p class="v2-actions">
+            <a class="button secondary" href={url(ruta.video(portada.data.slug))}>
+              Ver la ficha
+            </a>
+          </p>
+        </div>
+        <aside class="v2-queue" aria-labelledby="cola-titulo">
+          <p class="eyebrow" id="cola-titulo">También nuevo</p>
+          <ul>
+            {novedades.map((v) => (
+              <li>
+                <p class="v2-meta">
+                  {formato(v.data.duracion_iso)} · {duracionReloj(v.data.duracion_iso)} ·{' '}
+                  <time datetime={fechaISO(v.data.publicado_en)}>{fechaLarga(v.data.publicado_en)}</time>
+                </p>
+                <h3>
+                  <a href={url(ruta.video(v.data.slug))}>{v.data.titulo}</a>
+                </h3>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      </section>
+    )
+  }
+
+  <section class="wrap section" aria-labelledby="catalogo-titulo">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Catálogo completo</p>
+        <h2 id="catalogo-titulo">Todos los vídeos.</h2>
+      </div>
+      <p class="v2-meta">
+        Short: {shorts.length} piezas de un minuto o menos · Largo: {largos.length} de más de un minuto
+      </p>
+    </div>
+    <p class="v2-meta">
+      El rótulo se calcula con la duración real de cada pieza; no afirma cómo la clasifica YouTube.
+    </p>
+
+    <div class="v2-filters" data-filtros hidden>
+      <div class="v2-segments" role="group" aria-label="Filtrar por formato">
+        <button type="button" data-formato="todos" aria-pressed="true">Todos ({videos.length})</button>
+        <button type="button" data-formato="Short" aria-pressed="false">Shorts ({shorts.length})</button>
+        <button type="button" data-formato="Largo" aria-pressed="false">Largos ({largos.length})</button>
+      </div>
+      <p class="v2-select">
+        <label for="filtro-tema">Tema</label>
+        <select id="filtro-tema" data-tema>
+          <option value="todos">Todos los temas</option>
+          {temasConVideo.map(({ tema, total }) => (
+            <option value={tema.id}>
+              {tema.data.titulo} ({total})
+            </option>
+          ))}
+        </select>
+      </p>
+    </div>
+    <p class="v2-count" data-cuenta aria-live="polite">{videos.length} vídeos</p>
+
     {
       videos.length === 0 ? (
         <div class="empty">
           <h2>Ninguna ficha de vídeo publicada.</h2>
           <p>
-            Una ficha solo se publica cuando su estado real en YouTube es público, la metadata está contrastada con la
-            API y el resumen es propio. Hoy no hay ninguna que cumpla las tres cosas.
+            Una ficha solo se publica cuando su estado real en YouTube es público y el resumen es propio. Hoy no hay
+            ninguna que cumpla las dos cosas.
           </p>
           <p>
-            <a class="text-link" href={url(ruta.temas())}>Ver los temas troncales</a>
+            <a class="text-link" href={url(ruta.temas())}>
+              Ver los temas troncales
+            </a>
           </p>
         </div>
       ) : (
-        <ul class="video-grid">
-          {videos.map((video) => (
-            <li class="video-card">
-              <a href={url(ruta.video(video.data.slug))}>
-                <img
-                  class="video-thumb"
-                  src={video.data.miniatura_local ? url(video.data.miniatura_local) : video.data.miniatura}
-                  alt=""
-                  width="320"
-                  height="180"
-                  loading="lazy"
-                  decoding="async"
-                  referrerpolicy="no-referrer"
-                />
-                <div class="video-card-body">
-                  <h2>{video.data.titulo}</h2>
-                  <p>{video.data.descripcion_corta}</p>
-                  <p class="video-meta">
-                    <span>{duracionLegible(video.data.duracion_iso)}</span>
-                    <span>{fechaLarga(video.data.publicado_en)}</span>
-                  </p>
-                </div>
-              </a>
-            </li>
-          ))}
+        <ul class="v2-video-grid" data-lista>
+          {videos.map((video) => {
+            const mini = video.data.miniatura_local ?? `/assets/videos/${video.data.youtube_id}.webp`;
+            const propios = temasDe(video);
+            return (
+              <li
+                class="v2-video"
+                data-formato={formato(video.data.duracion_iso)}
+                data-temas={propios.map((t) => t.id).join(' ')}
+              >
+                <a
+                  class="v2-poster"
+                  href={url(ruta.video(video.data.slug))}
+                  aria-label={`Ver la ficha: ${video.data.titulo}`}
+                >
+                  <img
+                    src={url(mini)}
+                    srcset={srcsetMiniatura(url(mini))}
+                    sizes={SIZES_CATALOGO}
+                    width="640"
+                    height="360"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="v2-play" aria-hidden="true">▶</span>
+                  <span class="v2-duration">
+                    {formato(video.data.duracion_iso)} · {duracionReloj(video.data.duracion_iso)}
+                  </span>
+                </a>
+                <p class="v2-video-tema">
+                  {propios.length > 0 ? propios.map((t) => t.data.titulo).join(' · ') : SECCION}
+                </p>
+                <h3>
+                  <a href={url(ruta.video(video.data.slug))}>{video.data.titulo}</a>
+                </h3>
+                <p class="v2-video-desc">{video.data.descripcion_corta}</p>
+                <p class="v2-meta">
+                  {duracionLegible(video.data.duracion_iso)} ·{' '}
+                  <time datetime={fechaISO(video.data.publicado_en)}>{fechaLarga(video.data.publicado_en)}</time>
+                </p>
+              </li>
+            );
+          })}
         </ul>
       )
     }
-  </div>
+
+    <div class="v2-empty-filter" data-vacio hidden>
+      <h3>No hay vídeos con estos filtros.</h3>
+      <p>Prueba otro tema o vuelve a verlos todos.</p>
+      <button class="button secondary" type="button" data-limpiar>Quitar filtros</button>
+    </div>
+  </section>
+
+  <section class="wrap section v2-channel" aria-labelledby="canal-titulo">
+    <div>
+      <p class="eyebrow">{SECCION} en YouTube</p>
+      <h2 id="canal-titulo">Otra forma de ver las cuentas.</h2>
+      <p class="v2-meta">Las piezas nuevas aparecen antes en el canal. Aquí llegan con su ficha y su contexto.</p>
+    </div>
+    <a class="button secondary" href={CANAL_YOUTUBE} rel="noopener">
+      Canal en YouTube <span aria-hidden="true">↗</span>
+      <span class="sr-only"> (se abre en otra pestaña)</span>
+    </a>
+  </section>
+
+  <script is:inline>
+    const barra = document.querySelector('[data-filtros]');
+    const lista = document.querySelector('[data-lista]');
+    if (barra && lista) {
+      barra.hidden = false;
+      const cuenta = document.querySelector('[data-cuenta]');
+      const vacio = document.querySelector('[data-vacio]');
+      const botones = [...barra.querySelectorAll('[data-formato]')];
+      const selector = barra.querySelector('[data-tema]');
+      const tarjetas = [...lista.querySelectorAll('.v2-video')];
+      let formatoActivo = 'todos';
+      let temaActivo = 'todos';
+
+      const aplicar = () => {
+        let visibles = 0;
+        tarjetas.forEach((tarjeta) => {
+          const formatoOk = formatoActivo === 'todos' || tarjeta.dataset.formato === formatoActivo;
+          const temas = (tarjeta.dataset.temas || '').split(' ').filter(Boolean);
+          const temaOk = temaActivo === 'todos' || temas.includes(temaActivo);
+          const mostrar = formatoOk && temaOk;
+          tarjeta.hidden = !mostrar;
+          if (mostrar) visibles += 1;
+        });
+        if (cuenta) cuenta.textContent = `${visibles} ${visibles === 1 ? 'vídeo' : 'vídeos'}`;
+        if (vacio) vacio.hidden = visibles !== 0;
+        lista.hidden = visibles === 0;
+      };
+
+      botones.forEach((boton) => {
+        boton.addEventListener('click', () => {
+          formatoActivo = boton.dataset.formato || 'todos';
+          botones.forEach((b) => b.setAttribute('aria-pressed', String(b === boton)));
+          aplicar();
+        });
+      });
+      selector?.addEventListener('change', () => {
+        temaActivo = selector.value;
+        aplicar();
+      });
+      document.querySelector('[data-limpiar]')?.addEventListener('click', () => {
+        formatoActivo = 'todos';
+        temaActivo = 'todos';
+        if (selector) selector.value = 'todos';
+        botones.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.formato === 'todos')));
+        aplicar();
+      });
+    }
+  </script>
 </Base>

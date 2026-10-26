@@ -1,8 +1,13 @@
 ---
 /**
- * Facade del reproductor: sin iframe hasta que el visitante lo pide.
- * Ninguna página carga YouTube por su cuenta; el único JS del sitio vive aquí y en nada más.
- * Sin JS el enlace directo a YouTube sigue funcionando.
+ * Escenario de vídeo de la ficha.
+ *
+ * - Con inserción disponible: portada 16:9 con fachada. El iframe solo se crea al pulsar
+ *   «Reproducir aquí»; la página no habla con YouTube hasta ese clic.
+ * - Con inserción deshabilitada por el propietario (caso conocido O1V9_of7g1w): no se ofrece
+ *   un botón que sabemos que falla. El aviso es explícito y «Ver en YouTube» es la acción principal.
+ *
+ * «Ver en YouTube» es un enlace normal: funciona sin JavaScript y nunca depende del iframe.
  */
 import { verEnYouTube } from '../lib/rutas.ts';
 
@@ -10,54 +15,136 @@ interface Props {
   youtubeId: string;
   titulo: string;
   duracion: string;
+  formato: string;
+  miniatura: string;
+  miniaturaSrcset: string;
+  sizes: string;
+  insertable?: boolean;
 }
 
-const { youtubeId, titulo, duracion } = Astro.props;
+const {
+  youtubeId,
+  titulo,
+  duracion,
+  formato,
+  miniatura,
+  miniaturaSrcset,
+  sizes,
+  insertable = true,
+} = Astro.props;
+
+const enlace = verEnYouTube(youtubeId);
 ---
 
-<div
-  class="player"
-  id="reproductor"
-  data-facade
-  data-video={youtubeId}
-  data-titulo={titulo}
-  role="group"
-  aria-label={`Reproductor de vídeo: ${titulo}`}
->
-  <div>
-    <svg viewBox="0 0 72 72" aria-hidden="true" shape-rendering="crispEdges">
-      <path fill="#F0A848" d="M8 8h56v56H8z"></path>
-      <path fill="#0B1526" d="M28 20h8v8h8v8h8v8h-8v8H28z"></path>
-    </svg>
-    <p class="eyebrow">El vídeo no se ha cargado todavía</p>
-    <p>
-      La ficha dura {duracion} y su reproductor se carga desde YouTube solo si lo pides. Hasta entonces esta
-      página no habla con ningún servidor externo.
-    </p>
-    <button class="button" type="button" data-cargar>Cargar el vídeo de YouTube</button>
-    <noscript>
-      <p class="hint">
-        Sin JavaScript no hay reproductor integrado. El enlace directo de abajo abre el vídeo igualmente.
-      </p>
-    </noscript>
-    <p role="status" aria-live="polite" data-estado></p>
+<div class="watch-stage">
+  <div
+    class="v2-player"
+    data-facade
+    data-video={youtubeId}
+    data-titulo={titulo}
+    role="group"
+    aria-label={`Vídeo: ${titulo}`}
+  >
+    <div class="v2-poster" data-poster>
+      <img src={miniatura} srcset={miniaturaSrcset} sizes={sizes} width="640" height="360" alt="" decoding="async" />
+      {
+        insertable ? (
+          <span class="v2-play" aria-hidden="true">▶</span>
+        ) : (
+          <span class="v2-badge">Solo en YouTube</span>
+        )
+      }
+      <span class="v2-duration">{formato} · {duracion}</span>
+    </div>
   </div>
-</div>
+  {
+    !insertable && (
+      <div class="v2-notice" data-aviso>
+        <p>
+          <strong>Este vídeo no se puede ver dentro de esta página.</strong> El canal no permite la reproducción
+          insertada en otros sitios. Se ve completo en YouTube, con la misma cuenta de siempre.
+        </p>
+      </div>
+    )
+  }
 
-<p>
-  <a class="text-link" href={verEnYouTube(youtubeId)} rel="noopener">Ver el vídeo directamente en YouTube</a>
-</p>
+  <div class="v2-player-actions">
+    {
+      insertable ? (
+        <>
+          <button class="button" type="button" data-reproducir>
+            Reproducir aquí
+          </button>
+          <a class="button secondary" data-youtube href={enlace} rel="noopener">
+            Ver en YouTube <span aria-hidden="true">↗</span>
+            <span class="sr-only"> (se abre en otra pestaña)</span>
+          </a>
+        </>
+      ) : (
+        <a class="button" data-youtube href={enlace} rel="noopener">
+          Ver en YouTube <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (se abre en otra pestaña)</span>
+        </a>
+      )
+    }
+  </div>
+
+  <p class="v2-player-hint">
+    {
+      insertable ? (
+        <>
+          El reproductor se carga desde YouTube solo si lo pides; hasta entonces esta página no le pide nada. El
+          enlace directo funciona sin JavaScript y sin reproductor.
+        </>
+      ) : (
+        <>
+          La ficha conserva el título, la duración y la descripción del vídeo. La reproducción ocurre en YouTube, donde
+          se aplican sus condiciones.
+        </>
+      )
+    }
+  </p>
+  <p role="status" aria-live="polite" data-estado class="v2-player-hint"></p>
+</div>
 
 <script is:inline>
   document.querySelectorAll('[data-facade]').forEach((reproductor) => {
-    const boton = reproductor.querySelector('[data-cargar]');
-    const estado = reproductor.querySelector('[data-estado]');
-    if (!boton) return;
+    const escenario = reproductor.closest('.watch-stage') || reproductor.parentElement;
+    const boton = escenario.querySelector('[data-reproducir]');
+    const enlace = escenario.querySelector('[data-youtube]');
+    const aviso = escenario.querySelector('[data-aviso]');
+    const poster = reproductor.querySelector('[data-poster]');
+    const estado = escenario.querySelector('[data-estado]');
+    const id = reproductor.getAttribute('data-video');
+    if (!boton || !id) return;
+
+    const fallar = (mensaje) => {
+      reproductor.querySelector('.v2-player-frame')?.remove();
+      reproductor.removeAttribute('aria-busy');
+      if (poster) poster.hidden = false;
+      if (aviso) {
+        aviso.hidden = false;
+      } else {
+        const nuevo = document.createElement('div');
+        nuevo.className = 'v2-notice';
+        nuevo.setAttribute('data-aviso', '');
+        nuevo.innerHTML =
+          '<p><strong>Este vídeo no se ha podido cargar aquí.</strong> Puede que el canal no permita la reproducción insertada. Se ve completo en YouTube.</p>';
+        reproductor.after(nuevo);
+      }
+      if (estado) estado.textContent = mensaje;
+      boton.disabled = true;
+      boton.hidden = true;
+      // La acción que sí funciona pasa a ser la principal.
+      if (enlace) {
+        enlace.classList.remove('secondary');
+        enlace.focus();
+      }
+    };
+
     boton.addEventListener('click', () => {
-      const id = reproductor.getAttribute('data-video');
-      if (!id) return;
       const iframe = document.createElement('iframe');
-      iframe.className = 'player-frame';
+      iframe.className = 'v2-player-frame';
       iframe.title = reproductor.getAttribute('data-titulo') || 'Vídeo de 4 Sotas';
       iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0';
       iframe.allow = 'encrypted-media; picture-in-picture; fullscreen';
@@ -66,28 +153,35 @@ const { youtubeId, titulo, duracion } = Astro.props;
       iframe.tabIndex = 0;
       iframe.hidden = true;
       boton.disabled = true;
+      boton.textContent = 'Cargando el reproductor…';
       reproductor.setAttribute('aria-busy', 'true');
-      estado.textContent = 'Conectando con YouTube…';
-      const recuperar = () => {
-        clearTimeout(espera);
-        iframe.remove();
-        reproductor.removeAttribute('aria-busy');
-        boton.disabled = false;
-        boton.textContent = 'Reintentar la carga';
-        estado.textContent = 'No se ha podido confirmar la carga. Reintenta o usa el enlace directo a YouTube.';
-      };
-      const espera = setTimeout(recuperar, 12000);
-      iframe.addEventListener('error', recuperar, { once: true });
-      iframe.addEventListener('load', () => {
-        if (!iframe.isConnected) return;
-        clearTimeout(espera);
-        reproductor.removeAttribute('aria-busy');
-        const conservarFoco = document.activeElement === boton;
-        reproductor.querySelector('div').hidden = true;
-        iframe.hidden = false;
-        reproductor.classList.add('loaded');
-        if (conservarFoco) iframe.focus();
-      }, { once: true });
+      if (estado) estado.textContent = 'Conectando con YouTube…';
+
+      const espera = setTimeout(
+        () => fallar('No se ha podido confirmar la carga. Usa «Ver en YouTube» para verlo.'),
+        12000,
+      );
+
+      iframe.addEventListener(
+        'error',
+        () => fallar('No se ha podido cargar el reproductor. Usa «Ver en YouTube» para verlo.'),
+        { once: true },
+      );
+      iframe.addEventListener(
+        'load',
+        () => {
+          if (!iframe.isConnected) return;
+          clearTimeout(espera);
+          reproductor.removeAttribute('aria-busy');
+          if (poster) poster.hidden = true;
+          iframe.hidden = false;
+          reproductor.classList.add('loaded');
+          if (estado) estado.textContent = 'Reproductor de YouTube cargado.';
+          boton.hidden = true;
+          iframe.focus();
+        },
+        { once: true },
+      );
       reproductor.append(iframe);
     });
   });

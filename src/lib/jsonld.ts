@@ -144,6 +144,10 @@ export const videoObjeto = (params: {
   subidoISO: string;
   duracionISO: string;
   embedUrl: string;
+  /** URL del contenido en su plataforma de origen (YouTube). Por defecto, la ficha propia. */
+  contentUrl?: string;
+  /** Fecha de la última revisión editorial de la ficha, si existe. */
+  revisadoISO?: string;
 }): Nodo => {
   const origen = new URL(params.url).origin;
   return {
@@ -155,9 +159,10 @@ export const videoObjeto = (params: {
     uploadDate: params.subidoISO,
     duration: params.duracionISO,
     embedUrl: params.embedUrl,
-    // El contenido canónico es la watch page: la ficha propia, no el reproductor externo.
-    contentUrl: params.url,
+    // El contenido original vive en YouTube; la ficha es la página que lo presenta.
+    contentUrl: params.contentUrl ?? params.url,
     url: params.url,
+    ...(params.revisadoISO ? { dateModified: params.revisadoISO } : {}),
     inLanguage: 'es-ES',
     publisher: { '@id': `${origen}#organizacion`, '@type': 'Organization', name: MARCA, url: `${origen}/` },
     isPartOf: { '@type': 'WebPage', '@id': `${params.url}#pagina`, url: params.url },
