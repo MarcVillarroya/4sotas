@@ -16,6 +16,13 @@
       }
     },
     {
+      "id": "vid-DzH02NfDqM4",
+      "archivo": "vid-DzH02NfDqM4.yaml",
+      "parches": {
+        "vistas_al_verificar": 224
+      }
+    },
+    {
       "id": "vid-M9EhU06FlUA",
       "archivo": "vid-M9EhU06FlUA.yaml",
       "parches": {
@@ -31,11 +38,6 @@
     }
   ],
   "sinFicha": [
-    {
-      "youtube_id": "DzH02NfDqM4",
-      "titulo": "S&P 500: 4 de cada 10 € van a 10 posiciones #curiosidades",
-      "publicado_en": "2026-10-26"
-    },
     {
       "youtube_id": "LL1EJttJPrs",
       "titulo": "GTA VI: Cómo un videojuego de 1997 se convirtió en un imperio multimillonario",

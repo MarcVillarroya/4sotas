@@ -1,0 +1,63 @@
+# 4 Sotas · pack editorial de la pieza «S&P 500: 4 de cada 10 € van a 10 posiciones».
+#
+# Contrato: /home/mvf/4sotas/v2.2/VIDEO-INFO.md §1.
+# Pieza ya publicada en YouTube (DzH02NfDqM4, público desde 2026-10-26T14:30:24Z).
+# Fuente de los datos: descripción oficial del vídeo leída por la API (youtube.videos.list,
+# solo lectura, 2026-10-26) + guion de voz realmente sintetizado para la pieza
+# (packs/guiones/DzH02NfDqM4-voz-lineas.txt) + metadatos del máster local (ffprobe).
+# Ninguna cifra del pack es nueva: todas aparecen en la descripción oficial o en el guion.
+
+titulo: "S&P 500: 4 de cada 10 € van a 10 posiciones"
+slug: sp500-4-de-cada-10-euros-a-10-posiciones
+youtube_id: DzH02NfDqM4
+
+descripcion_corta: "Pieza corta de 52 s: comprar el S&P 500 no reparte el dinero a partes iguales y 10 posiciones concentran cerca del 40 % del índice."
+seo_descripcion: "Vídeo corto de Sota de Oros: el S&P 500 pondera por capitalización, así que 10 posiciones concentran cerca del 40 % del índice."
+
+resumen_editorial: "Comprar el S&P 500 no reparte el dinero a partes iguales entre 500 empresas: el índice pondera por capitalización. De 1.000 €, unos 391 irían a las 10 mayores posiciones y unos 609 al resto; NVIDIA sola pesa más del 8 %. Por eso, cuando una de esas gigantes cae, arrastra al índice mucho más que cualquier empresa pequeña. Cierra con la versión equiponderada, donde cada compañía pesa un 0,2 %."
+
+que_cubre:
+  - "Por qué el índice no reparte a partes iguales: pondera por el tamaño de cada empresa"
+  - "El reparto en euros: unos 391 € de 1.000 € a las 10 mayores posiciones, cerca del 40 % del índice"
+  - "El contraste con la versión equiponderada, donde cada compañía pesa un 0,2 %"
+
+que_no_cubre:
+  - "No es una recomendación de compra ni una previsión de rentabilidad: las equivalencias en euros son ilustrativas."
+
+para_quien: "Para quien invierte en fondos indexados y cree que comprar el S&P 500 ya le diversifica del todo."
+
+temas:
+  - tema-inversion
+
+keywords:
+  - S&P 500
+  - concentración índice
+  - riesgo de concentración
+  - ponderación por capitalización
+  - inversión indexada
+  - ETFs
+  - fondo indexado
+  - diversificación cartera
+  - bolsa americana
+
+fuentes:
+  - "S&P Dow Jones Indices · metodología del S&P 500 y de su versión equiponderada (atribución que da el propio vídeo en su descripción oficial)"
+  - "Descripción y metadatos oficiales del vídeo DzH02NfDqM4 en YouTube, leídos por la API el 2026-10-26 (solo lectura)"
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. Las equivalencias en euros son ilustrativas y no son una promesa de rentabilidad."
+
+capitulos: []
+
+# El short no tiene SRT ni transcripción publicada (la API devuelve caption=false); la fuente
+# del texto es el guion de voz con el que se sintetizó el audio, copiado literal del proyecto
+# de producción (mismo sha256).
+guion: packs/guiones/DzH02NfDqM4-voz-lineas.txt
+
+# Publicación real: 2026-10-26 15:30 Europe/Madrid (publishAt de la API).
+publicar_en: "2026-10-26T15:30:00+01:00"
+
+miniatura: public/assets/videos/DzH02NfDqM4.webp
+video: /home/mvf/Escritorio/Proyectos/sp500-trampa/out/Sp500Trampa-V4.mp4
+
+# La API devuelve la duración redondeada a segundos (PT52S); el máster mide 51,400 s.
+duracion_iso: PT52S

@@ -51,11 +51,11 @@
     {
       "videoId": "DzH02NfDqM4",
       "title": "S&P 500: 4 de cada 10 € van a 10 posiciones",
-      "privacy_status": "private",
-      "publish_at": "2026-10-26T14:30:00Z",
-      "published_at": "2026-10-21T06:05:23Z",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-26T14:30:24Z",
       "duration_iso8601": "PT52S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg?sqp=CMSR-tYG&rs=AOn4CLBYsCZhuSe_-s332a1-1eFGu7Ae9Q",
+      "thumbnail_url": "https://i.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg",
       "default_language": "es-ES",
       "verification": "verificado_api"
     },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T10:12:58.878Z",
+  "generated_at": "2026-10-26T16:03:40.735Z",
   "root": "/home/mvf/4sotas/site",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
@@ -7,7 +7,7 @@
     "sotas": 4,
     "temas": 8,
     "articulos": 9,
-    "videos": 11,
+    "videos": 12,
     "series": 1,
     "herramientas": 2,
     "glosario": 14,
@@ -15,8 +15,8 @@
     "autores": 2
   },
   "dist": {
-    "htmls": 50,
-    "sitemapLocs": 49
+    "htmls": 51,
+    "sitemapLocs": 50
   },
   "blockers": [],
   "warnings": [
