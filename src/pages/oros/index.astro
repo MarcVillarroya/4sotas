@@ -1,183 +1,47 @@
 ---
-/**
- * Home de Sota de Oros. Promesa y estado salen de la colección `sotas` y del recuento
- * real de entradas publicadas: ningún hueco se rellena con contenido de demostración.
- */
-import { getCollection, getEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import PortadaModulos from '../../components/PortadaModulos.astro';
+import { contenidoPortadas } from '../../lib/portadas.ts';
 import { MARCA, SECCION, ruta, url } from '../../lib/rutas.ts';
-import { cuentaPublicada, visibles } from '../../lib/publicacion.ts';
 import { grafoSeccion } from '../../lib/jsonld.ts';
-
 const sota = await getEntry('sotas', 'sota-oros');
-if (!sota) throw new Error('Falta la entrada sota-oros en la colección `sotas`');
-
-const [temas, articulos, videos, glosario, herramientas] = await Promise.all([
-  getCollection('temas'),
-  getCollection('articulos'),
-  getCollection('videos'),
-  getCollection('glosario'),
-  getCollection('herramientas'),
-]);
-
-const recuento = {
-  temas: cuentaPublicada(temas),
-  articulos: cuentaPublicada(articulos),
-  videos: cuentaPublicada(videos),
-  glosario: cuentaPublicada(glosario),
-  herramientas: cuentaPublicada(herramientas),
-};
-
-/** Plan editorial V1 cerrado en F0 (BRIEF §Decisiones F0): cinco páginas troncales. */
-const TRONCALES = [
-  { titulo: 'La nómina, línea a línea', detalle: 'Del bruto al neto: retenciones, cotizaciones y orden de las restas.' },
-  { titulo: 'IRPF y tramos', detalle: 'Por qué el tipo que te retienen no es el de tu tramo marginal.' },
-  { titulo: 'Inflación', detalle: 'Qué le pasa a tu dinero parado y cómo se compara con una subida de precios.' },
-  { titulo: 'Los primeros 1.000 €', detalle: 'Orden de decisiones al empezar a ahorrar, sin productos ni recomendaciones.' },
-  { titulo: 'Vivienda', detalle: 'Entrada, financiación e impuestos con cifras de fuente oficial y fecha de vigencia.' },
-];
-
+if (!sota) throw new Error('Falta sota-oros');
+const contenido = await contenidoPortadas();
 const titulo = 'Tu dinero, con las cartas claras';
-const descripcion =
-  'Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.';
+const descripcion = 'Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.';
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
-
-const jsonLd = grafoSeccion({
-  origen: new URL(canonica).origin,
-  url: canonica,
-  nombre: titulo,
-  descripcion,
-});
-
-const vacio = recuento.articulos === 0 && recuento.videos === 0;
-
-/** Directorio de secciones: existe siempre como página y declara su recuento real. */
-const directorio = [
-  { titulo: 'Temas troncales', detalle: 'Los mapas de cada bloque editorial.', ruta: ruta.temas(), total: visibles(temas).length },
-  { titulo: 'Guías', detalle: 'Explicadores con fuentes fechadas.', ruta: ruta.guias(), total: visibles(articulos).length },
-  { titulo: 'Vídeos', detalle: 'Fichas con metadata contrastada contra la API.', ruta: ruta.videos(), total: visibles(videos).length },
-  { titulo: 'Glosario', detalle: 'Términos con definición corta y ejemplo.', ruta: ruta.glosario(), total: visibles(glosario).length },
-  { titulo: 'Herramientas', detalle: 'Calculadoras con supuestos y límites declarados.', ruta: ruta.herramientas(), total: visibles(herramientas).length },
-];
+const jsonLd = grafoSeccion({ origen: new URL(canonica).origin, url: canonica, nombre: titulo, descripcion });
+const iconos: Record<string, string> = { nomina: 'nomina', fiscal: 'nomina', inflacion: 'inflacion', ahorro: 'ahorro', inversion: 'inversion', banca: 'banca', vivienda: 'vivienda', historia: 'historia' };
 ---
-
 <Base titulo={`${SECCION} · ${titulo}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
   <section class="wrap hero oros-hero" aria-labelledby="titulo-principal">
-    <div>
-      <p class="eyebrow">{SECCION} · economía cotidiana</p>
-      <h1 id="titulo-principal">{titulo}.</h1>
+    <div><p class="eyebrow">Sota de Oros · economía cotidiana</p><h1 id="titulo-principal">{titulo}.</h1>
       <p class="lead">{sota.data.promesa}</p>
-      <p>{sota.data.lema}</p>
-      <div class="actions">
-        <a class="button" href={url('/#criterio')}>Cómo trabajamos</a>
-        <a class="button secondary" href={url('/')}>Volver a la baraja</a>
+      <div class="actions"><a class="button" href={url(ruta.videos())}>Ver los vídeos</a>
+        {contenido.calculadora && <a class="button secondary" href={url(ruta.herramienta(contenido.calculadora.data.slug))}>Abrir la calculadora</a>}
       </div>
     </div>
-    <figure class="hero-art">
-      <img
-        src={url('/assets/baraja.svg')}
-        width="400"
-        height="320"
-        alt="Naipe pixel de la sota de oros sosteniendo una moneda"
-        decoding="async"
-      />
-      <figcaption class="art-note">Entender primero. Decidir después.</figcaption>
-    </figure>
+    <figure class="hero-art"><img src={url('/assets/v2/sota-explain.svg')} width="160" height="224" alt="" />
+      <figcaption class="art-note">Primero, entender. Después, decidir.</figcaption></figure>
   </section>
-
-  <section class="wrap section" id="plan" aria-labelledby="titulo-plan">
-    <div class="section-head">
-      <h2 id="titulo-plan">Las cinco puertas de la V1.</h2>
-      <p class="muted">Plan editorial cerrado, en preparación</p>
-    </div>
-    <p class="lead">
-      Cada una será una página troncal con sus guías, sus fuentes y sus límites. Ninguna se publica hasta tener
-      los datos verificados y la revisión factual registrada.
-    </p>
-    <ol class="steps">
-      {
-        TRONCALES.map((t) => (
-          <li>
-            <div>
-              <h2>{t.titulo}</h2>
-              <p>{t.detalle}</p>
-            </div>
-          </li>
-        ))
-      }
-    </ol>
+  <section class="wrap section" aria-labelledby="temas-titulo">
+    <div class="section-head"><h2 id="temas-titulo">Entra por tu pregunta.</h2><a class="text-link" href={url(ruta.temas())}>Todos los temas</a></div>
+    <p class="muted">Cada tema reúne sus guías y vídeos para ayudarte a entender el dinero de cada día.</p>
+    <ul class="v2-topics">{contenido.mapa.map(({tema, guias, videos}) => <li>
+      <a href={url(ruta.tema(tema.data.slug))}><img src={url(`/assets/v2/topic-${iconos[tema.data.cluster] ?? 'empezar'}.svg`)} width="40" height="40" alt="" loading="lazy" />
+        <h3>{tema.data.titulo}</h3><p>{tema.data.descripcion_corta}</p>
+        <span class="muted">{guias === 0 ? 'Sin guía todavía' : `${guias} ${guias === 1 ? 'guía' : 'guías'}`} · {videos} {videos === 1 ? 'vídeo' : 'vídeos'}</span>
+      </a></li>)}</ul>
   </section>
-
-  <section class="wrap section editorial-grid" aria-labelledby="titulo-estado">
-    <div>
-      <p class="eyebrow">Estado editorial</p>
-      <h2 id="titulo-estado">Qué hay publicado hoy.</h2>
-    </div>
-    <div>
-      <dl class="metrics">
-        <div>
-          <dt>Páginas troncales publicadas</dt>
-          <dd>{recuento.temas}</dd>
-        </div>
-        <div>
-          <dt>Guías publicadas</dt>
-          <dd>{recuento.articulos}</dd>
-        </div>
-        <div>
-          <dt>Fichas de vídeo verificadas</dt>
-          <dd>{recuento.videos}</dd>
-        </div>
-        <div>
-          <dt>Términos de glosario</dt>
-          <dd>{recuento.glosario}</dd>
-        </div>
-        <div>
-          <dt>Herramientas publicadas</dt>
-          <dd>{recuento.herramientas}</dd>
-        </div>
-      </dl>
-      {
-        vacio && (
-          <p class="status">
-            Cero no es un error: es el estado real. Nada se publica sin fuente fechada, revisión factual y
-            límites declarados, así que esta sección todavía no tiene contenido que enlazar. El catálogo de
-            vídeos solo mostrará fichas verificadas contra la API de YouTube.
-          </p>
-        )
-      }
-    </div>
-  </section>
-
-  <section class="wrap section editorial-grid" aria-labelledby="titulo-direcciones">
-    <h2 id="titulo-direcciones">Por dónde seguir.</h2>
-    <div>
-      <ul class="link-list">
-        {
-          directorio.map((d) => (
-            <li>
-              <a href={url(d.ruta)}>
-                {d.titulo} <span class="orden">{d.total} publicadas</span>
-              </a>
-              <p>{d.detalle}</p>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
-
-  <section class="wrap section editorial-grid" aria-labelledby="titulo-limites">
-    <h2 id="titulo-limites">Antes de sacar conclusiones.</h2>
-    <div>
-      <p>
-        El contenido educativo no sustituye el asesoramiento individualizado. Un cálculo depende de sus
-        supuestos y no garantiza lo que ocurrirá: separamos el dato con fuente del ejemplo y de la hipótesis.
-      </p>
-      <p>
-        Cuando una cifra cambie de norma o de ejercicio, la página mostrará su fecha de revisión y su vigencia en
-        lugar de quedarse desactualizada en silencio.
-      </p>
-      <p><a class="text-link" href={url('/#criterio')}>Leer el criterio editorial</a></p>
-    </div>
+  <PortadaModulos {...contenido} portal />
+  {contenido.glosario.length > 0 && <section class="wrap section" aria-labelledby="glosario-titulo">
+    <div class="section-head"><h2 id="glosario-titulo">Las palabras, claras.</h2><a class="text-link" href={url(ruta.glosario())}>Ver el glosario completo</a></div>
+    <p class="muted">Términos que aparecen en las guías para empezar.</p>
+    <dl class="v2-terms">{contenido.glosario.map(g => <div><dt><a href={url(ruta.termino(g.data.slug))}>{g.data.termino}</a></dt><dd>{g.data.definicion_corta}</dd></div>)}</dl>
+  </section>}
+  <section class="wrap section editorial-grid" aria-labelledby="limites-titulo"><h2 id="limites-titulo">Antes de sacar conclusiones.</h2>
+    <div><p>El contenido educativo no sustituye el asesoramiento individualizado. Un cálculo depende de sus supuestos y no garantiza lo que ocurrirá: separamos el dato con fuente del ejemplo y de la hipótesis.</p>
+      <p><a class="text-link" href={url('/metodologia/')}>Metodología y fuentes</a></p></div>
   </section>
 </Base>

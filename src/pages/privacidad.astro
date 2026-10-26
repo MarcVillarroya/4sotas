@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { CANAL_YOUTUBE } from '../lib/rutas.ts';
+---
+<Base titulo="Privacidad" descripcion="Sin analítica, cuentas ni cookies propias. Explicamos las miniaturas externas y qué ocurre al cargar el reproductor de YouTube.">
+  <article class="wrap institutional"><p class="eyebrow">El proyecto</p><h1>Privacidad.</h1>
+    <h2>Qué hace este sitio.</h2><p>Servimos páginas estáticas, sin analítica, cuentas ni cookies propias. La calculadora trabaja en tu navegador: no envía ni guarda las cifras que introduces. Las tipografías se sirven desde este mismo sitio.</p>
+    <h2>Miniaturas y conexiones externas.</h2><p>Algunas miniaturas se descargan de los servidores de imágenes de YouTube al mostrarse. Esa petición comunica a ese servicio datos de conexión, como tu dirección IP. No afirmamos que todas las páginas estén libres de conexiones externas antes de pulsar.</p>
+    <h2>Cuando cargas un reproductor.</h2><p>El reproductor se inserta solo cuando pulsas su botón, desde youtube-nocookie.com. Ese dominio no significa que no exista tratamiento de datos: YouTube puede establecer conexiones con otros servicios y aplicar sus propias políticas.</p>
+    <h2>Enlaces que salen del sitio.</h2><p>Los enlaces al canal y a los vídeos abren YouTube en otra pestaña. A partir de ese clic se aplican sus políticas.</p>
+    <ul><li><a href="https://policies.google.com/privacy" rel="noopener">Política de privacidad de Google</a></li><li><a href="https://www.youtube.com/t/terms" rel="noopener">Términos de servicio de YouTube</a></li><li><a href="https://policies.google.com/technologies/cookies" rel="noopener">Cómo usa Google las cookies</a></li></ul>
+    <h2>Infraestructura.</h2><p>El alojamiento es GitHub Pages. El proveedor de alojamiento recibe las peticiones necesarias para servir las páginas; consulta su <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">declaración de privacidad</a>. No prometemos ausencia de registros técnicos del proveedor.</p>
+    <h2>Contacto.</h2><p>No hay correo de contacto publicado. Puedes escribirnos mediante el <a href={CANAL_YOUTUBE} target="_blank" rel="noopener">canal en YouTube<span class="sr-only"> (se abre en otra pestaña)</span></a>.</p>
+  </article>
+</Base>

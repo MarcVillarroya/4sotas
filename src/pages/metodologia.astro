@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { CANAL_YOUTUBE } from '../lib/rutas.ts';
+---
+<Base titulo="Metodología y fuentes" descripcion="Fuentes primarias, revisión factual y límites declarados: cómo comprobamos las guías y calculadoras de 4 Sotas.">
+  <article class="wrap institutional"><p class="eyebrow">Metodología y fuentes</p><h1>Cómo lo comprobamos.</h1>
+    <h2>Fuentes primarias primero.</h2><p>AEAT, BOE, Seguridad Social, Banco de España, BCE, INE y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos.</p>
+    <h2>Cuatro etiquetas, nunca mezcladas.</h2><p>Hecho (dato con fuente), cálculo (operación reproducible), supuesto (hipótesis declarada) y opinión (nuestra lectura). Si no sabes en qué casilla cae una frase, es que está mal escrita.</p>
+    <h2>Revisión antes de publicar.</h2><p>Ninguna guía se publica sin revisión factual registrada. Si una norma cambia, la página se revisa y se anota la fecha.</p>
+    <h2>Límites declarados.</h2><p>Cada calculadora publica fórmula, supuestos y límites en la misma página. Cada guía dice qué no cubre.</p>
+    <h2>Nada que no podamos verificar.</h2><p>No publicamos vídeos, cifras, credenciales ni datos de terceros que no podamos comprobar.</p>
+    <h2>Correcciones.</h2><p>Si encuentras un error, dilo por el canal de YouTube y lo revisamos. La corrección se anota en la página afectada con su fecha.</p>
+    <a class="text-link" href={CANAL_YOUTUBE} target="_blank" rel="noopener">Canal en YouTube<span class="sr-only"> (se abre en otra pestaña)</span></a>
+  </article>
+</Base>

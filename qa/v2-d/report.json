@@ -1,0 +1,644 @@
+{
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 0,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://marcvillarroya.github.io#organizacion",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "sameAs": [
+                "https://www.youtube.com/channel/UCq2xbvKI-0TXaPprjK970OQ"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/",
+              "name": "4 Sotas · La vida no viene con instrucciones",
+              "description": "4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 7,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/",
+              "name": "Tu dinero, con las cartas claras",
+              "description": "Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 0,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://marcvillarroya.github.io#organizacion",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "sameAs": [
+                "https://www.youtube.com/channel/UCq2xbvKI-0TXaPprjK970OQ"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/",
+              "name": "4 Sotas · La vida no viene con instrucciones",
+              "description": "4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 7,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/",
+              "name": "Tu dinero, con las cartas claras",
+              "description": "Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 0,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://marcvillarroya.github.io#organizacion",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "sameAs": [
+                "https://www.youtube.com/channel/UCq2xbvKI-0TXaPprjK970OQ"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/",
+              "name": "4 Sotas · La vida no viene con instrucciones",
+              "description": "4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 7,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/",
+              "name": "Tu dinero, con las cartas claras",
+              "description": "Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 0,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://marcvillarroya.github.io#organizacion",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "sameAs": [
+                "https://www.youtube.com/channel/UCq2xbvKI-0TXaPprjK970OQ"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/",
+              "name": "4 Sotas · La vida no viene con instrucciones",
+              "description": "4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "name": "oros",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "broken": [],
+      "topics": 7,
+      "guides": 3,
+      "videos": 3,
+      "canonical": "https://marcvillarroya.github.io/4sotas/oros/",
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://marcvillarroya.github.io#sitio",
+              "name": "4 Sotas",
+              "url": "https://marcvillarroya.github.io/",
+              "inLanguage": "es-ES",
+              "publisher": {
+                "@id": "https://marcvillarroya.github.io#organizacion"
+              }
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://marcvillarroya.github.io/4sotas/oros/#pagina",
+              "url": "https://marcvillarroya.github.io/4sotas/oros/",
+              "name": "Tu dinero, con las cartas claras",
+              "description": "Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.",
+              "inLanguage": "es-ES",
+              "isPartOf": {
+                "@type": "WebSite",
+                "url": "https://marcvillarroya.github.io/"
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "home-768-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "home-768-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "home-768-escape",
+      "pass": true
+    },
+    {
+      "name": "oros-768-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "oros-768-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "oros-768-escape",
+      "pass": true
+    },
+    {
+      "name": "home-390-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "home-390-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "home-390-escape",
+      "pass": true
+    },
+    {
+      "name": "oros-390-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "oros-390-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "oros-390-escape",
+      "pass": true
+    },
+    {
+      "name": "home-320-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "home-320-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "home-320-escape",
+      "pass": true
+    },
+    {
+      "name": "oros-320-channel-visible",
+      "pass": true
+    },
+    {
+      "name": "oros-320-menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "oros-320-escape",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/sobre-4-sotas/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/sobre-4-sotas/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/sobre-4-sotas/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/metodologia/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/metodologia/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/metodologia/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/privacidad/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/privacidad/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/privacidad/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/videos/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/videos/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/videos/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/guias/bruto-a-neto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/guias/bruto-a-neto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/guias/bruto-a-neto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/herramientas/interes-compuesto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/herramientas/interes-compuesto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/herramientas/interes-compuesto/-1440",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/sobre-4-sotas/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/sobre-4-sotas/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/sobre-4-sotas/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/metodologia/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/metodologia/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/metodologia/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/privacidad/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/privacidad/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/privacidad/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/videos/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/videos/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/videos/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/guias/bruto-a-neto/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/guias/bruto-a-neto/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/guias/bruto-a-neto/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-http-/oros/herramientas/interes-compuesto/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-overflow-/oros/herramientas/interes-compuesto/-390",
+      "pass": true
+    },
+    {
+      "name": "shell-axe-/oros/herramientas/interes-compuesto/-390",
+      "pass": true
+    },
+    {
+      "name": "home-oros-1-click-1440",
+      "pass": true
+    },
+    {
+      "name": "oros-calculadora-1-click-1440",
+      "pass": true
+    },
+    {
+      "name": "home-videos-1-click-1440",
+      "pass": true
+    },
+    {
+      "name": "home-ficha-1-click-1440",
+      "pass": true
+    },
+    {
+      "name": "footer-canal-1440",
+      "pass": true
+    },
+    {
+      "name": "home-oros-1-click-390",
+      "pass": true
+    },
+    {
+      "name": "oros-calculadora-1-click-390",
+      "pass": true
+    },
+    {
+      "name": "home-videos-1-click-390",
+      "pass": true
+    },
+    {
+      "name": "home-ficha-1-click-390",
+      "pass": true
+    },
+    {
+      "name": "footer-canal-390",
+      "pass": true
+    },
+    {
+      "name": "no-js-menu",
+      "pass": true
+    }
+  ],
+  "browser": "156.0.8078.4",
+  "failures": 0
+}

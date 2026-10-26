@@ -4,7 +4,7 @@
  * más específica que contiene la página actual queda marcada.
  * Todos los enlaces pasan por `url()`: la base de Pages va incluida.
  */
-import { BASE, MARCA, SECCION, url } from '../lib/rutas.ts';
+import { BASE, MARCA, SECCION, CANAL_YOUTUBE, url } from '../lib/rutas.ts';
 
 const rutaActual = (() => {
   const p = Astro.url.pathname;
@@ -15,9 +15,8 @@ const rutaActual = (() => {
 const enlaces = [
   { href: '/', etiqueta: 'Inicio', seccion: '/' },
   { href: '/oros/', etiqueta: SECCION, seccion: '/oros/' },
-  { href: '/oros/temas/', etiqueta: 'Temas', seccion: '/oros/temas/' },
-  { href: '/oros/guias/', etiqueta: 'Guías', seccion: '/oros/guias/' },
   { href: '/oros/videos/', etiqueta: 'Vídeos', seccion: '/oros/videos/' },
+  { href: '/oros/herramientas/', etiqueta: 'Herramientas', seccion: '/oros/herramientas/' },
   { href: '/oros/glosario/', etiqueta: 'Glosario', seccion: '/oros/glosario/' },
 ];
 
@@ -36,14 +35,31 @@ const enOros = rutaActual.startsWith('/oros/');
       {enOros ? `${MARCA} / OROS` : MARCA.toUpperCase()}
       <span class="sr-only">, inicio</span>
     </a>
-    <nav aria-label="Principal">
+    <nav class="desktop-nav" aria-label="Principal">
       {
         enlaces.map((e) => (
-          <a href={url(e.href)} aria-current={seccionActiva === e.seccion ? 'page' : undefined}>
+          <a href={url(e.href)} aria-current={rutaActual === e.href ? 'page' : undefined} class:list={{ 'section-active': seccionActiva === e.seccion }}>
             {e.etiqueta}
           </a>
         ))
       }
     </nav>
+    <a class="header-channel" href={CANAL_YOUTUBE} target="_blank" rel="noopener"><span class="channel-long">Canal en </span>YouTube <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
+    <details class="mobile-nav">
+      <summary>Menú</summary>
+      <nav aria-label="Principal móvil">
+        {enlaces.map(e => <a href={url(e.href)} aria-current={rutaActual === e.href ? 'page' : undefined}>{e.etiqueta}</a>)}
+      </nav>
+    </details>
   </div>
 </header>
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.mobile-nav').forEach(menu => {
+    menu.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
+    });
+  });
+</script>

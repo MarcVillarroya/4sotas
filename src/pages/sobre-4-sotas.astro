@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/rutas.ts';
+---
+<Base titulo="Sobre 4 Sotas" descripcion="4 Sotas es un proyecto editorial independiente para entender la economía cotidiana en España antes de decidir.">
+  <article class="wrap institutional"><p class="eyebrow">El proyecto</p><h1>Cuatro sotas, una baraja.</h1>
+    <p>4 Sotas es un proyecto editorial independiente sobre la economía cotidiana en España. La baraja tiene cuatro palos; el primero que abrimos es Oros, el dinero de cada día.</p>
+    <p>Escribimos para gente que quiere entender antes de decidir: qué te resta la nómina, cómo funciona un tramo de IRPF, qué le pasa a tu dinero con la inflación, en qué orden se resuelven los primeros ahorros.</p>
+    <p>No vendemos productos, no gestionamos dinero de nadie y no damos asesoramiento individualizado. Publicamos, fechamos y revisamos.</p>
+    <div class="actions"><a class="button" href={url('/oros/')}>Explorar Sota de Oros</a><a class="text-link" href={url('/metodologia/')}>Metodología y fuentes</a></div>
+  </article>
+</Base>

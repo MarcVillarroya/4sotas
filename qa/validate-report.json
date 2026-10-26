@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T03:21:46.173Z",
-  "root": "/home/mvf/4sotas/site/.worktrees/t_6ef580fd",
+  "generated_at": "2026-10-26T09:12:18.609Z",
+  "root": "/home/mvf/4sotas/site",
   "site": "https://marcvillarroya.github.io",
   "base": "/4sotas",
   "entries": {
@@ -15,8 +15,8 @@
     "autores": 2
   },
   "dist": {
-    "htmls": 47,
-    "sitemapLocs": 46
+    "htmls": 50,
+    "sitemapLocs": 49
   },
   "blockers": [],
   "warnings": [
