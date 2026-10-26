@@ -160,8 +160,8 @@ test('el intérprete por defecto es el venv del canal, nunca python3 del sistema
   const visto: string[] = [];
   const elegido = resolverInterprete({
     env: { HOME: '/home/prueba' } as NodeJS.ProcessEnv,
-    existe: (p: string) => {
-      visto.push(p);
+    existe: (p: fs.PathLike) => {
+      visto.push(String(p));
       return true;
     },
   });
@@ -174,7 +174,7 @@ test('el intérprete por defecto es el venv del canal, nunca python3 del sistema
 test('YT_PYTHON manda sobre el venv por defecto', () => {
   const elegido = resolverInterprete({
     env: { HOME: '/home/prueba', YT_PYTHON: '/opt/py/bin/python3.12' } as NodeJS.ProcessEnv,
-    existe: (p: string) => p === '/opt/py/bin/python3.12',
+    existe: (p: fs.PathLike) => String(p) === '/opt/py/bin/python3.12',
   });
   assert.equal(elegido, '/opt/py/bin/python3.12');
 });
