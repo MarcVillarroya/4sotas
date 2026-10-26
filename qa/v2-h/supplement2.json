@@ -1,0 +1,87 @@
+{
+  "vectores": [
+    {
+      "id": "V6",
+      "esperado": "81160,90",
+      "estado": "Resultado actualizado. Capital final 81.160,90 €, 48.000,00 € aportados e 33.160,90 € de intereses.",
+      "capital": "48.000,00 €Lo que sale de tu bolsillo: capital inicial más todas las aportaciones.",
+      "metricas": [
+        "48.000,00 €Lo que sale de tu bolsillo: capital inicial más todas las aportacione",
+        "33.160,90 €Capital final menos lo aportado. Es la parte que produce la rentabili",
+        "0,4074 %El porcentaje anual repartido en cada periodo de capitalización.",
+        "Sin inflaciónEl capital final descontando la inflación que hayas indicado."
+      ],
+      "filas": 25,
+      "foco": "H2",
+      "errores": []
+    },
+    {
+      "id": "V13",
+      "esperado": "44936,82",
+      "estado": "Resultado actualizado. Capital final 81.160,90 €, 48.000,00 € aportados e 33.160,90 € de intereses.",
+      "capital": "48.000,00 €Lo que sale de tu bolsillo: capital inicial más todas las aportaciones.",
+      "metricas": [
+        "48.000,00 €Lo que sale de tu bolsillo: capital inicial más todas las aportacione",
+        "33.160,90 €Capital final menos lo aportado. Es la parte que produce la rentabili",
+        "0,4074 %El porcentaje anual repartido en cada periodo de capitalización.",
+        "44.936,82 €El capital final descontando la inflación que hayas indicado."
+      ],
+      "filas": 25,
+      "foco": "H2",
+      "errores": []
+    },
+    {
+      "id": "error-plazo",
+      "estado": "No se puede calcular todavía: Los años deben ser un entero entre 0 y 60. Hay 1 dato más que revisar.",
+      "capital": "—Lo que sale de tu bolsillo: capital inicial más todas las aportaciones.",
+      "metricas": [
+        "—Lo que sale de tu bolsillo: capital inicial más todas las aportaciones.",
+        "—Capital final menos lo aportado. Es la parte que produce la rentabilidad.",
+        "—El porcentaje anual repartido en cada periodo de capitalización.",
+        "—El capital final descontando la inflación que hayas indicado."
+      ],
+      "filas": 5,
+      "foco": "INPUT",
+      "errores": [
+        ""
+      ]
+    }
+  ],
+  "fuentes": {
+    "total": 42,
+    "caidas": [],
+    "muestra": [
+      {
+        "url": "https://atc.gencat.cat/es/tributs/itpajd/tpo/tarifes-tipus/",
+        "status": 200
+      },
+      {
+        "url": "https://clientebancario.bde.es/pcb/en/blog/la-tasacion-no-solo-es-un-mero-tramite.html",
+        "status": 200
+      },
+      {
+        "url": "https://clientebancario.bde.es/pcb/es/blog/pago-aplazado-tarjetas-credito.html",
+        "status": 200
+      },
+      {
+        "url": "https://clientebancario.bde.es/pcb/es/menu-horizontal/actualidadeducac/educacion-financiera/comparadores-y-simuladores/",
+        "status": 200
+      },
+      {
+        "url": "https://clientebancario.bde.es/pcb/es/menu-horizontal/podemosayudarte/comisiones/comisionesproductosbancarios/comision_emision_tenencia_tarjeta.html",
+        "status": 200
+      }
+    ]
+  },
+  "higiene": {
+    "literal": [
+      "404.html",
+      "llms.txt"
+    ],
+    "token_gh": [],
+    "aws": [],
+    "pem": [],
+    "yt_token": [],
+    "total_archivos": 60
+  }
+}

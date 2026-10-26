@@ -30,4 +30,14 @@ qa/f1-revision/cache/
 qa/**/evidence*/
 
 # Dependencias locales (nunca en el repo)
-node_modules
+node_modules/
+
+# Worktrees de tareas paralelas
+.worktrees/
+
+# Capturas por ronda de QA V2 (pesadas; se regeneran con scripts/qa-v2-*.mjs).
+# Solo el informe JSON de cada ronda va al repo.
+qa/v2-*/*.png
+
+# Capturas visuales locales (pesadas; se regeneran con scripts de QA visual)
+qa/visual/

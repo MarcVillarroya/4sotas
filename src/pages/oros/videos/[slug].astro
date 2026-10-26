@@ -5,7 +5,7 @@
  * la calculadora de su tema y las piezas relacionadas del propio catálogo.
  *
  * Sin jerga de proceso en la vista: la línea editorial indica la última revisión y la fuente.
- * VideoObject declara miniatura absoluta, fechas, embedUrl y contentUrl de YouTube.
+ * VideoObject declara miniatura absoluta, fechas y embedUrl de YouTube.
  */
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
@@ -241,8 +241,8 @@ const jsonLd = grafo([
         guías y calculadoras son de esta casa.
       </p>
       <p>
-        Si una pieza deja de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse
-        publicada sin contenido real.
+        Si una pieza deja de ser pública, su ficha desaparece del sitio en la siguiente actualización en lugar de
+        quedarse publicada sin contenido real.
       </p>
       <p>
         <a class="text-link" href={url(ruta.videos())}>Volver al catálogo de vídeos</a>

@@ -1,0 +1,252 @@
+{
+  "home": {
+    "status": 200,
+    "doc": 5009,
+    "h1": 75,
+    "h2": 44,
+    "h3": 18,
+    "body": 16,
+    "lead": 20,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        7
+      ],
+      [
+        "grid:48px 1208px",
+        3
+      ],
+      [
+        "grid:645.328px 586.672px",
+        1
+      ],
+      [
+        "grid:320px 320px 320px 320px",
+        1
+      ],
+      [
+        "grid:739.188px 492.797px",
+        1
+      ],
+      [
+        "grid:48px",
+        1
+      ]
+    ],
+    "secciones": 8,
+    "sombras": 3,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "La vida no viene con instrucciones."
+  },
+  "oros": {
+    "status": 200,
+    "doc": 5889,
+    "h1": 75,
+    "h2": 44,
+    "h3": 20,
+    "body": 16,
+    "lead": 20,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        8
+      ],
+      [
+        "grid:48px 1208px",
+        3
+      ],
+      [
+        "grid:821.328px 410.656px",
+        1
+      ],
+      [
+        "grid:296px 296px 296px 296px",
+        1
+      ],
+      [
+        "grid:739.188px 492.797px",
+        1
+      ],
+      [
+        "grid:48px",
+        1
+      ]
+    ],
+    "secciones": 9,
+    "sombras": 3,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "Tu dinero, con las cartas claras."
+  },
+  "videos": {
+    "status": 200,
+    "doc": 4768,
+    "h1": 72,
+    "h2": 32,
+    "h3": 18,
+    "body": 16,
+    "lead": 20,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        14
+      ],
+      [
+        "grid:36px",
+        11
+      ],
+      [
+        "grid:780.734px 459.25px",
+        1
+      ],
+      [
+        "grid:48px",
+        1
+      ],
+      [
+        "grid:410.656px 410.672px 410.656px",
+        1
+      ],
+      [
+        "grid:1046px 202px",
+        1
+      ]
+    ],
+    "secciones": 6,
+    "sombras": 1,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "Una idea.Más clara."
+  },
+  "ficha": {
+    "status": 200,
+    "doc": 2947,
+    "h1": 52,
+    "h2": 24,
+    "h3": 18,
+    "body": 16,
+    "lead": null,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        6
+      ],
+      [
+        "grid:885.703px 354.281px",
+        1
+      ],
+      [
+        "grid:270px 270px 270px",
+        1
+      ]
+    ],
+    "secciones": 6,
+    "sombras": 1,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "IRPF en la nómina: qué te retienen y por qué"
+  },
+  "guia": {
+    "status": 200,
+    "doc": 8200,
+    "h1": 79,
+    "h2": 28,
+    "h3": 28,
+    "body": 16,
+    "lead": null,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        11
+      ],
+      [
+        "grid:224px 992px",
+        1
+      ]
+    ],
+    "secciones": 7,
+    "sombras": 0,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo"
+  },
+  "calculadora": {
+    "status": 200,
+    "doc": 5129,
+    "h1": 79,
+    "h2": 28,
+    "h3": null,
+    "body": 16,
+    "lead": 20,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        8
+      ],
+      [
+        "grid:262px 262px",
+        2
+      ],
+      [
+        "grid:616px 616px",
+        1
+      ],
+      [
+        "grid:548px",
+        1
+      ],
+      [
+        "grid:272px 944px",
+        1
+      ]
+    ],
+    "secciones": 11,
+    "sombras": 1,
+    "radios": [
+      "0px",
+      "50%"
+    ],
+    "h1text": "Calculadora de interés compuesto"
+  },
+  "glosario": {
+    "status": 200,
+    "doc": 3834,
+    "h1": 79,
+    "h2": 44,
+    "h3": 28,
+    "body": 16,
+    "lead": 20,
+    "display": "Archivo Black",
+    "cuerpo": "Inter",
+    "grids": [
+      [
+        "flex:row",
+        16
+      ]
+    ],
+    "secciones": 9,
+    "sombras": 0,
+    "radios": [
+      "0px"
+    ],
+    "h1text": "Glosario."
+  }
+}

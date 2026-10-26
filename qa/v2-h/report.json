@@ -1,0 +1,2714 @@
+{
+  "browser": "156.0.8078.4",
+  "generated_at": "2026-10-26T09:54:40.084Z",
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 5009,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "La vida no viene con instrucciones.",
+      "broken": [],
+      "imgs": 11,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 203,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "oros",
+      "path": "/oros/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 5889,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tu dinero, con las cartas claras.",
+      "broken": [],
+      "imgs": 14,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 244,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "videos",
+      "path": "/oros/videos/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 4768,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Una idea.Más clara.",
+      "broken": [],
+      "imgs": 15,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 276,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "ficha",
+      "path": "/oros/videos/tres-cuentas-un-sueldo/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 2921,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+      "broken": [],
+      "imgs": 3,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 140,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "guia",
+      "path": "/oros/guias/tramos-irpf-y-retencion/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 8019,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 339,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "calculadora",
+      "path": "/oros/herramientas/interes-compuesto/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 5964,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Calculadora de interés compuesto",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 421,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "glosario",
+      "path": "/oros/glosario/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 3834,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Glosario.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/glosario/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 193,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "sobre",
+      "path": "/sobre-4-sotas/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 1299,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cuatro sotas, una baraja.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/sobre-4-sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 74,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "metodologia",
+      "path": "/metodologia/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 1863,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cómo lo comprobamos.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/metodologia/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 82,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "privacidad",
+      "path": "/privacidad/",
+      "width": 1440,
+      "status": 200,
+      "docHeight": 1959,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Privacidad.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/privacidad/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 90,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 5693,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "La vida no viene con instrucciones.",
+      "broken": [],
+      "imgs": 11,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 203,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "oros",
+      "path": "/oros/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 6867,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tu dinero, con las cartas claras.",
+      "broken": [],
+      "imgs": 14,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 244,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "videos",
+      "path": "/oros/videos/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 5965,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Una idea.Más clara.",
+      "broken": [],
+      "imgs": 15,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 276,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "ficha",
+      "path": "/oros/videos/tres-cuentas-un-sueldo/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 3113,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+      "broken": [],
+      "imgs": 3,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 140,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "guia",
+      "path": "/oros/guias/tramos-irpf-y-retencion/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 10794,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 339,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "calculadora",
+      "path": "/oros/herramientas/interes-compuesto/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 8693,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Calculadora de interés compuesto",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 421,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "glosario",
+      "path": "/oros/glosario/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 3716,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Glosario.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/glosario/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 193,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "sobre",
+      "path": "/sobre-4-sotas/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 1280,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cuatro sotas, una baraja.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/sobre-4-sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 74,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "metodologia",
+      "path": "/metodologia/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 1806,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cómo lo comprobamos.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/metodologia/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 82,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "privacidad",
+      "path": "/privacidad/",
+      "width": 768,
+      "status": 200,
+      "docHeight": 1986,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Privacidad.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/privacidad/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 90,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 7749,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "La vida no viene con instrucciones.",
+      "broken": [],
+      "imgs": 11,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 203,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "oros",
+      "path": "/oros/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 10090,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tu dinero, con las cartas claras.",
+      "broken": [],
+      "imgs": 14,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 244,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "videos",
+      "path": "/oros/videos/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 8543,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Una idea.Más clara.",
+      "broken": [],
+      "imgs": 15,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 276,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "ficha",
+      "path": "/oros/videos/tres-cuentas-un-sueldo/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 4111,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+      "broken": [],
+      "imgs": 3,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 140,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "guia",
+      "path": "/oros/guias/tramos-irpf-y-retencion/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 13452,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 339,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "calculadora",
+      "path": "/oros/herramientas/interes-compuesto/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 11016,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Calculadora de interés compuesto",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 421,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": [
+        {
+          "tag": "input",
+          "text": "",
+          "w": 13,
+          "h": 13,
+          "inline": false
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "w": 13,
+          "h": 13,
+          "inline": false
+        }
+      ]
+    },
+    {
+      "name": "glosario",
+      "path": "/oros/glosario/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 4820,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Glosario.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/glosario/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 193,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "sobre",
+      "path": "/sobre-4-sotas/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 1748,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cuatro sotas, una baraja.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/sobre-4-sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 74,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "metodologia",
+      "path": "/metodologia/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 2318,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cómo lo comprobamos.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/metodologia/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 82,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "privacidad",
+      "path": "/privacidad/",
+      "width": 390,
+      "status": 200,
+      "docHeight": 2604,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Privacidad.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/privacidad/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 90,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 8431,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "La vida no viene con instrucciones.",
+      "broken": [],
+      "imgs": 11,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 203,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "oros",
+      "path": "/oros/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 11044,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tu dinero, con las cartas claras.",
+      "broken": [],
+      "imgs": 14,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 244,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "videos",
+      "path": "/oros/videos/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 8747,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Una idea.Más clara.",
+      "broken": [],
+      "imgs": 15,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 276,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "ficha",
+      "path": "/oros/videos/tres-cuentas-un-sueldo/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 4692,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes",
+      "broken": [],
+      "imgs": 3,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 140,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "guia",
+      "path": "/oros/guias/tramos-irpf-y-retencion/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 16204,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 339,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "calculadora",
+      "path": "/oros/herramientas/interes-compuesto/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 12396,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Calculadora de interés compuesto",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 421,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": [
+        {
+          "tag": "input",
+          "text": "",
+          "w": 13,
+          "h": 13,
+          "inline": false
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "w": 13,
+          "h": 13,
+          "inline": false
+        }
+      ]
+    },
+    {
+      "name": "glosario",
+      "path": "/oros/glosario/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 5461,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Glosario.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/oros/glosario/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [
+        null
+      ],
+      "ldCount": 1,
+      "nodos": 193,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "sobre",
+      "path": "/sobre-4-sotas/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 2003,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cuatro sotas, una baraja.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/sobre-4-sotas/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 74,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    },
+    {
+      "name": "metodologia",
+      "path": "/metodologia/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 2738,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Cómo lo comprobamos.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/metodologia/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 82,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": []
+    },
+    {
+      "name": "privacidad",
+      "path": "/privacidad/",
+      "width": 320,
+      "status": 200,
+      "docHeight": 3048,
+      "overflow": false,
+      "h1": 1,
+      "h1text": "Privacidad.",
+      "broken": [],
+      "imgs": 1,
+      "canonicos": [
+        "https://marcvillarroya.github.io/4sotas/privacidad/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "ldParse": true,
+      "ldTypes": [],
+      "ldCount": 0,
+      "nodos": 90,
+      "audit": "<html lang=\"es-ES\">",
+      "violaciones": [],
+      "internos": [],
+      "tapPequenos": []
+    }
+  ],
+  "actions": [
+    {
+      "width": 1440,
+      "A": {
+        "clics": 3,
+        "pasos": [
+          {
+            "etiqueta": "header Vídeos",
+            "text": "Vídeos",
+            "href": "/4sotas/oros/videos/",
+            "top": 22,
+            "relTop": 22,
+            "w": 52,
+            "h": 44,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": true,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "tarjeta destacada",
+            "text": "▶Largo · 1:05",
+            "href": "/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+            "top": 652,
+            "relTop": 652,
+            "w": 781,
+            "h": 439,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "Reproducir aquí",
+            "href": null
+          }
+        ],
+        "ruta": "/oros/videos/tres-cuentas-un-sueldo/",
+        "reproduccion": {
+          "iframe": true,
+          "src": "https://www.youtube-nocookie.com/embed/1ztXsY1hwNA?rel=0",
+          "aviso": null,
+          "visibleSinScroll": true,
+          "peticiones_tras_pulsar": 11,
+          "hosts": [
+            "www.youtube-nocookie.com",
+            "fonts.gstatic.com",
+            "www.google.com",
+            "i.ytimg.com",
+            "jnn-pa.googleapis.com"
+          ]
+        }
+      },
+      "A2": {
+        "aviso": null,
+        "boton_reproducir": false,
+        "enlace_youtube": [
+          "https://www.youtube.com/watch?v=O1V9_of7g1w"
+        ]
+      },
+      "B": [
+        {
+          "text": "Canal en YouTube ↗ (se abre en otra pestaña)",
+          "enHeader": true,
+          "enFooter": false,
+          "top": 22,
+          "visibleSinScroll": true,
+          "h": 44
+        },
+        {
+          "text": "Canal en YouTube ↗ (se abre en otra pestaña)",
+          "enHeader": false,
+          "enFooter": false,
+          "top": 3885,
+          "visibleSinScroll": false,
+          "h": 54
+        },
+        {
+          "text": "Canal en YouTube (se abre en otra pestaña)",
+          "enHeader": false,
+          "enFooter": true,
+          "top": 4687,
+          "visibleSinScroll": false,
+          "h": 44
+        }
+      ],
+      "C": {
+        "clics": 1,
+        "pasos": [
+          {
+            "etiqueta": "CTA Abrir la calculadora (home)",
+            "text": "Abrir la calculadora",
+            "href": "/4sotas/oros/herramientas/interes-compuesto/",
+            "top": 2040,
+            "relTop": 2040,
+            "w": 204,
+            "h": 54,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/herramientas/interes-compuesto/"
+      },
+      "D": {
+        "clics": 3,
+        "pasos": [
+          {
+            "etiqueta": "Sota de Oros",
+            "text": "Explora Sota de Oros",
+            "href": "/4sotas/oros/",
+            "top": 594,
+            "relTop": 594,
+            "w": 217,
+            "h": 54,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": true,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "tema Nómina",
+            "text": "Nómina: del bruto al neto, línea a líneaQué se resta del sal",
+            "href": "/4sotas/oros/temas/nomina/",
+            "top": 747,
+            "relTop": 747,
+            "w": 296,
+            "h": 328,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "guía IRPF",
+            "text": "Los tramos del IRPF",
+            "href": "/4sotas/oros/guias/tramos-irpf-y-retencion/",
+            "top": 3082,
+            "relTop": 3082,
+            "w": 723,
+            "h": 51,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/guias/tramos-irpf-y-retencion/",
+        "hints": {
+          "irpf_en_home": 2,
+          "buscador": 0,
+          "enlaces_irpf": []
+        },
+        "h1": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo"
+      },
+      "E": {
+        "clics": 1,
+        "pasos": [
+          {
+            "etiqueta": "Sigue aprendiendo → vídeo",
+            "text": "Los tramos del IRPF no funcionan como crees",
+            "href": "/4sotas/oros/videos/tramos-del-irpf/",
+            "top": 6539,
+            "relTop": 6539,
+            "w": 187,
+            "h": 46,
+            "scrollY": 0,
+            "vh": 900,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/videos/tramos-del-irpf/",
+        "top": 6361,
+        "doc": 8019,
+        "enlaces": [
+          {
+            "text": "Los tramos del IRPF no funcionan como crees",
+            "href": "/4sotas/oros/videos/tramos-del-irpf/"
+          },
+          {
+            "text": "Tipo marginal",
+            "href": "/4sotas/oros/glosario/tipo-marginal/"
+          },
+          {
+            "text": "Tipo de retención",
+            "href": "/4sotas/oros/glosario/tipo-de-retencion/"
+          },
+          {
+            "text": "Base de cotización",
+            "href": "/4sotas/oros/glosario/base-de-cotizacion/"
+          },
+          {
+            "text": "Tema: Nómina: del bruto al neto, línea a línea",
+            "href": "/4sotas/oros/temas/nomina/"
+          },
+          {
+            "text": "Vídeo: IRPF en la nómina: qué te retienen y por qué",
+            "href": "/4sotas/oros/videos/irpf-en-la-nomina/"
+          }
+        ],
+        "herramientas": [
+          "/4sotas/oros/herramientas/",
+          "/4sotas/oros/herramientas/"
+        ],
+        "indice_sigue_aprendiendo": true
+      }
+    },
+    {
+      "width": 390,
+      "A": {
+        "clics": 4,
+        "pasos": [
+          {
+            "etiqueta": "header Vídeos",
+            "text": "Vídeos",
+            "href": "/4sotas/oros/videos/",
+            "top": 139,
+            "relTop": 139,
+            "w": 71,
+            "h": 44,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": true,
+            "abrioMenu": true
+          },
+          {
+            "etiqueta": "tarjeta destacada",
+            "text": "▶Largo · 1:05",
+            "href": "/4sotas/oros/videos/tres-cuentas-un-sueldo/",
+            "top": 562,
+            "relTop": 562,
+            "w": 347,
+            "h": 195,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": true,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "Reproducir aquí",
+            "href": null
+          }
+        ],
+        "ruta": "/oros/videos/tres-cuentas-un-sueldo/",
+        "reproduccion": {
+          "iframe": true,
+          "src": "https://www.youtube-nocookie.com/embed/1ztXsY1hwNA?rel=0",
+          "aviso": null,
+          "visibleSinScroll": true,
+          "peticiones_tras_pulsar": 12,
+          "hosts": [
+            "www.youtube-nocookie.com",
+            "fonts.gstatic.com",
+            "www.google.com",
+            "i.ytimg.com",
+            "yt3.ggpht.com",
+            "jnn-pa.googleapis.com"
+          ]
+        }
+      },
+      "A2": {
+        "aviso": null,
+        "boton_reproducir": false,
+        "enlace_youtube": [
+          "https://www.youtube.com/watch?v=O1V9_of7g1w"
+        ]
+      },
+      "B": [
+        {
+          "text": "Canal en YouTube ↗ (se abre en otra pestaña)",
+          "enHeader": true,
+          "enFooter": false,
+          "top": 17,
+          "visibleSinScroll": true,
+          "h": 44
+        },
+        {
+          "text": "Canal en YouTube ↗ (se abre en otra pestaña)",
+          "enHeader": false,
+          "enFooter": false,
+          "top": 6233,
+          "visibleSinScroll": false,
+          "h": 54
+        },
+        {
+          "text": "Canal en YouTube (se abre en otra pestaña)",
+          "enHeader": false,
+          "enFooter": true,
+          "top": 7401,
+          "visibleSinScroll": false,
+          "h": 44
+        }
+      ],
+      "C": {
+        "clics": 1,
+        "pasos": [
+          {
+            "etiqueta": "CTA Abrir la calculadora (home)",
+            "text": "Abrir la calculadora",
+            "href": "/4sotas/oros/herramientas/interes-compuesto/",
+            "top": 2969,
+            "relTop": 2969,
+            "w": 204,
+            "h": 54,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/herramientas/interes-compuesto/"
+      },
+      "D": {
+        "clics": 3,
+        "pasos": [
+          {
+            "etiqueta": "Sota de Oros",
+            "text": "Explora Sota de Oros",
+            "href": "/4sotas/oros/",
+            "top": 480,
+            "relTop": 480,
+            "w": 347,
+            "h": 54,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": true,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "tema Nómina",
+            "text": "Nómina: del bruto al neto, línea a líneaQué se resta del sal",
+            "href": "/4sotas/oros/temas/nomina/",
+            "top": 1022,
+            "relTop": 1022,
+            "w": 347,
+            "h": 252,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          },
+          {
+            "etiqueta": "guía IRPF",
+            "text": "Los tramos del IRPF",
+            "href": "/4sotas/oros/guias/tramos-irpf-y-retencion/",
+            "top": 4610,
+            "relTop": 4610,
+            "w": 172,
+            "h": 21,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/guias/tramos-irpf-y-retencion/",
+        "hints": {
+          "irpf_en_home": 2,
+          "buscador": 0,
+          "enlaces_irpf": []
+        },
+        "h1": "Tramos del IRPF: por qué subir de tramo no te quita el sueldo"
+      },
+      "E": {
+        "clics": 1,
+        "pasos": [
+          {
+            "etiqueta": "Sigue aprendiendo → vídeo",
+            "text": "Los tramos del IRPF no funcionan como crees",
+            "href": "/4sotas/oros/videos/tramos-del-irpf/",
+            "top": 11232,
+            "relTop": 11232,
+            "w": 187,
+            "h": 46,
+            "scrollY": 0,
+            "vh": 844,
+            "visibleSinScroll": false,
+            "abrioMenu": false
+          }
+        ],
+        "ruta": "/oros/videos/tramos-del-irpf/",
+        "top": 11010,
+        "doc": 13452,
+        "enlaces": [
+          {
+            "text": "Los tramos del IRPF no funcionan como crees",
+            "href": "/4sotas/oros/videos/tramos-del-irpf/"
+          },
+          {
+            "text": "Tipo marginal",
+            "href": "/4sotas/oros/glosario/tipo-marginal/"
+          },
+          {
+            "text": "Tipo de retención",
+            "href": "/4sotas/oros/glosario/tipo-de-retencion/"
+          },
+          {
+            "text": "Base de cotización",
+            "href": "/4sotas/oros/glosario/base-de-cotizacion/"
+          },
+          {
+            "text": "Tema: Nómina: del bruto al neto, línea a línea",
+            "href": "/4sotas/oros/temas/nomina/"
+          },
+          {
+            "text": "Vídeo: IRPF en la nómina: qué te retienen y por qué",
+            "href": "/4sotas/oros/videos/irpf-en-la-nomina/"
+          }
+        ],
+        "herramientas": [
+          "/4sotas/oros/herramientas/",
+          "/4sotas/oros/herramientas/"
+        ],
+        "indice_sigue_aprendiendo": true
+      }
+    }
+  ],
+  "nav": [
+    {
+      "width": 1440,
+      "home": {
+        "orosHeader": {
+          "text": "Sota de Oros",
+          "visibleSinScroll": true,
+          "top": 22
+        },
+        "videosHeader": {
+          "text": "Vídeos",
+          "visibleSinScroll": true,
+          "top": 22
+        },
+        "orosCTA": {
+          "text": "Explora Sota de Oros",
+          "visibleSinScroll": true,
+          "top": 594
+        },
+        "videosCTA": {
+          "text": "Ver vídeos",
+          "visibleSinScroll": true,
+          "top": 594
+        }
+      },
+      "fichas_desde_home": 5,
+      "ficha_ejemplo": {
+        "h": "/oros/videos/fondo-de-emergencia/",
+        "t": "▶53 s"
+      },
+      "menu": null,
+      "teclado": [
+        {
+          "tag": "a",
+          "text": "Saltar al contenido",
+          "outline": true,
+          "w": 191,
+          "h": 62
+        },
+        {
+          "tag": "a",
+          "text": "4 SOTAS, inicio",
+          "outline": true,
+          "w": 123,
+          "h": 44
+        },
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "outline": true,
+          "w": 42,
+          "h": 44
+        },
+        {
+          "tag": "a",
+          "text": "Sota de Oros",
+          "outline": true,
+          "w": 99,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "home": {
+        "orosHeader": {
+          "text": "Sota de Oros",
+          "visibleSinScroll": true,
+          "top": 0
+        },
+        "videosHeader": {
+          "text": "Vídeos",
+          "visibleSinScroll": true,
+          "top": 0
+        },
+        "orosCTA": {
+          "text": "Explora Sota de Oros",
+          "visibleSinScroll": true,
+          "top": 480
+        },
+        "videosCTA": {
+          "text": "Ver vídeos",
+          "visibleSinScroll": true,
+          "top": 551
+        }
+      },
+      "fichas_desde_home": 5,
+      "ficha_ejemplo": {
+        "h": "/oros/videos/fondo-de-emergencia/",
+        "t": "▶53 s"
+      },
+      "menu": {
+        "existe": true,
+        "summary": {
+          "w": 66,
+          "h": 46,
+          "text": "Menú"
+        },
+        "abierto": {
+          "open": true,
+          "items": [
+            {
+              "text": "Inicio",
+              "w": 71,
+              "h": 44,
+              "visible": true
+            },
+            {
+              "text": "Sota de Oros",
+              "w": 100,
+              "h": 44,
+              "visible": true
+            },
+            {
+              "text": "Vídeos",
+              "w": 71,
+              "h": 44,
+              "visible": true
+            },
+            {
+              "text": "Herramientas",
+              "w": 100,
+              "h": 44,
+              "visible": true
+            },
+            {
+              "text": "Glosario",
+              "w": 71,
+              "h": 44,
+              "visible": true
+            }
+          ],
+          "altura": 0
+        },
+        "cerrado_con_escape": true,
+        "foco_devuelto": "summary:Menú"
+      },
+      "teclado": [
+        {
+          "tag": "a",
+          "text": "Saltar al contenido",
+          "outline": true,
+          "w": 191,
+          "h": 62
+        },
+        {
+          "tag": "a",
+          "text": "4 SOTAS, inicio",
+          "outline": true,
+          "w": 187,
+          "h": 44
+        },
+        {
+          "tag": "a",
+          "text": "Canal en YouTube ↗ (se abre en",
+          "outline": true,
+          "w": 78,
+          "h": 44
+        },
+        {
+          "tag": "summary",
+          "text": "Menú",
+          "outline": true,
+          "w": 66,
+          "h": 46
+        }
+      ]
+    }
+  ],
+  "perf": {
+    "videos-1440": {
+      "peticiones": 19,
+      "transferido": 498063,
+      "js": 0,
+      "css": 35875,
+      "fuentes": 67524,
+      "miniaturas_ytimg": 0,
+      "peticiones_ytimg": 0,
+      "webp": 392908,
+      "imagenes": 11,
+      "lcp_ms": 0,
+      "dcl": 30,
+      "load": 40,
+      "nodos": 276,
+      "imgs": [
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/mark.svg",
+          "w": "40",
+          "nat": "136x150",
+          "bytes": 570,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/v2/play.svg",
+          "w": "112",
+          "nat": "64x64",
+          "bytes": 532,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/v2/emblem-oros.svg",
+          "w": "64",
+          "nat": "64x64",
+          "bytes": 654,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "w": "640",
+          "nat": "640x360",
+          "bytes": 37790,
+          "loading": "eager",
+          "sizes": "(max-width: 1000px) 100vw, 640px"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 37790,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/3xz04lRAW0k.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 69642,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/6dp6Y6nTreY.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 41870,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/i5fe580iFqk.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 20926,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/LarTT_rvCGM.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 26762,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/M9EhU06FlUA.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 38254,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/O1V9_of7g1w.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 23328,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/SrvXlAVnDog.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 27108,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/t1zPAoZV05M.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 40002,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/u0AKp6bpdGo.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 25038,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/vefjjmzDHyY.webp",
+          "w": "640",
+          "nat": "475x267",
+          "bytes": 42188,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        }
+      ],
+      "iframes": 0
+    },
+    "home-1440": {
+      "peticiones": 15,
+      "transferido": 232089,
+      "js": 0,
+      "fuentes": 67524,
+      "lcp_ms": 0,
+      "iframes": 0
+    },
+    "ficha-1440": {
+      "peticiones": 8,
+      "transferido": 143039,
+      "js": 0,
+      "fuentes": 67524,
+      "lcp_ms": 0,
+      "iframes": 0
+    },
+    "cls-home-1440": 0.0001,
+    "cls-videos-1440": 0.0075,
+    "cls-ficha-1440": 0.0016,
+    "cls-calculadora-1440": 0.0001,
+    "videos-390": {
+      "peticiones": 19,
+      "transferido": 498063,
+      "js": 0,
+      "css": 35875,
+      "fuentes": 67524,
+      "miniaturas_ytimg": 0,
+      "peticiones_ytimg": 0,
+      "webp": 392908,
+      "imagenes": 11,
+      "lcp_ms": 0,
+      "dcl": 34,
+      "load": 38,
+      "nodos": 276,
+      "imgs": [
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/mark.svg",
+          "w": "40",
+          "nat": "136x150",
+          "bytes": 570,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/v2/play.svg",
+          "w": "112",
+          "nat": "64x64",
+          "bytes": 532,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/v2/emblem-oros.svg",
+          "w": "64",
+          "nat": "64x64",
+          "bytes": 654,
+          "loading": "eager",
+          "sizes": null
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 37790,
+          "loading": "eager",
+          "sizes": "(max-width: 1000px) 100vw, 640px"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 37790,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/3xz04lRAW0k.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 69642,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/6dp6Y6nTreY.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 41870,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/i5fe580iFqk.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 20926,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/LarTT_rvCGM.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 26762,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/M9EhU06FlUA.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 38254,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/O1V9_of7g1w.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 23328,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/SrvXlAVnDog.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 27108,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/t1zPAoZV05M.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 40002,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/u0AKp6bpdGo.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 25038,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        },
+        {
+          "src": "http://127.0.0.1:43017/4sotas/assets/videos/vefjjmzDHyY.webp",
+          "w": "640",
+          "nat": "390x219",
+          "bytes": 42188,
+          "loading": "eager",
+          "sizes": "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        }
+      ],
+      "iframes": 0
+    },
+    "home-390": {
+      "peticiones": 13,
+      "transferido": 154297,
+      "js": 0,
+      "fuentes": 67524,
+      "lcp_ms": 0,
+      "iframes": 0
+    },
+    "ficha-390": {
+      "peticiones": 8,
+      "transferido": 143039,
+      "js": 0,
+      "fuentes": 67524,
+      "lcp_ms": 0,
+      "iframes": 0
+    },
+    "cls-home-390": 0.0314,
+    "cls-videos-390": 0.0004,
+    "cls-ficha-390": 0.0006,
+    "cls-calculadora-390": 0.0268
+  },
+  "seo": {
+    "canonical": {
+      "home": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/\">"
+      ],
+      "oros": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/\">"
+      ],
+      "videos": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/videos/\">"
+      ],
+      "ficha": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/videos/tres-cuentas-un-sueldo/\">"
+      ],
+      "guia": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/guias/tramos-irpf-y-retencion/\">"
+      ],
+      "calculadora": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/herramientas/interes-compuesto/\">"
+      ],
+      "glosario": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/oros/glosario/\">"
+      ],
+      "sobre": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/sobre-4-sotas/\">"
+      ],
+      "metodologia": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/metodologia/\">"
+      ],
+      "privacidad": [
+        "<link rel=\"canonical\" href=\"https://marcvillarroya.github.io/4sotas/privacidad/\">"
+      ]
+    },
+    "ldTypes": {
+      "home": [
+        [
+          null
+        ]
+      ],
+      "oros": [
+        [
+          null
+        ]
+      ],
+      "videos": [
+        [
+          null
+        ]
+      ],
+      "ficha": [
+        [
+          null
+        ]
+      ],
+      "guia": [
+        [
+          null
+        ]
+      ],
+      "calculadora": [
+        [
+          null
+        ]
+      ],
+      "glosario": [
+        [
+          null
+        ]
+      ],
+      "sobre": [],
+      "metodologia": [],
+      "privacidad": []
+    },
+    "noindex": [],
+    "sitemap_urls": 49,
+    "sitemap_muestra": [
+      "https://marcvillarroya.github.io/4sotas/",
+      "https://marcvillarroya.github.io/4sotas/metodologia/",
+      "https://marcvillarroya.github.io/4sotas/oros/"
+    ],
+    "robots_txt": {
+      "bytes": 578,
+      "primera_linea": "# 4 Sotas — V1 (origen de proyecto GitHub Pages)",
+      "sitemap": true
+    },
+    "video_ld": [
+      {
+        "keys": [
+          "@type",
+          "@id",
+          "name",
+          "description",
+          "thumbnailUrl",
+          "uploadDate",
+          "duration",
+          "embedUrl",
+          "contentUrl",
+          "url",
+          "dateModified",
+          "inLanguage",
+          "publisher",
+          "isPartOf"
+        ],
+        "contentUrl": "https://www.youtube.com/watch?v=1ztXsY1hwNA",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/1ztXsY1hwNA",
+        "thumbnailUrl": [
+          "https://marcvillarroya.github.io/4sotas/assets/videos/1ztXsY1hwNA.webp",
+          "https://i.ytimg.com/vi/1ztXsY1hwNA/maxresdefault.jpg"
+        ],
+        "uploadDate": "2026-10-19",
+        "name": true,
+        "description": true,
+        "duration": "PT1M5S"
+      }
+    ],
+    "status_404": 404
+  },
+  "internal_links": {
+    "total": 47,
+    "fallos": []
+  },
+  "checks": [
+    {
+      "id": "home-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "oros-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "videos-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "ficha-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "guia-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "calculadora-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "glosario-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "sobre-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "metodologia-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "privacidad-1440",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "home-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "oros-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "videos-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "ficha-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "guia-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "calculadora-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "glosario-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "sobre-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "metodologia-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "privacidad-768",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "home-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "oros-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "videos-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "ficha-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "guia-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "calculadora-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 2
+    },
+    {
+      "id": "glosario-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "sobre-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "metodologia-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "privacidad-390",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "home-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "oros-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "videos-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "ficha-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "o publicado en el canal. Este vídeo no tiene transcripción publicada. No inventamos una: el resumen de arriba describe el tema, no cada min"
+        },
+        {
+          "term": "\\bbuild\\b",
+          "contexto": " de ser pública, su ficha deja de generarse en el siguiente build en lugar de quedarse publicada sin contenido real. Volver al catálogo de "
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "guia-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": "00 euros y la diferencia entre tipo marginal y tipo medio. Publicada: 26 de octubre de 2026 Actualizada: 26 de octubre de 2026 Revisión fac"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "calculadora-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 2
+    },
+    {
+      "id": "glosario-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "sobre-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    },
+    {
+      "id": "metodologia-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [
+        {
+          "term": "publicadas?",
+          "contexto": " y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos. Cuatro etiquetas, n"
+        }
+      ],
+      "tapPequenos": 0
+    },
+    {
+      "id": "privacidad-320",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": 0,
+      "axe": 0,
+      "internos": [],
+      "tapPequenos": 0
+    }
+  ],
+  "errores_consola": []
+}
