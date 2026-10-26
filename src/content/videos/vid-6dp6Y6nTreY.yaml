@@ -34,3 +34,16 @@ relacionados:
   - vid-t1zPAoZV05M
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "¿Cuánto aguantarías sin cobrar? El vídeo plantea el escenario de quedarse sin nómina con el alquiler, la compra y una avería del coche encima, y explica para qué sirve un fondo de emergencia: dinero que no está para hacerte rico, sino para comprarte tiempo. La referencia que cita es guardar entre 3 y 6 meses de gastos esenciales, no de sueldo."
+  que_cubre:
+    - "Para qué sirve un fondo de emergencia: comprar tiempo cuando se deja de cobrar"
+    - La referencia de 3 a 6 meses de gastos esenciales, con un ejemplo de 1.200 € al mes (3.600 a 7.200 €)
+    - Que conviene guardarlo separado, en una cuenta segura y con acceso rápido, empezando por cubrir un mes
+  que_no_cubre:
+    - "No calcula el fondo que necesitas: las cifras son un ejemplo para explicar el mecanismo."
+  para_quien: Para quien vive al día y quiere saber cuánto dinero debería tener apartado antes de necesitarlo.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

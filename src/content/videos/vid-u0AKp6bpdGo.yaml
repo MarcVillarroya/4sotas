@@ -35,3 +35,16 @@ relacionados:
   - vid-i5fe580iFqk
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "Con 1.000 € disponibles, ¿amortizas deuda o inviertes? El vídeo plantea que no hay respuesta automática: depende de lo que cuesta la deuda y de lo que podrías ganar. Pone dos cifras de ejemplo: una tarjeta al 18 % costaría unos 180 € en intereses por mantener 1.000 € un año, e invertir al 7 % daría unos 70 € sin garantía. La regla: deuda cara, primero amortizar; deuda barata, primero calcular."
+  que_cubre:
+    - Por qué no hay una respuesta única entre amortizar deuda e invertir
+    - "El coste de ejemplo: unos 180 € de intereses por 1.000 € al 18 % durante un año"
+    - "La regla de decisión: deuda cara primero, deuda barata después de calcular"
+  que_no_cubre:
+    - "No es una recomendación de inversión: los rendimientos citados no están garantizados."
+  para_quien: Para quien tiene un dinero apartado y no sabe si quitarse deuda antes de invertir.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

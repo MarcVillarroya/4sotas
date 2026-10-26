@@ -198,6 +198,50 @@ const articulos = defineCollection({
     }),
 });
 
+/** Información editorial del vídeo (V2.2-A). Contrato: v2.2/VIDEO-INFO.md */
+const ORIGEN_INFO = ['paquete-publicacion', 'descripcion-oficial', 'transcripcion', 'guion', 'migracion-v2.1'] as const;
+
+const informacionVideo = z
+  .object({
+    estado: z.enum(['completo', 'pendiente']),
+    resumen: z.string().min(140).max(420).optional(),
+    que_cubre: z.array(z.string().min(8).max(160)).max(4).default([]),
+    que_no_cubre: z.array(z.string().min(8).max(160)).max(2).default([]),
+    para_quien: z.string().min(20).max(200).optional(),
+    origen: z.enum(ORIGEN_INFO),
+    /** Qué falta exactamente cuando `estado: pendiente`. Sin este detalle no hay pendiente válido. */
+    faltan: z.array(z.string().min(3).max(140)).default([]),
+    /** Migración V2.1: ficha heredada, publicada antes del estreno de este contrato. */
+    heredado: z.boolean().default(false),
+  })
+  .strict()
+  .superRefine((v, ctx) => {
+    if (v.estado === 'completo') {
+      if (!v.resumen)
+        ctx.addIssue({ code: 'custom', path: ['resumen'], message: 'informacion.estado=completo exige `resumen` (140–420)' });
+      if (v.que_cubre.length < 2)
+        ctx.addIssue({ code: 'custom', path: ['que_cubre'], message: 'informacion.estado=completo exige 2–4 puntos en `que_cubre`' });
+      if (!v.para_quien)
+        ctx.addIssue({ code: 'custom', path: ['para_quien'], message: 'informacion.estado=completo exige `para_quien`' });
+      if (v.faltan.length > 0)
+        ctx.addIssue({ code: 'custom', path: ['faltan'], message: 'una información completa no puede declarar `faltan`' });
+    } else {
+      if (v.faltan.length === 0)
+        ctx.addIssue({ code: 'custom', path: ['faltan'], message: 'informacion.estado=pendiente exige decir qué falta (`faltan`)' });
+      if (v.resumen || v.que_cubre.length || v.para_quien)
+        ctx.addIssue({
+          code: 'custom',
+          path: ['estado'],
+          message: 'informacion.pendiente no puede declarar resumen, que_cubre ni para_quien (no se inventa)',
+        });
+    }
+    if (v.heredado && v.origen !== 'migracion-v2.1')
+      ctx.addIssue({ code: 'custom', path: ['heredado'], message: '`heredado: true` solo se admite con origen=migracion-v2.1' });
+  });
+
+/** Última fecha de publicación heredada de V2.1: después, `heredado` ya no es una excusa. */
+const CORTE_HEREDADO = new Date('2026-11-01T00:00:00Z');
+
 const videos = defineCollection({
   loader: glob({ pattern: '**/*.yaml', base: './src/content/videos', generateId: ({ data }) => String(data.id) }),
   schema: z
@@ -227,6 +271,8 @@ const videos = defineCollection({
       relacionados: z.array(reference('videos')).max(3).default([]),
       transcripcion: z.boolean().default(false),
       capitulos: z.array(z.object({ titulo: z.string().max(120), segundo: z.number().int().min(0) }).strict()).default([]),
+      /** Información editorial explícita: sin ella la ficha no es publicable. */
+      informacion: informacionVideo,
     })
     .strict()
     .superRefine((v, ctx) => {
@@ -240,6 +286,25 @@ const videos = defineCollection({
           code: 'custom',
           path: ['status'],
           message: 'un vídeo no público no puede publicarse en el sitio (aislamiento de no publicados)',
+        });
+      // V2.2-A: publicado exige información completa. La única excepción son las fichas
+      // heredadas de V2.1 (marcadas `heredado: true`, anteriores al corte), y aun así la
+      // conciliación semanal las lista como pendientes.
+      if (v.status === 'publicado' && v.informacion.estado !== 'completo') {
+        const heredadaValida = v.informacion.heredado && (v.publicado ?? new Date()) < CORTE_HEREDADO;
+        if (!heredadaValida)
+          ctx.addIssue({
+            code: 'custom',
+            path: ['informacion', 'estado'],
+            message:
+              'status=publicado exige informacion.estado=completo (solo las fichas heredadas de V2.1, con heredado: true, quedan exentas)',
+          });
+      }
+      if (v.informacion.heredado && (v.publicado ?? new Date()) >= CORTE_HEREDADO)
+        ctx.addIssue({
+          code: 'custom',
+          path: ['informacion', 'heredado'],
+          message: 'informacion.heredado solo vale para fichas publicadas antes de V2.2 (corte 2026-11-01)',
         });
     }),
 });

@@ -1,0 +1,38 @@
+# Pack de ejemplo completo (fixture de tests V2.2-A). No es una pieza real del canal:
+# los ficheros que cita son stubs de test, no vídeo ni miniatura de producción.
+titulo: "Cómo leer una nómina en España (2026): del bruto al neto"
+slug: prueba-como-leer-una-nomina
+descripcion_corta: "Recorre una nómina española de 2026 línea a línea, del salario bruto al neto."
+seo_descripcion: "Nómina de 2026 línea a línea: qué se suma, qué se resta y por qué el neto no es el bruto."
+resumen_editorial: "Abre una nómina de ejemplo de 2026 línea a línea: 24.000 € brutos al año en 12 pagas son 2.000 € al mes, de los que se restan cotizaciones y retención de IRPF hasta llegar al neto. El vídeo explica cada concepto y cierra con comprobaciones para revisar tu propia nómina."
+que_cubre:
+  - "El mapa de la nómina: devengos, deducciones y neto sobre un caso concreto"
+  - "La diferencia entre 12 y 14 pagas y qué implica en el cálculo"
+  - "Las cotizaciones a la Seguridad Social y la retención de IRPF"
+que_no_cubre:
+  - "No es asesoramiento laboral ni fiscal: usa supuestos concretos de un caso de ejemplo."
+para_quien: "Para quien quiere entender una nómina española de arriba abajo sin ser contable."
+temas:
+  - tema-nomina
+keywords:
+  - nomina
+  - irpf
+  - seguridad social
+  - salario neto
+fuentes:
+  - "Agencia Tributaria — retenciones sobre rendimientos del trabajo (Ley 35/2006)."
+disclaimer: "Cifras de ejemplo con supuestos concretos: tu caso puede ser distinto. No es asesoramiento laboral ni fiscal."
+publicar_en: "2026-11-02T18:00:00+01:00"
+miniatura: "tests/fixtures/video-pack/pieza.png"
+video: "tests/fixtures/video-pack/pieza.mp4"
+duracion_iso: PT1M5S
+transcripcion:
+  estado: revisada
+  fuente: "tests/fixtures/video-pack/pieza.srt"
+capitulos:
+  - titulo: "Las tres cifras y el mapa"
+    segundo: 0
+  - titulo: "Doce o catorce pagas"
+    segundo: 65
+  - titulo: "Neto, coste y revisión"
+    segundo: 130

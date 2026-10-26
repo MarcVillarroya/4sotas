@@ -97,6 +97,22 @@ function assertSinBloqueantes(report, status) {
   assert.equal(report.verdict, 'ok');
 }
 
+/**
+ * Información editorial sintética (V2.2-A): los borradores la declaran pendiente y con su lista
+ * de faltas; el vídeo publicado la declara completa. El validador exige el bloque en toda ficha.
+ */
+const INFO_PENDIENTE = { estado: 'pendiente', origen: 'migracion-v2.1', faltan: ['resumen editorial'], heredado: false };
+const INFO_COMPLETA = {
+  estado: 'completo',
+  resumen: 'Resumen sintético de prueba con longitud suficiente para el contrato de información editorial del vídeo.',
+  que_cubre: ['Punto sintético uno del vídeo', 'Punto sintético dos del vídeo'],
+  que_no_cubre: ['Nada: es un fixture sintético del validador'],
+  para_quien: 'Para quien prueba el validador sin contenido real.',
+  origen: 'descripcion-oficial',
+  faltan: [],
+  heredado: false,
+};
+
 const clonar = (files) => JSON.parse(JSON.stringify(files));
 
 function htmlSalida(ruta) {
@@ -171,6 +187,7 @@ function matriz() {
       temas: ['tema-nomina'],
       serie: 'ser-basicos',
       relacionados: [VID_B],
+      informacion: INFO_PENDIENTE,
     },
     'videos/vid-b.json': {
       id: VID_B,
@@ -179,6 +196,7 @@ function matriz() {
       titulo: 'Vídeo sintético dos',
       status: 'borrador',
       temas: ['tema-nomina'],
+      informacion: INFO_PENDIENTE,
     },
     'series/ser-basicos.json': {
       id: 'ser-basicos',
@@ -326,6 +344,7 @@ test('videos publicado que referencia un video en borrador: B-REF-PRIVADA', () =
       privacidad_api: 'public',
       temas: ['tema-publicado'],
       relacionados: [VID_B],
+      informacion: INFO_COMPLETA,
     },
     'videos/vid-b.json': {
       id: VID_B,
@@ -334,6 +353,7 @@ test('videos publicado que referencia un video en borrador: B-REF-PRIVADA', () =
       titulo: 'Vídeo sintético en borrador',
       status: 'borrador',
       temas: ['tema-publicado'],
+      informacion: INFO_PENDIENTE,
     },
     'temas/tema-publicado.json': {
       ...CAMPOS_PUBLICADO,
@@ -539,7 +559,7 @@ for (const [col, id, ruta] of RUTAS_SALIDA) {
   test(`${col}: borrador con index.html en dist bloquea con B-DRAFT-EN-DIST`, () => {
     const file = `${col}/entrada.json`;
     const { status, report } = ejecutar(
-      { [file]: { id, slug: 'prueba', status: 'borrador' } },
+      { [file]: { id, slug: 'prueba', status: 'borrador', ...(col === 'videos' ? { informacion: INFO_PENDIENTE } : {}) } },
       { [`${ruta.slice(1)}index.html`]: htmlSalida(ruta) },
     );
     assert.equal(status, 1);
@@ -554,7 +574,7 @@ for (const [col, id, ruta] of RUTAS_SALIDA) {
 
   test(`${col}: borrador sin página propia en dist no bloquea`, () => {
     const { status, report } = ejecutar(
-      { [`${col}/entrada.json`]: { id, slug: 'prueba', status: 'borrador' } },
+      { [`${col}/entrada.json`]: { id, slug: 'prueba', status: 'borrador', ...(col === 'videos' ? { informacion: INFO_PENDIENTE } : {}) } },
       { 'oros/temas/prueba-distinta/index.html': htmlSalida('/oros/temas/prueba-distinta/') },
     );
     assertSinBloqueantes(report, status);
@@ -567,7 +587,7 @@ for (const [col, id, ruta] of RUTAS_SALIDA) {
       data.temas = ['tema-publicado'];
       files['temas/publicado.json'] = { ...CAMPOS_PUBLICADO, id: 'tema-publicado', slug: 'publicado' };
     }
-    if (col === 'videos') Object.assign(data, { youtube_id: 'AAAAAAAAAAA', estado_youtube: 'publico' });
+    if (col === 'videos') Object.assign(data, { youtube_id: 'AAAAAAAAAAA', estado_youtube: 'publico', informacion: INFO_COMPLETA });
     const { status, report } = ejecutar(files, { [`${ruta.slice(1)}index.html`]: htmlSalida(ruta) });
     assertSinBloqueantes(report, status);
   });

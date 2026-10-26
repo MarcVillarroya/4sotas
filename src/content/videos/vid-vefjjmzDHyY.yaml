@@ -33,3 +33,16 @@ temas:
 relacionados: []
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "Pagas 10 € con tarjeta, pero el comercio no llega a cobrarlos: en cada pago juegan tu banco, el banco del comercio y la red de la tarjeta, y los tres se llevan su parte. El vídeo explica la tasa de intercambio y su tope legal en Europa (0,2 % en débito y 0,3 % en crédito), por qué sumada a millones de tarjetas deja de ser poca cosa, y qué hay detrás del «gratis» del cashback y los puntos."
+  que_cubre:
+    - "Quién cobra en cada pago con tarjeta: tu banco, el del comercio y la red"
+    - "La tasa de intercambio y su tope legal en Europa: 0,2 % en débito y 0,3 % en crédito"
+    - "Por qué la tarjeta parece gratis: cashback, puntos y el interés del crédito"
+  que_no_cubre:
+    - No compara tarjetas ni calcula las comisiones de tu banco concreto.
+  para_quien: Para quien usa la tarjeta a diario y quiere saber qué pasa con el dinero hasta que llega al comercio.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

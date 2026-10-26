@@ -34,4 +34,30 @@ relacionados:
   - vid-LarTT_rvCGM
   - vid-O1V9_of7g1w
 transcripcion: false
-capitulos: []
+capitulos:
+  - titulo: Las tres cifras y el mapa
+    segundo: 0
+  - titulo: Doce o catorce pagas
+    segundo: 117
+  - titulo: Lo que suma
+    segundo: 182
+  - titulo: Seguridad Social
+    segundo: 249
+  - titulo: IRPF
+    segundo: 339
+  - titulo: Neto, coste y revisión
+    segundo: 420
+informacion:
+  estado: completo
+  resumen: "Abre una nómina de ejemplo de 2026 línea a línea, desde cero y sin jerga: 24.000 € brutos al año en 12 pagas son 2.000 € al mes, de los que se restan 130 € de cotizaciones (6,50 %) y 270,20 € de retención de IRPF (13,51 %), hasta un neto de 1.599,80 €. Los 400,20 € de diferencia tienen explicación y el vídeo cierra con cinco comprobaciones para revisar tu propia nómina."
+  que_cubre:
+    - "El mapa de la nómina: devengos, deducciones y neto sobre un caso concreto de 2026"
+    - La diferencia entre 12 y 14 pagas y qué implica en el cálculo
+    - Las cotizaciones a la Seguridad Social y la retención de IRPF, cifra a cifra
+    - Cinco comprobaciones para revisar tu propia nómina al final del vídeo
+  que_no_cubre:
+    - "No es asesoramiento laboral ni fiscal: usa supuestos concretos (soltero/a, sin hijos, menor de 65 años)."
+  para_quien: Para quien quiere entender una nómina española de arriba abajo sin ser contable.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

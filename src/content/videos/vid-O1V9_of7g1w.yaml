@@ -36,3 +36,15 @@ relacionados:
   - vid-SrvXlAVnDog
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "¿Qué es la retención de IRPF que aparece en la nómina? El vídeo explica en un minuto que no es otro impuesto: es un pago por adelantado de tu IRPF que se regulariza en la declaración, de modo que si se retuvo de más te devuelven y si faltó pagas la diferencia. Cita la norma aplicada: Ley 35/2006, artículo 99, y RIRPF, artículos 83 a 88."
+  que_cubre:
+    - Qué es la retención de IRPF de la nómina y por qué no es el IRPF final del año
+    - "Qué ocurre en la declaración: si sobra, devuelven; si falta, se paga la diferencia"
+  que_no_cubre:
+    - "No calcula tu retención: no entra en los tramos ni en tus circunstancias personales."
+  para_quien: Para quien ve la línea de IRPF en su nómina y no sabe si ese dinero se pierde.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

@@ -212,6 +212,35 @@ for (const col of COLECCIONES) {
       if (d.estado_youtube !== 'publico') B('B-VIDEO-NO-PUBLICO', e.file, `vídeo publicado en el sitio con estado_youtube=${d.estado_youtube}`);
       if (d.id !== `vid-${d.youtube_id}`) B('B-VIDEO-ID', e.file, 'id distinto de vid-<youtube_id>');
     }
+    // V2.2-A · información editorial del vídeo (contrato: v2.2/VIDEO-INFO.md)
+    if (col === 'videos') {
+      const info = d.informacion;
+      if (!info || typeof info !== 'object') B('B-VIDEO-INFO-AUSENTE', e.file, 'la ficha de vídeo no declara `informacion`');
+      else {
+        if (!['completo', 'pendiente'].includes(info.estado))
+          B('B-VIDEO-INFO-ESTADO', e.file, `informacion.estado debe ser completo|pendiente (es "${info.estado}")`);
+        if (st === 'publicado' && info.estado !== 'completo' && !info.heredado)
+          B('B-VIDEO-INFO-INCOMPLETA', e.file, 'vídeo publicado sin información editorial completa (y sin marcar como heredada)');
+        if (info.estado === 'completo') {
+          if (!info.resumen) B('B-VIDEO-INFO-RESUMEN', e.file, 'informacion completa sin `resumen`');
+          if (!Array.isArray(info.que_cubre) || info.que_cubre.length < 2)
+            B('B-VIDEO-INFO-PUNTOS', e.file, 'informacion completa exige 2–4 puntos en `que_cubre`');
+          if (!info.para_quien) B('B-VIDEO-INFO-PARAQUIEN', e.file, 'informacion completa sin `para_quien`');
+        } else {
+          if (!Array.isArray(info.faltan) || info.faltan.length === 0)
+            B('B-VIDEO-INFO-SIN-FALTAS', e.file, 'informacion pendiente sin decir qué falta (`faltan`)');
+          else W('W-VIDEO-INFO-PENDIENTE', e.file, `información editorial pendiente: ${info.faltan.join(' · ')}`);
+          if (info.resumen || (info.que_cubre ?? []).length)
+            B('B-VIDEO-INFO-INVENTADA', e.file, 'informacion pendiente con resumen o puntos: no se inventa lo que no hay');
+        }
+      }
+      if (Array.isArray(d.capitulos) && d.capitulos.length > 0) {
+        if (d.capitulos[0].segundo !== 0) B('B-VIDEO-CAPITULOS-CERO', e.file, 'el primer capítulo debe empezar en 0 s');
+        for (let i = 1; i < d.capitulos.length; i++)
+          if (d.capitulos[i].segundo - d.capitulos[i - 1].segundo < 10)
+            B('B-VIDEO-CAPITULOS-SALTO', e.file, `capítulos con menos de 10 s de diferencia en "${d.capitulos[i].titulo}"`);
+      }
+    }
     if (col === 'herramientas' && st === 'publicado' && d.estado_implementacion === 'no-implementada')
       B('B-HERRAMIENTA-FANTASMA', e.file, 'herramienta anunciada sin implementación');
   }

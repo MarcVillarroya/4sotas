@@ -32,4 +32,32 @@ temas:
   - tema-burbujas
 relacionados: []
 transcripcion: false
-capitulos: []
+capitulos:
+  - titulo: El mundo que parecía funcionar
+    segundo: 0
+  - titulo: La máquina que multiplicaba el riesgo
+    segundo: 112
+  - titulo: Cuando el sistema comienza a romperse
+    segundo: 252
+  - titulo: España tenía su propia bomba
+    segundo: 368
+  - titulo: El precio que pagó España
+    segundo: 509
+  - titulo: Rescates, factura y consecuencias
+    segundo: 634
+  - titulo: Lo que 2008 nos enseñó
+    segundo: 736
+informacion:
+  estado: completo
+  resumen: "En septiembre de 2008 Lehman Brothers se declaró en quiebra y parecía un problema de Wall Street, lejos de España; años después superó los seis millones de parados. El documental sigue el hilo: el crédito barato y las hipotecas subprime, la burbuja inmobiliaria española, los rescates y la factura final, hasta lo que dejó enseñado. Con datos de la Reserva Federal, el INE, el Banco de España, el FROB, Sareb y el MEDE."
+  que_cubre:
+    - "Cómo se construyó la crisis: crédito barato y empaquetado del riesgo"
+    - Cómo viajó la crisis de Wall Street a la banca y al empleo en España
+    - La burbuja inmobiliaria española, los rescates y la factura final
+    - Lo que dejó enseñado 2008, con datos de la Reserva Federal, el INE y el Banco de España
+  que_no_cubre:
+    - "No es asesoramiento financiero ni de inversión: es un documental con cifras de fuentes públicas."
+  para_quien: Para quien quiere entender de dónde vino la crisis de 2008 en España sin tecnicismos.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

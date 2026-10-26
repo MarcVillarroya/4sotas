@@ -22,6 +22,8 @@ Thumbs.db
 
 # Informes de validación locales (el de release se commitea a mano)
 qa/*.local.json
+# Directorios temporales de tests (se crean y borran en cada ejecución)
+qa/tmp-*/
 
 # Cuerpos descargados de las fuentes citadas: material de terceros, nunca al repo
 qa/f1-revision/cache/

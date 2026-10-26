@@ -1,0 +1,22 @@
+# Pack incompleto a propósito (fixture de tests V2.2-A): le faltan `resumen_editorial`,
+# `para_quien`, `publicar_en` y solo trae un punto en `que_cubre`.
+titulo: "Pieza sin información editorial"
+slug: prueba-pack-incompleto
+descripcion_corta: "Pieza corta de prueba sin la información editorial que exige el contrato."
+seo_descripcion: "Pieza de prueba del contrato editorial de vídeo, sin resumen ni puntos."
+que_cubre:
+  - "Solo un punto, cuando el contrato exige entre dos y cuatro"
+que_no_cubre:
+  - "Tampoco declara para quién es ni cuándo se publica."
+temas:
+  - tema-ahorro
+keywords:
+  - prueba
+  - fixture
+  - contrato
+fuentes:
+  - "Fixture de tests, sin fuentes reales."
+disclaimer: "Fixture de pruebas: no describe ningún vídeo real del canal."
+miniatura: "tests/fixtures/video-pack/pieza.png"
+video: "tests/fixtures/video-pack/pieza.mp4"
+guion: "tests/fixtures/video-pack/pieza.srt"

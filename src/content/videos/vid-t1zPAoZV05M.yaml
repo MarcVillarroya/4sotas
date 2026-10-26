@@ -34,3 +34,16 @@ relacionados:
   - vid-6dp6Y6nTreY
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "Un café, un delivery, una app que se renueva sola: parece calderilla hasta que se suma. El vídeo distingue los gastos hormiga (pequeños y frecuentes) de los fantasma (cargos que se renuevan solos) y suma un ejemplo hipotético: 10 cafés al mes a 2,50 € son 300 € al año, 6 pedidos con recargos 360 € y una suscripción olvidada 80 €, en total 740 €. Propone revisar los últimos tres meses."
+  que_cubre:
+    - La diferencia entre gastos hormiga y gastos fantasma
+    - "La suma del ejemplo: 300 € de cafés, 360 € de recargos de delivery y 80 € de suscripción, 740 € al año"
+    - Una revisión práctica de los últimos tres meses para ver qué cargos se repiten
+  que_no_cubre:
+    - "No dice en qué gastar: las cantidades son un ejemplo y tu cuenta puede salir distinta."
+  para_quien: Para quien no entiende por qué ahorra poco aunque no hace compras grandes.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

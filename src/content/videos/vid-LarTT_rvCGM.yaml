@@ -35,3 +35,16 @@ relacionados:
   - vid-SrvXlAVnDog
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "El bruto es lo que firma tu empresa; el neto es lo que entra en tu cuenta. El vídeo explica por qué de 2.000 € brutos quedan 1.630 € en el ejemplo: la Seguridad Social se lleva alrededor del 6,5 % del bruto y el IRPF se retiene después, un 12 % sobre la base tras cotizar. Aclara que en una nómina real esas cifras dependen del salario y de la situación personal."
+  que_cubre:
+    - La diferencia entre bruto y neto y qué se resta por el camino
+    - "El orden del cálculo: cotización a la Seguridad Social y después retención de IRPF sobre la base"
+    - Que el 12 % de retención del ejemplo no es una regla general
+  que_no_cubre:
+    - "No calcula tu nómina: el porcentaje de retención depende de tu salario y tu situación personal."
+  para_quien: Para quien ha firmado una oferta y no entiende por qué el neto es bastante menor que el bruto.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

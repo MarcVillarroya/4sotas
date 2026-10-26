@@ -35,3 +35,16 @@ relacionados:
   - vid-O1V9_of7g1w
 transcripcion: false
 capitulos: []
+informacion:
+  estado: completo
+  resumen: "Subir de tramo de IRPF no te hace ganar menos. Con un ejemplo de 23.500 € brutos que pasan a 24.500 €, el vídeo desglosa qué ocurre con esa subida: 253 € van al IRPF y 65 € a la Seguridad Social, así que quedan 682 €. El mecanismo son escalones: cada parte del sueldo paga el porcentaje de su tramo, no todo al tipo más alto. Fuente: Agencia Tributaria, IRPF 2026."
+  que_cubre:
+    - Por qué subir de tramo de IRPF no resta dinero en conjunto
+    - "El desglose de una subida de 1.000 €: 253 € de IRPF, 65 € de Seguridad Social y 682 € netos"
+    - Que los tramos son escalones y solo la parte que supera el escalón paga el tipo mayor
+  que_no_cubre:
+    - No calcula tus tramos concretos ni la retención que aparece en tu nómina.
+  para_quien: Para quien ha rechazado un aumento por miedo a cambiar de tramo de IRPF.
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

@@ -91,6 +91,10 @@ const etiquetaFormato = formatoLegible(video.data.duracion_iso);
 const miniLocal = video.data.miniatura_local ?? `/assets/videos/${video.data.youtube_id}.webp`;
 const insertable = video.data.insercion !== 'deshabilitada';
 
+/** Información editorial de la ficha (V2.2-A): completa o declarada pendiente, nunca inventada. */
+const info = video.data.informacion;
+const infoCompleta = info.estado === 'completo';
+
 /** Objeto temático del primer tema del vídeo: ilustra de qué va sin repetir el personaje en 11 fichas. */
 const iconoTema = temasPropios[0] ? iconoDeCluster(temasPropios[0].data.cluster) : null;
 
@@ -188,11 +192,37 @@ const jsonLd = grafo([
   <div class="wrap v2-transcript">
     <section id="contexto" aria-labelledby="contexto-titulo">
       <h2 id="contexto-titulo">De qué trata.</h2>
-      <p>{video.data.descripcion_corta}</p>
+      <p>{infoCompleta && info.resumen ? info.resumen : video.data.descripcion_corta}</p>
+      {
+        infoCompleta && info.que_cubre.length > 0 && (
+          <div class="stack">
+            <h3>Qué cubre este vídeo</h3>
+            <ul class="v2-meta">
+              {info.que_cubre.map((punto) => (
+                <li>{punto}</li>
+              ))}
+            </ul>
+            {info.que_no_cubre.length > 0 && (
+              <p class="v2-meta">
+                <strong>Qué no cubre.</strong> {info.que_no_cubre.join(' ')}
+              </p>
+            )}
+            {info.para_quien && <p class="v2-meta">Para quién: {info.para_quien}</p>}
+          </div>
+        )
+      }
       <p class="v2-meta">
         Este resumen cuenta de qué va el vídeo, no lo que dice cada minuto. El título, la duración y la fecha son los
         del vídeo publicado en el canal.
       </p>
+      {
+        !infoCompleta && (
+          <p class="honest">
+            Esta ficha aún no tiene resumen editorial verificado: falta{' '}
+            {info.faltan.length > 0 ? info.faltan.join(', ') : 'la información editorial'}. Preferimos decirlo a inventarlo.
+          </p>
+        )
+      }
       {
         video.data.transcripcion ? (
           <p>La transcripción revisada está más abajo, en esta misma página.</p>
