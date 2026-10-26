@@ -11,14 +11,16 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo de Sota de Oros sobre cómo leer una nómina en España en 2026: del bruto al neto, concepto por concepto."
+  descripcion: "Vídeo de Sota de Oros sobre cómo leer una nómina en España en
+    2026: del bruto al neto, concepto por concepto."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: M9EhU06FlUA
 slug: como-leer-una-nomina
 titulo: "Cómo leer una nómina en España (2026): del bruto al neto"
-descripcion_corta: "Pieza de 9 min 50 s del canal Sota de Oros: recorre una nómina española de 2026 línea a línea, del salario bruto al neto."
+descripcion_corta: "Pieza de 9 min 50 s del canal Sota de Oros: recorre una
+  nómina española de 2026 línea a línea, del salario bruto al neto."
 publicado_en: 2026-10-11
 duracion_iso: PT9M50S
 miniatura: https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg
@@ -26,7 +28,7 @@ miniatura_local: /assets/videos/M9EhU06FlUA.webp
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26
-vistas_al_verificar: 59
+vistas_al_verificar: 60
 idioma: es
 temas:
   - tema-nomina
@@ -49,15 +51,24 @@ capitulos:
     segundo: 420
 informacion:
   estado: completo
-  resumen: "Abre una nómina de ejemplo de 2026 línea a línea, desde cero y sin jerga: 24.000 € brutos al año en 12 pagas son 2.000 € al mes, de los que se restan 130 € de cotizaciones (6,50 %) y 270,20 € de retención de IRPF (13,51 %), hasta un neto de 1.599,80 €. Los 400,20 € de diferencia tienen explicación y el vídeo cierra con cinco comprobaciones para revisar tu propia nómina."
+  resumen: "Abre una nómina de ejemplo de 2026 línea a línea, desde cero y sin
+    jerga: 24.000 € brutos al año en 12 pagas son 2.000 € al mes, de los que se
+    restan 130 € de cotizaciones (6,50 %) y 270,20 € de retención de IRPF (13,51
+    %), hasta un neto de 1.599,80 €. Los 400,20 € de diferencia tienen
+    explicación y el vídeo cierra con cinco comprobaciones para revisar tu
+    propia nómina."
   que_cubre:
-    - "El mapa de la nómina: devengos, deducciones y neto sobre un caso concreto de 2026"
+    - "El mapa de la nómina: devengos, deducciones y neto sobre un caso concreto
+      de 2026"
     - La diferencia entre 12 y 14 pagas y qué implica en el cálculo
-    - Las cotizaciones a la Seguridad Social y la retención de IRPF, cifra a cifra
+    - Las cotizaciones a la Seguridad Social y la retención de IRPF, cifra a
+      cifra
     - Cinco comprobaciones para revisar tu propia nómina al final del vídeo
   que_no_cubre:
-    - "No es asesoramiento laboral ni fiscal: usa supuestos concretos (soltero/a, sin hijos, menor de 65 años)."
-  para_quien: Para quien quiere entender una nómina española de arriba abajo sin ser contable.
+    - "No es asesoramiento laboral ni fiscal: usa supuestos concretos
+      (soltero/a, sin hijos, menor de 65 años)."
+  para_quien: Para quien quiere entender una nómina española de arriba abajo sin
+    ser contable.
   origen: descripcion-oficial
   faltan: []
   heredado: false

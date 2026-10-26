@@ -11,14 +11,16 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo corto de Sota de Oros: el S&P 500 pondera por capitalización, así que 10 posiciones concentran cerca del 40 % del índice."
+  descripcion: "Vídeo corto de Sota de Oros: el S&P 500 pondera por
+    capitalización, así que 10 posiciones concentran cerca del 40 % del índice."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: DzH02NfDqM4
 slug: sp500-4-de-cada-10-euros-a-10-posiciones
 titulo: "S&P 500: 4 de cada 10 € van a 10 posiciones"
-descripcion_corta: "Pieza corta de 52 s: comprar el S&P 500 no reparte el dinero a partes iguales y 10 posiciones concentran cerca del 40 % del índice."
+descripcion_corta: "Pieza corta de 52 s: comprar el S&P 500 no reparte el dinero
+  a partes iguales y 10 posiciones concentran cerca del 40 % del índice."
 publicado_en: 2026-10-26
 duracion_iso: PT52S
 miniatura: https://i.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg
@@ -27,7 +29,7 @@ insercion: deshabilitada
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26
-vistas_al_verificar: 221
+vistas_al_verificar: 224
 idioma: es
 temas:
   - tema-inversion
@@ -36,14 +38,24 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Comprar el S&P 500 no reparte el dinero a partes iguales entre 500 empresas: el índice pondera por capitalización. De 1.000 €, unos 391 irían a las 10 mayores posiciones y unos 609 al resto; NVIDIA sola pesa más del 8 %. Por eso, cuando una de esas gigantes cae, arrastra al índice mucho más que cualquier empresa pequeña. Cierra con la versión equiponderada, donde cada compañía pesa un 0,2 %."
+  resumen: "Comprar el S&P 500 no reparte el dinero a partes iguales entre 500
+    empresas: el índice pondera por capitalización. De 1.000 €, unos 391 irían a
+    las 10 mayores posiciones y unos 609 al resto; NVIDIA sola pesa más del 8 %.
+    Por eso, cuando una de esas gigantes cae, arrastra al índice mucho más que
+    cualquier empresa pequeña. Cierra con la versión equiponderada, donde cada
+    compañía pesa un 0,2 %."
   que_cubre:
-    - "Por qué el índice no reparte a partes iguales: pondera por el tamaño de cada empresa"
-    - "El reparto en euros: unos 391 € de 1.000 € a las 10 mayores posiciones, cerca del 40 % del índice"
-    - El contraste con la versión equiponderada, donde cada compañía pesa un 0,2 %
+    - "Por qué el índice no reparte a partes iguales: pondera por el tamaño de
+      cada empresa"
+    - "El reparto en euros: unos 391 € de 1.000 € a las 10 mayores posiciones,
+      cerca del 40 % del índice"
+    - El contraste con la versión equiponderada, donde cada compañía pesa un 0,2
+      %
   que_no_cubre:
-    - "No es una recomendación de compra ni una previsión de rentabilidad: las equivalencias en euros son ilustrativas."
-  para_quien: Para quien invierte en fondos indexados y cree que comprar el S&P 500 ya le diversifica del todo.
+    - "No es una recomendación de compra ni una previsión de rentabilidad: las
+      equivalencias en euros son ilustrativas."
+  para_quien: Para quien invierte en fondos indexados y cree que comprar el S&P
+    500 ya le diversifica del todo.
   origen: paquete-publicacion
   faltan: []
   heredado: false

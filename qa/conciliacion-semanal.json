@@ -1,0 +1,58 @@
+{
+  "hoy": "2026-10-26",
+  "cambios": [
+    {
+      "id": "vid-3xz04lRAW0k",
+      "archivo": "vid-3xz04lRAW0k.yaml",
+      "parches": {
+        "vistas_al_verificar": 257
+      }
+    },
+    {
+      "id": "vid-6dp6Y6nTreY",
+      "archivo": "vid-6dp6Y6nTreY.yaml",
+      "parches": {
+        "vistas_al_verificar": 325
+      }
+    },
+    {
+      "id": "vid-DzH02NfDqM4",
+      "archivo": "vid-DzH02NfDqM4.yaml",
+      "parches": {
+        "vistas_al_verificar": 224
+      }
+    },
+    {
+      "id": "vid-M9EhU06FlUA",
+      "archivo": "vid-M9EhU06FlUA.yaml",
+      "parches": {
+        "vistas_al_verificar": 60
+      }
+    },
+    {
+      "id": "vid-O1V9_of7g1w",
+      "archivo": "vid-O1V9_of7g1w.yaml",
+      "parches": {
+        "vistas_al_verificar": 229
+      }
+    }
+  ],
+  "sinFicha": [
+    {
+      "youtube_id": "LL1EJttJPrs",
+      "titulo": "GTA VI: Cómo un videojuego de 1997 se convirtió en un imperio multimillonario",
+      "publicado_en": "2026-10-25"
+    }
+  ],
+  "sinVideoEnCanal": [],
+  "pendientes": [],
+  "avisos": [],
+  "aplicado": true,
+  "escritos": [
+    "vid-3xz04lRAW0k.yaml",
+    "vid-6dp6Y6nTreY.yaml",
+    "vid-DzH02NfDqM4.yaml",
+    "vid-M9EhU06FlUA.yaml",
+    "vid-O1V9_of7g1w.yaml"
+  ]
+}

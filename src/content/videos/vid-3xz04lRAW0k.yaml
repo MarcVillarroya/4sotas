@@ -11,14 +11,16 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo de Sota de Oros sobre la crisis de 2008 en España: el ciclo del crédito, el ladrillo y las consecuencias."
+  descripcion: "Vídeo de Sota de Oros sobre la crisis de 2008 en España: el ciclo
+    del crédito, el ladrillo y las consecuencias."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: 3xz04lRAW0k
 slug: crisis-de-2008-espana
 titulo: "La crisis de 2008: cómo llegó a España"
-descripcion_corta: "Pieza de 13 min 33 s: cómo llegó a España la crisis de 2008, desde el crédito fácil hasta el ajuste del empleo."
+descripcion_corta: "Pieza de 13 min 33 s: cómo llegó a España la crisis de 2008,
+  desde el crédito fácil hasta el ajuste del empleo."
 publicado_en: 2026-10-18
 duracion_iso: PT13M33S
 miniatura: https://i.ytimg.com/vi/3xz04lRAW0k/maxresdefault.jpg
@@ -26,7 +28,7 @@ miniatura_local: /assets/videos/3xz04lRAW0k.webp
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26
-vistas_al_verificar: 253
+vistas_al_verificar: 257
 idioma: es
 temas:
   - tema-burbujas
@@ -49,15 +51,23 @@ capitulos:
     segundo: 736
 informacion:
   estado: completo
-  resumen: "En septiembre de 2008 Lehman Brothers se declaró en quiebra y parecía un problema de Wall Street, lejos de España; años después superó los seis millones de parados. El documental sigue el hilo: el crédito barato y las hipotecas subprime, la burbuja inmobiliaria española, los rescates y la factura final, hasta lo que dejó enseñado. Con datos de la Reserva Federal, el INE, el Banco de España, el FROB, Sareb y el MEDE."
+  resumen: "En septiembre de 2008 Lehman Brothers se declaró en quiebra y parecía
+    un problema de Wall Street, lejos de España; años después superó los seis
+    millones de parados. El documental sigue el hilo: el crédito barato y las
+    hipotecas subprime, la burbuja inmobiliaria española, los rescates y la
+    factura final, hasta lo que dejó enseñado. Con datos de la Reserva Federal,
+    el INE, el Banco de España, el FROB, Sareb y el MEDE."
   que_cubre:
     - "Cómo se construyó la crisis: crédito barato y empaquetado del riesgo"
     - Cómo viajó la crisis de Wall Street a la banca y al empleo en España
     - La burbuja inmobiliaria española, los rescates y la factura final
-    - Lo que dejó enseñado 2008, con datos de la Reserva Federal, el INE y el Banco de España
+    - Lo que dejó enseñado 2008, con datos de la Reserva Federal, el INE y el
+      Banco de España
   que_no_cubre:
-    - "No es asesoramiento financiero ni de inversión: es un documental con cifras de fuentes públicas."
-  para_quien: Para quien quiere entender de dónde vino la crisis de 2008 en España sin tecnicismos.
+    - "No es asesoramiento financiero ni de inversión: es un documental con
+      cifras de fuentes públicas."
+  para_quien: Para quien quiere entender de dónde vino la crisis de 2008 en España
+    sin tecnicismos.
   origen: descripcion-oficial
   faltan: []
   heredado: false

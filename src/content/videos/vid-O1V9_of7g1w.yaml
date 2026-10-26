@@ -11,14 +11,17 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo corto de Sota de Oros sobre la retención de IRPF en la nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota final."
+  descripcion: "Vídeo corto de Sota de Oros sobre la retención de IRPF en la
+    nómina: qué se retiene, quién lo fija y por qué no coincide con la cuota
+    final."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: O1V9_of7g1w
 slug: irpf-en-la-nomina
 titulo: "IRPF en la nómina: qué te retienen y por qué"
-descripcion_corta: "Pieza corta de 1 minuto: qué es la retención de IRPF que aparece en la nómina y por qué su importe no es el IRPF final del año."
+descripcion_corta: "Pieza corta de 1 minuto: qué es la retención de IRPF que
+  aparece en la nómina y por qué su importe no es el IRPF final del año."
 publicado_en: 2026-10-05
 duracion_iso: PT1M
 miniatura: https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg
@@ -27,7 +30,7 @@ insercion: deshabilitada
 estado_youtube: publico
 privacidad_api: public
 verificado_en: 2026-10-26
-vistas_al_verificar: 228
+vistas_al_verificar: 229
 idioma: es
 temas:
   - tema-nomina
@@ -38,13 +41,21 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "¿Qué es la retención de IRPF que aparece en la nómina? El vídeo explica en un minuto que no es otro impuesto: es un pago por adelantado de tu IRPF que se regulariza en la declaración, de modo que si se retuvo de más te devuelven y si faltó pagas la diferencia. Cita la norma aplicada: Ley 35/2006, artículo 99, y RIRPF, artículos 83 a 88."
+  resumen: "¿Qué es la retención de IRPF que aparece en la nómina? El vídeo
+    explica en un minuto que no es otro impuesto: es un pago por adelantado de
+    tu IRPF que se regulariza en la declaración, de modo que si se retuvo de más
+    te devuelven y si faltó pagas la diferencia. Cita la norma aplicada: Ley
+    35/2006, artículo 99, y RIRPF, artículos 83 a 88."
   que_cubre:
-    - Qué es la retención de IRPF de la nómina y por qué no es el IRPF final del año
-    - "Qué ocurre en la declaración: si sobra, devuelven; si falta, se paga la diferencia"
+    - Qué es la retención de IRPF de la nómina y por qué no es el IRPF final del
+      año
+    - "Qué ocurre en la declaración: si sobra, devuelven; si falta, se paga la
+      diferencia"
   que_no_cubre:
-    - "No calcula tu retención: no entra en los tramos ni en tus circunstancias personales."
-  para_quien: Para quien ve la línea de IRPF en su nómina y no sabe si ese dinero se pierde.
+    - "No calcula tu retención: no entra en los tramos ni en tus circunstancias
+      personales."
+  para_quien: Para quien ve la línea de IRPF en su nómina y no sabe si ese dinero
+    se pierde.
   origen: descripcion-oficial
   faltan: []
   heredado: false
