@@ -28,3 +28,6 @@ qa/f1-revision/cache/
 
 # capturas de QA (pesadas; se regeneran con qa/f1-integral/browser-qa.mjs)
 qa/**/evidence*/
+
+# Dependencias locales (nunca en el repo)
+node_modules
