@@ -11,7 +11,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FacadeVideo from '../../../components/FacadeVideo.astro';
-import { MARCA, SECCION, embedYouTube, ruta, url, verEnYouTube } from '../../../lib/rutas.ts';
+import { MARCA, SECCION, embedYouTube, ruta, url } from '../../../lib/rutas.ts';
 import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { grafo, sitioWeb, videoObjeto } from '../../../lib/jsonld.ts';
@@ -109,7 +109,6 @@ const jsonLd = grafo([
     subidoISO: fechaISO(video.data.publicado_en),
     duracionISO: video.data.duracion_iso,
     embedUrl: embedYouTube(video.data.youtube_id),
-    contentUrl: verEnYouTube(video.data.youtube_id),
     revisadoISO: video.data.revisado_factual ? fechaISO(video.data.revisado_factual) : undefined,
   }),
   jsonld,

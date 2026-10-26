@@ -1,8 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import { url } from '../lib/rutas.ts';
+import { grafo, paginaWeb, sitioWeb } from '../lib/jsonld.ts';
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const descripcion = '4 Sotas es un proyecto editorial independiente para entender la economía cotidiana en España antes de decidir.';
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({ url: canonica, nombre: 'Sobre 4 Sotas', descripcion, tipo: 'AboutPage' }),
+]);
 ---
-<Base titulo="Sobre 4 Sotas" descripcion="4 Sotas es un proyecto editorial independiente para entender la economía cotidiana en España antes de decidir.">
+<Base titulo="Sobre 4 Sotas" descripcion={descripcion} jsonLd={jsonLd}>
   <article class="wrap institutional"><p class="eyebrow">El proyecto</p><h1>Cuatro sotas, una baraja.</h1>
     <p>4 Sotas es un proyecto editorial independiente sobre la economía cotidiana en España. La baraja tiene cuatro palos; el primero que abrimos es Oros, el dinero de cada día.</p>
     <p>Escribimos para gente que quiere entender antes de decidir: qué te resta la nómina, cómo funciona un tramo de IRPF, qué le pasa a tu dinero con la inflación, en qué orden se resuelven los primeros ahorros.</p>

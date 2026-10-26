@@ -1,8 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import { CANAL_YOUTUBE } from '../lib/rutas.ts';
+import { grafo, paginaWeb, sitioWeb } from '../lib/jsonld.ts';
+
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const origen = new URL(canonica).origin;
+const descripcion = 'Sin analítica, cuentas ni cookies propias. Explicamos las miniaturas externas y qué ocurre al cargar el reproductor de YouTube.';
+const jsonLd = grafo([
+  sitioWeb(origen),
+  paginaWeb({ url: canonica, nombre: 'Privacidad', descripcion, tipo: 'WebPage' }),
+]);
 ---
-<Base titulo="Privacidad" descripcion="Sin analítica, cuentas ni cookies propias. Explicamos las miniaturas externas y qué ocurre al cargar el reproductor de YouTube.">
+<Base titulo="Privacidad" descripcion={descripcion} jsonLd={jsonLd}>
   <article class="wrap institutional"><p class="eyebrow">El proyecto</p><h1>Privacidad.</h1>
     <h2>Qué hace este sitio.</h2><p>Servimos páginas estáticas, sin analítica, cuentas ni cookies propias. La calculadora trabaja en tu navegador: no envía ni guarda las cifras que introduces. Las tipografías se sirven desde este mismo sitio.</p>
     <h2>Miniaturas y conexiones externas.</h2><p>Algunas miniaturas se descargan de los servidores de imágenes de YouTube al mostrarse. Esa petición comunica a ese servicio datos de conexión, como tu dirección IP. No afirmamos que todas las páginas estén libres de conexiones externas antes de pulsar.</p>
