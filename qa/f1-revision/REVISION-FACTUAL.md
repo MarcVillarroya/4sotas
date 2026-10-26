@@ -103,7 +103,7 @@ o añadir otro autor y cambiar `autorias.revisor` en las 11 entradas de sensibil
 ## 8. Cadena re-ejecutada (26-oct-2026)
 
 ```
-npm run check            → 0 errors, 0 warnings, 0 hints (51 files)
+npm run check            → 0 errors, 0 warnings, 0 hints (52 files)
 npm test                 → 116 tests, 116 pass, 0 fail
 npm run build            → 47 páginas
 npm run validate         → ok · 0 bloqueantes · 1 aviso (W-VIDEO-SIN-FICHA, intencional)
@@ -115,3 +115,12 @@ npm run publicacion:pendiente → contenido 45 · publicadas 39 · sin publicar 
 
 Catálogos y `llms.txt` coherentes con lo publicado: `topics.json` 7 · `catalog.json` (guías) 8 ·
 `videos.json` 11 · `tools.json` 1 · glosario 12 → **39**; `llms.txt` declara 7 / 8 / 11 / 12 / 1.
+
+> El `npm run build` de esta tabla se ejecutó con Node 26.7.0. Con el Node del sistema
+> (`/usr/bin/node` 22.23.3) Astro aborta: exige `>=22.23.4`. Ver `QA-INDEPENDIENTE.md` §6.
+
+## 9. Verificación independiente
+
+`qa/f1-revision/QA-INDEPENDIENTE.md`: segunda pasada de QA sobre esta misma revisión (cadena
+re-ejecutada, catálogos contra HTML, y verificación en vivo de las cifras de Nasdaq y S&P 500 que
+no se pudieron cachear). Veredicto: PASS.
