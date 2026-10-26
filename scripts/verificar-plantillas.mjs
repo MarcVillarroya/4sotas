@@ -287,11 +287,26 @@ if (!fs.existsSync(FIXTURES)) {
       if (!art.author?.name) fallo(`${ruta}: Article sin nombre de autor`);
     }
 
-    // SoftwareApplication solo si la herramienta calcula
-    const app = nodos.find((n) => n['@type'] === 'SoftwareApplication');
-    if (app) {
+    // SoftwareApplication solo si la herramienta calcula.
+    // La comprobación es por nodo y por herramienta, no por página: un listado puede describir
+    // herramientas que aún no calculan sin dejar de anunciar la que sí lo hace, y «no calcula»
+    // no debe confundirse con «no calcular» (por ejemplo, «déjalo vacío para no calcular el
+    // valor real»). El estado real sale de `estado_implementacion` en el contenido.
+    const apps = nodos.filter((n) => n['@type'] === 'SoftwareApplication');
+    const detalle = /^\/oros\/herramientas\/([^/]+)\/$/.exec(ruta);
+    for (const app of apps) {
       if (app.offers?.price !== '0') fallo(`${ruta}: SoftwareApplication con precio distinto de 0`);
-      if (/no calcula|en preparación/i.test(visible) && !/beta|estable/i.test(visible))
+      const url = String(app.url ?? app['@id'] ?? '');
+      const slug = detalle ? detalle[1] : (/\/oros\/herramientas\/([^/]+)\//.exec(url) ?? [])[1];
+      if (!slug) fallo(`${ruta}: SoftwareApplication sin herramienta identificable`);
+      else {
+        const ficha = entries.herramientas.find((e) => e.data.slug === slug);
+        if (!ficha) fallo(`${ruta}: SoftwareApplication de una herramienta inexistente (${slug})`);
+        else if (ficha.data.estado_implementacion === 'no-implementada')
+          fallo(`${ruta}: SoftwareApplication en una herramienta que no calcula (${slug})`);
+      }
+      // Red de seguridad sobre el texto: solo cuenta lo que la propia página afirma de sí misma.
+      if (detalle && /\bno calcula\b|en preparación/i.test(visible) && !/\bbeta\b|\bestable\b/i.test(visible))
         fallo(`${ruta}: SoftwareApplication en una herramienta que no calcula`);
     }
   }
