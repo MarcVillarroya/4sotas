@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import YAML from 'yaml';
-import { aplicarCambios, conciliar, leerFichas } from '../scripts/conciliar-videos.mjs';
+import { aplicarCambios, conciliar, leerFichas, resolverInterprete, PYTHON_POR_DEFECTO } from '../scripts/conciliar-videos.mjs';
 
 /* Fixture mínima de ficha: solo los campos que la conciliación lee o debe respetar. */
 const ficha = (extra: Record<string, unknown> = {}) => ({
@@ -152,4 +152,50 @@ test('sin cambios en el canal no se reescribe ninguna ficha', () => {
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });
   }
+});
+
+/* ─────────────── intérprete de yt_lista.py (ruta --desde-api) ─────────────── */
+
+test('el intérprete por defecto es el venv del canal, nunca python3 del sistema', () => {
+  const visto: string[] = [];
+  const elegido = resolverInterprete({
+    env: { HOME: '/home/prueba' } as NodeJS.ProcessEnv,
+    existe: (p: string) => {
+      visto.push(p);
+      return true;
+    },
+  });
+  assert.equal(elegido, path.join('/home/prueba', PYTHON_POR_DEFECTO));
+  assert.equal(elegido, '/home/prueba/venvs/yt-manager/bin/python');
+  assert.deepEqual(visto, ['/home/prueba/venvs/yt-manager/bin/python']);
+  assert.notEqual(elegido, 'python3');
+});
+
+test('YT_PYTHON manda sobre el venv por defecto', () => {
+  const elegido = resolverInterprete({
+    env: { HOME: '/home/prueba', YT_PYTHON: '/opt/py/bin/python3.12' } as NodeJS.ProcessEnv,
+    existe: (p: string) => p === '/opt/py/bin/python3.12',
+  });
+  assert.equal(elegido, '/opt/py/bin/python3.12');
+});
+
+test('sin intérprete falla con un error claro que nombra YT_PYTHON', () => {
+  assert.throws(
+    () => resolverInterprete({ env: { HOME: '/home/prueba' } as NodeJS.ProcessEnv, existe: () => false }),
+    (e: Error) => {
+      assert.match(e.message, /no existe el intérprete \/home\/prueba\/venvs\/yt-manager\/bin\/python/);
+      assert.match(e.message, /YT_PYTHON/);
+      return true;
+    },
+  );
+  assert.throws(
+    () => resolverInterprete({ env: { HOME: '/home/prueba', YT_PYTHON: '/no/existe/python' } as NodeJS.ProcessEnv, existe: () => false }),
+    /revisa YT_PYTHON/,
+  );
+});
+
+test('la ruta --desde-api no invoca python3 a secas', () => {
+  const fuente = fs.readFileSync(path.join(process.cwd(), 'scripts/conciliar-videos.mjs'), 'utf8');
+  assert.equal(/spawnSync\(\s*['"]python3['"]/.test(fuente), false, 'usa resolverInterprete()');
+  assert.match(fuente, /resolverInterprete\(/);
 });

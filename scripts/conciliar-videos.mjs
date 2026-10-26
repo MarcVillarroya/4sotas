@@ -158,13 +158,43 @@ export function aplicarCambios(fichas, resultado) {
 
 /* ───────────────────────────── CLI ───────────────────────────── */
 
+/** Venv por defecto: allí viven google-auth y google-api-python-client del canal. */
+export const PYTHON_POR_DEFECTO = 'venvs/yt-manager/bin/python';
+
+/**
+ * Resuelve el intérprete que ejecuta `yt_lista.py`: `YT_PYTHON` si está definido y, si no,
+ * el venv del canal. Nunca `python3` a secas: el intérprete del sistema no trae las
+ * librerías de YouTube. Lanza un error claro si la ruta no existe o no es ejecutable.
+ */
+export function resolverInterprete({ env = process.env, existe = fs.existsSync } = {}) {
+  const configurado = (env.YT_PYTHON ?? '').trim();
+  const candidato = configurado || path.join(env.HOME || '', PYTHON_POR_DEFECTO);
+  const comoSeArregla = configurado
+    ? 'revisa YT_PYTHON (variable de entorno)'
+    : 'define YT_PYTHON o crea el venv: python3 -m venv ~/venvs/yt-manager';
+  if (!candidato) throw new Error(`no hay intérprete de Python: ${comoSeArregla}`);
+  if (!existe(candidato)) throw new Error(`no existe el intérprete ${candidato}: ${comoSeArregla}`);
+  return candidato;
+}
+
 function leerDeApi() {
   const bin = path.join(SCRIPTS_YT, 'yt_lista.py');
   if (!fs.existsSync(bin)) {
     console.error(`conciliar-videos: falta ${bin} para leer el canal (o usa --entrada <json>)`);
     process.exit(2);
   }
-  const r = spawnSync('python3', [bin], { encoding: 'utf8' });
+  let interprete;
+  try {
+    interprete = resolverInterprete();
+  } catch (e) {
+    console.error(`conciliar-videos: ${e.message}`);
+    process.exit(2);
+  }
+  const r = spawnSync(interprete, [bin], { encoding: 'utf8' });
+  if (r.error) {
+    console.error(`conciliar-videos: no se pudo ejecutar ${interprete}: ${r.error.message}`);
+    process.exit(2);
+  }
   if (r.status !== 0) {
     console.error(`conciliar-videos: la API falló: ${(r.stderr ?? '').trim().split('\n').slice(-1)[0]}`);
     process.exit(1);
