@@ -217,7 +217,8 @@ function main() {
   }
 
   for (const [clave, valor] of Object.entries(parches)) doc.set(clave, valor);
-  fs.writeFileSync(candidata, String(doc), 'utf8');
+  // `lineWidth: 0`: sin reflujo de líneas largas, el diff sólo enseña los campos que cambian.
+  fs.writeFileSync(candidata, doc.toString({ lineWidth: 0 }), 'utf8');
   console.log(`ficha escrita: ${candidata}`);
 
   /* inventario del canal: la API ya dice public, el snapshot tiene que coincidir */
