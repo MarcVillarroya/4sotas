@@ -21,6 +21,7 @@
     "video:pack": "node scripts/pack-video.mjs",
     "video:programar": "node scripts/programar-video.mjs",
     "video:conciliar": "node scripts/conciliar-videos.mjs",
+    "video:publicar": "node scripts/publicar-ficha.mjs",
     "validate:content": "node scripts/validate-content.mjs --root . --inventory data/inventory-snapshot.json",
     "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://marcvillarroya.github.io}\" --base \"${SITE_BASE:-/4sotas}\" --json qa/validate-report.json"
   },

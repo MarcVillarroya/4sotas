@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-26T00:01:46+01:00",
+  "generated_at": "2026-10-28T12:00:00+01:00",
   "source": "audit/inventory.json (bloque videos, sin rutas locales ni tokens)",
   "channel": "UCq2xbvKI-0TXaPprjK970OQ",
   "videos": [
@@ -155,6 +155,17 @@
       "published_at": "2026-10-05T13:30:41Z",
       "duration_iso8601": "PT1M",
       "thumbnail_url": "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "wsseghAWiMw",
+      "title": "Comprar un piso de 250.000 €: las cuentas completas",
+      "privacy_status": "private",
+      "publish_at": "2026-11-01T10:00:00Z",
+      "published_at": "2026-10-28T10:44:18Z",
+      "duration_iso8601": "PT12M32S",
+      "thumbnail_url": "https://i.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg",
       "default_language": "es",
       "verification": "verificado_api"
     }

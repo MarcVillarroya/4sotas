@@ -1,0 +1,66 @@
+name: pages
+
+# Despliegue canónico del sitio en GitHub Pages (build_type: workflow).
+#
+# Por qué un workflow aparte y no el job `deploy` de `ci.yml`: ese job sólo corre con
+# `vars.DEPLOY_ENABLED == 'true'` y reutiliza el artefacto `sitio-dist`, así que duplicaría
+# el build dentro del mismo run. Aquí se construye y se publica en un solo flujo, que es lo
+# más simple de leer y de depurar cuando el despliegue falla. Mientras `DEPLOY_ENABLED` siga
+# sin definir, no hay doble despliegue.
+#
+# El CI (check, test, validate) NO se repite aquí: `ci.yml` ya lo corre en cada push a main.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un despliegue a la vez. No se cancela el que está en curso: publicar a medias deja Pages
+# con una versión anterior y sin aviso.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  SITE_ORIGIN: https://marcvillarroya.github.io
+  SITE_BASE: /4sotas
+
+jobs:
+  build:
+    name: build · sitio estático
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Instalar desde lockfile
+        run: npm ci
+      - name: Configurar Pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Build estático
+        run: npm run build
+      - name: Empaquetar artefacto de Pages
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist
+
+  deploy:
+    name: deploy · GitHub Pages
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1
