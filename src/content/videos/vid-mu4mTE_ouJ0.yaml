@@ -1,0 +1,51 @@
+id: vid-mu4mTE_ouJ0
+status: aprobado
+universo: oros
+creado: 2026-10-28
+publicado: 2026-10-28
+revisado_factual: 2026-10-28
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "Vídeo corto de Sota de Oros sobre el préstamo público TU CASA: hasta 50.000 € al 0 % para la primera vivienda, con un límite permanente al precio de venta."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: mu4mTE_ouJ0
+slug: tu-casa-50k
+titulo: "¿50.000 € al 0 % para comprar casa? Ojo al venderla"
+descripcion_corta: "Préstamo público de hasta 50.000 € al 0 % para complementar la hipoteca de la primera vivienda; el capital se devuelve y el precio de venta queda limitado."
+publicado_en: 2026-10-28
+duracion_iso: PT53S
+miniatura: https://i.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg
+miniatura_local: /assets/videos/mu4mTE_ouJ0.webp
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-10-28
+vistas_al_verificar: 0
+idioma: es
+temas:
+  - tema-vivienda
+relacionados:
+  - vid-wsseghAWiMw
+transcripcion: false
+capitulos: []
+informacion:
+  estado: completo
+  resumen: "El Real Decreto-ley 29/2026 crea el mecanismo TU CASA: un préstamo público de hasta el 20 % del valor de la vivienda y 50.000 € como máximo, al 0 % y sin comisiones, para complementar la hipoteca de la primera vivienda. El capital se devuelve y el precio de venta queda limitado de forma permanente, con actualización por IPC y mejoras. Requisitos y procedimiento dependen aún de un Acuerdo del Consejo de Ministros."
+  que_cubre:
+    - "Hasta el 20 % del valor de la vivienda y 50.000 € como máximo"
+    - "0 % de interés y 0 comisiones"
+    - "El capital se devuelve: el préstamo no es una subvención"
+    - "Límite permanente al precio de venta (IPC y mejoras ampliadas); procedimiento pendiente de acuerdo"
+  que_no_cubre:
+    - "No afirma que el préstamo pueda solicitarse ya."
+    - "No es asesoramiento financiero."
+  para_quien: "Para quien se plantea comprar su primera vivienda y quiere entender la contrapartida antes de decidir."
+  origen: descripcion-oficial
+  faltan: []
+  heredado: false

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-28T12:00:00+01:00",
+  "generated_at": "2026-10-28T18:01:31+01:00",
   "source": "audit/inventory.json (bloque videos, sin rutas locales ni tokens)",
   "channel": "UCq2xbvKI-0TXaPprjK970OQ",
   "videos": [
@@ -166,6 +166,17 @@
       "published_at": "2026-10-28T10:44:18Z",
       "duration_iso8601": "PT12M32S",
       "thumbnail_url": "https://i.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "mu4mTE_ouJ0",
+      "title": "¿50.000 € al 0 % para comprar casa? Ojo al venderla",
+      "privacy_status": "private",
+      "publish_at": "2026-10-28T17:30:00Z",
+      "published_at": "2026-10-28T16:47:41Z",
+      "duration_iso8601": "PT53S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg?sqp=CJDUiNcG&rs=AOn4CLDN_WvFArlYhoMjFzE-O-CHkBMFqw",
       "default_language": "es",
       "verification": "verificado_api"
     }
