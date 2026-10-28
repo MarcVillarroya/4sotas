@@ -1,9 +1,53 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-28T18:01:31+01:00",
+  "generated_at": "2026-10-28T23:49:40+01:00",
   "source": "audit/inventory.json (bloque videos, sin rutas locales ni tokens)",
   "channel": "UCq2xbvKI-0TXaPprjK970OQ",
   "videos": [
+    {
+      "videoId": "2aepHTLOjIQ",
+      "title": "Cuenta conjunta o separada: el 32 % frente al 56 %",
+      "privacy_status": "private",
+      "publish_at": "2026-11-02T14:30:00Z",
+      "published_at": "2026-10-28T22:47:04Z",
+      "duration_iso8601": "PT1M7S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/2aepHTLOjIQ/maxresdefault.jpg?sqp=COz1idcG&rs=AOn4CLDmP1woacWsBG8QoEnBIibFfjzNdA",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "mu4mTE_ouJ0",
+      "title": "¿50.000 € al 0 % para comprar casa? Ojo al venderla #finanzas #innovacionfinanciera #ahorrochallenge",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-28T17:30:11Z",
+      "duration_iso8601": "PT53S",
+      "thumbnail_url": "https://i.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "wsseghAWiMw",
+      "title": "Comprar un piso de 250.000 €: las cuentas completas",
+      "privacy_status": "private",
+      "publish_at": "2026-11-01T10:00:00Z",
+      "published_at": "2026-10-28T10:44:18Z",
+      "duration_iso8601": "PT12M32S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg?sqp=COz1idcG&rs=AOn4CLAUWAWKYTlrzEbn3bCVE9qNIZ5ltg",
+      "default_language": "es",
+      "verification": "verificado_api"
+    },
+    {
+      "videoId": "DzH02NfDqM4",
+      "title": "S&P 500: 4 de cada 10 € van a 10 posiciones #curiosidades",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-10-26T14:30:24Z",
+      "duration_iso8601": "PT52S",
+      "thumbnail_url": "https://i.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg",
+      "default_language": "es-ES",
+      "verification": "verificado_api"
+    },
     {
       "videoId": "LL1EJttJPrs",
       "title": " GTA VI: Cómo un videojuego de 1997 se convirtió en un imperio multimillonario",
@@ -28,12 +72,12 @@
     },
     {
       "videoId": "xZhIn2gYPJQ",
-      "title": "Comprar piso: por qué 40.000 € no llegan para 200.000 €",
+      "title": "Comprar piso: por qué 40.000 € no llegan para 200.000 € #finanzas #ahorrochallenge",
       "privacy_status": "private",
       "publish_at": "2026-10-30T14:30:00Z",
       "published_at": "2026-10-22T14:14:06Z",
       "duration_iso8601": "PT54S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/xZhIn2gYPJQ/maxresdefault.jpg?sqp=CMSR-tYG&rs=AOn4CLDUxosTvRqdLQ9lxouDkOOp5i7NRw",
+      "thumbnail_url": "https://i9.ytimg.com/vi/xZhIn2gYPJQ/maxresdefault.jpg?sqp=COz1idcG&rs=AOn4CLA40-yLUCJA4EnQhOS2P4kKoscy5g",
       "default_language": "es",
       "verification": "verificado_api"
     },
@@ -46,17 +90,6 @@
       "duration_iso8601": "PT1M3S",
       "thumbnail_url": "https://i.ytimg.com/vi/t1zPAoZV05M/maxresdefault.jpg",
       "default_language": "es",
-      "verification": "verificado_api"
-    },
-    {
-      "videoId": "DzH02NfDqM4",
-      "title": "S&P 500: 4 de cada 10 € van a 10 posiciones",
-      "privacy_status": "public",
-      "publish_at": null,
-      "published_at": "2026-10-26T14:30:24Z",
-      "duration_iso8601": "PT52S",
-      "thumbnail_url": "https://i.ytimg.com/vi/DzH02NfDqM4/maxresdefault.jpg",
-      "default_language": "es-ES",
       "verification": "verificado_api"
     },
     {
@@ -155,28 +188,6 @@
       "published_at": "2026-10-05T13:30:41Z",
       "duration_iso8601": "PT1M",
       "thumbnail_url": "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg",
-      "default_language": "es",
-      "verification": "verificado_api"
-    },
-    {
-      "videoId": "wsseghAWiMw",
-      "title": "Comprar un piso de 250.000 €: las cuentas completas",
-      "privacy_status": "private",
-      "publish_at": "2026-11-01T10:00:00Z",
-      "published_at": "2026-10-28T10:44:18Z",
-      "duration_iso8601": "PT12M32S",
-      "thumbnail_url": "https://i.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg",
-      "default_language": "es",
-      "verification": "verificado_api"
-    },
-    {
-      "videoId": "mu4mTE_ouJ0",
-      "title": "¿50.000 € al 0 % para comprar casa? Ojo al venderla",
-      "privacy_status": "public",
-      "publish_at": null,
-      "published_at": "2026-10-28T16:47:41Z",
-      "duration_iso8601": "PT53S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg?sqp=CJDUiNcG&rs=AOn4CLDN_WvFArlYhoMjFzE-O-CHkBMFqw",
       "default_language": "es",
       "verification": "verificado_api"
     }
