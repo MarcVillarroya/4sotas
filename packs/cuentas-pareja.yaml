@@ -1,0 +1,80 @@
+# 4 Sotas · pack editorial de la pieza «Cuenta conjunta o separada: el 32 % frente al 56 %».
+#
+# Contrato: /home/mvf/4sotas/v2.2/VIDEO-INFO.md §1 (implementación: src/lib/videoInfo.ts).
+# Pieza aún NO subida: no hay youtube_id (lo asigna YouTube al subir).
+# Miniatura de YouTube: la hace y la sube Marc en Studio (`miniatura_youtube: pendiente_marc`).
+# `miniatura` es el PÓSTER WEB, no la miniatura de YouTube; el validador exige que exista.
+#
+# Fuentes del texto, ninguna cifra nueva:
+#   · guion de locución canónico de la pieza (docs/GUION-VOZ.md del proyecto cuentas-pareja),
+#   · SRT de 13 cues con los tiempos reales del máster (out/cuentas-pareja.srt),
+#   · máster: out/cuentas-pareja-FINAL-v2.mp4 (1.982 frames · 66,066667 s · 1080×1920 · 30 fps),
+#   · cálculos verificados: 900/2.800 = 32,14 %; 900/1.600 = 56,25 %; 1.145,45 + 654,55 = 1.800;
+#     1.145,45/2.800 = 40,9 %; 654,55/1.600 = 40,9 %.
+
+titulo: "Cuenta conjunta o separada: el 32 % frente al 56 %"
+slug: cuentas-pareja
+
+descripcion_corta: "Dos sueldos, la misma cuota de 900 € y dos esfuerzos distintos: el 32,1 % frente al 56,3 %. El reparto proporcional iguala el 40,9 %."
+
+seo_descripcion: "Qué es una cuenta conjunta, separada o mixta y por qué pagar 900 € a medias pesa un 32,1 % de un sueldo y un 56,3 % del otro."
+
+resumen_editorial: "Una pareja cobra 2.800 € y 1.600 € y comparte 1.800 € de gastos. Si paga a medias, ambos ponen 900 €, pero uno destina el 32,1 % de su sueldo y el otro el 56,3 %. El vídeo repasa las tres formas de organizar el dinero —todo en común, cuentas separadas y sistema mixto— y muestra el reparto proporcional: 1.145 € y 655 €, el 40,9 % para ambos. No hay un único reparto justo; la clave es el acuerdo."
+
+que_cubre:
+  - "Por qué 900 € no cuestan lo mismo a quien cobra 2.800 € que a quien cobra 1.600 €: 32,1 % frente a 56,3 %."
+  - "Las tres formas de organizar el dinero: todo en común, cuentas separadas y sistema mixto con cuenta compartida."
+  - "El reparto proporcional: 1.145 € y 655 € para que ambos destinen el 40,9 % de su sueldo."
+  - "La diferencia entre el tipo de cuenta y el criterio para repartir los gastos."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni fiscal: las cifras son un ejemplo hipotético, no medias del mercado."
+  - "No entra en régimen legal de gananciales, titularidad de cuentas ni consecuencias fiscales."
+
+para_quien: "Para parejas que comparten gastos y quieren decidir con cifras si juntan todo, separan las cuentas o usan un sistema mixto."
+
+temas:
+  - tema-ahorro
+  - tema-banca
+  - tema-nomina
+
+keywords:
+  - cuenta conjunta
+  - cuenta común pareja
+  - reparto de gastos en pareja
+  - gastos a medias
+  - reparto proporcional
+  - finanzas en pareja
+  - dinero en pareja
+  - cuentas separadas
+  - sistema mixto
+  - finanzas personales
+  - educación financiera
+  - shorts
+
+fuentes:
+  - "Cifras del ejemplo hipotético del guion de la pieza; no son medias del mercado ni datos de una pareja real."
+  - "Cálculos aritméticos verificados: 900/2.800 = 32,14 %; 900/1.600 = 56,25 %; 1.145,45 + 654,55 = 1.800; 1.145,45/2.800 = 40,9 %; 654,55/1.600 = 40,9 %."
+  - "No se afirma ningún efecto legal o fiscal: el vídeo separa el tipo de organización, el criterio de reparto y la titularidad de una cuenta."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. Las cifras son un ejemplo hipotético y no una recomendación de reparto."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/mvf/Escritorio/Proyectos/cuentas-pareja/out/cuentas-pareja.srt
+
+# lun 2-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z. El pipeline convierte a UTC.
+publicar_en: "2026-11-02T15:30:00+01:00"
+
+# PÓSTER WEB (1280×720 webp). No es la miniatura de YouTube: esa la sube Marc en Studio.
+miniatura: public/assets/videos/cuentas-pareja-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/mvf/Escritorio/Proyectos/cuentas-pareja/out/cuentas-pareja-FINAL-v2.mp4
+duracion_iso: PT1M6S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
