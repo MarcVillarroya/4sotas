@@ -43,3 +43,4 @@ qa/v2-*/*.png
 
 # Capturas visuales locales (pesadas; se regeneran con scripts de QA visual)
 qa/visual/
+scratch/
