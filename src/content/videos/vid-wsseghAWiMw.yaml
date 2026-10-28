@@ -1,0 +1,72 @@
+id: vid-wsseghAWiMw
+status: revision
+universo: oros
+creado: 2026-10-28
+publicado: 2026-10-28
+revisado_factual: 2026-10-28
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "Cuenta completa de comprar un piso de 250.000 €: 78.000 € de fondos propios, el giro de la tasación, 843,21 € de cuota y 103.555 € de intereses."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: wsseghAWiMw
+slug: comprar-piso-250k
+titulo: "Comprar un piso de 250.000 €: las cuentas completas"
+descripcion_corta: "Pieza larga de 12 minutos: de una cuota de 843 € al mes a necesitar 78.000 € ahorrados, con impuestos, tasación, intereses y las ayudas que cambian la cuenta."
+publicado_en: 2026-11-01
+duracion_iso: PT12M31S
+miniatura: https://i.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg
+miniatura_local: /assets/videos/wsseghAWiMw.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-10-28
+idioma: es
+temas:
+  - tema-vivienda
+  - tema-banca
+  - tema-ahorro
+relacionados: []
+transcripcion: false
+capitulos:
+  - titulo: Las cuatro cuentas · el coste real
+    segundo: 0
+  - titulo: "Impuestos: ITP e IVA"
+    segundo: 52
+  - titulo: Gastos de compra y provisión
+    segundo: 120
+  - titulo: La tasación y los 66.000 €
+    segundo: 209
+  - titulo: "Intereses: 103.555 €"
+    segundo: 286
+  - titulo: "Capacidad de pago: el 30 %"
+    segundo: 373
+  - titulo: Tipos de hipoteca y la FEIN
+    segundo: 436
+  - titulo: El proceso, las arras y la nota simple
+    segundo: 511
+  - titulo: Excepciones y ayudas
+    segundo: 584
+  - titulo: "La cuenta final: 381.554,90 €"
+    segundo: 646
+informacion:
+  estado: completo
+  resumen: "Un piso de 250.000 € parece asumible con una cuota de 843 € al mes, pero para firmar hacen falta unos 78.000 €: 50.000 de entrada, 25.000 de ITP en Cataluña y 3.000 de provisión. Añade el giro de la tasación (230.000 € recortan el préstamo a 184.000 y suben el ahorro a 94.000), separa gastos de compraventa y de hipoteca según la Ley 5/2019 y cierra con el coste: 103.555 € de intereses y 381.554,90 € nominales."
+  que_cubre:
+    - "De la cuota de 843 € al ahorro real: 50.000 € de entrada, 25.000 € de impuestos y 3.000 € de provisión"
+    - "El giro de la tasación: 230.000 € recortan el préstamo a 184.000 € y suben los fondos propios a 94.000 €"
+    - Qué asume el banco y qué pagas tú al constituir la hipoteca, según la Ley 5/2019
+    - "El coste a largo plazo: 103.555 € de intereses y 381.554,90 € nominales en 30 años"
+  que_no_cubre:
+    - "No es asesoramiento financiero ni fiscal: las cifras son un escenario con supuestos concretos (Cataluña, ITP del 10 %, 3 % fijo)."
+    - No entra en financiación por encima del 80 %, ayudas autonómicas al margen del ITP reducido del 5 % ni fiscalidad de otras comunidades.
+  para_quien: Para quien está mirando su primer piso y quiere ver todas las cifras antes de firmar, no solo la cuota.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false

@@ -1,0 +1,107 @@
+# 4 Sotas · pack editorial de la pieza «Comprar un piso de 250.000 €: las cuentas completas».
+#
+# Contrato: /home/mvf/4sotas/v2.2/VIDEO-INFO.md §1 (implementación: src/lib/videoInfo.ts).
+# Pieza aún NO subida: no hay youtube_id (lo asigna YouTube al subir) ni miniatura
+# (la hace y la sube Marc en Studio; aquí queda declarada como pendiente).
+#
+# Fuentes del texto, ninguna cifra nueva:
+#   · guion de locución canónico: src/videos/finance-spain/comprar-piso-250k/script.ts
+#     (copia literal en packs/guiones/comprar-piso-250k-guion.txt),
+#   · capítulos reales: timing.ts (frames @30 fps) + out/v6h-fix/capitulos-v6h-final.txt,
+#   · máster: out/v6h-fix/v2/master-v6h-v2.mp4 (22.534 frames · 751,133 s · 1920×1080 · 30 fps),
+#   · transcripción: captions.pages.json re-timado al máster v2 → out/v6h-fix/v2/comprar-piso-250k-es.srt.
+
+titulo: "Comprar un piso de 250.000 €: las cuentas completas"
+slug: comprar-piso-250k
+
+descripcion_corta: "Pieza larga de 12 minutos: de una cuota de 843 € al mes a necesitar 78.000 € ahorrados, con impuestos, tasación, intereses y las ayudas que cambian la cuenta."
+
+seo_descripcion: "Cuenta completa de comprar un piso de 250.000 €: 78.000 € de fondos propios, el giro de la tasación, 843,21 € de cuota y 103.555 € de intereses."
+
+resumen_editorial: "Un piso de 250.000 € parece asumible con una cuota de 843 € al mes, pero para firmar hacen falta unos 78.000 €: 50.000 de entrada, 25.000 de ITP en Cataluña y 3.000 de provisión. Añade el giro de la tasación (230.000 € recortan el préstamo a 184.000 y suben el ahorro a 94.000), separa gastos de compraventa y de hipoteca según la Ley 5/2019 y cierra con el coste: 103.555 € de intereses y 381.554,90 € nominales."
+
+que_cubre:
+  - "De la cuota de 843 € al ahorro real: 50.000 € de entrada, 25.000 € de impuestos y 3.000 € de provisión"
+  - "El giro de la tasación: 230.000 € recortan el préstamo a 184.000 € y suben los fondos propios a 94.000 €"
+  - "Qué asume el banco y qué pagas tú al constituir la hipoteca, según la Ley 5/2019"
+  - "El coste a largo plazo: 103.555 € de intereses y 381.554,90 € nominales en 30 años"
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni fiscal: las cifras son un escenario con supuestos concretos (Cataluña, ITP del 10 %, 3 % fijo)."
+  - "No entra en financiación por encima del 80 %, ayudas autonómicas al margen del ITP reducido del 5 % ni fiscalidad de otras comunidades."
+
+para_quien: "Para quien está mirando su primer piso y quiere ver todas las cifras antes de firmar, no solo la cuota."
+
+temas:
+  - tema-vivienda
+  - tema-banca
+  - tema-ahorro
+
+keywords:
+  - comprar piso
+  - hipoteca
+  - entrada vivienda
+  - ITP Cataluña
+  - gastos compraventa
+  - tasación hipotecaria
+  - cuota hipotecaria
+  - intereses hipoteca
+  - Ley de crédito inmobiliario
+  - FEIN
+  - arras
+  - fondos propios
+  - vivienda Cataluña
+
+fuentes:
+  - "INE · tipo medio de las hipotecas nuevas sobre viviendas (3,08 % en agosto de 2026), citado en el propio vídeo"
+  - "Ley 5/2019, de 15 de marzo, reguladora de los contratos de crédito inmobiliario: reparto de gastos de la hipoteca"
+  - "Banco de España · referencia de que el total de deudas no supere el 40 % de los ingresos netos mensuales"
+  - "Generalitat de Catalunya · escala progresiva del ITP y tipo reducido del 5 % para vivienda habitual con requisitos"
+  - "Guion de locución del proyecto comprar-piso-250k (script.ts), del que sale el texto de esta pieza"
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero ni fiscal. Las cifras son un escenario con supuestos concretos y cambian según comunidad, entidad y operación."
+
+# 10 capítulos reales: segundos derivados de timing.ts (frames @30 fps) y títulos de
+# out/v6h-fix/capitulos-v6h-final.txt. 0:00 primero y más de 10 s entre marcas.
+capitulos:
+  - titulo: "Las cuatro cuentas · el coste real"
+    segundo: 0
+  - titulo: "Impuestos: ITP e IVA"
+    segundo: 52
+  - titulo: "Gastos de compra y provisión"
+    segundo: 120
+  - titulo: "La tasación y los 66.000 €"
+    segundo: 209
+  - titulo: "Intereses: 103.555 €"
+    segundo: 286
+  - titulo: "Capacidad de pago: el 30 %"
+    segundo: 373
+  - titulo: "Tipos de hipoteca y la FEIN"
+    segundo: 436
+  - titulo: "El proceso, las arras y la nota simple"
+    segundo: 511
+  - titulo: "Excepciones y ayudas"
+    segundo: 584
+  - titulo: "La cuenta final: 381.554,90 €"
+    segundo: 646
+
+guion: packs/guiones/comprar-piso-250k-guion.txt
+
+# SRT generado de captions.pages.json con los timecodes finales del máster v2
+# (444 cues, sin solapes, última marca 12:30,986 < 751,133 s). Estado: ASR alineado
+# con la voz final, con corrección mecánica de cifras y erratas; no hay revisión
+# línea a línea de una persona, por eso se declara «automatica».
+transcripcion:
+  estado: automatica
+  fuente: /home/mvf/Escritorio/Proyectos/comprar-piso-250k/out/v6h-fix/v2/comprar-piso-250k-es.srt
+
+# La crea y la sube Marc en Studio; el pipeline solo comprueba la ruta.
+miniatura: public/assets/videos/comprar-piso-250k-poster.webp   # póster provisional de la web (fotograma del máster). La miniatura de YouTube la sube Marc en Studio; NO se toca por API.
+
+video: /home/mvf/Escritorio/Proyectos/comprar-piso-250k/out/v6h-fix/v2/master-v6h-v2.mp4
+
+# Real: 22.534 frames a 30 fps = 751,133 s.
+duracion_iso: PT12M31S
+
+# Domingo 2026-11-01 a las 11:00 en Europe/Madrid (CET, +01:00).
+publicar_en: "2026-11-01T11:00:00+01:00"
