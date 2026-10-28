@@ -99,8 +99,20 @@ for (const col of [...COLECCIONES, ...RUIDO]) {
 const borradores = COLECCIONES.flatMap((col) =>
   entries[col]
     .filter((e) => (e.data.status ?? 'borrador') !== 'publicado')
-    .map((e) => ({ col, ruta: RUTA[col](e.data.slug), file: e.file, status: e.data.status ?? 'borrador' })),
+    .map((e) => ({ col, data: e.data, ruta: RUTA[col](e.data.slug), file: e.file, status: e.data.status ?? 'borrador' })),
 );
+
+/**
+ * Fichas que ni el build de fixtures puede renderizar por diseño: la página de vídeo exige
+ * `estado_youtube: publico` y `privacidad_api: public` (aislamiento de no publicados), así que
+ * una ficha programada en YouTube no tiene plantilla que verificar aquí. Su cobertura real son
+ * `validate-content` (esquema e inventario) y la conciliación semanal. Se informan, no fallan.
+ */
+const sinPlantillaEnFixtures = (b) =>
+  b.col === 'videos' && (b.data.estado_youtube !== 'publico' || b.data.privacidad_api !== 'public');
+
+const checkables = borradores.filter((b) => !sinPlantillaEnFixtures(b));
+const noCheckables = borradores.filter(sinPlantillaEnFixtures);
 
 const publicados = COLECCIONES.flatMap((col) =>
   entries[col].filter((e) => e.data.status === 'publicado').map((e) => ({ col, ...e })),
@@ -175,11 +187,17 @@ const normal = (s) => String(s).replace(/\s+/g, ' ').trim().toLowerCase();
 if (!fs.existsSync(FIXTURES)) {
   fallo(`no existe el build de fixtures en ${FIXTURES} (ejecuta npm run build:fixtures)`);
 } else {
-  for (const b of borradores) {
+  for (const b of checkables) {
     if (!existeRuta(FIXTURES, b.ruta)) fallo(`build de fixtures: plantilla sin renderizar ${b.ruta} (${b.file})`);
   }
-  const conPagina = borradores.filter((b) => existeRuta(FIXTURES, b.ruta));
-  bien(`build de fixtures: ${conPagina.length}/${borradores.length} plantillas con borrador renderizadas`);
+  const conPagina = checkables.filter((b) => existeRuta(FIXTURES, b.ruta));
+  bien(`build de fixtures: ${conPagina.length}/${checkables.length} plantillas con borrador renderizadas`);
+  if (noCheckables.length)
+    bien(
+      `build de fixtures: ${noCheckables.length} ficha(s) de vídeo no pública(s) sin plantilla por diseño (${noCheckables
+        .map((b) => b.file)
+        .join(', ')})`,
+    );
 
   const htmls = walk(FIXTURES, '.html');
 
