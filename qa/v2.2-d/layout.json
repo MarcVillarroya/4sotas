@@ -1,0 +1,670 @@
+[
+ {
+  "path": "/oros/videos/sp500-4-de-cada-10-euros-a-10-posiciones/",
+  "width": 1440,
+  "docH": 2535,
+  "bloque": {
+   "top": 1249,
+   "left": 291,
+   "w": 858,
+   "h": 562
+  },
+  "video": {
+   "top": 181,
+   "left": 80,
+   "w": 1280,
+   "h": 1068
+  },
+  "h2": {
+   "top": 1249,
+   "left": 291,
+   "w": 858,
+   "h": 47,
+   "fs": 44,
+   "lh": 46.6,
+   "ls": "-1.1px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1296,
+   "left": 291,
+   "w": 858,
+   "h": 148,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 5,
+   "charsPorLinea": 79,
+   "texto": "Comprar el S&P 500 no reparte el dinero a partes iguales ent…"
+  },
+  "h3": {
+   "top": 1444,
+   "left": 291,
+   "w": 858,
+   "h": 30,
+   "fs": 28,
+   "lh": 29.7,
+   "ls": "-0.7px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1581,
+   "left": 291,
+   "w": 858,
+   "h": 53,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 2
+  },
+  "paraQuien": {
+   "top": 1646,
+   "left": 291,
+   "w": 858,
+   "h": 26,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 1
+  },
+  "lis": [
+   {
+    "top": 1486,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Por qué el índice no reparte a partes iguales: pon"
+   },
+   {
+    "top": 1512,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "El reparto en euros: unos 391 € de 1.000 € a las 1"
+   },
+   {
+    "top": 1538,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "El contraste con la versión equiponderada, donde c"
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 212
+ },
+ {
+  "path": "/oros/videos/sp500-4-de-cada-10-euros-a-10-posiciones/",
+  "width": 390,
+  "docH": 3462,
+  "bloque": {
+   "top": 1326,
+   "left": 22,
+   "w": 347,
+   "h": 1036
+  },
+  "video": {
+   "top": 189,
+   "left": 22,
+   "w": 347,
+   "h": 1137
+  },
+  "h2": {
+   "top": 1326,
+   "left": 22,
+   "w": 347,
+   "h": 32,
+   "fs": 30,
+   "lh": 31.8,
+   "ls": "-0.75px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1357,
+   "left": 22,
+   "w": 347,
+   "h": 327,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 11,
+   "charsPorLinea": 36,
+   "texto": "Comprar el S&P 500 no reparte el dinero a partes iguales ent…"
+  },
+  "h3": {
+   "top": 1684,
+   "left": 22,
+   "w": 347,
+   "h": 23,
+   "fs": 22,
+   "lh": 23.3,
+   "ls": "-0.55px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1946,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "paraQuien": {
+   "top": 2038,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "lis": [
+   {
+    "top": 1719,
+    "left": 44,
+    "w": 324,
+    "h": 79,
+    "lineas": 3,
+    "texto": "Por qué el índice no reparte a partes iguales: pon"
+   },
+   {
+    "top": 1798,
+    "left": 44,
+    "w": 324,
+    "h": 79,
+    "lineas": 3,
+    "texto": "El reparto en euros: unos 391 € de 1.000 € a las 1"
+   },
+   {
+    "top": 1878,
+    "left": 44,
+    "w": 324,
+    "h": 53,
+    "lineas": 2,
+    "texto": "El contraste con la versión equiponderada, donde c"
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 212
+ },
+ {
+  "path": "/oros/videos/crisis-de-2008-espana/",
+  "width": 1440,
+  "docH": 2877,
+  "bloque": {
+   "top": 1122,
+   "left": 291,
+   "w": 858,
+   "h": 562
+  },
+  "video": {
+   "top": 181,
+   "left": 80,
+   "w": 1280,
+   "h": 941
+  },
+  "h2": {
+   "top": 1122,
+   "left": 291,
+   "w": 858,
+   "h": 47,
+   "fs": 44,
+   "lh": 46.6,
+   "ls": "-1.1px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1168,
+   "left": 291,
+   "w": 858,
+   "h": 148,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 5,
+   "charsPorLinea": 84,
+   "texto": "En septiembre de 2008 Lehman Brothers se declaró en quiebra …"
+  },
+  "h3": {
+   "top": 1317,
+   "left": 291,
+   "w": 858,
+   "h": 30,
+   "fs": 28,
+   "lh": 29.7,
+   "ls": "-0.7px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1480,
+   "left": 291,
+   "w": 858,
+   "h": 26,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 1
+  },
+  "paraQuien": {
+   "top": 1518,
+   "left": 291,
+   "w": 858,
+   "h": 26,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 1
+  },
+  "lis": [
+   {
+    "top": 1358,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Cómo se construyó la crisis: crédito barato y empa"
+   },
+   {
+    "top": 1385,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Cómo viajó la crisis de Wall Street a la banca y a"
+   },
+   {
+    "top": 1411,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "La burbuja inmobiliaria española, los rescates y l"
+   },
+   {
+    "top": 1438,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Lo que dejó enseñado 2008, con datos de la Reserva"
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 213
+ },
+ {
+  "path": "/oros/videos/crisis-de-2008-espana/",
+  "width": 390,
+  "docH": 3953,
+  "bloque": {
+   "top": 1216,
+   "left": 22,
+   "w": 347,
+   "h": 1092
+  },
+  "video": {
+   "top": 189,
+   "left": 22,
+   "w": 347,
+   "h": 1027
+  },
+  "h2": {
+   "top": 1216,
+   "left": 22,
+   "w": 347,
+   "h": 32,
+   "fs": 30,
+   "lh": 31.8,
+   "ls": "-0.75px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1248,
+   "left": 22,
+   "w": 347,
+   "h": 356,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 12,
+   "charsPorLinea": 35,
+   "texto": "En septiembre de 2008 Lehman Brothers se declaró en quiebra …"
+  },
+  "h3": {
+   "top": 1604,
+   "left": 22,
+   "w": 347,
+   "h": 23,
+   "fs": 22,
+   "lh": 23.3,
+   "ls": "-0.55px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1893,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "paraQuien": {
+   "top": 1984,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "lis": [
+   {
+    "top": 1640,
+    "left": 44,
+    "w": 324,
+    "h": 53,
+    "lineas": 2,
+    "texto": "Cómo se construyó la crisis: crédito barato y empa"
+   },
+   {
+    "top": 1692,
+    "left": 44,
+    "w": 324,
+    "h": 53,
+    "lineas": 2,
+    "texto": "Cómo viajó la crisis de Wall Street a la banca y a"
+   },
+   {
+    "top": 1745,
+    "left": 44,
+    "w": 324,
+    "h": 53,
+    "lineas": 2,
+    "texto": "La burbuja inmobiliaria española, los rescates y l"
+   },
+   {
+    "top": 1798,
+    "left": 44,
+    "w": 324,
+    "h": 79,
+    "lineas": 3,
+    "texto": "Lo que dejó enseñado 2008, con datos de la Reserva"
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 213
+ },
+ {
+  "path": "/oros/videos/tres-cuentas-un-sueldo/",
+  "width": 1440,
+  "docH": 3070,
+  "bloque": {
+   "top": 1122,
+   "left": 291,
+   "w": 858,
+   "h": 506
+  },
+  "video": {
+   "top": 181,
+   "left": 80,
+   "w": 1280,
+   "h": 941
+  },
+  "h2": {
+   "top": 1122,
+   "left": 291,
+   "w": 858,
+   "h": 47,
+   "fs": 44,
+   "lh": 46.6,
+   "ls": "-1.1px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1168,
+   "left": 291,
+   "w": 858,
+   "h": 119,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 4,
+   "charsPorLinea": 87,
+   "texto": "¿Cobras 1.600 € y a mitad de mes ya no sabes cuánto te queda…"
+  },
+  "h3": {
+   "top": 1287,
+   "left": 291,
+   "w": 858,
+   "h": 30,
+   "fs": 28,
+   "lh": 29.7,
+   "ls": "-0.7px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1424,
+   "left": 291,
+   "w": 858,
+   "h": 26,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 1
+  },
+  "paraQuien": {
+   "top": 1462,
+   "left": 291,
+   "w": 858,
+   "h": 26,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 1
+  },
+  "lis": [
+   {
+    "top": 1329,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Por qué el sueldo se acaba antes de fin de mes cua"
+   },
+   {
+    "top": 1355,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "El reparto de ejemplo: 950 € de recibos fijos, 500"
+   },
+   {
+    "top": 1382,
+    "left": 313,
+    "w": 836,
+    "h": 26,
+    "lineas": 1,
+    "texto": "Que el ahorro se aparta primero, antes de gastar, "
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 221
+ },
+ {
+  "path": "/oros/videos/tres-cuentas-un-sueldo/",
+  "width": 390,
+  "docH": 4529,
+  "bloque": {
+   "top": 1370,
+   "left": 22,
+   "w": 347,
+   "h": 1006
+  },
+  "video": {
+   "top": 215,
+   "left": 22,
+   "w": 347,
+   "h": 1154
+  },
+  "h2": {
+   "top": 1370,
+   "left": 22,
+   "w": 347,
+   "h": 32,
+   "fs": 30,
+   "lh": 31.8,
+   "ls": "-0.75px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "De qué trata."
+  },
+  "resumen": {
+   "top": 1401,
+   "left": 22,
+   "w": 347,
+   "h": 297,
+   "fs": 18,
+   "lh": 29.7,
+   "ls": "normal",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "lineas": 10,
+   "charsPorLinea": 35,
+   "texto": "¿Cobras 1.600 € y a mitad de mes ya no sabes cuánto te queda…"
+  },
+  "h3": {
+   "top": 1698,
+   "left": 22,
+   "w": 347,
+   "h": 23,
+   "fs": 22,
+   "lh": 23.3,
+   "ls": "-0.55px",
+   "color": "rgb(246, 240, 228)",
+   "maxw": "none",
+   "texto": "Qué cubre este vídeo"
+  },
+  "queNoCubre": {
+   "top": 1961,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "paraQuien": {
+   "top": 2052,
+   "left": 22,
+   "w": 347,
+   "h": 79,
+   "fs": 16,
+   "lh": 26.4,
+   "ls": "normal",
+   "color": "rgb(189, 200, 216)",
+   "maxw": "none",
+   "lineas": 3
+  },
+  "lis": [
+   {
+    "top": 1734,
+    "left": 44,
+    "w": 324,
+    "h": 79,
+    "lineas": 3,
+    "texto": "Por qué el sueldo se acaba antes de fin de mes cua"
+   },
+   {
+    "top": 1813,
+    "left": 44,
+    "w": 324,
+    "h": 79,
+    "lineas": 3,
+    "texto": "El reparto de ejemplo: 950 € de recibos fijos, 500"
+   },
+   {
+    "top": 1892,
+    "left": 44,
+    "w": 324,
+    "h": 53,
+    "lineas": 2,
+    "texto": "Que el ahorro se aparta primero, antes de gastar, "
+   }
+  ],
+  "overflowX": false,
+  "palabrasBloque": 221
+ },
+ {
+  "path": "/oros/videos/",
+  "width": 1440,
+  "sinBloque": true
+ },
+ {
+  "path": "/oros/videos/",
+  "width": 390,
+  "sinBloque": true
+ }
+]
