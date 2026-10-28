@@ -1,5 +1,5 @@
 id: vid-mu4mTE_ouJ0
-status: aprobado
+status: publicado
 universo: oros
 creado: 2026-10-28
 publicado: 2026-10-28
@@ -23,8 +23,8 @@ publicado_en: 2026-10-28
 duracion_iso: PT53S
 miniatura: https://i.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg
 miniatura_local: /assets/videos/mu4mTE_ouJ0.webp
-estado_youtube: programado
-privacidad_api: private
+estado_youtube: publico
+privacidad_api: public
 verificado_en: 2026-10-28
 vistas_al_verificar: 0
 idioma: es
