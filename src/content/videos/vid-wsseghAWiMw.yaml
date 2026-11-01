@@ -1,5 +1,5 @@
 id: vid-wsseghAWiMw
-status: revision
+status: publicado
 universo: oros
 creado: 2026-10-28
 publicado: 2026-10-28
@@ -24,9 +24,9 @@ duracion_iso: PT12M31S
 miniatura: https://i.ytimg.com/vi/wsseghAWiMw/maxresdefault.jpg
 miniatura_local: /assets/videos/wsseghAWiMw.webp
 insercion: disponible
-estado_youtube: programado
-privacidad_api: private
-verificado_en: 2026-10-28
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-01
 idioma: es
 temas:
   - tema-vivienda
