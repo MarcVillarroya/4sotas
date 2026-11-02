@@ -1,7 +1,9 @@
 id: herr-prestamo
-status: revision
+status: publicado
 universo: oros
 creado: 2026-11-02
+publicado: 2026-11-02
+revisado_factual: 2026-11-02
 procedencia: original
 sensibilidad: alta
 autorias:
@@ -11,9 +13,7 @@ fuentes:
   - fuente: src-s5-06
     dato: Artículo 4 de la Ley 5/2019, que define la TAE como el coste total del préstamo expresado en porcentaje anual.
   - fuente: src-bde-comparador-tipos-comisiones
-    dato: El Banco de España publica simuladores y comparadores de tipos y comisiones de préstamos.
-  - fuente: src-s5-04
-    dato: Las comisiones bancarias son libres, con información previa y aceptación por escrito.
+    dato: El Banco de España publica un comparador de tipos y comisiones de préstamos hipotecarios y personales, y simuladores de cuota y TAE.
 seo:
   descripcion: Calculadora de préstamo personal con cuota francesa, intereses, total, TAE desde el flujo y tabla anual. Fórmula, supuestos y límites publicados.
 actualizacion:
