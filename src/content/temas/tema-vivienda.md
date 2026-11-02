@@ -38,6 +38,7 @@ cluster: vivienda
 orden: 6
 pilar: art-comprar-piso-coste
 temas_relacionados: [tema-banca, tema-inversion]
+herramientas: [herr-hipoteca, herr-viabilidad-hipoteca]
 ---
 
 # Vivienda e hipoteca

@@ -1,0 +1,72 @@
+id: herr-prestamo
+status: revision
+universo: oros
+creado: 2026-11-02
+procedencia: original
+sensibilidad: alta
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes:
+  - fuente: src-s5-06
+    dato: Artículo 4 de la Ley 5/2019, que define la TAE como el coste total del préstamo expresado en porcentaje anual.
+  - fuente: src-bde-comparador-tipos-comisiones
+    dato: El Banco de España publica simuladores y comparadores de tipos y comisiones de préstamos.
+  - fuente: src-s5-04
+    dato: Las comisiones bancarias son libres, con información previa y aceptación por escrito.
+seo:
+  descripcion: Calculadora de préstamo personal con cuota francesa, intereses, total, TAE desde el flujo y tabla anual. Fórmula, supuestos y límites publicados.
+actualizacion:
+  politica: revision-anual
+slug: prestamo
+titulo: Calculadora de préstamo
+descripcion: Calcula la cuota de un préstamo personal, los intereses totales y la TAE real cuando hay comisión de apertura, con tabla anual.
+tipo: calculadora
+estado_implementacion: beta
+version_motor: 1.0.0
+formula: >-
+  i = TIN/100/12; cuota = P·i/(1−(1+i)^−n), y cuota = P/n si i = 0. Total = cuota·n; intereses = total − P.
+  La TAE resuelve r en P·(1−comisión/100) = Σ cuota/(1+r)^k para k = 1…n y se anualiza como (1+r)^12 − 1.
+unidad_salida: EUR-por-mes
+parametros:
+  - clave: importe
+    etiqueta: Importe del préstamo
+    tipo: moneda
+    defecto: 15000
+    min: 300
+    max: 200000
+    paso: 100
+  - clave: meses
+    etiqueta: Plazo en meses
+    tipo: entero
+    defecto: 60
+    min: 3
+    max: 120
+    paso: 1
+  - clave: tinAnual
+    etiqueta: TIN anual
+    tipo: porcentaje
+    defecto: 7
+    min: 0
+    max: 30
+    paso: 0.1
+  - clave: comisionPct
+    etiqueta: Comisión de apertura
+    tipo: porcentaje
+    defecto: 0
+    min: 0
+    max: 10
+    paso: 0.1
+supuestos:
+  - "La cuota es constante (sistema francés) y el TIN se mantiene igual durante todo el plazo; no hay carencia ni cuotas distintas."
+  - "La comisión de apertura se cobra al firmar: reduce el capital que recibes, no la cuota, y por eso sube la TAE."
+  - "La TAE se calcula desde el flujo real de pagos, no se copia del TIN; sin comisión sigue siendo una tasa efectiva anual."
+  - "No se modelan seguros, comisiones de mantenimiento, vinculaciones, impuestos ni comisiones por amortización anticipada."
+limites:
+  - "Es una simulación aritmética con tu hipótesis de tipo, no una oferta ni una aprobación de la entidad."
+  - "No incluye seguros, comisiones de mantenimiento ni vinculaciones: si existen en tu caso, el coste real será mayor."
+  - "No se modelan cuotas de carencia, comisiones por cancelación parcial ni cambios de tipo; el resultado no cubre esos productos."
+  - "El importe se limita a 200.000 € y el plazo a 120 meses: fuera de ese rango la herramienta no ofrece resultado."
+tests: tests/finanzas-prestamo.ts
+temas:
+  - tema-banca

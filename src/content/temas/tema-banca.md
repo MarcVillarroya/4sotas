@@ -40,6 +40,7 @@ cluster: banca
 orden: 5
 pilar: art-tarjetas-comisiones
 temas_relacionados: [tema-inversion, tema-vivienda]
+herramientas: [herr-prestamo]
 videos_destacados: [vid-vefjjmzDHyY]
 ---
 

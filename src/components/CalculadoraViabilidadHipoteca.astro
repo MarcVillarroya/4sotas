@@ -1,0 +1,381 @@
+---
+/**
+ * Viabilidad de hipoteca · interfaz interactiva.
+ *
+ * Se renderiza desde `pages/oros/herramientas/[slug].astro` cuando la ficha es
+ * `viabilidad-hipoteca`. Calcula un encaje aritmético con los datos del usuario y unos
+ * umbrales explícitos: nunca una aprobación bancaria ni una probabilidad.
+ */
+import type { CollectionEntry } from 'astro:content';
+import Herramienta from '../layouts/Herramienta.astro';
+import {
+  ETIQUETA_VEREDICTO,
+  LIMITES_VIABILIDAD,
+  calcularViabilidad,
+} from '../lib/finanzas/viabilidad.ts';
+import { formatearEuros, formatearPorcentaje } from '../lib/finanzas/numero.ts';
+import { AVISO_SIN_JS, celdasFilaAnual } from '../lib/finanzas/presentacion.ts';
+
+interface Props {
+  ficha: CollectionEntry<'herramientas'>;
+}
+
+const { ficha } = Astro.props;
+
+/** Ejemplo por defecto: precio 300.000, 60.000 de entrada y 120.000 de ahorro (Justo). */
+const DEFECTO = {
+  precio: 300000,
+  ahorro: 120000,
+  entrada: 60000,
+  gastosPct: 10,
+  plazoAnios: 30,
+  tinAnual: 3,
+  ingresos: 3000,
+  otrasDeudas: 0,
+} as const;
+
+const inicial = calcularViabilidad(DEFECTO);
+if (!inicial.ok) throw new Error(`Ejemplo por defecto inválido: ${inicial.errores[0]?.mensaje ?? 'sin detalle'}`);
+const ejemplo = inicial.resultado;
+const L = LIMITES_VIABILIDAD;
+const filas = ejemplo.tabla.map(celdasFilaAnual);
+---
+
+<Herramienta ficha={ficha} calcula={ficha.data.estado_implementacion !== 'no-implementada'}>
+  <p class="v2-calc-intro">
+    Pon el precio, tu ahorro, la entrada que piensas dar y los ingresos netos del hogar. Verás si la compra encaja con
+    esos números: cuota, porcentaje de ingresos, prueba con dos puntos más de tipo y el dinero que te queda después.
+  </p>
+
+  <form id="formulario-viabilidad" novalidate aria-describedby="ayuda-formulario">
+    <p class="hint" id="ayuda-formulario">
+      Todo se calcula en esta página. Nada de lo que escribas se envía a ningún sitio.
+    </p>
+
+    <fieldset class="v2-calc-group">
+      <legend>1 · La compra</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="precio">Precio de la vivienda <span class="v2-unit">€</span></label>
+          <input id="precio" name="precio" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.precio)} aria-describedby="ayuda-precio error-precio" />
+          <p class="hint" id="ayuda-precio">
+            De {L.precioMin.toLocaleString('es-ES')} € a {L.precioMax.toLocaleString('es-ES')} €.
+          </p>
+          <p class="error" id="error-precio" hidden></p>
+        </div>
+        <div class="field">
+          <label for="entrada">Entrada <span class="v2-unit">€</span></label>
+          <input id="entrada" name="entrada" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.entrada)} aria-describedby="ayuda-entrada error-entrada" />
+          <p class="hint" id="ayuda-entrada">La parte del precio que pagas con tu dinero. El resto es la hipoteca.</p>
+          <p class="error" id="error-entrada" hidden></p>
+        </div>
+        <div class="field">
+          <label for="gastosPct">Gastos de compra <span class="v2-unit">% del precio</span></label>
+          <input id="gastosPct" name="gastosPct" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.gastosPct)} aria-describedby="ayuda-gastos error-gastosPct" />
+          <p class="hint" id="ayuda-gastos">
+            Impuestos, notaría, registro, gestoría y tasación, de {L.gastosMin} % a {L.gastosMax} %. Es orientativo y
+            editable: los gastos varían por comunidad y tipo de vivienda; el porcentaje es editable.
+          </p>
+          <p class="error" id="error-gastosPct" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="v2-calc-group">
+      <legend>2 · Tu dinero</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="ahorro">Ahorro disponible <span class="v2-unit">€</span></label>
+          <input id="ahorro" name="ahorro" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.ahorro)} aria-describedby="ayuda-ahorro error-ahorro" />
+          <p class="hint" id="ayuda-ahorro">Todo lo que puedes destinar a la compra: entrada, gastos y colchón.</p>
+          <p class="error" id="error-ahorro" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ingresos">Ingresos netos del hogar <span class="v2-unit">€/mes</span></label>
+          <input id="ingresos" name="ingresos" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.ingresos)} aria-describedby="ayuda-ingresos error-ingresos" />
+          <p class="hint" id="ayuda-ingresos">
+            Suma de los ingresos netos mensuales, de {L.ingresosMin.toLocaleString('es-ES')} € a{' '}
+            {L.ingresosMax.toLocaleString('es-ES')} €.
+          </p>
+          <p class="error" id="error-ingresos" hidden></p>
+        </div>
+        <div class="field">
+          <label for="otrasDeudas">Otras deudas mensuales <span class="v2-unit">€/mes</span></label>
+          <input id="otrasDeudas" name="otrasDeudas" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.otrasDeudas)} aria-describedby="ayuda-deudas error-otrasDeudas" />
+          <p class="hint" id="ayuda-deudas">Préstamos, tarjetas o pensiones que ya pagas cada mes. Si no hay, deja 0.</p>
+          <p class="error" id="error-otrasDeudas" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="v2-calc-group">
+      <legend>3 · La hipoteca</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="plazoAnios">Plazo <span class="v2-unit">años</span></label>
+          <input id="plazoAnios" name="plazoAnios" type="text" inputmode="numeric" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.plazoAnios)} aria-describedby="ayuda-plazo error-plazoAnios" />
+          <p class="hint" id="ayuda-plazo">Número entero de {L.plazoMin} a {L.plazoMax} años.</p>
+          <p class="error" id="error-plazoAnios" hidden></p>
+        </div>
+        <div class="field">
+          <label for="tinAnual">TIN fijo anual <span class="v2-unit">%</span></label>
+          <input id="tinAnual" name="tinAnual" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="done"
+            value={String(DEFECTO.tinAnual)} aria-describedby="ayuda-tin error-tinAnual" />
+          <p class="hint" id="ayuda-tin">El tipo que quieres probar, de {L.tinMin} % a {L.tinMax} %.</p>
+          <p class="error" id="error-tinAnual" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button class="button" type="submit">Calcular</button>
+    </div>
+    <p class="hint">Si cambias un dato, el resultado se oculta. Pulsa Calcular para verlo de nuevo.</p>
+    <noscript><p class="honest">{AVISO_SIN_JS}</p></noscript>
+  </form>
+
+  <Fragment slot="ejemplos">
+    <ul>
+      <li>
+        <strong>300.000 € con 100.000 € de entrada, 140.000 € de ahorro e ingresos de 3.000 €</strong>: hipoteca de
+        200.000 €, LTV del 66,7 %, cuota de 843,21 €, DTI del 28,11 % y 10.000 € de colchón. Encaje holgado.
+      </li>
+      <li>
+        <strong>El mismo piso con 60.000 € de ahorro y 60.000 € de entrada</strong>: la cuota de 1.011,85 € sería pagable,
+        pero faltan 30.000 € para los gastos. No encaja por liquidez.
+      </li>
+    </ul>
+    <p class="hint">Las dos cifras están fijadas en tests/finanzas-viabilidad.test.ts y se recalculan al publicar.</p>
+  </Fragment>
+
+  <Fragment slot="resultado">
+    <section class="calc-result v2-calc-result" aria-labelledby="resultado-herramienta">
+      <p class="eyebrow">Encaje orientativo</p>
+      <h2 id="resultado-herramienta" tabindex="-1" style="font-size:var(--text-h3)">Veredicto</h2>
+      <p class="veredicto" id="metrica-veredicto" data-veredicto={ejemplo.veredicto}>
+        <span class="veredicto-icono" aria-hidden="true">•</span>
+        <span class="veredicto-texto">{ETIQUETA_VEREDICTO[ejemplo.veredicto]}</span>
+      </p>
+      <p class="hint" id="resumen-entrada">
+        Precio {DEFECTO.precio.toLocaleString('es-ES')} €, entrada {DEFECTO.entrada.toLocaleString('es-ES')} €, ahorro{' '}
+        {DEFECTO.ahorro.toLocaleString('es-ES')} € e ingresos de {DEFECTO.ingresos.toLocaleString('es-ES')} € al mes.
+      </p>
+      <ul class="motivos" id="motivos-veredicto">
+        {ejemplo.motivos.map((motivo) => <li>{motivo}</li>)}
+      </ul>
+
+      <dl class="metrics">
+        <div><dt>Hipoteca necesaria</dt><dd><span id="metrica-hipoteca">{formatearEuros(ejemplo.hipoteca)}</span></dd></div>
+        <div><dt>LTV</dt><dd><span id="metrica-ltv">{formatearPorcentaje(ejemplo.ltv, 1)}</span></dd></div>
+        <div><dt>Cuota mensual</dt><dd><span id="metrica-cuota">{formatearEuros(ejemplo.cuota)}</span></dd></div>
+        <div><dt>DTI</dt><dd><span id="metrica-dti">{formatearPorcentaje(ejemplo.dti)}</span></dd></div>
+        <div><dt>DTI con +2 puntos</dt><dd><span id="metrica-dti-estres">{formatearPorcentaje(ejemplo.dtiEstres)}</span></dd></div>
+        <div><dt>Gastos de compra</dt><dd><span id="metrica-gastos">{formatearEuros(ejemplo.gastos)}</span></dd></div>
+        <div><dt>Efectivo restante</dt><dd><span id="metrica-efectivo">{formatearEuros(ejemplo.efectivo)}</span></dd></div>
+        <div>
+          <dt>Ingresos netos mínimos (cuota al 35 %)</dt>
+          <dd><span id="metrica-ingresos-minimos">{formatearEuros(ejemplo.ingresosMinimos)}</span></dd>
+        </div>
+      </dl>
+
+      <p class="v2-calc-honest">Encaje orientativo con tus datos; cada entidad decide.</p>
+      <p class="hint">
+        Esto no es una oferta ni una aprobación bancaria. No incluye seguros, comisiones de mantenimiento ni vinculaciones.
+        Los umbrales (LTV 80/90 %, DTI 35/40 %, estrés 40/45 %, colchón de 6/3 cuotas) son práctica de mercado, no ley.
+      </p>
+
+      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="estado-calculo">
+        Resultado calculado con los valores del formulario.
+      </p>
+      <p class="v2-calc-notice" id="aviso-resultado" hidden></p>
+    </section>
+
+    <div class="table-wrap calc-table" tabindex="0" role="region" aria-label="Cuadro anual de la hipoteca">
+      <table>
+        <caption>Cuadro anual de la hipoteca necesaria con el TIN introducido.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Año</th>
+            <th scope="col">Cuotas</th>
+            <th scope="col">Intereses (€)</th>
+            <th scope="col">Capital amortizado (€)</th>
+            <th scope="col">Pendiente (€)</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-anual-cuerpo">
+          {
+            filas.map((fila) => (
+              <tr>
+                <th scope="row">{fila[0]}</th>
+                <td>{fila[1]}</td>
+                <td>{fila[2]}</td>
+                <td>{fila[3]}</td>
+                <td>{fila[4]}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </Fragment>
+</Herramienta>
+
+<style>
+  .calc-table {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .veredicto {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0 0.5rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    font-size: var(--text-h3);
+    font-weight: 650;
+  }
+  .veredicto[data-veredicto='holgado'] .veredicto-icono {
+    color: #1f7a3d;
+  }
+  .veredicto[data-veredicto='justo'] .veredicto-icono {
+    color: #a9700a;
+  }
+  .veredicto[data-veredicto='no-encaja'] .veredicto-icono {
+    color: #a22626;
+  }
+  .motivos {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.2rem;
+  }
+</style>
+
+<script>
+  import { ETIQUETA_VEREDICTO, calcularViabilidad } from '../lib/finanzas/viabilidad.ts';
+  import { formatearEuros, formatearPorcentaje, parsearNumero } from '../lib/finanzas/numero.ts';
+  import {
+    AVISO_CAMBIOS,
+    escribir,
+    limpiarErrores,
+    mostrarAviso,
+    ocultarAviso,
+    pintarErrores,
+    pintarTablaAnual,
+    textoError,
+    valorDe,
+  } from '../lib/finanzas/presentacion.ts';
+
+  const CAMPOS = ['precio', 'entrada', 'gastosPct', 'ahorro', 'ingresos', 'otrasDeudas', 'plazoAnios', 'tinAnual'] as const;
+  const METRICAS = [
+    'metrica-hipoteca',
+    'metrica-ltv',
+    'metrica-cuota',
+    'metrica-dti',
+    'metrica-dti-estres',
+    'metrica-gastos',
+    'metrica-efectivo',
+    'metrica-ingresos-minimos',
+  ] as const;
+  const ICONOS: Record<string, string> = { holgado: '✓', justo: '!', 'no-encaja': '✕' };
+
+  const formulario = document.getElementById('formulario-viabilidad') as HTMLFormElement | null;
+  const tituloResultado = document.getElementById('resultado-herramienta');
+
+  const retirar = (): void => {
+    for (const id of METRICAS) escribir(id, '—');
+    const veredicto = document.getElementById('metrica-veredicto');
+    if (veredicto) {
+      veredicto.dataset.veredicto = '';
+      veredicto.querySelector('.veredicto-texto')!.textContent = '—';
+    }
+    document.getElementById('motivos-veredicto')?.replaceChildren();
+    escribir('resumen-entrada', AVISO_CAMBIOS);
+    document.getElementById('tabla-anual-cuerpo')?.replaceChildren();
+  };
+
+  const actualizar = (enfocar: boolean): void => {
+    const entrada = {
+      precio: parsearNumero(valorDe('precio')),
+      ahorro: parsearNumero(valorDe('ahorro')),
+      entrada: parsearNumero(valorDe('entrada')),
+      gastosPct: parsearNumero(valorDe('gastosPct')),
+      plazoAnios: parsearNumero(valorDe('plazoAnios')),
+      tinAnual: parsearNumero(valorDe('tinAnual')),
+      ingresos: parsearNumero(valorDe('ingresos')),
+      otrasDeudas: parsearNumero(valorDe('otrasDeudas')),
+    };
+    const respuesta = calcularViabilidad(entrada);
+    limpiarErrores(CAMPOS);
+    if (!respuesta.ok) {
+      retirar();
+      pintarErrores(respuesta.errores);
+      mostrarAviso(textoError(respuesta.errores), 'error');
+      escribir('estado-calculo', textoError(respuesta.errores));
+      document.getElementById(respuesta.errores[0]?.campo ?? '')?.focus();
+      return;
+    }
+    const r = respuesta.resultado;
+    ocultarAviso();
+
+    const veredicto = document.getElementById('metrica-veredicto');
+    if (veredicto) {
+      veredicto.dataset.veredicto = r.veredicto;
+      const icono = veredicto.querySelector('.veredicto-icono');
+      if (icono) icono.textContent = ICONOS[r.veredicto] ?? '•';
+      const texto = veredicto.querySelector('.veredicto-texto');
+      if (texto) texto.textContent = ETIQUETA_VEREDICTO[r.veredicto];
+    }
+    const motivos = document.getElementById('motivos-veredicto');
+    if (motivos) {
+      motivos.replaceChildren(
+        ...r.motivos.map((motivo) => {
+          const li = document.createElement('li');
+          li.textContent = motivo;
+          return li;
+        }),
+      );
+    }
+
+    escribir('metrica-hipoteca', formatearEuros(r.hipoteca));
+    escribir('metrica-ltv', formatearPorcentaje(r.ltv, 1));
+    escribir('metrica-cuota', formatearEuros(r.cuota));
+    escribir('metrica-dti', formatearPorcentaje(r.dti));
+    escribir('metrica-dti-estres', formatearPorcentaje(r.dtiEstres));
+    escribir('metrica-gastos', formatearEuros(r.gastos));
+    escribir('metrica-efectivo', formatearEuros(r.efectivo));
+    escribir('metrica-ingresos-minimos', formatearEuros(r.ingresosMinimos));
+    escribir(
+      'resumen-entrada',
+      `Precio ${entrada.precio.toLocaleString('es-ES')} €, entrada ${entrada.entrada.toLocaleString('es-ES')} €, ahorro ${entrada.ahorro.toLocaleString('es-ES')} € e ingresos de ${entrada.ingresos.toLocaleString('es-ES')} € al mes.`,
+    );
+    pintarTablaAnual(r.tabla);
+    escribir(
+      'estado-calculo',
+      `Encaje ${ETIQUETA_VEREDICTO[r.veredicto]}. Cuota de ${formatearEuros(r.cuota)}, DTI ${formatearPorcentaje(r.dti)} y ${formatearEuros(r.efectivo)} de efectivo restante.`,
+    );
+    if (enfocar) tituloResultado?.focus();
+  };
+
+  formulario?.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    actualizar(true);
+  });
+
+  const editar = (): void => {
+    limpiarErrores(CAMPOS);
+    retirar();
+    mostrarAviso(AVISO_CAMBIOS, 'neutro');
+  };
+  formulario?.addEventListener('input', editar);
+  formulario?.addEventListener('change', editar);
+</script>

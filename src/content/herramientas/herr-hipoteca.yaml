@@ -1,0 +1,72 @@
+id: herr-hipoteca
+status: revision
+universo: oros
+creado: 2026-11-02
+procedencia: original
+sensibilidad: alta
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes:
+  - fuente: src-s7-04
+    dato: La financiación habitual es de hasta el 80 % del valor de tasación como práctica bancaria, no como límite legal.
+  - fuente: src-s7-03
+    dato: Artículos 13 y 14.1.e de la Ley 5/2019, tasación previa y reparto de gastos de la compra.
+  - fuente: src-s5-06
+    dato: Artículo 4 de la Ley 5/2019, que define la TAE como coste total del préstamo en porcentaje anual.
+seo:
+  descripcion: Calculadora de hipoteca fija con cuota francesa, intereses totales, LTV y cuadro anual de amortización. Fórmula, supuestos y límites publicados.
+actualizacion:
+  politica: revision-anual
+slug: hipoteca
+titulo: Calculadora de hipoteca
+descripcion: Calcula la cuota mensual de una hipoteca a tipo fijo, los intereses totales y el cuadro anual de amortización a partir del precio y la entrada.
+tipo: calculadora
+estado_implementacion: beta
+version_motor: 1.0.0
+formula: >-
+  Importe = precio − entrada; LTV = importe/precio. i = TIN/100/12; cuota = P·i/(1−(1+i)^−n), con cuota = P/n si i = 0,
+  donde P es el importe y n = plazo en años · 12. Total = cuota·n; intereses = total − P.
+unidad_salida: EUR-por-mes
+parametros:
+  - clave: precio
+    etiqueta: Precio de la vivienda
+    tipo: moneda
+    defecto: 250000
+    min: 30000
+    max: 1500000
+    paso: 1000
+  - clave: entrada
+    etiqueta: Entrada
+    tipo: moneda
+    defecto: 50000
+    min: 0
+    max: 1500000
+    paso: 1000
+  - clave: plazoAnios
+    etiqueta: Plazo en años
+    tipo: entero
+    defecto: 30
+    min: 5
+    max: 40
+    paso: 1
+  - clave: tinAnual
+    etiqueta: TIN fijo anual
+    tipo: porcentaje
+    defecto: 3
+    min: 0
+    max: 10
+    paso: 0.05
+supuestos:
+  - "La hipoteca es a tipo fijo durante todo el plazo: el mismo TIN se aplica a los 12 meses de cada año, sin revisiones."
+  - "El importe financiado es exactamente precio menos entrada; la entrada se paga con dinero propio y no se financia."
+  - "La cuota es constante (sistema francés) y no hay carencia, cuotas extra ni amortización anticipada."
+  - "El precio introducido es de compra; la tasación puede ser distinta y el banco suele financiar sobre la menor de las dos."
+limites:
+  - "Es una simulación aritmética con tu hipótesis de tipo, no una oferta ni una aprobación bancaria."
+  - "No incluye seguros, comisiones de mantenimiento ni vinculaciones: si existen en tu caso, el coste real será mayor."
+  - "No se modelan hipotecas variables ni Euríbor: el tipo de esta herramienta es fijo todo el plazo."
+  - "No incluye gastos de compra ni impuestos; para eso está la herramienta de viabilidad, que sí los estima."
+tests: tests/finanzas-hipoteca.ts
+temas:
+  - tema-vivienda

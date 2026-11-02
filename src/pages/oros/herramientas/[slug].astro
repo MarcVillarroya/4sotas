@@ -2,10 +2,12 @@
 /**
  * Página de una herramienta generada desde la colección.
  *
- * Dos formas, una sola ruta:
- *  - `interes-compuesto` renderiza la interfaz interactiva desde `CalculadoraInteresCompuesto`
- *    (motor probado en `src/lib/calculadora.ts`, vectores en `docs/CALCULADORA.md`).
- *  - el resto renderiza la metodología sin interfaz mientras su motor no exista.
+ * Una sola ruta, dos formas:
+ *  - las calculadoras registradas en `CALCULADORAS` renderizan su interfaz interactiva;
+ *  - el resto renderiza la metodología sin formulario mientras su motor no exista.
+ *
+ * Si una ficha declara `estado_implementacion` distinta de `no-implementada` y no tiene
+ * componente registrado, el build falla: no se publica una herramienta que no calcula.
  *
  * La ruta se genera con `visibles()`, así que la página aparece exactamente cuando la ficha
  * es visible en el build actual: un borrador nunca tiene página pública.
@@ -13,11 +15,22 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Herramienta from '../../../layouts/Herramienta.astro';
 import CalculadoraInteresCompuesto from '../../../components/CalculadoraInteresCompuesto.astro';
+import CalculadoraPrestamo from '../../../components/CalculadoraPrestamo.astro';
+import CalculadoraHipoteca from '../../../components/CalculadoraHipoteca.astro';
+import CalculadoraViabilidadHipoteca from '../../../components/CalculadoraViabilidadHipoteca.astro';
 import { visibles } from '../../../lib/publicacion.ts';
 
 interface Props {
   ficha: CollectionEntry<'herramientas'>;
 }
+
+/** Registro explícito: slug de la ficha → componente que la calcula. */
+const CALCULADORAS: Record<string, typeof CalculadoraInteresCompuesto> = {
+  'interes-compuesto': CalculadoraInteresCompuesto,
+  prestamo: CalculadoraPrestamo,
+  hipoteca: CalculadoraHipoteca,
+  'viabilidad-hipoteca': CalculadoraViabilidadHipoteca,
+};
 
 export async function getStaticPaths() {
   const herramientas = visibles(await getCollection('herramientas'));
@@ -26,24 +39,24 @@ export async function getStaticPaths() {
 
 const { ficha } = Astro.props;
 const calcula = ficha.data.estado_implementacion !== 'no-implementada';
-const esCalculadora = ficha.data.slug === 'interes-compuesto';
+const Calculadora = CALCULADORAS[ficha.data.slug];
+
+if (calcula && !Calculadora) {
+  throw new Error(
+    `La herramienta "${ficha.data.slug}" declara estado_implementacion="${ficha.data.estado_implementacion}" ` +
+      'pero no tiene componente registrado en CALCULADORAS (src/pages/oros/herramientas/[slug].astro).',
+  );
+}
 ---
 
 {
-  esCalculadora ? (
-    <CalculadoraInteresCompuesto ficha={ficha} />
+  Calculadora ? (
+    <Calculadora ficha={ficha} />
   ) : (
     <Herramienta ficha={ficha} calcula={calcula}>
-      {calcula ? (
-        <p>
-          Esta herramienta se calcula en su propia página. Aquí está la metodología completa, por si quieres revisarla
-          antes de usarla.
-        </p>
-      ) : (
-        <p>
-          Todavía no hay formulario porque todavía no hay cálculo. Aquí está la metodología que seguirá cuando lo haya.
-        </p>
-      )}
+      <p>
+        Todavía no hay formulario porque todavía no hay cálculo. Aquí está la metodología que seguirá cuando lo haya.
+      </p>
       <p class="hint">
         Nada de lo que escribas aquí se envía a ningún sitio: esta página no usa analítica ni carga nada de terceros.
       </p>

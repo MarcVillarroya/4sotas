@@ -1,0 +1,272 @@
+---
+/**
+ * Calculadora de préstamo · interfaz interactiva.
+ *
+ * Se renderiza desde `pages/oros/herramientas/[slug].astro` cuando la ficha es `prestamo`.
+ * Sin JavaScript la página ya muestra un ejemplo completo calculado en el build con el
+ * mismo motor puro (`src/lib/finanzas/prestamo.ts`); el `<script>` solo recalcula con los
+ * datos del usuario. No hay envío, ni cookies, ni peticiones.
+ */
+import type { CollectionEntry } from 'astro:content';
+import Herramienta from '../layouts/Herramienta.astro';
+import { LIMITES_PRESTAMO, calcularPrestamo, formatearTae } from '../lib/finanzas/prestamo.ts';
+import { formatearEuros } from '../lib/finanzas/numero.ts';
+import { AVISO_SIN_JS, celdasFilaAnual } from '../lib/finanzas/presentacion.ts';
+
+interface Props {
+  ficha: CollectionEntry<'herramientas'>;
+}
+
+const { ficha } = Astro.props;
+
+/** Ejemplo por defecto = vector P1 de docs/FINANZAS.md §6. */
+const DEFECTO = { importe: 15000, meses: 60, tinAnual: 7, comisionPct: 0 } as const;
+
+const inicial = calcularPrestamo(DEFECTO);
+if (!inicial.ok) throw new Error(`Ejemplo por defecto inválido: ${inicial.errores[0]?.mensaje ?? 'sin detalle'}`);
+const ejemplo = inicial.resultado;
+const L = LIMITES_PRESTAMO;
+
+const EJEMPLOS = [
+  { titulo: 'Un préstamo de 12.000 € al 0 % a 12 meses', entrada: { ...DEFECTO, importe: 12000, meses: 12, tinAnual: 0 } },
+  { titulo: 'El mismo préstamo con un 1 % de comisión de apertura', entrada: { ...DEFECTO, comisionPct: 1 } },
+];
+const ejemplos = EJEMPLOS.map((e) => {
+  const r = calcularPrestamo(e.entrada);
+  if (!r.ok) throw new Error(`Ejemplo publicado inválido: ${e.titulo}`);
+  return { ...e, resultado: r.resultado };
+});
+
+const filas = ejemplo.tabla.map(celdasFilaAnual);
+---
+
+<Herramienta ficha={ficha} calcula={ficha.data.estado_implementacion !== 'no-implementada'}>
+  <p class="v2-calc-intro">
+    Introduce el importe, el plazo y el tipo que te ofrecen: verás la cuota mensual, cuánto pagas de intereses y la TAE
+    real cuando hay comisión de apertura. La tabla anual muestra cómo baja la deuda año a año.
+  </p>
+
+  <form id="formulario-prestamo" novalidate aria-describedby="ayuda-formulario">
+    <p class="hint" id="ayuda-formulario">
+      Todo se calcula en esta página. Nada de lo que escribas se envía a ningún sitio.
+    </p>
+
+    <fieldset class="v2-calc-group">
+      <legend>1 · Cuánto pides</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="importe">Importe <span class="v2-unit">€</span></label>
+          <input id="importe" name="importe" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.importe)} aria-describedby="ayuda-importe error-importe" />
+          <p class="hint" id="ayuda-importe">De {L.importeMin} € a {L.importeMax.toLocaleString('es-ES')} €.</p>
+          <p class="error" id="error-importe" hidden></p>
+        </div>
+        <div class="field">
+          <label for="meses">Plazo <span class="v2-unit">meses</span></label>
+          <input id="meses" name="meses" type="text" inputmode="numeric" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.meses)} aria-describedby="ayuda-meses error-meses" />
+          <p class="hint" id="ayuda-meses">Número entero de {L.mesesMin} a {L.mesesMax} meses.</p>
+          <p class="error" id="error-meses" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="v2-calc-group">
+      <legend>2 · A qué tipo</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="tinAnual">TIN anual <span class="v2-unit">%</span></label>
+          <input id="tinAnual" name="tinAnual" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.tinAnual)} aria-describedby="ayuda-tin error-tinAnual" />
+          <p class="hint" id="ayuda-tin">
+            El tipo nominal anual que te ofrecen, de {L.tinMin} % a {L.tinMax} %. La TAE se calcula aparte, desde las cuotas.
+          </p>
+          <p class="error" id="error-tinAnual" hidden></p>
+        </div>
+        <div class="field">
+          <label for="comisionPct">Comisión de apertura <span class="v2-unit">% del importe</span></label>
+          <input id="comisionPct" name="comisionPct" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="done"
+            value={String(DEFECTO.comisionPct)} aria-describedby="ayuda-comision error-comisionPct" />
+          <p class="hint" id="ayuda-comision">
+            Opcional, de {L.comisionMin} % a {L.comisionMax} %. Se resta del capital recibido para calcular la TAE.
+          </p>
+          <p class="error" id="error-comisionPct" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button class="button" type="submit">Calcular</button>
+    </div>
+    <p class="hint">Si cambias un dato, el resultado se oculta. Pulsa Calcular para verlo de nuevo.</p>
+    <noscript><p class="honest">{AVISO_SIN_JS}</p></noscript>
+  </form>
+
+  <Fragment slot="ejemplos">
+    <ul>
+      {
+        ejemplos.map((e) => (
+          <li>
+            <strong>{e.titulo}</strong>: cuota de {formatearEuros(e.resultado.cuota)}, {formatearEuros(e.resultado.intereses)} de
+            intereses y {formatearEuros(e.resultado.total)} pagados en total. TAE {formatearTae(e.resultado.tae)}.
+          </li>
+        ))
+      }
+    </ul>
+    <p class="hint">Estas cifras se recalculan al publicar la página con la misma fórmula que usa el formulario.</p>
+  </Fragment>
+
+  <Fragment slot="resultado">
+    <section class="calc-result v2-calc-result" aria-labelledby="resultado-herramienta">
+      <p class="eyebrow">Resultado</p>
+      <h2 id="resultado-herramienta" tabindex="-1" style="font-size:var(--text-h3)">Cuota mensual</h2>
+      <p class="big-number" id="metrica-cuota">{formatearEuros(ejemplo.cuota)}</p>
+      <p class="hint" id="resumen-entrada">
+        {DEFECTO.importe.toLocaleString('es-ES')} € a {DEFECTO.meses} meses con un TIN del {DEFECTO.tinAnual} % y un{' '}
+        {DEFECTO.comisionPct} % de comisión.
+      </p>
+
+      <dl class="metrics">
+        <div><dt>Intereses totales</dt><dd><span id="metrica-intereses">{formatearEuros(ejemplo.intereses)}</span></dd></div>
+        <div><dt>Total pagado</dt><dd><span id="metrica-total">{formatearEuros(ejemplo.total)}</span></dd></div>
+        <div>
+          <dt>Comisión de apertura</dt>
+          <dd><span id="metrica-comision">{formatearEuros(ejemplo.comision)}</span></dd>
+        </div>
+        <div>
+          <dt>TAE calculada desde el flujo</dt>
+          <dd><span id="metrica-tae">{formatearTae(ejemplo.tae)}</span></dd>
+        </div>
+      </dl>
+
+      <p class="v2-calc-honest">
+        Esto no es una oferta ni una aprobación bancaria. No incluye seguros, comisiones de mantenimiento ni vinculaciones.
+      </p>
+      <p class="hint">
+        La TAE no es el TIN: se obtiene de las cuotas y del capital neto que recibes (importe menos comisión). Con un 0 % de
+        comisión sigue siendo una tasa efectiva anual, algo mayor que el TIN nominal.
+      </p>
+
+      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="estado-calculo">
+        Resultado calculado con los valores del formulario.
+      </p>
+      <p class="v2-calc-notice" id="aviso-resultado" hidden></p>
+    </section>
+
+    <div class="table-wrap calc-table" tabindex="0" role="region" aria-label="Cuadro anual de amortización">
+      <table>
+        <caption>Cuadro anual del préstamo: intereses, capital amortizado y deuda pendiente.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Año</th>
+            <th scope="col">Cuotas</th>
+            <th scope="col">Intereses (€)</th>
+            <th scope="col">Capital amortizado (€)</th>
+            <th scope="col">Pendiente (€)</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-anual-cuerpo">
+          {
+            filas.map((fila) => (
+              <tr>
+                <th scope="row">{fila[0]}</th>
+                <td>{fila[1]}</td>
+                <td>{fila[2]}</td>
+                <td>{fila[3]}</td>
+                <td>{fila[4]}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </Fragment>
+</Herramienta>
+
+<style>
+  .calc-table {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<script>
+  import { calcularPrestamo, formatearTae } from '../lib/finanzas/prestamo.ts';
+  import { formatearEuros, formatearPorcentaje, parsearNumero } from '../lib/finanzas/numero.ts';
+  import {
+    AVISO_CAMBIOS,
+    escribir,
+    limpiarErrores,
+    mostrarAviso,
+    ocultarAviso,
+    pintarErrores,
+    pintarTablaAnual,
+    textoError,
+    valorDe,
+  } from '../lib/finanzas/presentacion.ts';
+
+  const CAMPOS = ['importe', 'meses', 'tinAnual', 'comisionPct'] as const;
+  const formulario = document.getElementById('formulario-prestamo') as HTMLFormElement | null;
+  const tituloResultado = document.getElementById('resultado-herramienta');
+
+  const retirar = (): void => {
+    escribir('metrica-cuota', '—');
+    escribir('metrica-intereses', '—');
+    escribir('metrica-total', '—');
+    escribir('metrica-comision', '—');
+    escribir('metrica-tae', '—');
+    escribir('resumen-entrada', AVISO_CAMBIOS);
+    document.getElementById('tabla-anual-cuerpo')?.replaceChildren();
+  };
+
+  const actualizar = (enfocar: boolean): void => {
+    const entrada = {
+      importe: parsearNumero(valorDe('importe')),
+      meses: parsearNumero(valorDe('meses')),
+      tinAnual: parsearNumero(valorDe('tinAnual')),
+      comisionPct: parsearNumero(valorDe('comisionPct')),
+    };
+    const respuesta = calcularPrestamo(entrada);
+    limpiarErrores(CAMPOS);
+    if (!respuesta.ok) {
+      retirar();
+      pintarErrores(respuesta.errores);
+      mostrarAviso(textoError(respuesta.errores), 'error');
+      escribir('estado-calculo', textoError(respuesta.errores));
+      document.getElementById(respuesta.errores[0]?.campo ?? '')?.focus();
+      return;
+    }
+    const r = respuesta.resultado;
+    ocultarAviso();
+    escribir('metrica-cuota', formatearEuros(r.cuota));
+    escribir('metrica-intereses', formatearEuros(r.intereses));
+    escribir('metrica-total', formatearEuros(r.total));
+    escribir('metrica-comision', formatearEuros(r.comision));
+    escribir('metrica-tae', formatearTae(r.tae));
+    escribir(
+      'resumen-entrada',
+      `${entrada.importe.toLocaleString('es-ES')} € a ${entrada.meses} meses con un TIN del ${formatearPorcentaje(entrada.tinAnual / 100)} y un ${formatearPorcentaje(entrada.comisionPct / 100)} de comisión.`,
+    );
+    pintarTablaAnual(r.tabla);
+    escribir(
+      'estado-calculo',
+      `Cuota de ${formatearEuros(r.cuota)}; total pagado ${formatearEuros(r.total)}; TAE ${formatearTae(r.tae)}.`,
+    );
+    if (enfocar) tituloResultado?.focus();
+  };
+
+  formulario?.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    actualizar(true);
+  });
+
+  const editar = (): void => {
+    limpiarErrores(CAMPOS);
+    retirar();
+    mostrarAviso(AVISO_CAMBIOS, 'neutro');
+  };
+  formulario?.addEventListener('input', editar);
+  formulario?.addEventListener('change', editar);
+</script>

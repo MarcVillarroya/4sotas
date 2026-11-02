@@ -1,0 +1,265 @@
+---
+/**
+ * Calculadora de hipoteca fija · interfaz interactiva.
+ *
+ * Se renderiza desde `pages/oros/herramientas/[slug].astro` cuando la ficha es `hipoteca`.
+ * Tipo fijo durante todo el plazo: no se modela Euríbor ni tipo variable. Sin JavaScript
+ * la página muestra el ejemplo calculado en el build con `src/lib/finanzas/hipoteca.ts`.
+ */
+import type { CollectionEntry } from 'astro:content';
+import Herramienta from '../layouts/Herramienta.astro';
+import { LIMITES_HIPOTECA, calcularHipoteca } from '../lib/finanzas/hipoteca.ts';
+import { formatearEuros, formatearPorcentaje } from '../lib/finanzas/numero.ts';
+import { AVISO_SIN_JS, celdasFilaAnual } from '../lib/finanzas/presentacion.ts';
+
+interface Props {
+  ficha: CollectionEntry<'herramientas'>;
+}
+
+const { ficha } = Astro.props;
+
+/** Ejemplo por defecto = vector H1 de docs/FINANZAS.md §6. */
+const DEFECTO = { precio: 250000, entrada: 50000, plazoAnios: 30, tinAnual: 3 } as const;
+
+const inicial = calcularHipoteca(DEFECTO);
+if (!inicial.ok) throw new Error(`Ejemplo por defecto inválido: ${inicial.errores[0]?.mensaje ?? 'sin detalle'}`);
+const ejemplo = inicial.resultado;
+const L = LIMITES_HIPOTECA;
+
+const EJEMPLOS = [
+  { titulo: '300.000 € con 60.000 € de entrada al 3 % a 30 años', entrada: { ...DEFECTO, precio: 300000, entrada: 60000 } },
+  {
+    titulo: '300.000 € con 50.000 € de entrada al 3,5 % a 30 años',
+    entrada: { ...DEFECTO, precio: 300000, entrada: 50000, tinAnual: 3.5 },
+  },
+];
+const ejemplos = EJEMPLOS.map((e) => {
+  const r = calcularHipoteca(e.entrada);
+  if (!r.ok) throw new Error(`Ejemplo publicado inválido: ${e.titulo}`);
+  return { ...e, resultado: r.resultado };
+});
+
+const filas = ejemplo.tabla.map(celdasFilaAnual);
+---
+
+<Herramienta ficha={ficha} calcula={ficha.data.estado_implementacion !== 'no-implementada'}>
+  <p class="v2-calc-intro">
+    Dinos el precio, cuánto pones de entrada y a qué tipo fijo te lo ofrecen: verás la cuota mensual, los intereses totales
+    y cómo se reparte la deuda año a año. Una hipoteca a tipo variable no se simula aquí.
+  </p>
+
+  <form id="formulario-hipoteca" novalidate aria-describedby="ayuda-formulario">
+    <p class="hint" id="ayuda-formulario">
+      Todo se calcula en esta página. Nada de lo que escribas se envía a ningún sitio.
+    </p>
+
+    <fieldset class="v2-calc-group">
+      <legend>1 · La vivienda y la entrada</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="precio">Precio de la vivienda <span class="v2-unit">€</span></label>
+          <input id="precio" name="precio" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.precio)} aria-describedby="ayuda-precio error-precio" />
+          <p class="hint" id="ayuda-precio">
+            De {L.precioMin.toLocaleString('es-ES')} € a {L.precioMax.toLocaleString('es-ES')} €.
+          </p>
+          <p class="error" id="error-precio" hidden></p>
+        </div>
+        <div class="field">
+          <label for="entrada">Entrada <span class="v2-unit">€</span></label>
+          <input id="entrada" name="entrada" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.entrada)} aria-describedby="ayuda-entrada error-entrada" />
+          <p class="hint" id="ayuda-entrada">
+            Lo que pagas por adelantado. Tiene que ser menor que el precio: el resto es la hipoteca.
+          </p>
+          <p class="error" id="error-entrada" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="v2-calc-group">
+      <legend>2 · Plazo y tipo fijo</legend>
+      <div class="fields">
+        <div class="field">
+          <label for="plazoAnios">Plazo <span class="v2-unit">años</span></label>
+          <input id="plazoAnios" name="plazoAnios" type="text" inputmode="numeric" autocomplete="off" enterkeyhint="next"
+            value={String(DEFECTO.plazoAnios)} aria-describedby="ayuda-plazo error-plazoAnios" />
+          <p class="hint" id="ayuda-plazo">Número entero de {L.plazoMin} a {L.plazoMax} años.</p>
+          <p class="error" id="error-plazoAnios" hidden></p>
+        </div>
+        <div class="field">
+          <label for="tinAnual">TIN fijo anual <span class="v2-unit">%</span></label>
+          <input id="tinAnual" name="tinAnual" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="done"
+            value={String(DEFECTO.tinAnual)} aria-describedby="ayuda-tin error-tinAnual" />
+          <p class="hint" id="ayuda-tin">
+            El tipo fijo que te ofrecen, de {L.tinMin} % a {L.tinMax} %. Se mantiene igual todo el plazo en este cálculo.
+          </p>
+          <p class="error" id="error-tinAnual" hidden></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button class="button" type="submit">Calcular</button>
+    </div>
+    <p class="hint">Si cambias un dato, el resultado se oculta. Pulsa Calcular para verlo de nuevo.</p>
+    <noscript><p class="honest">{AVISO_SIN_JS}</p></noscript>
+  </form>
+
+  <Fragment slot="ejemplos">
+    <ul>
+      {
+        ejemplos.map((e) => (
+          <li>
+            <strong>{e.titulo}</strong>: {formatearEuros(e.resultado.importe)} de hipoteca, cuota de{' '}
+            {formatearEuros(e.resultado.cuota)}, {formatearEuros(e.resultado.intereses)} de intereses y{' '}
+            {formatearEuros(e.resultado.total)} pagados en total.
+          </li>
+        ))
+      }
+    </ul>
+    <p class="hint">Estas cifras se recalculan al publicar la página con la misma fórmula que usa el formulario.</p>
+  </Fragment>
+
+  <Fragment slot="resultado">
+    <section class="calc-result v2-calc-result" aria-labelledby="resultado-herramienta">
+      <p class="eyebrow">Resultado</p>
+      <h2 id="resultado-herramienta" tabindex="-1" style="font-size:var(--text-h3)">Cuota mensual</h2>
+      <p class="big-number" id="metrica-cuota">{formatearEuros(ejemplo.cuota)}</p>
+      <p class="hint" id="resumen-entrada">
+        {DEFECTO.precio.toLocaleString('es-ES')} € con {DEFECTO.entrada.toLocaleString('es-ES')} € de entrada, a{' '}
+        {DEFECTO.plazoAnios} años y un {DEFECTO.tinAnual} % fijo.
+      </p>
+
+      <dl class="metrics">
+        <div><dt>Hipoteca</dt><dd><span id="metrica-importe">{formatearEuros(ejemplo.importe)}</span></dd></div>
+        <div><dt>Financiación (LTV)</dt><dd><span id="metrica-ltv">{formatearPorcentaje(ejemplo.ltv, 1)}</span></dd></div>
+        <div><dt>Intereses totales</dt><dd><span id="metrica-intereses">{formatearEuros(ejemplo.intereses)}</span></dd></div>
+        <div><dt>Total pagado</dt><dd><span id="metrica-total">{formatearEuros(ejemplo.total)}</span></dd></div>
+      </dl>
+
+      <p class="v2-calc-honest">
+        Esto no es una oferta ni una aprobación bancaria. No incluye seguros, comisiones de mantenimiento ni vinculaciones.
+      </p>
+      <p class="hint">
+        Tipo fijo durante todo el plazo: una hipoteca variable no se simula aquí. La cuota sale del sistema francés (cuota
+        constante) y se redondea solo al presentar.
+      </p>
+
+      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="estado-calculo">
+        Resultado calculado con los valores del formulario.
+      </p>
+      <p class="v2-calc-notice" id="aviso-resultado" hidden></p>
+    </section>
+
+    <div class="table-wrap calc-table" tabindex="0" role="region" aria-label="Cuadro anual de amortización">
+      <table>
+        <caption>Cuadro anual de la hipoteca: intereses, capital amortizado y deuda pendiente.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Año</th>
+            <th scope="col">Cuotas</th>
+            <th scope="col">Intereses (€)</th>
+            <th scope="col">Capital amortizado (€)</th>
+            <th scope="col">Pendiente (€)</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-anual-cuerpo">
+          {
+            filas.map((fila) => (
+              <tr>
+                <th scope="row">{fila[0]}</th>
+                <td>{fila[1]}</td>
+                <td>{fila[2]}</td>
+                <td>{fila[3]}</td>
+                <td>{fila[4]}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </Fragment>
+</Herramienta>
+
+<style>
+  .calc-table {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<script>
+  import { calcularHipoteca } from '../lib/finanzas/hipoteca.ts';
+  import { formatearEuros, formatearPorcentaje, parsearNumero } from '../lib/finanzas/numero.ts';
+  import {
+    AVISO_CAMBIOS,
+    escribir,
+    limpiarErrores,
+    mostrarAviso,
+    ocultarAviso,
+    pintarErrores,
+    pintarTablaAnual,
+    textoError,
+    valorDe,
+  } from '../lib/finanzas/presentacion.ts';
+
+  const CAMPOS = ['precio', 'entrada', 'plazoAnios', 'tinAnual'] as const;
+  const formulario = document.getElementById('formulario-hipoteca') as HTMLFormElement | null;
+  const tituloResultado = document.getElementById('resultado-herramienta');
+
+  const retirar = (): void => {
+    for (const id of ['metrica-cuota', 'metrica-importe', 'metrica-ltv', 'metrica-intereses', 'metrica-total'])
+      escribir(id, '—');
+    escribir('resumen-entrada', AVISO_CAMBIOS);
+    document.getElementById('tabla-anual-cuerpo')?.replaceChildren();
+  };
+
+  const actualizar = (enfocar: boolean): void => {
+    const entrada = {
+      precio: parsearNumero(valorDe('precio')),
+      entrada: parsearNumero(valorDe('entrada')),
+      plazoAnios: parsearNumero(valorDe('plazoAnios')),
+      tinAnual: parsearNumero(valorDe('tinAnual')),
+    };
+    const respuesta = calcularHipoteca(entrada);
+    limpiarErrores(CAMPOS);
+    if (!respuesta.ok) {
+      retirar();
+      pintarErrores(respuesta.errores);
+      mostrarAviso(textoError(respuesta.errores), 'error');
+      escribir('estado-calculo', textoError(respuesta.errores));
+      document.getElementById(respuesta.errores[0]?.campo ?? '')?.focus();
+      return;
+    }
+    const r = respuesta.resultado;
+    ocultarAviso();
+    escribir('metrica-cuota', formatearEuros(r.cuota));
+    escribir('metrica-importe', formatearEuros(r.importe));
+    escribir('metrica-ltv', formatearPorcentaje(r.ltv, 1));
+    escribir('metrica-intereses', formatearEuros(r.intereses));
+    escribir('metrica-total', formatearEuros(r.total));
+    escribir(
+      'resumen-entrada',
+      `${entrada.precio.toLocaleString('es-ES')} € con ${entrada.entrada.toLocaleString('es-ES')} € de entrada, a ${entrada.plazoAnios} años y un ${formatearPorcentaje(entrada.tinAnual / 100)} fijo.`,
+    );
+    pintarTablaAnual(r.tabla);
+    escribir('estado-calculo', `Cuota de ${formatearEuros(r.cuota)}; total pagado ${formatearEuros(r.total)}.`);
+    if (enfocar) tituloResultado?.focus();
+  };
+
+  formulario?.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    actualizar(true);
+  });
+
+  const editar = (): void => {
+    limpiarErrores(CAMPOS);
+    retirar();
+    mostrarAviso(AVISO_CAMBIOS, 'neutro');
+  };
+  formulario?.addEventListener('input', editar);
+  formulario?.addEventListener('change', editar);
+</script>
