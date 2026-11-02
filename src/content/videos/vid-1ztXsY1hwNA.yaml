@@ -11,21 +11,23 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo de Sota de Oros sobre el método de tres cuentas para repartir un sueldo y llegar a fin de mes con margen."
+  descripcion: "Vídeo de Sota de Oros sobre el método de tres cuentas para
+    repartir un sueldo y llegar a fin de mes con margen."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: 1ztXsY1hwNA
 slug: tres-cuentas-un-sueldo
 titulo: "3 cuentas, 1 sueldo: por qué te falta dinero a fin de mes"
-descripcion_corta: "Pieza de 1 min 5 s: el reparto del sueldo en tres cuentas y por qué el dinero se acaba antes de fin de mes."
+descripcion_corta: "Pieza de 1 min 5 s: el reparto del sueldo en tres cuentas y
+  por qué el dinero se acaba antes de fin de mes."
 publicado_en: 2026-10-19
 duracion_iso: PT1M5S
 miniatura: https://i.ytimg.com/vi/1ztXsY1hwNA/maxresdefault.jpg
 miniatura_local: /assets/videos/1ztXsY1hwNA.webp
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-10-26
+verificado_en: 2026-11-02
 vistas_al_verificar: 270
 idioma: es
 temas:
@@ -37,14 +39,22 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "¿Cobras 1.600 € y a mitad de mes ya no sabes cuánto te queda? El vídeo plantea que el problema no es cuánto ganas, sino que todo el dinero vive en la misma cuenta, y explica el sistema de tres cuentas: recibos y gastos fijos, día a día y ahorro, con un reparto de ejemplo de 1.600 € en 950, 500 y 150 €. Las cantidades son un ejemplo del mecanismo."
+  resumen: "¿Cobras 1.600 € y a mitad de mes ya no sabes cuánto te queda? El vídeo
+    plantea que el problema no es cuánto ganas, sino que todo el dinero vive en
+    la misma cuenta, y explica el sistema de tres cuentas: recibos y gastos
+    fijos, día a día y ahorro, con un reparto de ejemplo de 1.600 € en 950, 500
+    y 150 €. Las cantidades son un ejemplo del mecanismo."
   que_cubre:
-    - Por qué el sueldo se acaba antes de fin de mes cuando todo el dinero está en una sola cuenta
-    - "El reparto de ejemplo: 950 € de recibos fijos, 500 € de día a día y 150 € de ahorro sobre 1.600 €"
+    - Por qué el sueldo se acaba antes de fin de mes cuando todo el dinero está
+      en una sola cuenta
+    - "El reparto de ejemplo: 950 € de recibos fijos, 500 € de día a día y 150 €
+      de ahorro sobre 1.600 €"
     - Que el ahorro se aparta primero, antes de gastar, y no con lo que sobra
   que_no_cubre:
-    - "No es un reparto personalizado: las cantidades son un ejemplo para explicar el mecanismo."
-  para_quien: Para quien cobra todos los meses y llega a fin de mes sin saber en qué se le ha ido el dinero.
+    - "No es un reparto personalizado: las cantidades son un ejemplo para
+      explicar el mecanismo."
+  para_quien: Para quien cobra todos los meses y llega a fin de mes sin saber en
+    qué se le ha ido el dinero.
   origen: descripcion-oficial
   faltan: []
   heredado: false

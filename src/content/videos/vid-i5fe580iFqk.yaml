@@ -11,22 +11,24 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo corto de Sota de Oros: qué le hace la inflación a 10.000 € que no rentan, con el importe planteado en la pieza."
+  descripcion: "Vídeo corto de Sota de Oros: qué le hace la inflación a 10.000 €
+    que no rentan, con el importe planteado en la pieza."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: i5fe580iFqk
 slug: inflacion-sobre-10000
 titulo: "Tu dinero parado pierde valor: la inflación sobre 10.000 € (2026)"
-descripcion_corta: "Pieza corta de 51 s: el efecto de la inflación sobre 10.000 € parados, planteado con la cifra del titular del vídeo."
+descripcion_corta: "Pieza corta de 51 s: el efecto de la inflación sobre 10.000
+  € parados, planteado con la cifra del titular del vídeo."
 publicado_en: 2026-10-12
 duracion_iso: PT51S
 miniatura: https://i.ytimg.com/vi/i5fe580iFqk/maxresdefault.jpg
 miniatura_local: /assets/videos/i5fe580iFqk.webp
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-10-26
-vistas_al_verificar: 277
+verificado_en: 2026-11-02
+vistas_al_verificar: 279
 idioma: es
 temas:
   - tema-inflacion
@@ -35,14 +37,23 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "10.000 € quietos en la cuenta siguen siendo 10.000 €, pero compran menos. Con la inflación de España en el 4,9 % (IPC, avance de septiembre de 2026), el vídeo calcula que ese dinero pierde unos 467 € de poder de compra y equivale a unos 9.533 € de un año antes, y muestra la operación: 10.000 ÷ 1,049. Explica también qué significa ese 4,9 % con una cesta que pasa de 100 € a 104,90 €."
+  resumen: "10.000 € quietos en la cuenta siguen siendo 10.000 €, pero compran
+    menos. Con la inflación de España en el 4,9 % (IPC, avance de septiembre de
+    2026), el vídeo calcula que ese dinero pierde unos 467 € de poder de compra
+    y equivale a unos 9.533 € de un año antes, y muestra la operación: 10.000 ÷
+    1,049. Explica también qué significa ese 4,9 % con una cesta que pasa de 100
+    € a 104,90 €."
   que_cubre:
     - Por qué el saldo del banco no baja y el poder de compra sí
-    - Qué significa un 4,9 % de inflación, con una cesta que pasa de 100 € a 104,90 €
-    - "La operación del ejemplo: 10.000 ÷ 1,049 ≈ 9.533 €, unos 467 € de poder de compra perdidos"
+    - Qué significa un 4,9 % de inflación, con una cesta que pasa de 100 € a
+      104,90 €
+    - "La operación del ejemplo: 10.000 ÷ 1,049 ≈ 9.533 €, unos 467 € de poder
+      de compra perdidos"
   que_no_cubre:
-    - No proyecta la inflación futura ni calcula el efecto sobre tu cartera completa.
-  para_quien: Para quien tiene dinero parado en la cuenta y quiere ver cuánto poder de compra pierde en un año.
+    - No proyecta la inflación futura ni calcula el efecto sobre tu cartera
+      completa.
+  para_quien: Para quien tiene dinero parado en la cuenta y quiere ver cuánto
+    poder de compra pierde en un año.
   origen: descripcion-oficial
   faltan: []
   heredado: false

@@ -11,21 +11,23 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Vídeo corto de Sota de Oros: el recorrido de un pago con tarjeta y quién se queda parte del importe en comisiones."
+  descripcion: "Vídeo corto de Sota de Oros: el recorrido de un pago con tarjeta y
+    quién se queda parte del importe en comisiones."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: vefjjmzDHyY
 slug: quien-se-queda-tu-dinero-tarjeta
 titulo: "¿Quién se queda tu dinero cuando pagas con tarjeta? (2026)"
-descripcion_corta: "Pieza corta de 55 s: quién cobra y cuánto cuando se paga con tarjeta, entre emisor, red y comercio."
+descripcion_corta: "Pieza corta de 55 s: quién cobra y cuánto cuando se paga con
+  tarjeta, entre emisor, red y comercio."
 publicado_en: 2026-10-16
 duracion_iso: PT55S
 miniatura: https://i.ytimg.com/vi/vefjjmzDHyY/maxresdefault.jpg
 miniatura_local: /assets/videos/vefjjmzDHyY.webp
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-10-26
+verificado_en: 2026-11-02
 vistas_al_verificar: 45
 idioma: es
 temas:
@@ -35,14 +37,22 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Pagas 10 € con tarjeta, pero el comercio no llega a cobrarlos: en cada pago juegan tu banco, el banco del comercio y la red de la tarjeta, y los tres se llevan su parte. El vídeo explica la tasa de intercambio y su tope legal en Europa (0,2 % en débito y 0,3 % en crédito), por qué sumada a millones de tarjetas deja de ser poca cosa, y qué hay detrás del «gratis» del cashback y los puntos."
+  resumen: "Pagas 10 € con tarjeta, pero el comercio no llega a cobrarlos: en cada
+    pago juegan tu banco, el banco del comercio y la red de la tarjeta, y los
+    tres se llevan su parte. El vídeo explica la tasa de intercambio y su tope
+    legal en Europa (0,2 % en débito y 0,3 % en crédito), por qué sumada a
+    millones de tarjetas deja de ser poca cosa, y qué hay detrás del «gratis»
+    del cashback y los puntos."
   que_cubre:
     - "Quién cobra en cada pago con tarjeta: tu banco, el del comercio y la red"
-    - "La tasa de intercambio y su tope legal en Europa: 0,2 % en débito y 0,3 % en crédito"
-    - "Por qué la tarjeta parece gratis: cashback, puntos y el interés del crédito"
+    - "La tasa de intercambio y su tope legal en Europa: 0,2 % en débito y 0,3 %
+      en crédito"
+    - "Por qué la tarjeta parece gratis: cashback, puntos y el interés del
+      crédito"
   que_no_cubre:
     - No compara tarjetas ni calcula las comisiones de tu banco concreto.
-  para_quien: Para quien usa la tarjeta a diario y quiere saber qué pasa con el dinero hasta que llega al comercio.
+  para_quien: Para quien usa la tarjeta a diario y quiere saber qué pasa con el
+    dinero hasta que llega al comercio.
   origen: descripcion-oficial
   faltan: []
   heredado: false
