@@ -76,8 +76,8 @@ const filas = ejemplo.tabla.map(celdasFilaAnual);
           <input id="gastosPct" name="gastosPct" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="next"
             value={String(DEFECTO.gastosPct)} aria-describedby="ayuda-gastos error-gastosPct" />
           <p class="hint" id="ayuda-gastos">
-            Impuestos, notaría, registro, gestoría y tasación, de {L.gastosMin} % a {L.gastosMax} %. Es orientativo y
-            editable: los gastos varían por comunidad y tipo de vivienda; el porcentaje es editable.
+            Impuestos, notaría, registro, gestoría y tasación, de {L.gastosMin} % a {L.gastosMax} %. Es orientativo:
+            los gastos varían por comunidad y tipo de vivienda; el porcentaje es editable.
           </p>
           <p class="error" id="error-gastosPct" hidden></p>
         </div>
@@ -152,7 +152,7 @@ const filas = ejemplo.tabla.map(celdasFilaAnual);
         pero faltan 30.000 € para los gastos. No encaja por liquidez.
       </li>
     </ul>
-    <p class="hint">Las dos cifras están fijadas en tests/finanzas-viabilidad.test.ts y se recalculan al publicar.</p>
+    <p class="hint">Las dos cifras están fijadas en tests/finanzas-viabilidad.ts y se recalculan al publicar.</p>
   </Fragment>
 
   <Fragment slot="resultado">

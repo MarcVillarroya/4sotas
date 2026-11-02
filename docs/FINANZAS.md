@@ -139,7 +139,7 @@ Tabla anual de P1 (referencia de los tests): año 1 intereses 967,75 € y pendi
 | V1b | igual que V1 con ahorro 140.000 | efectivo **10.000**; **Holgado** |
 | V2 | precio 300.000, ahorro 60.000, entrada 60.000, gastos 30.000 | hipoteca 240.000; cuota 1.011,85; efectivo **−30.000**; **No encaja** |
 | V3 | precio 300.000, entrada 60.000, ingresos 2.800, otras deudas 300 | cuota 1.011,85; DTI **46,85 %**; ingresos mínimos 3.748,14; **No encaja** |
-| V4 | precio 300.000, ahorro 120.000, entrada 60.000, ingresos 3.000 | efectivo 30.000; DTI 33,73 %; estrés 42,90 %; **Justo** |
+| V4 | precio 300.000, ahorro 120.000, entrada 60.000, ingresos 3.000 | efectivo 30.000; DTI 33,73 %; estrés 42,95 %; **Justo** |
 
 **Divergencia documentada con la tarjeta de trabajo (V1).** La tarjeta pedía, para V1,
 «ahorro 100.000 → efectivo 10.000», pero con `efectivo = ahorro − entrada − gastos` el
@@ -166,9 +166,10 @@ esquema ni se ha maquillado el resultado para que cuadre la cifra original.
 
 ## 8 · Estado y gates
 
-Estado de las fichas: `status: revision`, `estado_implementacion: beta`,
-`sensibilidad: alta` y revisor factual declarado. No se marcan `publicado` ni `estable`
-hasta la revisión factual.
+Estado de las fichas: `status: publicado` desde el 2026-11-02, con `publicado` y
+`revisado_factual` fechados ese día, `estado_implementacion: beta`, `sensibilidad: alta`
+y revisor factual declarado. Las fuentes de cada ficha se comprobaron contra su original
+antes de publicar; ninguna afirmación queda sin fuente tipada.
 
 Tests: `tests/finanzas-numero.ts`, `finanzas-amortizacion.ts`, `finanzas-prestamo.ts`,
 `finanzas-hipoteca.ts` y `finanzas-viabilidad.ts`. El esquema de la colección exige
@@ -176,11 +177,14 @@ Tests: `tests/finanzas-numero.ts`, `finanzas-amortizacion.ts`, `finanzas-prestam
 `npm test` añadiendo el glob `tests/finanzas-*.ts` al script; no se ha modificado el
 esquema para saltarse la regla.
 
-Gates comprobados: `npm run check` (0 errores), `npm test` (196 pass, 1 skip heredado),
-`npm run build`, `npm run build:fixtures` y `npm run verificar:plantillas` (0 fallos).
+Gates comprobados: `npm run check` (0 errores), `npm test` (197 pass; la única prueba de
+`calculadora-presentacion` que puede quedar en skip solo se salta si no hay `dist/`, así que
+conviene ejecutar antes `npm run build`), `npm run build`, `npm run build:fixtures` y
+`npm run verificar:plantillas` (0 fallos).
 
-`npm run validate` queda con 3 bloqueantes esperados: `B-REF-PRIVADA` porque
-`tema-vivienda` y `tema-banca` (publicados) referencian herramientas en `revision`. El
-validador protege contra fugas de borradores y no se ha relajado. El build público no
-genera esas páginas ni esos enlaces; cuando las fichas pasen a `publicado` en la revisión
-factual, los tres bloqueantes desaparecen sin tocar código.
+`npm run validate` termina con **0 bloqueantes** y 3 avisos de vídeos ajenos
+(`W-VIDEO-TITULO` ×2 y `W-VIDEO-SIN-FICHA`), que no bloquean. El build público genera
+`/oros/herramientas/prestamo/`, `/oros/herramientas/hipoteca/` y
+`/oros/herramientas/viabilidad-hipoteca/`, y los enlaces desde `/oros/herramientas/`,
+`/oros/`, `tema-vivienda` y `tema-banca` resuelven. El validador y el esquema no se han
+relajado: los bloqueantes desaparecieron al publicar las fichas con revisión factual.
