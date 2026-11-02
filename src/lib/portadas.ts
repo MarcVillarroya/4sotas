@@ -22,7 +22,12 @@ export function seleccionarPortadas(
   const videos = publicados(vs)
     .filter(v => v.data.estado_youtube === 'publico' && v.data.privacidad_api === 'public')
     .sort((a, b) => b.data.publicado_en.getTime() - a.data.publicado_en.getTime() || a.id.localeCompare(b.id));
-  const herramientas = publicados(hs).filter(h => h.data.estado_implementacion !== 'no-implementada');
+  const herramientasPublicadas = publicados(hs).filter(h => h.data.estado_implementacion !== 'no-implementada');
+  /** Orden editorial de la portada: primero la pregunta de vivienda, después deudas y ahorro. */
+  const ORDEN_HERRAMIENTAS = ['hipoteca', 'viabilidad-hipoteca', 'prestamo', 'interes-compuesto'];
+  const herramientas = [...herramientasPublicadas].sort(
+    (a, b) => ORDEN_HERRAMIENTAS.indexOf(a.data.slug) - ORDEN_HERRAMIENTAS.indexOf(b.data.slug) || a.id.localeCompare(b.id),
+  );
   const iniciales = guias.filter(g => g.data.destacado).slice(0, 3);
   const referencias = new Set(iniciales.flatMap(g => g.data.glosario.map(idRef)));
   const glosario = publicados(gs).filter(g => referencias.has(g.id))
@@ -33,5 +38,5 @@ export function seleccionarPortadas(
     videos: videos.filter(v => v.data.temas.some(r => idRef(r) === t.id)).length,
   }));
   return { temas, guias, iniciales, videos, destacado: videos[0], recientes: videos.slice(0, 3),
-    calculadora: herramientas.find(h => h.data.slug === 'interes-compuesto'), glosario, mapa };
+    calculadora: herramientas.find(h => h.data.slug === 'interes-compuesto'), herramientas, glosario, mapa };
 }

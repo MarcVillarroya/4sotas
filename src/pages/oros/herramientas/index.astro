@@ -1,7 +1,8 @@
 ---
 /**
- * Índice de herramientas. Existe para poder declarar el estado real: si no hay ninguna
- * disponible, lo dice; no se enlaza una calculadora que no calcula.
+ * Índice de herramientas. Agrupa por intención (vivienda, deudas, ahorro) para que cada
+ * calculadora se encuentre por la pregunta que responde, no por su nombre interno.
+ * Si una herramienta no está implementada no se enlaza; si no hay ninguna, se dice.
  */
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
@@ -21,6 +22,37 @@ const ETIQUETA_ESTADO: Record<string, string> = {
   beta: 'Calcula aquí',
   estable: 'Disponible',
 };
+
+/** Agrupación por intención: primero la pregunta, después la herramienta. */
+const GRUPOS = [
+  {
+    clave: 'vivienda',
+    titulo: 'Vivienda',
+    descripcion: 'Cuánto pagarás al mes y si la compra encaja con tu ahorro y tus ingresos.',
+    slugs: ['hipoteca', 'viabilidad-hipoteca', 'amortizacion-anticipada'],
+  },
+  {
+    clave: 'deudas',
+    titulo: 'Deudas',
+    descripcion: 'Cuánto cuesta de verdad un préstamo: cuota, intereses y TAE.',
+    slugs: ['prestamo'],
+  },
+  {
+    clave: 'ahorro',
+    titulo: 'Ahorro',
+    descripcion: 'Cuánto puede crecer lo que apartas, con la hipótesis de rentabilidad que elijas.',
+    slugs: ['interes-compuesto'],
+  },
+] as const;
+
+const usadas = new Set<string>(GRUPOS.flatMap((g) => g.slugs));
+const grupos = GRUPOS.map((grupo) => ({
+  ...grupo,
+  herramientas: grupo.slugs
+    .map((slug) => herramientas.find((h) => h.data.slug === slug))
+    .filter((h): h is (typeof herramientas)[number] => Boolean(h)),
+}));
+const sueltas = herramientas.filter((h) => !usadas.has(h.data.slug));
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
@@ -88,19 +120,55 @@ const jsonLd = grafo([
           </p>
         </div>
       ) : (
-        <ul class="link-list">
-          {herramientas.map((h) => (
-            <li>
-              <a href={url(ruta.herramienta(h.data.slug))}>
-                <Sprite familia="functional" nombre="calculadora" size={24} />
-                {h.data.titulo}
-                <span class="orden">{ETIQUETA_ESTADO[h.data.estado_implementacion] ?? h.data.estado_implementacion}</span>
-              </a>
-              <p>{h.data.descripcion}</p>
-            </li>
-          ))}
-        </ul>
+        <>
+          {grupos
+            .filter((grupo) => grupo.herramientas.length > 0)
+            .map((grupo) => (
+              <section class="v2-tools-group" aria-labelledby={`grupo-${grupo.clave}`}>
+                <h2 id={`grupo-${grupo.clave}`}>{grupo.titulo}</h2>
+                <p class="muted">{grupo.descripcion}</p>
+                <ul class="link-list">
+                  {grupo.herramientas.map((h) => (
+                    <li>
+                      <a href={url(ruta.herramienta(h.data.slug))}>
+                        <Sprite familia="functional" nombre="calculadora" size={24} />
+                        {h.data.titulo}
+                        <span class="orden">{ETIQUETA_ESTADO[h.data.estado_implementacion] ?? h.data.estado_implementacion}</span>
+                      </a>
+                      <p>{h.data.descripcion}</p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          {sueltas.length > 0 && (
+            <section class="v2-tools-group" aria-labelledby="grupo-otras">
+              <h2 id="grupo-otras">Otras</h2>
+              <ul class="link-list">
+                {sueltas.map((h) => (
+                  <li>
+                    <a href={url(ruta.herramienta(h.data.slug))}>
+                      <Sprite familia="functional" nombre="calculadora" size={24} />
+                      {h.data.titulo}
+                      <span class="orden">{ETIQUETA_ESTADO[h.data.estado_implementacion] ?? h.data.estado_implementacion}</span>
+                    </a>
+                    <p>{h.data.descripcion}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </>
       )
     }
   </div>
 </Base>
+
+<style>
+  .v2-tools-group + .v2-tools-group {
+    margin-top: 2.5rem;
+  }
+  .v2-tools-group h2 {
+    margin-bottom: 0.25rem;
+  }
+</style>

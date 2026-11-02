@@ -9,6 +9,8 @@ import { grafoSeccion } from '../../lib/jsonld.ts';
 const sota = await getEntry('sotas', 'sota-oros');
 if (!sota) throw new Error('Falta sota-oros');
 const contenido = await contenidoPortadas();
+/** CTA principal del hero: la primera herramienta publicada (hoy, la hipoteca). */
+const ctaHerramienta = contenido.herramientas[0] ?? contenido.calculadora;
 const titulo = 'Tu dinero, con las cartas claras';
 const descripcion = 'Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.';
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
@@ -20,7 +22,7 @@ const iconos: Record<string, string> = { nomina: 'nomina', fiscal: 'impuestos', 
     <div><p class="eyebrow">Sota de Oros · economía cotidiana</p><h1 id="titulo-principal">{titulo}.</h1>
       <p class="lead">{sota.data.promesa}</p>
       <div class="actions"><a class="button" href={url(ruta.videos())}>Ver los vídeos</a>
-        {contenido.calculadora && <a class="button secondary" href={url(ruta.herramienta(contenido.calculadora.data.slug))}>Abrir la calculadora</a>}
+        {ctaHerramienta && <a class="button secondary" href={url(ruta.herramienta(ctaHerramienta.data.slug))}>{ctaHerramienta.data.titulo}</a>}
       </div>
     </div>
     <figure class="v21-character"><div class="v21-card-label"><Sprite familia="functional" nombre="guia" size={40} inmediato /><span>TUS CARTAS, CLARAS</span></div>

@@ -1,0 +1,104 @@
+id: herr-viabilidad-hipoteca
+status: revision
+universo: oros
+creado: 2026-11-02
+procedencia: original
+sensibilidad: alta
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes:
+  - fuente: src-s7-04
+    dato: La financiación habitual es de hasta el 80 % del valor de tasación como práctica bancaria, no como límite legal.
+  - fuente: src-bde-consulta-endeudamiento-40
+    dato: El Banco de España indica que el total de deudas no debería superar el 40 % de los ingresos netos mensuales.
+  - fuente: src-s7-05
+    dato: Escala de ITP en Cataluña desde el 27 de junio de 2025; 10 % hasta 600.000 € y tipo medio por encima, verificado en la ATC.
+  - fuente: src-s7-06
+    dato: IVA del 10 % en obra nueva y 4 % en vivienda de protección oficial de régimen especial; la segunda mano tributa por ITP autonómico.
+seo:
+  descripcion: "Calcula si una compra encaja con tu ahorro e ingresos: hipoteca necesaria, LTV, cuota, DTI, prueba con +2 puntos y efectivo restante."
+actualizacion:
+  politica: revision-anual
+slug: viabilidad-hipoteca
+titulo: ¿Puedo comprar esta casa?
+descripcion: "Comprueba si una compra encaja con tu ahorro y tus ingresos: hipoteca necesaria, LTV, cuota, DTI, prueba con dos puntos más y efectivo restante."
+tipo: calculadora
+estado_implementacion: beta
+version_motor: 1.0.0
+formula: >-
+  gastos = precio·gastos%/100; hipoteca = precio − entrada; LTV = hipoteca/precio; cuota por sistema francés con el TIN
+  introducido; cuota de estrés con TIN + 2 puntos; efectivo = ahorro − entrada − gastos; DTI = (cuota + otras deudas)/ingresos;
+  ingresos mínimos = (cuota + otras deudas)/0,35.
+unidad_salida: EUR-por-mes
+parametros:
+  - clave: precio
+    etiqueta: Precio de la vivienda
+    tipo: moneda
+    defecto: 300000
+    min: 30000
+    max: 1500000
+    paso: 1000
+  - clave: ahorro
+    etiqueta: Ahorro disponible
+    tipo: moneda
+    defecto: 120000
+    min: 0
+    max: 1500000
+    paso: 1000
+  - clave: entrada
+    etiqueta: Entrada
+    tipo: moneda
+    defecto: 60000
+    min: 0
+    max: 1500000
+    paso: 1000
+  - clave: gastosPct
+    etiqueta: Gastos de compra
+    tipo: porcentaje
+    defecto: 10
+    min: 0
+    max: 20
+    paso: 0.5
+  - clave: plazoAnios
+    etiqueta: Plazo en años
+    tipo: entero
+    defecto: 30
+    min: 5
+    max: 40
+    paso: 1
+  - clave: tinAnual
+    etiqueta: TIN fijo anual
+    tipo: porcentaje
+    defecto: 3
+    min: 0
+    max: 10
+    paso: 0.05
+  - clave: ingresos
+    etiqueta: Ingresos netos del hogar
+    tipo: moneda
+    defecto: 3000
+    min: 500
+    max: 20000
+    paso: 100
+  - clave: otrasDeudas
+    etiqueta: Otras deudas mensuales
+    tipo: moneda
+    defecto: 0
+    min: 0
+    max: 10000
+    paso: 50
+supuestos:
+  - "Los umbrales (LTV 80/90 %, DTI 35/40 %, estrés 40/45 %, colchón de 6/3 cuotas) son práctica de mercado, no una norma legal."
+  - "Los gastos de compra se estiman como porcentaje editable del precio; varían por comunidad y tipo de vivienda y no son una tasa única."
+  - "El ahorro cubre entrada, gastos y colchón: el efectivo restante es ahorro menos entrada menos gastos estimados."
+  - "La prueba de estrés suma dos puntos al TIN y recalcula la cuota con el mismo plazo; no simula una revisión real del tipo."
+limites:
+  - "El veredicto es un encaje aritmético orientativo con tus datos; cada entidad decide y ninguna aprobación está garantizada."
+  - "No estima la probabilidad de que un banco conceda la hipoteca: no hay modelo ni datos para eso."
+  - "No incluye seguros, comisiones de mantenimiento ni vinculaciones, ni la fiscalidad personal de la compra."
+  - "No modela hipotecas variables ni Euríbor; el TIN introducido se mantiene fijo en toda la simulación."
+tests: tests/finanzas-viabilidad.ts
+temas:
+  - tema-vivienda
+  - tema-banca
