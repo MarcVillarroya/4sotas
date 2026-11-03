@@ -1,0 +1,68 @@
+# 4 Sotas · pack editorial de «150 € al mes desde los 30: la entrada del piso a los 63».
+#
+# Fuente: guion de locución de la V2 (docs/v2/GUION-VOZ-V2.md + public/audio-v2/lineas.txt),
+# SRT de 12 cues del máster (out/v2/ahorro-33-anos-V2.srt) y cálculo verificado del brief.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+
+titulo: "150 € al mes desde los 30: la entrada del piso a los 63"
+slug: ahorro-33-anos
+
+descripcion_corta: "Con 150 € al mes desde los 30, reunir la entrada de un piso de 200.000 € lleva 33 años y 4 meses. La cuenta, paso a paso."
+
+seo_descripcion: "Por qué 150 € al mes no bastan para la entrada de un piso: 60.000 € iniciales, 400 meses y 33 años y 4 meses. Cifras y matices."
+
+resumen_editorial: "Con 30 años y 150 € al mes, reunir la entrada de un piso de 200.000 € lleva 33 años y 4 meses. El vídeo desglosa los 60.000 € iniciales —40.000 de aportación y 20.000 de ITP general sobre vivienda usada—, explica los 400 meses y muestra el envejecimiento. Cierra con los matices: el precio no se queda quieto, el cálculo es a precios de hoy y existen tipos reducidos y otras financiaciones."
+
+que_cubre:
+  - "Por qué la entrada de un piso de 200.000 € no son 40.000 €: el ITP general del 10 % añade 20.000 €."
+  - "Cómo 150 € al mes se convierten en 400 meses, 33 años y 4 meses, y en llegar a los 63."
+  - "Los matices: precio congelado, tipos reducidos y financiaciones distintas."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni una predicción: el cálculo es a precios de hoy y con un ejemplo redondo."
+  - "No entra en ayudas concretas, avales ni requisitos personales."
+
+para_quien: "Para quien empieza a ahorrar para su primer piso y quiere ver la cuenta completa sin promesas."
+
+temas:
+  - tema-ahorro
+  - tema-vivienda
+
+keywords:
+  - ahorrar para comprar un piso
+  - 33 años ahorrando
+  - entrada de un piso
+  - comprar vivienda España
+  - 150 euros al mes
+  - ITP vivienda usada
+  - precio de la vivienda
+  - ahorro mensual
+  - tipos reducidos comprar piso
+  - finanzas personales
+  - educación financiera
+  - Sota de Oros
+
+fuentes:
+  - "Cifras del ejemplo del guion: vivienda usada de 200.000 €, 80 % financiado, 40.000 € de aportación, ITP general 10 % = 20.000 €, total 60.000 €; 150 €/mes × 400 meses = 33 años y 4 meses. Aritmética verificada."
+  - "El cálculo usa un precio congelado y no es una predicción del mercado."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. El cálculo usa un ejemplo con precio congelado y no es una predicción."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/mvf/Escritorio/Proyectos/ahorro-33-anos/out/v2/ahorro-33-anos-V2.srt
+
+# mié 4-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+publicar_en: "2026-11-04T15:30:00+01:00"
+
+miniatura: public/assets/videos/ahorro-33-anos-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/mvf/Escritorio/Proyectos/ahorro-33-anos/out/v2/ahorro-33-anos-V2-FINAL.mp4
+duracion_iso: PT57S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
