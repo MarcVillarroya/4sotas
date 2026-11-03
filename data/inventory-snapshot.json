@@ -190,6 +190,20 @@
       "thumbnail_url": "https://i.ytimg.com/vi/O1V9_of7g1w/maxresdefault.jpg",
       "default_language": "es",
       "verification": "verificado_api"
+    },
+    {
+      "videoId": "gIfkNboEZdI",
+      "title": "150 € al mes desde los 30: la entrada del piso a los 63",
+      "privacy_status": "private",
+      "publish_at": "2026-11-04T14:30:00Z",
+      "published_at": "2026-11-03T11:48:50Z",
+      "duration_iso8601": "PT57S",
+      "thumbnail_url": "https://i.ytimg.com/vi/gIfkNboEZdI/maxresdefault.jpg",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "commentCount": "0"
+      }
     }
   ]
 }
