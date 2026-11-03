@@ -1,0 +1,5 @@
+# 4 Sotas — https://4sotas.com
+User-agent: *
+Allow: /
+
+Sitemap: https://4sotas.com/sitemap-index.xml
