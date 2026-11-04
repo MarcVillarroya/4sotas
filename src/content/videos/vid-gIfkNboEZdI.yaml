@@ -1,5 +1,5 @@
 id: vid-gIfkNboEZdI
-status: revision
+status: publicado
 universo: oros
 creado: 2026-11-03
 publicado: 2026-11-03
@@ -24,9 +24,9 @@ duracion_iso: PT57S
 miniatura: https://i.ytimg.com/vi/gIfkNboEZdI/maxresdefault.jpg
 miniatura_local: /assets/videos/gIfkNboEZdI.webp
 insercion: disponible
-estado_youtube: programado
-privacidad_api: private
-verificado_en: 2026-11-03
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-04
 idioma: es
 temas:
   - tema-ahorro
