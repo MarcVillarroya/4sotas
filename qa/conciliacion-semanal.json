@@ -1,137 +1,155 @@
 {
-  "hoy": "2026-11-02",
+  "hoy": "2026-11-09",
   "cambios": [
     {
       "id": "vid-1ztXsY1hwNA",
       "archivo": "vid-1ztXsY1hwNA.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-2aepHTLOjIQ",
       "archivo": "vid-2aepHTLOjIQ.yaml",
       "parches": {
-        "duracion_iso": "PT1M7S",
-        "publicado_en": "2026-10-28",
-        "vistas_al_verificar": 0,
-        "miniatura": "https://i9.ytimg.com/vi/2aepHTLOjIQ/maxresdefault.jpg?sqp=CICGodcG&rs=AOn4CLBKjEfdh9NYaTBDNhMIOU0MhtVtUA",
-        "verificado_en": "2026-11-02"
+        "vistas_al_verificar": 1254,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-3xz04lRAW0k",
       "archivo": "vid-3xz04lRAW0k.yaml",
       "parches": {
-        "vistas_al_verificar": 265,
-        "verificado_en": "2026-11-02"
+        "vistas_al_verificar": 280,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-6dp6Y6nTreY",
       "archivo": "vid-6dp6Y6nTreY.yaml",
       "parches": {
-        "vistas_al_verificar": 326,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-DzH02NfDqM4",
       "archivo": "vid-DzH02NfDqM4.yaml",
       "parches": {
-        "vistas_al_verificar": 283,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
+      }
+    },
+    {
+      "id": "vid-LL1EJttJPrs",
+      "archivo": "vid-LL1EJttJPrs.yaml",
+      "parches": {
+        "vistas_al_verificar": 108,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-LarTT_rvCGM",
       "archivo": "vid-LarTT_rvCGM.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-M9EhU06FlUA",
       "archivo": "vid-M9EhU06FlUA.yaml",
       "parches": {
-        "vistas_al_verificar": 85,
-        "verificado_en": "2026-11-02"
+        "vistas_al_verificar": 122,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-O1V9_of7g1w",
       "archivo": "vid-O1V9_of7g1w.yaml",
       "parches": {
-        "vistas_al_verificar": 232,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-SrvXlAVnDog",
       "archivo": "vid-SrvXlAVnDog.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
+      }
+    },
+    {
+      "id": "vid-TT9vvDgV5m0",
+      "archivo": "vid-TT9vvDgV5m0.yaml",
+      "parches": {
+        "vistas_al_verificar": 14,
+        "verificado_en": "2026-11-09"
+      }
+    },
+    {
+      "id": "vid-gIfkNboEZdI",
+      "archivo": "vid-gIfkNboEZdI.yaml",
+      "parches": {
+        "vistas_al_verificar": 1394,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-i5fe580iFqk",
       "archivo": "vid-i5fe580iFqk.yaml",
       "parches": {
-        "vistas_al_verificar": 279,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
+      }
+    },
+    {
+      "id": "vid-iat5xP27vqo",
+      "archivo": "vid-iat5xP27vqo.yaml",
+      "parches": {
+        "vistas_al_verificar": 47,
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-mu4mTE_ouJ0",
       "archivo": "vid-mu4mTE_ouJ0.yaml",
       "parches": {
-        "vistas_al_verificar": 283,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-t1zPAoZV05M",
       "archivo": "vid-t1zPAoZV05M.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-u0AKp6bpdGo",
       "archivo": "vid-u0AKp6bpdGo.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-vefjjmzDHyY",
       "archivo": "vid-vefjjmzDHyY.yaml",
       "parches": {
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
       }
     },
     {
       "id": "vid-wsseghAWiMw",
       "archivo": "vid-wsseghAWiMw.yaml",
       "parches": {
-        "duracion_iso": "PT12M32S",
-        "vistas_al_verificar": 2,
-        "verificado_en": "2026-11-02"
+        "verificado_en": "2026-11-09"
+      }
+    },
+    {
+      "id": "vid-xZhIn2gYPJQ",
+      "archivo": "vid-xZhIn2gYPJQ.yaml",
+      "parches": {
+        "verificado_en": "2026-11-09"
       }
     }
   ],
-  "sinFicha": [
-    {
-      "youtube_id": "xZhIn2gYPJQ",
-      "titulo": "Comprar piso: por qué 40.000 € no llegan para 200.000 € #finanzas #ahorrochallenge",
-      "publicado_en": "2026-10-30"
-    },
-    {
-      "youtube_id": "LL1EJttJPrs",
-      "titulo": "GTA VI: Cómo un videojuego de 1997 se convirtió en un imperio multimillonario",
-      "publicado_en": "2026-10-25"
-    }
-  ],
+  "sinFicha": [],
   "sinVideoEnCanal": [],
   "pendientes": [],
   "avisos": [],
@@ -142,15 +160,20 @@
     "vid-3xz04lRAW0k.yaml",
     "vid-6dp6Y6nTreY.yaml",
     "vid-DzH02NfDqM4.yaml",
+    "vid-LL1EJttJPrs.yaml",
     "vid-LarTT_rvCGM.yaml",
     "vid-M9EhU06FlUA.yaml",
     "vid-O1V9_of7g1w.yaml",
     "vid-SrvXlAVnDog.yaml",
+    "vid-TT9vvDgV5m0.yaml",
+    "vid-gIfkNboEZdI.yaml",
     "vid-i5fe580iFqk.yaml",
+    "vid-iat5xP27vqo.yaml",
     "vid-mu4mTE_ouJ0.yaml",
     "vid-t1zPAoZV05M.yaml",
     "vid-u0AKp6bpdGo.yaml",
     "vid-vefjjmzDHyY.yaml",
-    "vid-wsseghAWiMw.yaml"
+    "vid-wsseghAWiMw.yaml",
+    "vid-xZhIn2gYPJQ.yaml"
   ]
 }

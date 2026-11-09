@@ -30,7 +30,7 @@ miniatura_local: /assets/videos/wsseghAWiMw.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-02
+verificado_en: 2026-11-09
 idioma: es
 temas:
   - tema-vivienda
@@ -86,4 +86,4 @@ informacion:
   origen: paquete-publicacion
   faltan: []
   heredado: false
-vistas_al_verificar: 2
+vistas_al_verificar: 7

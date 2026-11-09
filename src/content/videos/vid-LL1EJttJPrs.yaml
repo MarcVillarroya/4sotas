@@ -11,14 +11,18 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Documental: de la ciudad vista desde arriba en 1997 al GTA VI de 2026. 29 años de diseño, tecnología y negocio, con las cifras de GTA V y lo que aún no sabemos."
+  descripcion: "Documental: de la ciudad vista desde arriba en 1997 al GTA VI de
+    2026. 29 años de diseño, tecnología y negocio, con las cifras de GTA V y lo
+    que aún no sabemos."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: LL1EJttJPrs
 slug: gta-vi-imperio
 titulo: "GTA VI: cómo un juego de 1997 se convirtió en un imperio"
-descripcion_corta: "De la ciudad vista desde arriba al GTA VI de 2026: 29 años de diseño, tecnología y negocio, con las cifras de GTA V y lo que todavía no sabemos."
+descripcion_corta: "De la ciudad vista desde arriba al GTA VI de 2026: 29 años
+  de diseño, tecnología y negocio, con las cifras de GTA V y lo que todavía no
+  sabemos."
 publicado_en: 2026-10-25
 duracion_iso: PT11M14S
 miniatura: https://i.ytimg.com/vi/LL1EJttJPrs/maxresdefault.jpg
@@ -26,8 +30,8 @@ miniatura_local: /assets/videos/LL1EJttJPrs.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-04
-vistas_al_verificar: 67
+verificado_en: 2026-11-09
+vistas_al_verificar: 108
 idioma: es
 temas:
   - tema-inversion
@@ -54,16 +58,26 @@ capitulos:
     segundo: 643
 informacion:
   estado: completo
-  resumen: "Documental sobre cómo un juego de 1997 se convirtió en el mundo abierto más rentable de la industria: 29 años en nueve capítulos, de la vista cenital del original al GTA VI de 2026, con las cifras del negocio y separando siempre lo confirmado de las proyecciones de analistas."
+  resumen: "Documental sobre cómo un juego de 1997 se convirtió en el mundo
+    abierto más rentable de la industria: 29 años en nueve capítulos, de la
+    vista cenital del original al GTA VI de 2026, con las cifras del negocio y
+    separando siempre lo confirmado de las proyecciones de analistas."
   que_cubre:
-    - "La evolución del diseño: de la vista cenital de 1997 al mundo abierto en 3D y al estado entero."
-    - "Las cifras del negocio: 800 M$ el primer día de GTA V, 225 millones de copias y unos 9.700 M$ de ingresos de la franquicia desde 2013."
-    - "El giro del modelo: el gasto recurrente, que supone el 78 % del gasto de Take-Two."
-    - "GTA VI: lo anunciado frente a las proyecciones de analistas, marcadas como tales."
+    - "La evolución del diseño: de la vista cenital de 1997 al mundo abierto en
+      3D y al estado entero."
+    - "Las cifras del negocio: 800 M$ el primer día de GTA V, 225 millones de
+      copias y unos 9.700 M$ de ingresos de la franquicia desde 2013."
+    - "El giro del modelo: el gasto recurrente, que supone el 78 % del gasto de
+      Take-Two."
+    - "GTA VI: lo anunciado frente a las proyecciones de analistas, marcadas
+      como tales."
   que_no_cubre:
-    - "No es una predicción de ventas ni una cifra oficial de GTA VI: las proyecciones se citan como escenario."
-    - "No entra en la trama ni en detalles de juego más allá de lo que explica el negocio."
-  para_quien: "Para quien quiere entender por qué GTA es un negocio de casi 10.000 millones y qué hay de cierto en las cifras que se publican."
+    - "No es una predicción de ventas ni una cifra oficial de GTA VI: las
+      proyecciones se citan como escenario."
+    - "No entra en la trama ni en detalles de juego más allá de lo que explica
+      el negocio."
+  para_quien: "Para quien quiere entender por qué GTA es un negocio de casi 10.000
+    millones y qué hay de cierto en las cifras que se publican."
   origen: paquete-publicacion
   faltan: []
   heredado: false
