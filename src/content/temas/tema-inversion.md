@@ -31,9 +31,6 @@ temas_relacionados: [tema-banca, tema-vivienda, tema-burbujas]
 videos_destacados: [vid-u0AKp6bpdGo]
 herramientas: [herr-interes-compuesto]
 ---
-
-# Inversión desde cero
-
 Invertir es cambiar dinero disponible hoy por una expectativa de dinero futuro. Nada más y nada
 menos. Todo lo demás —productos, plataformas, comisiones, impuestos— son detalles de cómo se hace
 ese intercambio y de cuánto se queda por el camino. Esta página es el mapa del clúster: qué

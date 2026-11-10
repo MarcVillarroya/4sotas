@@ -48,9 +48,6 @@ preguntas:
   - pregunta: "¿Es mejor amortizar deuda o invertir los primeros 1.000 euros?"
     respuesta: "Depende del coste de la deuda comparado con la rentabilidad esperada después de impuestos. Si el coste supera esa rentabilidad, amortizar es matemáticamente mejor. La decisión final depende de tu liquidez, tu plazo y tu tolerancia al riesgo, y no es una recomendación individualizada."
 ---
-
-# Tus primeros 1.000 euros: el orden importa más que la rentabilidad
-
 **Tesis:** los primeros 1.000 € no se optimizan buscando la rentabilidad más alta, sino resolviendo en el orden correcto tres problemas distintos: saber cuánto gastas, tener un colchón que evite endeudarte y quitarte de encima la deuda que cuesta más de lo que puedes ganar. Solo cuando esos tres están resueltos la rentabilidad empieza a importar.
 
 ## 1. El punto de partida, con datos

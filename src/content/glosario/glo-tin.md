@@ -27,9 +27,6 @@ categoria: banca
 sinonimos: [tipo nominal, tipo de interés nominal]
 relacionados: [glo-tae]
 ---
-
-# TIN (tipo de interés nominal)
-
 El TIN es el porcentaje que se aplica al capital pendiente. Es la cifra que aparece en la publicidad
 de los préstamos y la que se negocia, pero **no es el coste real** del producto.
 

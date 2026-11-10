@@ -49,10 +49,14 @@ test('la variante de 320 se deriva del nombre del archivo de 640', () => {
   assert.equal(miniatura320('/assets/videos/otro.png'), '/assets/videos/otro.png', 'sin .webp no se inventa una ruta');
 });
 
-test('el srcset declara las dos variantes reales con su ancho', () => {
+test('el srcset declara las dos variantes reales con su ancho y versión', () => {
+  // La versión sale de la fecha del fichero en public/: cambia con el contenido, no con el build.
+  const srcset = srcsetMiniatura('/assets/videos/M9EhU06FlUA.webp');
+  assert.match(srcset, /^\/assets\/videos\/M9EhU06FlUA-320\.webp\?v=\d+ 320w, \/assets\/videos\/M9EhU06FlUA\.webp\?v=\d+ 640w$/);
   assert.equal(
     srcsetMiniatura('/assets/videos/M9EhU06FlUA.webp'),
-    '/assets/videos/M9EhU06FlUA-320.webp 320w, /assets/videos/M9EhU06FlUA.webp 640w',
+    srcset,
+    'la versión es estable entre llamadas',
   );
 });
 

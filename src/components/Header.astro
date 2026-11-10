@@ -48,7 +48,7 @@ const enOros = rutaActual.startsWith('/oros/');
     <a class="header-channel" href={CANAL_YOUTUBE} target="_blank" rel="noopener"><span class="channel-long">Canal en </span>YouTube <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
     <details class="mobile-nav">
       <summary>Menú</summary>
-      <nav aria-label="Principal">
+      <nav aria-label="Principal (móvil)">
         {enlaces.map(e => <a href={url(e.href)} aria-current={rutaActual === e.href ? 'page' : undefined}>{e.etiqueta}</a>)}
       </nav>
     </details>

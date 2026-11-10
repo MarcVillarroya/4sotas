@@ -40,9 +40,6 @@ pilar: art-comprar-piso-coste
 temas_relacionados: [tema-banca, tema-inversion]
 herramientas: [herr-hipoteca, herr-viabilidad-hipoteca]
 ---
-
-# Vivienda e hipoteca
-
 Comprar una vivienda es la operación financiera más grande de la mayoría de las familias y, a la
 vez, la que se explica peor: se habla del precio y casi nunca del dinero que hace falta **además**
 del precio, ni de lo que cuesta el préstamo durante 25 o 30 años.

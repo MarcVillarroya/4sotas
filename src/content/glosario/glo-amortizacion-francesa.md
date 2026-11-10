@@ -25,9 +25,6 @@ categoria: vivienda
 sinonimos: [sistema francés, cuota constante]
 relacionados: [glo-tae]
 ---
-
-# Amortización francesa
-
 Es el sistema con el que se calculan casi todas las hipotecas españolas a tipo fijo: **cuota
 constante** durante toda la vida del préstamo. Dentro de esa cuota fija, el reparto entre intereses y
 capital cambia cada mes.

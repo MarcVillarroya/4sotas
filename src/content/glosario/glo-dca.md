@@ -25,9 +25,6 @@ categoria: inversion
 sinonimos: [aportación periódica, inversión programada]
 relacionados: [glo-diversificacion]
 ---
-
-# DCA (aportación periódica)
-
 DCA son las siglas de *dollar cost averaging*: invertir un importe fijo cada periodo (normalmente
 cada mes) en lugar de entrar con todo el capital de golpe.
 

@@ -104,8 +104,8 @@ const jsonLd = grafo([
           <a
             class="v2-poster"
             href={url(ruta.video(portada.data.slug))}
-            aria-label={`Ver la ficha: ${portada.data.titulo}`}
           >
+            <span class="sr-only">Ver la ficha: {portada.data.titulo}.</span>
             <img
               src={conVersion(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
               srcset={srcsetMiniatura(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
@@ -215,8 +215,8 @@ const jsonLd = grafo([
                 <a
                   class="v2-poster"
                   href={url(ruta.video(video.data.slug))}
-                  aria-label={`Ver la ficha: ${video.data.titulo}`}
                 >
+                  <span class="sr-only">Ver la ficha: {video.data.titulo}.</span>
                   <img
                     src={conVersion(url(mini))}
                     srcset={srcsetMiniatura(url(mini))}

@@ -40,9 +40,6 @@ temas_relacionados: [tema-inflacion, tema-nomina]
 videos_destacados: [vid-6dp6Y6nTreY, vid-1ztXsY1hwNA, vid-t1zPAoZV05M]
 herramientas: [herr-interes-compuesto]
 ---
-
-# Ahorro: los primeros 1.000 € y el orden que importa
-
 Antes de la rentabilidad hay una pregunta más incómoda: **cuánto aguantas sin cobrar**. La Encuesta de Competencias Financieras del Banco de España da la respuesta agregada y sirve como termómetro: el **6 %** de los encuestados podría sostener sus gastos **menos de una semana** sin endeudarse y el **57 %** podría hacerlo **seis meses o más**. [hecho] Son datos de la edición de 2021, con 21.000 individuos y 7.764 entrevistas válidas, no una foto de 2026.
 
 ## El contexto no es de emergencia, pero tampoco de holgura

@@ -35,9 +35,6 @@ preguntas:
   - pregunta: ¿Cuánto tarda un traspaso entre fondos?
     respuesta: Como máximo 5 días hábiles si es en la misma gestora y hasta 8 días hábiles si es entre gestoras distintas, según la ficha informativa de la CNMV.
 ---
-
-# Fondos indexados y ETF: qué cambia de verdad
-
 Dos productos, un mismo índice y una discusión interminable en foros. La pregunta útil no es
 «cuál es mejor», sino qué diferencia hay en tres cosas concretas: **cómo se compra, cuánto cuesta
 mantenerlo y qué pasa con Hacienda cuando te mueves**.

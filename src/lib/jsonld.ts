@@ -7,10 +7,21 @@ import { CANAL_YOUTUBE, MARCA, SECCION } from './rutas.ts';
 
 export type Nodo = Record<string, unknown>;
 
-const conContexto = (nodes: Nodo[]): Nodo => ({
-  '@context': 'https://schema.org',
-  '@graph': nodes,
-});
+const conContexto = (nodes: Nodo[]): Nodo => {
+  // La Organization se define una sola vez por grafo: si alguna página la referencia por @id
+  // (publisher, founder…) y no la incluye, el @id queda colgando. Se inyecta aquí, en el único
+  // punto por el que pasan todos los grafos, en vez de repetirla en cada plantilla.
+  const plano = JSON.stringify(nodes);
+  const tieneOrganizacion = nodes.some((n) => n['@type'] === 'Organization');
+  if (!tieneOrganizacion && plano.includes('#organizacion')) {
+    const sitio = nodes.find((n) => typeof n['@id'] === 'string' && String(n['@id']).endsWith('#sitio'));
+    const origen = sitio
+      ? String(sitio['@id']).replace(/#sitio$/, '')
+      : (plano.match(/https:\/\/[^"\\]+?(?=#organizacion)/) ?? [])[0];
+    if (origen) nodes = [organizacion(origen), ...nodes];
+  }
+  return { '@context': 'https://schema.org', '@graph': nodes };
+};
 
 /** Grafo JSON-LD: un único `<script type="application/ld+json">` por página. */
 export const grafo = (nodes: Nodo[]): Nodo => conContexto(nodes);
@@ -114,6 +125,8 @@ export const articulo = (params: {
   autor: { nombre: string; url?: string };
   seccion?: string;
   citas?: readonly string[];
+  /** Imagen de la página (1200×630). Sin ella, Google no da por elegible el rich result de Article. */
+  imagen?: string;
 }): Nodo => {
   const origen = new URL(params.url).origin;
   return {
@@ -127,8 +140,10 @@ export const articulo = (params: {
       ? { dateModified: params.actualizadoISO || params.publicadoISO }
       : {}),
     inLanguage: 'es-ES',
+    image: params.imagen ?? `${origen}/assets/og/4sotas.png`,
     author: { '@type': 'Person', name: params.autor.nombre, ...(params.autor.url ? { url: params.autor.url } : {}) },
-    publisher: { '@id': `${origen}#organizacion`, '@type': 'Organization', name: MARCA, url: `${origen}/` },
+    publisher: { '@id': `${origen}#organizacion` },
+    isPartOf: { '@id': `${origen}#sitio` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${params.url}#pagina`, url: params.url },
     isAccessibleForFree: true,
     ...(params.seccion ? { articleSection: params.seccion } : {}),
@@ -160,6 +175,9 @@ export const videoObjeto = (params: {
     name: params.nombre,
     description: params.descripcion,
     thumbnailUrl: [...params.miniaturas],
+    // Dimensiones reales del póster: sin ellas Google tiene que descargarlo para maquetar.
+    width: 640,
+    height: 360,
     uploadDate: params.subidoISO,
     duration: params.duracionISO,
     embedUrl: params.embedUrl,
@@ -169,7 +187,7 @@ export const videoObjeto = (params: {
     // dateModified solo si no es anterior a la publicación: una ficha no se modifica antes de existir.
     ...(params.revisadoISO && params.revisadoISO >= params.subidoISO ? { dateModified: params.revisadoISO } : {}),
     inLanguage: 'es-ES',
-    publisher: { '@id': `${origen}#organizacion`, '@type': 'Organization', name: MARCA, url: `${origen}/` },
+    publisher: { '@id': `${origen}#organizacion` },
     isPartOf: { '@type': 'WebPage', '@id': `${params.url}#pagina`, url: params.url },
     // Sin interactionStatistic: no publicamos vistas que caducan.
   };

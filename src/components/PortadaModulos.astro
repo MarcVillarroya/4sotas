@@ -20,7 +20,8 @@ const miniatura = (v: CollectionEntry<'videos'>) => conVersion(url(v.data.miniat
 const srcset = (v: CollectionEntry<'videos'>) => srcsetMiniatura(url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`));
 ---
 {destacado && <section class="wrap section v2-feature" aria-labelledby="destacado-titulo">
-  <a class="v2-poster" href={url(ruta.video(destacado.data.slug))} aria-label={`Ver la ficha: ${destacado.data.titulo}`}>
+  <a class="v2-poster" href={url(ruta.video(destacado.data.slug))}>
+    <span class="sr-only">Ver la ficha: {destacado.data.titulo}.</span>
     <img src={miniatura(destacado)} srcset={srcset(destacado)} sizes="(max-width: 1000px) 100vw, 640px" width="640" height="360" alt="" loading="lazy" decoding="async" />
     <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
     <span class="v2-duration">{duracionLegible(destacado.data.duracion_iso)}</span>

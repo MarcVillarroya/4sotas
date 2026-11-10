@@ -47,9 +47,6 @@ preguntas:
   - pregunta: ¿Cuánto es un 1,5 % mensual en tasa anual?
     respuesta: Un 18 % nominal anual según la conversión que usa el Banco de España; la TAE es superior, un 19,56 % con capitalización mensual y sin comisiones.
 ---
-
-# Débito, crédito y revolving: cómo se paga de verdad una tarjeta
-
 Una tarjeta es un instrumento de pago con una condición contractual detrás. La pregunta que ordena
 todo lo demás es sencilla: **¿de quién es el dinero que estás gastando?** Si es tuyo, hablamos de
 débito o prepago. Si es del banco, hablamos de crédito, y ahí empieza a correr un reloj.

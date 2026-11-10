@@ -38,9 +38,6 @@ temas_relacionados: [tema-ahorro, tema-nomina]
 videos_destacados: [vid-i5fe580iFqk]
 herramientas: []
 ---
-
-# Inflación: cuánto poder adquisitivo pierde tu dinero
-
 La inflación no es un número abstracto que se lee en el telediario: es la tasa a la que **una cantidad fija de euros compra menos cosas** con el paso del tiempo. La única forma honesta de hablarla es con la cuenta delante.
 
 ## Qué dicen los últimos datos

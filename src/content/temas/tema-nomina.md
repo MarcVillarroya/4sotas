@@ -38,9 +38,6 @@ temas_relacionados: [tema-ahorro]
 videos_destacados: [vid-M9EhU06FlUA, vid-LarTT_rvCGM, vid-SrvXlAVnDog]
 herramientas: []
 ---
-
-# Nómina: del bruto al neto, línea a línea
-
 Dos cifras gobiernan tu nómina y no son la misma: la **cotización a la Seguridad Social**, que es un porcentaje fijo sobre una base concreta, y la **retención de IRPF**, que es un pago a cuenta calculado con un algoritmo que depende de tu sueldo y de tu situación personal y familiar. Todo lo demás son consecuencias.
 
 ## El recorrido de un euro bruto

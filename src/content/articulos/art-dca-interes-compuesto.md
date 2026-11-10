@@ -36,9 +36,6 @@ preguntas:
   - pregunta: ¿Por qué el resultado de aportar 200 euros al mes no es 200 por 12 por los años?
     respuesta: Porque cada aportación empieza a generar rendimiento en un momento distinto; el capital final suma la aportación más los intereses de cada una, no una multiplicación simple.
 ---
-
-# Aportar cada mes o de golpe: la aritmética del largo plazo
-
 Hay dos preguntas mezcladas en casi todas las conversaciones sobre invertir poco a poco. Una es
 estratégica: ¿aporto todos los meses o meto el dinero de una vez? Otra es puramente matemática:
 cuando añades dinero cada mes, ¿cómo se calcula lo que tendrás al final? La segunda tiene respuesta

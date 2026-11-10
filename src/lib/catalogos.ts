@@ -10,7 +10,7 @@ import type { CollectionEntry } from 'astro:content';
 import { publicados } from './publicacion.ts';
 import { ruta, url } from './rutas.ts';
 
-export const SCHEMA_VERSION = '1.0.0';
+export const SCHEMA_VERSION = '1.1.0';
 
 export type Catalogo = {
   schema_version: string;
@@ -72,6 +72,8 @@ export function catalogoVideos(entradas: readonly CollectionEntry<'videos'>[], g
       publicado_en: dia(e.data.publicado_en),
       duracion_iso: e.data.duracion_iso,
       estado_youtube: e.data.estado_youtube,
+      // Campo que gobierna la publicación: sin él, el catálogo no es auditable desde fuera.
+      privacidad_api: e.data.privacidad_api,
       miniatura: e.data.miniatura,
       temas: e.data.temas.map((t) => (typeof t === 'string' ? t : t.id)),
       vistas_al_verificar: e.data.vistas_al_verificar,
@@ -97,6 +99,26 @@ export function catalogoHerramientas(
       version_motor: e.data.version_motor,
       unidad_salida: e.data.unidad_salida,
       temas: e.data.temas.map((t) => (typeof t === 'string' ? t : t.id)),
+      actualizado: dia(e.data.actualizado ?? e.data.publicado),
+    }));
+  return sobre({ schema_version: SCHEMA_VERSION, generated_at: generatedAt, universo: 'oros', items: [] }, items);
+}
+
+/** Glosario completo: una entrada por término publicado, con su definición corta. */
+export function catalogoGlosario(
+  entradas: readonly CollectionEntry<'glosario'>[],
+  generatedAt: string,
+): Catalogo {
+  const items = publicados(entradas)
+    .sort((a, b) => a.data.termino.localeCompare(b.data.termino, 'es'))
+    .map((e) => ({
+      id: e.data.id,
+      slug: e.data.slug,
+      url: url(ruta.termino(e.data.slug)),
+      termino: e.data.termino,
+      definicion_corta: e.data.definicion_corta,
+      categoria: e.data.categoria,
+      sinonimos: e.data.sinonimos,
       actualizado: dia(e.data.actualizado ?? e.data.publicado),
     }));
   return sobre({ schema_version: SCHEMA_VERSION, generated_at: generatedAt, universo: 'oros', items: [] }, items);

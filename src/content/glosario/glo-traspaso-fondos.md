@@ -27,9 +27,6 @@ categoria: inversion
 sinonimos: [traspaso, diferimiento fiscal]
 relacionados: [glo-diversificacion]
 ---
-
-# Traspaso de fondos
-
 Un traspaso es la operación por la que las participaciones de un fondo se convierten en
 participaciones de otro **sin pasar por caja**. El dinero no vuelve a tu cuenta: se transfiere entre
 fondos.

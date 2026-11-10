@@ -25,9 +25,6 @@ categoria: banca
 sinonimos: [tasa anual equivalente, coste efectivo]
 relacionados: [glo-tin]
 ---
-
-# TAE (tasa anual equivalente)
-
 La TAE es la cifra que permite comparar productos con estructuras distintas, porque **homogeneiza el
 coste o la rentabilidad a un año e incorpora las comisiones**.
 

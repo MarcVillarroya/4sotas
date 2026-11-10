@@ -71,11 +71,12 @@ const unidad = {
 ---
 
 <Base
-  titulo={`${ficha.data.titulo} · ${SECCION}`}
+  titulo={ficha.data.seo.titulo ?? ficha.data.titulo}
   descripcion={ficha.data.descripcion}
-  sufijo={MARCA}
+  sufijo={SECCION}
   jsonLd={jsonLd}
 >
+  <article>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
@@ -212,4 +213,5 @@ const unidad = {
       </section>
     </div>
   </div>
+  </article>
 </Base>

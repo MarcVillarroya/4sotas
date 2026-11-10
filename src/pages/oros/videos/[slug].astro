@@ -137,9 +137,10 @@ const jsonLd = grafo([
   descripcion={video.data.seo.descripcion ?? video.data.descripcion_corta}
   sufijo={SECCION}
   ogType="video.other"
-  ogImagen={miniLocal}
+  ogImagen={conVersion(miniLocal)}
   jsonLd={jsonLd}
 >
+  <article>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
@@ -296,4 +297,5 @@ const jsonLd = grafo([
       </p>
     </section>
   </div>
+  </article>
 </Base>

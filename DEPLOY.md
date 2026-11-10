@@ -1,4 +1,44 @@
-# DEPLOY · 4Sotas V1 — GitHub Pages
+# DEPLOY · 4Sotas
+
+## Ahora: Cloudflare Pages (producción)
+
+| Dato | Valor |
+| --- | --- |
+| URL | **https://4sotas.com** (y `www` → 301 al apex por Page Rule) |
+| Proyecto | `4sotas` en la cuenta de Marc Villarroya (`7cc5b8908a55337b3541ca4f69977b23`) |
+| Modo | *Direct upload*: no hay build en Cloudflare; se sube `dist/` ya construido |
+| Preview | https://4sotas.pages.dev |
+| Build | `SITE_ORIGIN=https://4sotas.com SITE_BASE=/ npm run build` |
+| Publicar | `npx wrangler pages deploy dist --project-name=4sotas --branch=main` |
+| Token | `~/.hermes/secrets/cloudflare.env` (Pages + DNS + Zone Settings; sin caché ni WAF) |
+
+Los valores por defecto de `astro.config.mjs` ya son producción: un build sin variables publica
+canónicas de `4sotas.com` y base `/`. `SITE_ORIGIN`/`SITE_BASE` solo hacen falta para
+reproducir el host antiguo.
+
+### Verificación después de publicar
+
+1. `curl -sI https://4sotas.com/` → 200 y cabeceras de `public/_headers`.
+2. `/robots.txt` contiene `Content-Signal` y el `Sitemap:` absoluto; `/llms.txt`, `/llms-full.txt`
+   y `/rss.xml` responden 200.
+3. `/sitemap.xml` responde 301 a `/sitemap-index.xml`.
+4. Una ficha de vídeo carga su póster (`?v=` cambia cuando cambia el fichero).
+5. `npm run validate` en local antes de subir: 0 bloqueantes.
+
+### Trampas conocidas
+
+- **Caché de assets**: `/assets/*` y `/_astro/*` van con `max-age=31536000, immutable`. Si un
+  asset se pidió antes de existir, el 404 queda cacheado un año y el token no puede purgar
+  (`purge_cache` sin permiso). Por eso los pósters llevan `?v=<mtime>`: cambiar el fichero
+  cambia la URL.
+- **`public/robots.txt` ya no existe**: el `robots.txt` se genera en `src/pages/robots.txt.ts`.
+  Un fichero en `public/` con el mismo nombre gana y silencia la ruta (Astro solo avisa).
+- **www**: el apex es el canónico. La redirección vive en una Page Rule de Cloudflare, no en el
+  repo; si se borra, `www` vuelve a servir 200 duplicado.
+- **Redirecciones**: `public/_redirects` (Pages) resuelve `/sitemap.xml` y `/feed.xml`.
+
+## Historial: GitHub Pages (V1, retirado)
+
 
 Evidencia real del despliegue público de la V1 (2026-10-26).
 

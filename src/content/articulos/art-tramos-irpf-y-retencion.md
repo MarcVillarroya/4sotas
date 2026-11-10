@@ -45,9 +45,6 @@ preguntas:
   - pregunta: "¿El tipo que aparece en mi nómina es el IRPF que pago?"
     respuesta: "No. Ese porcentaje es una retención a cuenta que se calcula con el algoritmo de la AEAT. El impuesto real se determina al presentar la declaración, donde se regulariza y puede salir a devolver o a ingresar."
 ---
-
-# Tramos del IRPF: por qué subir de tramo no te quita el sueldo
-
 **Tesis:** la escala del IRPF se aplica por capas. Cada euro de tu base tributa solo al tipo del tramo en el que cae, no al tipo más alto que alcanzas. Confundir el **tipo marginal** (el del último tramo) con el **tipo medio** (cuota dividida entre base) produce un error de miles de euros en las conversaciones sobre sueldos.
 
 ## 1. Los seis tramos de la escala estatal

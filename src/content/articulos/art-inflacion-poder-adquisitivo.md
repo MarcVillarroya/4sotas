@@ -47,9 +47,6 @@ preguntas:
   - pregunta: "¿Un depósito al 2,5 % me hace ganar con una inflación del 4,9 %?"
     respuesta: "En términos nominales sí, en términos de poder de compra no. El tipo real es (1,025 / 1,049) − 1 = −2,29 %, es decir, pierdes capacidad de compra frente a los precios. Además habría que restar la fiscalidad de los rendimientos."
 ---
-
-# Inflación y poder adquisitivo: la cuenta que convierte la tasa en euros
-
 **Tesis:** la inflación no se combina con tu dinero sumando o restando: se combina **dividiendo**, porque los índices se encadenan de forma multiplicativa. Con la tasa de septiembre de 2026, 1.000 € en efectivo valen 953,29 € de poder de compra dentro de un año. Cualquier otra cuenta es una aproximación y conviene decirlo.
 
 ## 1. Los datos, con fecha y ámbito

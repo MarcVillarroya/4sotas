@@ -49,9 +49,6 @@ preguntas:
   - pregunta: "¿Cuánto se me resta de Seguridad Social en 2026?"
     respuesta: "Si eres un trabajador indefinido del Régimen General sin horas extra, el 6,50 % de la base de cotización: 4,70 % de contingencias comunes, 1,55 % de desempleo, 0,10 % de formación profesional y 0,15 % de MEI. La empresa aporta otros conceptos que no aparecen en tu nómina."
 ---
-
-# Bruto y neto: cómo se calcula tu nómina en España (2026)
-
 **Tesis:** el neto de tu nómina no se obtiene aplicando un porcentaje único al bruto. Se obtiene de dos operaciones distintas que se suman: una cotización de porcentaje fijo sobre una base con topes legales y una retención calculada con el algoritmo de Hacienda según tu situación personal. Si confundes las dos, cualquier comparación de sueldos es falsa.
 
 Este recorrido usa las cifras vigentes en **octubre de 2026** y muestra cada operación con su fórmula, para que puedas rehacerla con tu propio bruto.

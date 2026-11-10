@@ -11,6 +11,13 @@ import { MARCA, ORIGEN_POR_DEFECTO, SECCION, ruta, url } from '../lib/rutas.ts';
 const fecha = (d?: Date) => (d ? d.toISOString().slice(0, 10) : '');
 const plural = (n: number, s: string, p: string) => `${n} ${n === 1 ? s : p}`;
 
+/**
+ * Baja dos niveles los encabezados del cuerpo: cada página ya abre con `## <título>`,
+ * así que su `#`/`##` original debe colgar de ahí y no romper la jerarquía del documento.
+ */
+const cuerpoRebajado = (md: string): string =>
+  md.replace(/^(#{1,6})\s+/gm, (_, h: string) => `${'#'.repeat(Math.min(6, h.length + 2))} `);
+
 export const GET: APIRoute = async ({ site }) => {
   const [temas, articulos, videos, glosario, herramientas, fuentes] = await Promise.all([
     getCollection('temas'),
@@ -46,7 +53,7 @@ export const GET: APIRoute = async ({ site }) => {
     (h) => h.data.estado_implementacion !== 'no-implementada',
   );
 
-  const cuerpo: string[] = [
+  const lineas: string[] = [
     `# ${MARCA} · ${SECCION} — contenido completo`,
     '',
     '> Publicación editorial en español sobre economía personal en España. Cada cifra lleva fuente oficial y fecha. No es asesoramiento financiero individualizado.',
@@ -70,7 +77,7 @@ export const GET: APIRoute = async ({ site }) => {
   ];
 
   for (const t of temasOk) {
-    cuerpo.push(
+    lineas.push(
       `## ${t.data.titulo}`,
       '',
       `URL: ${origen}${ruta.tema(t.data.slug)}`,
@@ -79,13 +86,13 @@ export const GET: APIRoute = async ({ site }) => {
       t.data.descripcion_corta,
       '',
     );
-    if (t.body?.trim()) cuerpo.push(t.body.trim(), '');
+    if (t.body?.trim()) lineas.push(cuerpoRebajado(t.body.trim()), '');
   }
 
-  cuerpo.push('---', '', '# Guías', '');
+  lineas.push('---', '', '# Guías', '');
 
   for (const a of articulosOk) {
-    cuerpo.push(
+    lineas.push(
       `## ${a.data.titulo}`,
       '',
       `URL: ${origen}${ruta.guia(a.data.slug)}`,
@@ -94,20 +101,20 @@ export const GET: APIRoute = async ({ site }) => {
       `**Respuesta corta.** ${a.data.resumen}`,
       '',
     );
-    if (a.body?.trim()) cuerpo.push(a.body.trim(), '');
+    if (a.body?.trim()) lineas.push(cuerpoRebajado(a.body.trim()), '');
     if (a.data.preguntas?.length) {
-      cuerpo.push('### Preguntas que responde esta página', '');
-      for (const p of a.data.preguntas) cuerpo.push(`- **${p.pregunta}** ${p.respuesta}`);
-      cuerpo.push('');
+      lineas.push('### Preguntas que responde esta página', '');
+      for (const p of a.data.preguntas) lineas.push(`- **${p.pregunta}** ${p.respuesta}`);
+      lineas.push('');
     }
     const citas = (a.data.fuentes ?? []).map((f) => citaFuente(f.fuente)).filter(Boolean);
-    if (citas.length) cuerpo.push('### Fuentes', '', ...citas, '');
+    if (citas.length) lineas.push('### Fuentes', '', ...citas, '');
   }
 
-  cuerpo.push('---', '', '# Fichas de vídeo', '');
+  lineas.push('---', '', '# Fichas de vídeo', '');
 
   for (const v of videosOk) {
-    cuerpo.push(
+    lineas.push(
       `## ${v.data.titulo}`,
       '',
       `URL: ${origen}${ruta.video(v.data.slug)}`,
@@ -116,12 +123,12 @@ export const GET: APIRoute = async ({ site }) => {
       v.data.descripcion_corta,
       '',
     );
-    if (v.data.informacion?.resumen) cuerpo.push(v.data.informacion.resumen, '');
+    if (v.data.informacion?.resumen) lineas.push(v.data.informacion.resumen, '');
     if (v.data.informacion?.que_cubre?.length) {
-      cuerpo.push('Qué cubre:', '', ...v.data.informacion.que_cubre.map((x) => `- ${x}`), '');
+      lineas.push('Qué cubre:', '', ...v.data.informacion.que_cubre.map((x) => `- ${x}`), '');
     }
     if (v.data.capitulos?.length) {
-      cuerpo.push(
+      lineas.push(
         'Capítulos:',
         '',
         ...v.data.capitulos.map((c) => {
@@ -135,10 +142,10 @@ export const GET: APIRoute = async ({ site }) => {
     }
   }
 
-  cuerpo.push('---', '', '# Glosario', '');
+  lineas.push('---', '', '# Glosario', '');
 
   for (const g of glosarioOk) {
-    cuerpo.push(
+    lineas.push(
       `## ${g.data.termino}`,
       '',
       `URL: ${origen}${ruta.termino(g.data.slug)}`,
@@ -146,13 +153,13 @@ export const GET: APIRoute = async ({ site }) => {
       g.data.definicion_corta,
       '',
     );
-    if (g.body?.trim()) cuerpo.push(g.body.trim(), '');
+    if (g.body?.trim()) lineas.push(cuerpoRebajado(g.body.trim()), '');
   }
 
-  cuerpo.push('---', '', '# Herramientas', '');
+  lineas.push('---', '', '# Herramientas', '');
 
   for (const h of herramientasOk) {
-    cuerpo.push(
+    lineas.push(
       `## ${h.data.titulo}`,
       '',
       `URL: ${origen}${ruta.herramienta(h.data.slug)}`,
@@ -163,13 +170,13 @@ export const GET: APIRoute = async ({ site }) => {
       `**Fórmula.** ${h.data.formula}`,
       '',
     );
-    if (h.data.supuestos?.length) cuerpo.push('Supuestos:', '', ...h.data.supuestos.map((x) => `- ${x}`), '');
-    if (h.data.limites?.length) cuerpo.push('Límites:', '', ...h.data.limites.map((x) => `- ${x}`), '');
+    if (h.data.supuestos?.length) lineas.push('Supuestos:', '', ...h.data.supuestos.map((x) => `- ${x}`), '');
+    if (h.data.limites?.length) lineas.push('Límites:', '', ...h.data.limites.map((x) => `- ${x}`), '');
   }
 
   const total = [temasOk.length, articulosOk.length, videosOk.length, glosarioOk.length, herramientasOk.length];
 
-  cuerpo.push(
+  lineas.push(
     '---',
     '',
     '## Uso y cita',
@@ -182,7 +189,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
   );
 
-  return new Response(cuerpo.join('\n'), {
+  return new Response(lineas.join('\n'), {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },
   });
 };

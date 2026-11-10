@@ -43,9 +43,6 @@ temas_relacionados: [tema-inversion, tema-vivienda]
 herramientas: [herr-prestamo]
 videos_destacados: [vid-vefjjmzDHyY]
 ---
-
-# Banca y crédito
-
 Un banco no es una caja de ahorros con sombrero: es una empresa que gana dinero con la diferencia
 entre lo que paga por tu dinero y lo que cobra por prestarlo, más las comisiones. Entender esa frase
 resuelve la mitad de las dudas sobre cuentas, tarjetas y depósitos.

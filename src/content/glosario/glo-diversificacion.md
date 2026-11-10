@@ -25,9 +25,6 @@ categoria: inversion
 sinonimos: [reparto de riesgo]
 relacionados: [glo-dca, glo-traspaso-fondos]
 ---
-
-# Diversificación
-
 Diversificar es repartir para que la suerte de un único activo no determine el resultado de toda la
 cartera. No es «tener muchos productos»: es tener **cosas que no caen a la vez**.
 

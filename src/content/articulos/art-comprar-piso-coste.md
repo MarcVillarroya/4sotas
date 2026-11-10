@@ -47,9 +47,6 @@ preguntas:
   - pregunta: ¿La entrada del 20 % es obligatoria por ley?
     respuesta: No. Es la práctica bancaria habitual financiar hasta el 80 % del valor de tasación, pero no existe un límite legal que obligue a ese porcentaje.
 ---
-
-# Comprar vivienda: de los 200.000 € al dinero que sale de tu cuenta
-
 Cuando alguien dice «me compro un piso de 200.000 €», está diciendo tres cosas distintas: el precio
 que paga al vendedor, el dinero disponible el día de la firma y la deuda de las dos próximas
 décadas. Las tres cifras son distintas y solo la primera aparece en el anuncio.

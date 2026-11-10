@@ -29,9 +29,6 @@ orden: 7
 temas_relacionados: [tema-inversion, tema-vivienda]
 videos_destacados: [vid-3xz04lRAW0k]
 ---
-
-# Burbujas y pánicos
-
 Una burbuja es un episodio en el que el precio de algo se separa de cualquier cálculo razonable
 sobre lo que ese algo puede producir, y se sostiene porque cada comprador espera venderlo más caro.
 El problema no es el precio alto: es **el mecanismo de salida**, que necesita compradores nuevos
