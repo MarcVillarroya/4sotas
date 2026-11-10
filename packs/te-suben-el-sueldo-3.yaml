@@ -1,0 +1,73 @@
+# 4 Sotas · pack editorial de «Te suben el sueldo un 3 %, pero eres más pobre».
+#
+# Fuente: máster V8 aceptado (out/SueldoInflacion-V8-FINAL.mp4), SRT revisado
+# (out/sueldo-inflacion.srt) y docs/metadatos.md de la pieza.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: miércoles 11-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "Te suben el sueldo un 3 %, pero eres más pobre"
+slug: te-suben-el-sueldo-3
+
+descripcion_corta: "Te suben el sueldo un 3 %, pero con un IPC del 4,9 % necesitas 98 € más al mes: cobras 60 € y pierdes 38 € de poder adquisitivo."
+
+seo_descripcion: "Con una subida del 3 % y un IPC del 4,9 %, cobras 60 € más pero necesitas 98 € más: pierdes un 1,8 % de poder adquisitivo."
+
+resumen_editorial: "Te suben el sueldo un 3 %: pasas de 2.000 € a 2.060 € netos. Con el IPC interanual en el 4,9 %, mantener tu nivel de vida costaría 2.098 €, así que te faltan 38 € al mes. Aunque cobras 60 € más, tu poder adquisitivo cae alrededor de un 1,8 %. El vídeo separa la subida nominal del coste real y recuerda que el 4,9 % es el dato de avance del INE de octubre de 2026."
+
+que_cubre:
+  - "La diferencia entre subida nominal y poder adquisitivo: 2.000 € → 2.060 € frente a una cesta de 2.098 €."
+  - "De dónde salen los 38 € que faltan y por qué equivalen a una pérdida real del 1,8 %."
+  - "Cómo comparar una subida salarial con el IPC y por qué el dato de avance del INE importa."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni una predicción de inflación: usa un ejemplo hipotético."
+  - "No entra en salarios por sector, convenios, IRPF ni en la subida del bruto."
+
+para_quien: "Para quien ha recibido una subida y quiere entender por qué el recibo no siempre se traduce en más capacidad de compra."
+
+temas:
+  - tema-nomina
+  - tema-inflacion
+
+keywords:
+  - sota de oros
+  - inflación
+  - subida de sueldo
+  - poder adquisitivo
+  - IPC
+  - salario
+  - finanzas personales
+  - economía
+  - INE
+  - nómina
+  - ahorro
+  - shorts
+
+relacionados:
+  - vid-iat5xP27vqo
+  - vid-M9EhU06FlUA
+
+fuentes:
+  - "INE · avance del IPC de octubre de 2026, publicado el 30-10-2026: variación anual del 4,9 %."
+  - "Cálculos propios: 2.000 × 1,03 = 2.060 €; 2.000 × 1,049 = 2.098 €; 2.098 − 2.060 = 38 €; (1,03 / 1,049) − 1 = −1,81 %."
+  - "Ejemplo hipotético de sueldo neto; no es una estadística salarial. El dato definitivo del INE se publica el 13-11-2026."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. El 4,9 % es el avance del IPC de octubre de 2026 y el ejemplo es hipotético."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/sueldo-inflacion/out/sueldo-inflacion.srt
+
+publicar_en: "2026-11-11T15:30:00+01:00"
+
+miniatura: public/assets/videos/te-suben-el-sueldo-3-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/sueldo-inflacion/out/SueldoInflacion-V8-FINAL.mp4
+duracion_iso: PT45S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
