@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Sprite from './Sprite.astro';
+import { conVersion, srcsetMiniatura } from '../lib/videos.ts';
 import { ruta, url, CANAL_YOUTUBE } from '../lib/rutas.ts';
 import { fechaLarga, fechaISO, duracionLegible } from '../lib/format.ts';
 interface Props {
@@ -15,8 +16,8 @@ interface Props {
 const { destacado, recientes, iniciales, calculadora, herramientas = [], portal = false } = Astro.props;
 const listaHerramientas = herramientas.length > 1 ? herramientas.slice(0, 3) : [];
 const otrosVideos = recientes.filter(v => v.id !== destacado?.id);
-const miniatura = (v: CollectionEntry<'videos'>) => url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`);
-const srcset = (v: CollectionEntry<'videos'>) => `${miniatura(v).replace(/\.webp$/, '-320.webp')} 320w, ${miniatura(v)} 640w`;
+const miniatura = (v: CollectionEntry<'videos'>) => conVersion(url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`));
+const srcset = (v: CollectionEntry<'videos'>) => srcsetMiniatura(url(v.data.miniatura_local ?? `/assets/videos/${v.data.youtube_id}.webp`));
 ---
 {destacado && <section class="wrap section v2-feature" aria-labelledby="destacado-titulo">
   <a class="v2-poster" href={url(ruta.video(destacado.data.slug))} aria-label={`Ver la ficha: ${destacado.data.titulo}`}>

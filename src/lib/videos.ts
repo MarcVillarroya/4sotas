@@ -1,3 +1,6 @@
+import { statSync } from 'node:fs';
+import { join } from 'node:path';
+
 /**
  * Derivaciones del catálogo de vídeos.
  *
@@ -38,6 +41,30 @@ export const duracionReloj = (iso: string): string => {
   return h > 0 ? `${h}:${dos(m)}:${dos(s)}` : `${m}:${dos(s)}`;
 };
 
+/**
+ * Versión de un póster a partir de la fecha del fichero en `public/`.
+ * Los assets se sirven con caché de un año: sin este parámetro, reemplazar un póster
+ * (mismo nombre = id de YouTube) no llega nunca a quien ya lo vio, y un 404 cacheado
+ * antes de existir se queda pegado. Se calcula en el build, no a mano.
+ */
+const VERSIONES = new Map<string, string>();
+
+export const versionDeMiniatura = (local: string): string => {
+  if (VERSIONES.has(local)) return VERSIONES.get(local) as string;
+  const rel = local.replace(/^\//, '');
+  let v = '0';
+  try {
+    v = String(Math.round(statSync(join(process.cwd(), 'public', rel)).mtimeMs));
+  } catch {
+    v = '0';
+  }
+  VERSIONES.set(local, v);
+  return v;
+};
+
+/** Añade `?v=` a una ruta de póster para que un cambio de imagen invalide la caché. */
+export const conVersion = (local: string): string => `${local}?v=${versionDeMiniatura(local)}`;
+
 /** Ruta local de la variante de 320×180 a partir de la de 640×360. */
 export const miniatura320 = (local: string): string =>
   local.endsWith('.webp') ? `${local.slice(0, -'.webp'.length)}-320.webp` : local;
@@ -46,7 +73,8 @@ export const miniatura320 = (local: string): string =>
  * `srcset` con las dos variantes WebP descargadas. Ambas existen en `public/assets/videos/`;
  * si faltara la de 320, el navegador pediría la de 640 y no se rompe el diseño.
  */
-export const srcsetMiniatura = (local: string): string => `${miniatura320(local)} 320w, ${local} 640w`;
+export const srcsetMiniatura = (local: string): string =>
+  `${conVersion(miniatura320(local))} 320w, ${conVersion(local)} 640w`;
 
 /** `sizes` del listado: una columna a 390, dos a 768, tres a 1440. */
 export const SIZES_CATALOGO = '(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw';

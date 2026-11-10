@@ -17,7 +17,7 @@ import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { grafo, sitioWeb, videoObjeto } from '../../../lib/jsonld.ts';
 import { duracionLegible, fechaISO, fechaLarga, marcaTiempo } from '../../../lib/format.ts';
-import { SIZES_PORTADA, duracionReloj, formatoLegible, srcsetMiniatura } from '../../../lib/videos.ts';
+import { SIZES_PORTADA, conVersion, duracionReloj, formatoLegible, srcsetMiniatura } from '../../../lib/videos.ts';
 import { iconoDeCluster } from '../../../lib/iconos.ts';
 
 interface Props {
@@ -163,7 +163,7 @@ const jsonLd = grafo([
           titulo={video.data.titulo}
           duracion={reloj}
           formato={etiquetaFormato}
-          miniatura={url(miniLocal)}
+          miniatura={conVersion(url(miniLocal))}
           miniaturaSrcset={srcsetMiniatura(url(miniLocal))}
           sizes={SIZES_PORTADA}
           insertable={insertable}

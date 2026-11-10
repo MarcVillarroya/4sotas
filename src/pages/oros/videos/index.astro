@@ -20,6 +20,7 @@ import {
   esShort,
   formato,
   formatoLegible,
+  conVersion,
   srcsetMiniatura,
 } from '../../../lib/videos.ts';
 
@@ -106,7 +107,7 @@ const jsonLd = grafo([
             aria-label={`Ver la ficha: ${portada.data.titulo}`}
           >
             <img
-              src={url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`)}
+              src={conVersion(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
               srcset={srcsetMiniatura(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
               sizes={SIZES_PORTADA}
               width="640"
@@ -217,7 +218,7 @@ const jsonLd = grafo([
                   aria-label={`Ver la ficha: ${video.data.titulo}`}
                 >
                   <img
-                    src={url(mini)}
+                    src={conVersion(url(mini))}
                     srcset={srcsetMiniatura(url(mini))}
                     sizes={SIZES_CATALOGO}
                     width="640"
