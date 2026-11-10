@@ -116,7 +116,7 @@ const INFO_COMPLETA = {
 const clonar = (files) => JSON.parse(JSON.stringify(files));
 
 function htmlSalida(ruta) {
-  return `<!doctype html><link rel="canonical" href="https://marcvillarroya.github.io/4sotas${ruta}"><title>Fixture sintético</title>`;
+  return `<!doctype html><link rel="canonical" href="https://4sotas.com${ruta}"><title>Fixture sintético</title>`;
 }
 
 /* ─────────────────────── fixture sintético: matriz válida ─────────────────────── */
