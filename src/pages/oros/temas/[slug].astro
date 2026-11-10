@@ -111,9 +111,9 @@ const jsonLd = grafo([
 ---
 
 <Base
-  titulo={`${tema.data.titulo} · ${SECCION}`}
+  titulo={tema.data.seo.titulo ?? tema.data.titulo}
   descripcion={tema.data.descripcion_corta}
-  sufijo={MARCA}
+  sufijo={SECCION}
   jsonLd={jsonLd}
 >
   <div class="wrap">

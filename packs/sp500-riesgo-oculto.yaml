@@ -1,0 +1,93 @@
+# 4 Sotas · pack editorial de «S&P 500: el riesgo oculto de creerte diversificado».
+#
+# Fuente: guion canónico (sp500-riesgo-oculto/docs/GUION-CANONICO.md + public/audio/lineas.txt),
+# capítulos derivados de src/timeline.json (inicios de bloque reales del máster V7) y cifras del
+# dossier (docs/DOSSIER.md). Máster: out/SP500-riesgo-oculto-V7.mp4 · 21.241 frames · 708,100 s.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+
+titulo: "S&P 500: el riesgo oculto de creerte diversificado"
+slug: sp500-riesgo-oculto
+
+descripcion_corta: "Siete compañías concentran un tercio de tu fondo indexado. Qué significa para 10.000 €, qué pasa si caen y cómo mirarlo en tu propia cartera."
+
+seo_descripcion: "El S&P 500 no reparte tu dinero a partes iguales: siete compañías pesan el 33,89 %. Qué implica para 10.000 € y cómo revisar tu cartera."
+
+resumen_editorial: "El S&P 500 reúne 500 compañías, aunque tenga 503 valores por las clases de acciones. Siete pesan el 33,89 %: en una cartera de 10.000 € son 3.389 €. El vídeo muestra por qué el número de empresas no mide la diversificación, qué pasaría si las siete cayeran un 30 % (−1.016,70 €) y por qué el MSCI World tampoco lo resuelve: 1.248 componentes y el 73 % en EE. UU."
+
+que_cubre:
+  - "500 compañías y 503 valores: por qué el número de posiciones no mide la diversificación real."
+  - "El reparto de 10.000 €: 3.389 € en las siete mayores y 6.611 € en las 493 restantes."
+  - "El escenario de una caída del 30 % en las siete: −1.016,70 €, un −10,17 % de la cartera."
+  - "La comparación con el MSCI World: 1.248 componentes, 73 % en EE. UU. y las mismas siete arriba."
+
+que_no_cubre:
+  - "No es una predicción ni una recomendación de compra o venta: el escenario de caída es hipotético."
+  - "No entra en fiscalidad, costes de los fondos ni en qué índice elegir para cada perfil."
+
+para_quien: "Para quien invierte en un fondo indexado al S&P 500 y cree que por tener 500 empresas su dinero está repartido."
+
+temas:
+  - tema-inversion
+  - tema-burbujas
+
+keywords:
+  - S&P 500
+  - diversificación
+  - fondo indexado
+  - siete magníficas
+  - concentración del índice
+  - MSCI World
+  - invertir en bolsa
+  - cartera de inversión
+  - riesgo de concentración
+  - 10.000 euros
+  - educación financiera
+  - Sota de Oros
+
+fuentes:
+  - "S&P Dow Jones Indices · S&P 500 factsheet: 500 compañías y 503 valores por clases de acciones; top 10 = 37,3 % del índice (30/10/2026)."
+  - "State Street SPDR S&P 500 ETF Trust (SPY) · pesos a 28/10/2026: NVIDIA 7,82 %, Apple 7,52 %, Microsoft 5,91 %, Alphabet A+C 5,15 %, Amazon 3,75 %, Meta 2,03 %, Tesla 1,71 % = 33,89 %."
+  - "MSCI · MSCI World Index factsheet: 1.248 componentes, top 10 = 26,59 %, 23 mercados desarrollados y 73 % de peso en Estados Unidos."
+  - "CNBC y Associated Press · sesión del 5/11/2026: S&P 500 −4,4 %, Nasdaq −5,5 %."
+  - "Cálculos propios sobre esos datos: 10.000 €, reparto 33,89 / 66,11 y escenario de caída del 30 % en las siete."
+  - "Nota metodológica: el 37,4 % de peso del sector tecnológico es un dato de agosto de 2026; los pesos por compañía son una foto del 28/10/2026."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero ni una recomendación de compra o venta. El escenario de caída es hipotético y las cifras son una foto con fecha."
+
+# 9 capítulos con los segundos reales del máster (inicios de bloque en src/timeline.json).
+capitulos:
+  - titulo: "Apertura: 500 empresas, un tercio en siete"
+    segundo: 0
+  - titulo: "Cómo se reparte el dinero dentro del índice"
+    segundo: 61
+  - titulo: "La concentración: 37,3 % en diez posiciones"
+    segundo: 129
+  - titulo: "Qué pasaría si las siete cayeran un 30 %"
+    segundo: 221
+  - titulo: "El 5 de noviembre: −4,4 %"
+    segundo: 276
+  - titulo: "MSCI World: más países, el mismo líder"
+    segundo: 361
+  - titulo: "Revisar tu cartera: dónde mirar"
+    segundo: 488
+  - titulo: "Las dos caras del índice"
+    segundo: 575
+  - titulo: "Cierre: la pregunta"
+    segundo: 652
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/sp500-riesgo-oculto/out/sp500-riesgo-oculto-es.srt
+
+# domingo 8-nov-2026, 11:00 Europe/Madrid (CET, UTC+1) = 10:00Z.
+publicar_en: "2026-11-08T11:00:00+01:00"
+
+miniatura: public/assets/videos/sp500-riesgo-oculto-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/sp500-riesgo-oculto/out/SP500-riesgo-oculto-V7.mp4
+duracion_iso: PT11M48S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa

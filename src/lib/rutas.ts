@@ -15,7 +15,7 @@ export const url = (p: string): string => conBase(BASE, p);
 export const canonica = (pathname: string, site: URL | undefined): string =>
   new URL(pathname, site ?? ORIGEN_POR_DEFECTO).href;
 
-export const ORIGEN_POR_DEFECTO = 'https://marcvillarroya.github.io';
+export const ORIGEN_POR_DEFECTO = 'https://4sotas.com';
 
 /** Rutas internas de la V1 que existen como página. */
 export const RUTAS = {

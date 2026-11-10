@@ -61,9 +61,9 @@ const guiasQueLoUsan = visibles(articulos).filter((a) =>
 ---
 
 <Base
-  titulo={`${termino.data.termino} · ${SECCION}`}
+  titulo={termino.data.seo.titulo ?? termino.data.termino}
   descripcion={termino.data.definicion_corta}
-  sufijo={MARCA}
+  sufijo={SECCION}
   jsonLd={jsonLd}
 >
   <div class="wrap">

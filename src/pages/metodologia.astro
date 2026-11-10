@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { CANAL_YOUTUBE } from '../lib/rutas.ts';
+import { CANAL_YOUTUBE, MARCA } from '../lib/rutas.ts';
 import { grafo, paginaWeb, sitioWeb } from '../lib/jsonld.ts';
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
@@ -11,7 +11,7 @@ const jsonLd = grafo([
   paginaWeb({ url: canonica, nombre: 'Metodología y fuentes', descripcion, tipo: 'AboutPage' }),
 ]);
 ---
-<Base titulo="Metodología y fuentes" descripcion={descripcion} jsonLd={jsonLd}>
+<Base titulo="Metodología y fuentes" descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
   <article class="wrap institutional"><p class="eyebrow">Metodología y fuentes</p><h1>Cómo lo comprobamos.</h1>
     <h2>Fuentes primarias primero.</h2><p>AEAT, BOE, Seguridad Social, Banco de España, BCE, INE y CNMV antes que cualquier resumen de terceros. Cada cifra publicada lleva su fuente y la fecha en que la consultamos.</p>
     <h2>Cuatro etiquetas, nunca mezcladas.</h2><p>Hecho (dato con fuente), cálculo (operación reproducible), supuesto (hipótesis declarada) y opinión (nuestra lectura). Si no sabes en qué casilla cae una frase, es que está mal escrita.</p>

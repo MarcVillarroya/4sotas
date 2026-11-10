@@ -29,6 +29,7 @@ fuentes:
   - fuente: src-bde-euribor-septiembre-2026
     dato: Euríbor a 12 meses en el 3,247 % en septiembre de 2026.
 seo:
+  titulo: "Comprar vivienda: de 200.000 € al dinero que sale de tu cuenta"
   descripcion: "Qué cuesta de verdad un piso de 200.000 €: entrada, ITP catalán, gastos y cuota con amortización francesa paso a paso."
   noindex: false
 actualizacion:

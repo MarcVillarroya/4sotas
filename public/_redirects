@@ -1,0 +1,5 @@
+# Cloudflare Pages · alias que los rastreadores y lectores esperan encontrar.
+# El sitemap real lo genera @astrojs/sitemap como sitemap-index.xml.
+/sitemap.xml /sitemap-index.xml 301
+/feed.xml /rss.xml 301
+/feed /rss.xml 301

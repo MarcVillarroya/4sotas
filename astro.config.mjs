@@ -4,9 +4,10 @@ import sitemap from '@astrojs/sitemap';
 import enlacesConBase from './scripts/remark-enlaces-base.mjs';
 import jerarquiaEditorial from './scripts/remark-jerarquia.mjs';
 
-// Origen y base configurables por entorno: nunca hardcodear un dominio no registrado.
-const SITE = process.env.SITE_ORIGIN ?? 'https://marcvillarroya.github.io';
-const BASE = process.env.SITE_BASE ?? '/4sotas';
+// Origen y base configurables por entorno. Por defecto, producción (4sotas.com en Cloudflare
+// Pages): un build sin variables publica canónicas correctas en vez de apuntar a GitHub Pages.
+const SITE = process.env.SITE_ORIGIN ?? 'https://4sotas.com';
+const BASE = process.env.SITE_BASE ?? '/';
 
 export default defineConfig({
   site: SITE,

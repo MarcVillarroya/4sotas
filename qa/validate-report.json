@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-02T14:47:51.271Z",
-  "root": "/home/mvf/4sotas/site/.worktrees/t_eb2972e8",
-  "site": "https://marcvillarroya.github.io",
-  "base": "/4sotas",
+  "generated_at": "2026-11-10T17:09:36.990Z",
+  "root": "/home/hermesiarco/Escritorio/Proyectos/4sotas",
+  "site": "https://4sotas.com",
+  "base": "",
   "entries": {
     "sotas": 4,
     "temas": 8,
     "articulos": 9,
-    "videos": 15,
+    "videos": 22,
     "series": 1,
     "herramientas": 5,
     "glosario": 14,
@@ -15,26 +15,10 @@
     "autores": 2
   },
   "dist": {
-    "htmls": 57,
-    "sitemapLocs": 56
+    "htmls": 63,
+    "sitemapLocs": 62
   },
   "blockers": [],
-  "warnings": [
-    {
-      "code": "W-VIDEO-TITULO",
-      "where": "src/content/videos/vid-DzH02NfDqM4.yaml",
-      "msg": "título distinto del real de la API: \"S&P 500: 4 de cada 10 € van a 10 posiciones\" vs \"S&P 500: 4 de cada 10 € van a 10 posiciones #curiosidades\""
-    },
-    {
-      "code": "W-VIDEO-TITULO",
-      "where": "src/content/videos/vid-mu4mTE_ouJ0.yaml",
-      "msg": "título distinto del real de la API: \"¿50.000 € al 0 % para comprar casa? Ojo al venderla\" vs \"¿50.000 € al 0 % para comprar casa? Ojo al venderla #finanzas #innovacionfinanciera #ahorrochallenge\""
-    },
-    {
-      "code": "W-VIDEO-SIN-FICHA",
-      "where": "audit/inventory.json",
-      "msg": "vídeo público sin ficha en el sitio: LL1EJttJPrs"
-    }
-  ],
+  "warnings": [],
   "verdict": "ok"
 }

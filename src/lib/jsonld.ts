@@ -20,7 +20,11 @@ export const organizacion = (origen: string): Nodo => ({
   '@id': `${origen}#organizacion`,
   name: MARCA,
   url: `${origen}/`,
+  logo: { '@type': 'ImageObject', url: `${origen}/assets/mark.svg`, width: 40, height: 44 },
   inLanguage: 'es-ES',
+  // Principios editoriales publicados: metodología y fuentes, no una promesa genérica.
+  publishingPrinciples: `${origen}/metodologia/`,
+  founder: { '@type': 'Person', name: 'Marc Villarroya', url: `${origen}/sobre-4-sotas/` },
   // sameAs solo con URL verificada: el canal real del proyecto.
   sameAs: [CANAL_YOUTUBE],
 });
@@ -107,7 +111,7 @@ export const articulo = (params: {
   publicadoISO?: string;
   actualizadoISO?: string;
   tipo?: 'Article' | 'BlogPosting';
-  autor: { nombre: string };
+  autor: { nombre: string; url?: string };
   seccion?: string;
   citas?: readonly string[];
 }): Nodo => {
@@ -123,7 +127,7 @@ export const articulo = (params: {
       ? { dateModified: params.actualizadoISO || params.publicadoISO }
       : {}),
     inLanguage: 'es-ES',
-    author: { '@type': 'Person', name: params.autor.nombre },
+    author: { '@type': 'Person', name: params.autor.nombre, ...(params.autor.url ? { url: params.autor.url } : {}) },
     publisher: { '@id': `${origen}#organizacion`, '@type': 'Organization', name: MARCA, url: `${origen}/` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${params.url}#pagina`, url: params.url },
     isAccessibleForFree: true,
@@ -162,7 +166,8 @@ export const videoObjeto = (params: {
     // El contenido original vive en YouTube; la ficha es la página que lo presenta.
     contentUrl: params.contentUrl ?? params.url,
     url: params.url,
-    ...(params.revisadoISO ? { dateModified: params.revisadoISO } : {}),
+    // dateModified solo si no es anterior a la publicación: una ficha no se modifica antes de existir.
+    ...(params.revisadoISO && params.revisadoISO >= params.subidoISO ? { dateModified: params.revisadoISO } : {}),
     inLanguage: 'es-ES',
     publisher: { '@id': `${origen}#organizacion`, '@type': 'Organization', name: MARCA, url: `${origen}/` },
     isPartOf: { '@type': 'WebPage', '@id': `${params.url}#pagina`, url: params.url },

@@ -1,0 +1,69 @@
+# Ficha 4sotas para el Short del viernes 6-nov-2026 — BORRADOR.
+#
+# No vive en src/content/videos todavía: se copia allí como `vid-<ID>.yaml` en cuanto la
+# subida devuelva el id de YouTube, sustituyendo los TBD. Con `status: revision` no se
+# publica; el viernes, después del estreno, se promociona con:
+#   node scripts/publicar-ficha.mjs --youtube-id <ID> --escribir
+# y se despliega con build + wrangler.
+id: vid-iat5xP27vqo
+status: publicado
+universo: oros
+creado: 2026-11-04
+publicado: 2026-11-04
+revisado_factual: 2026-11-04
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "Un fondo de emergencia de 7.200 € pierde 336 € de poder
+    adquisitivo en un año con un 4,9 % de inflación. La cuenta correcta y qué
+    solución tiene."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: iat5xP27vqo
+slug: fondo-emergencia-336-euros
+titulo: "Tu fondo de emergencia pierde 336 €: ¿lo invertirías?"
+descripcion_corta: "Con 7.200 € de colchón y un 4,9 % de inflación, el dinero
+  pierde 336 € de poder adquisitivo en un año. Por qué la cuenta no es una
+  multiplicación y qué solución tiene."
+publicado_en: 2026-11-06
+duracion_iso: PT56S
+miniatura: https://i.ytimg.com/vi/iat5xP27vqo/maxresdefault.jpg
+miniatura_local: /assets/videos/iat5xP27vqo.webp
+insercion: disponible
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-10
+idioma: es
+temas:
+  - tema-ahorro
+  - tema-inflacion
+relacionados:
+  - vid-6dp6Y6nTreY
+transcripcion: false
+capitulos: []
+informacion:
+  estado: completo
+  resumen: "Un fondo de emergencia de 7.200 € pierde 336 € de poder adquisitivo si
+    los precios suben un 4,9 %: el valor real se divide entre 1,049, no se
+    multiplica, y queda en 6.864 €. El vídeo descarta las dos prisas contrarias
+    y cierra con una cuenta remunerada de acceso inmediato."
+  que_cubre:
+    - "La cuenta real del poder adquisitivo: 7.200 / 1,049 = 6.864 €, una
+      pérdida de 336 €."
+    - "Por qué la multiplicación (7.200 × 4,9 % = 352,80 €) es el error clásico."
+    - "El acceso inmediato como condición, no la rentabilidad como objetivo."
+  que_no_cubre:
+    - "No es asesoramiento financiero ni una previsión de inflación: usa el 4,9
+      % como escenario."
+    - "No nombra entidades, productos ni rentabilidades concretas."
+  para_quien: "Para quien tiene un colchón de emergencia y se plantea si merece la
+    pena invertirlo."
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false
+vistas_al_verificar: 47

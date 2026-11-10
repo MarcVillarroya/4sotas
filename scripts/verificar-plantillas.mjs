@@ -239,7 +239,9 @@ if (!fs.existsSync(FIXTURES)) {
     const tipos = new Set(nodos.map((n) => n['@type']));
     const plano = JSON.stringify(nodos);
     if (/aggregateRating|ratingValue|reviewCount/.test(plano)) fallo(`${ruta}: JSON-LD con ratings inventados`);
-    if (/4sotas\.com/.test(plano)) fallo(`${ruta}: JSON-LD con el dominio no registrado`);
+    // El dominio de producción es el canónico: lo que no debe aparecer es el host antiguo de Pages.
+    if (/marcvillarroya\.github\.io/.test(plano)) fallo(`${ruta}: JSON-LD con el host antiguo de GitHub Pages`);
+    if (/"\/4sotas\//.test(plano)) fallo(`${ruta}: JSON-LD con la base antigua /4sotas/`);
 
     const esperado = ESQUEMA.find((e) => e.patron.test(ruta));
     if (esperado) {
@@ -284,7 +286,10 @@ if (!fs.existsSync(FIXTURES)) {
       }
       if (!Array.isArray(video.thumbnailUrl) || video.thumbnailUrl.length === 0)
         fallo(`${ruta}: VideoObject sin miniatura`);
-      if (video.contentUrl !== canon[0]) fallo(`${ruta}: VideoObject.contentUrl no es la watch page`);
+      // contentUrl es el vídeo de origen (YouTube), no la ficha: Google exige una URL de vídeo.
+      if (!/^https:\/\/www\.youtube\.com\/watch\?v=/.test(video.contentUrl))
+        fallo(`${ruta}: VideoObject.contentUrl no apunta al vídeo de YouTube`);
+      if (video.url !== canon[0]) fallo(`${ruta}: VideoObject.url no es la ficha canónica`);
     }
 
     // Article: fechas ISO y autoría. Las fechas solo se exigen al contenido publicado:

@@ -54,10 +54,19 @@ const imagenSocial = ogAbsoluta(canonica, url(ogImagen));
     <meta property="og:description" content={descripcion} />
     <meta property="og:url" content={canonica} />
     <meta property="og:image" content={imagenSocial} />
+    <meta property="og:image:alt" content={descripcion} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={tituloFinal} />
+    <meta name="twitter:description" content={descripcion} />
+    <meta name="twitter:image" content={imagenSocial} />
     <link rel="icon" href={url('/assets/mark.svg')} type="image/svg+xml" />
+    <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
+    <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
+    <link rel="alternate" type="application/rss+xml" title={`${MARCA} · novedades`} href={url('/rss.xml')} />
+    <link rel="sitemap" type="application/xml" href={url('/sitemap-index.xml')} />
     {jsonLd && <JsonLd data={jsonLd} />}
   </head>
   <body>

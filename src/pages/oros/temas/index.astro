@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Sprite from '../../../components/Sprite.astro';
-import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
@@ -20,7 +20,7 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Temas troncales';
 const descripcion =
-  'Mapa en orden editorial de los temas de Sota de Oros: qué cubre cada bloque, con qué guía empieza y qué vídeos y herramientas lo acompañan cuando estén publicados.';
+  'Mapa editorial de Sota de Oros: qué cubre cada tema, por qué guía empezar y qué vídeos y calculadoras lo acompañan.';
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -43,7 +43,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={`${titulo} · ${SECCION}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>

@@ -17,7 +17,7 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const jsonLd = grafoSeccion({ origen: new URL(canonica).origin, url: canonica, nombre: titulo, descripcion });
 const iconos: Record<string, string> = { nomina: 'nomina', fiscal: 'impuestos', inflacion: 'inflacion', ahorro: 'ahorro', inversion: 'inversion', banca: 'banca', vivienda: 'vivienda', historia: 'historia' };
 ---
-<Base titulo={`${SECCION} · ${titulo}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <section class="wrap hero v21-cover v21-oros" aria-labelledby="titulo-principal">
     <div><p class="eyebrow">Sota de Oros · economía cotidiana</p><h1 id="titulo-principal">{titulo}.</h1>
       <p class="lead">{sota.data.promesa}</p>

@@ -10,8 +10,8 @@
  *   --content <dir>     directorio de contenido (por defecto <root>/src/content)
  *   --dist <dir>        directorio construido; si falta, se omiten los checks de salida
  *   --inventory <file>  inventario de auditoría; si falta, se omite el contraste con YouTube
- *   --site <url>        origen esperado (por defecto SITE_ORIGIN o https://marcvillarroya.github.io)
- *   --base <path>       base path esperado (por defecto SITE_BASE o /4sotas)
+ *   --site <url>        origen esperado (por defecto SITE_ORIGIN o https://4sotas.com)
+ *   --base <path>       base path esperado (por defecto SITE_BASE o vacío, dominio raíz)
  *   --json <file>       escribe el informe máquina-legible
  * Códigos: B* = bloqueante (exit 1) · W* = aviso (exit 0)
  */
@@ -36,8 +36,9 @@ const ROOT = path.resolve(arg('root', process.cwd()));
 const CONTENT = path.resolve(arg('content', path.join(ROOT, 'src/content')));
 const DIST = arg('dist', null) ? path.resolve(arg('dist')) : null;
 const INVENTORY = arg('inventory', null) ? path.resolve(arg('inventory')) : null;
-const SITE = (arg('site', process.env.SITE_ORIGIN ?? 'https://marcvillarroya.github.io')).replace(/\/+$/, '');
-const BASE = `/${arg('base', process.env.SITE_BASE ?? '/4sotas').replace(/^\/+|\/+$/g, '')}`;
+const SITE = (arg('site', process.env.SITE_ORIGIN ?? 'https://4sotas.com')).replace(/\/+$/, '');
+const BASE_BRUTO = arg('base', process.env.SITE_BASE ?? '').replace(/^\/+|\/+$/g, '');
+const BASE = BASE_BRUTO ? `/${BASE_BRUTO}` : '';
 const JSON_OUT = arg('json', null);
 
 const COLECCIONES = ['sotas', 'temas', 'articulos', 'videos', 'series', 'herramientas', 'glosario', 'fuentes', 'autores'];
@@ -392,7 +393,7 @@ if (DIST) {
         if (canon.length !== 1) B('B-CANONICA', rel, `canónicas encontradas: ${canon.length} (debe haber 1)`);
         else {
           if (!canon[0].startsWith(`${SITE}${BASE}/`)) B('B-CANONICA-ORIGEN', rel, `canónica fuera del origen/base: ${canon[0]}`);
-          if (canon[0].includes('4sotas.com')) B('B-CANONICA-DOMINIO', rel, 'canónica apunta a 4sotas.com (no registrado)');
+          if (/marcvillarroya\.github\.io/.test(canon[0])) B('B-CANONICA-DOMINIO', rel, 'canónica apunta al host antiguo de GitHub Pages');
         }
         if (noindex) B('B-NOINDEX-PUBLICO', rel, 'página pública con noindex');
         const relLimpia = rel.replace(/(^|\/)index\.html$/, '$1').replace(/\\/g, '/').replace(/^\//, '');
@@ -406,7 +407,7 @@ if (DIST) {
           const parsed = JSON.parse(m[1].replace(/&quot;/g, '"'));
           const planos = JSON.stringify(parsed);
           if (/"aggregateRating"|"reviewCount"|"ratingValue"/.test(planos)) B('B-JSONLD-RATING', rel, 'JSON-LD con ratings inventados');
-          if (/4sotas\.com/.test(planos)) B('B-JSONLD-DOMINIO', rel, 'JSON-LD con 4sotas.com');
+          if (/marcvillarroya\.github\.io/.test(planos)) B('B-JSONLD-DOMINIO', rel, 'JSON-LD con el host antiguo de GitHub Pages');
         } catch {
           B('B-JSONLD-INVALIDO', rel, 'bloque JSON-LD no parseable');
         }

@@ -74,7 +74,7 @@ const jsonLd = grafo([
     publicadoISO: fechaISO(articulo.data.publicado),
     actualizadoISO: fechaISO(actualizado),
     tipo: esAnalisis ? 'BlogPosting' : 'Article',
-    autor: { nombre: redactor?.data.nombre_publico ?? MARCA },
+    autor: { nombre: redactor?.data.nombre_publico ?? MARCA, url: `${origen}/sobre-4-sotas/` },
     seccion: temasPropios[0]?.data.titulo,
     citas: fuentesPropias.map((f) => f.fuente.data.url),
   }),
@@ -99,9 +99,9 @@ const hayRelacionados =
 ---
 
 <Base
-  titulo={`${articulo.data.titulo} · ${SECCION}`}
+  titulo={articulo.data.seo.titulo ?? articulo.data.titulo}
   descripcion={articulo.data.seo.descripcion ?? articulo.data.resumen}
-  sufijo={MARCA}
+  sufijo={SECCION}
   ogType="article"
   jsonLd={jsonLd}
 >

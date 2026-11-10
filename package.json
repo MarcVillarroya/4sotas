@@ -23,7 +23,7 @@
     "video:conciliar": "node scripts/conciliar-videos.mjs",
     "video:publicar": "node scripts/publicar-ficha.mjs",
     "validate:content": "node scripts/validate-content.mjs --root . --inventory data/inventory-snapshot.json",
-    "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://marcvillarroya.github.io}\" --base \"${SITE_BASE:-/4sotas}\" --json qa/validate-report.json"
+    "validate": "node scripts/validate-content.mjs --root . --dist dist --inventory data/inventory-snapshot.json --site \"${SITE_ORIGIN:-https://4sotas.com}\" --base \"${SITE_BASE:-}\" --json qa/validate-report.json"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.3.4",

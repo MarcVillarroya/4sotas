@@ -8,7 +8,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Sprite from '../../../components/Sprite.astro';
-import { CANAL_YOUTUBE, MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { CANAL_YOUTUBE, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { porFechaDesc, resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
@@ -70,7 +70,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={`${titulo} · ${SECCION}`} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
