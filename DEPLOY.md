@@ -27,7 +27,9 @@ reproducir el host antiguo.
 
 ### Trampas conocidas
 
-- **Caché de assets**: `/assets/*` y `/_astro/*` van con `max-age=31536000, immutable`. Si un
+- **Caché de assets**: Cloudflare Pages sirve cualquier fichero de `/assets/*` con
+  `max-age=31536000` **e ignora `_headers`** para esos ficheros (probado con MISS: `/assets/**` →
+  1 año; `/llms.txt` sí respeta su regla). Si un
   asset se pidió antes de existir, el 404 queda cacheado un año y el token no puede purgar
   (`purge_cache` sin permiso). Por eso los pósters llevan `?v=<mtime>`: cambiar el fichero
   cambia la URL.

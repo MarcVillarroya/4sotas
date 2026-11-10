@@ -92,6 +92,15 @@ el tráfico orgánico**: el dominio no aparece todavía en Bing ni tiene captura
 - Sin desbordamiento horizontal en 360, 390, 768, 1024, 1440 y 1920 px.
 - Ningún texto de cuerpo por debajo de 14 px; ningún control de tamaño insuficiente en móvil.
 - Las tablas anchas de las calculadoras siguen siendo desplazables dentro de su contenedor.
+- **Menú móvil:** medido en navegador, el panel ocupaba el 56 % del ancho a 360 px y el 54 % a 390
+  (quedaba en la primera columna del grid). Ahora es un panel absoluto a todo el ancho del header
+  (100 % medido a 360, 390, 768 y 1024) con el filete completo.
+- **Salto de cabecera** entre 1000 y 1001 px (78 → 88 px) por dos `@media` divergentes: unificado.
+- **Objetivos táctiles del glosario:** 30×21 px en `/oros/` y 40×24 en `/oros/glosario/`. Ahora 44 px
+  de alto en todos los enlaces de término.
+- **Caché:** Cloudflare Pages sirve `/assets/*` con un año e **ignora `_headers`** para esos ficheros
+  (comprobado con MISS). No se puede acortar desde el repo; por eso la única defensa real contra un
+  404 envenenado es versionar la URL, que es lo que hacen ya las miniaturas.
 
 ## 3. Rendimiento
 
@@ -101,7 +110,23 @@ el tráfico orgánico**: el dominio no aparece todavía en Bing ni tiene captura
   acumuladas (`global`, `plantillas`, `v2`, `v2-1`). No es un problema hoy; sí es deuda si se sigue
   añadiendo capa sobre capa.
 
-## 4. Pendiente (necesita decisión o acceso)
+## 5. Diseño y lenguaje visual
+
+El sitio no es «pixel art integral»: es un diseño editorial oscuro, con tipografía sans muy
+contrastada, y el pixel art entra por las ilustraciones (sota, palos, emblemas), los iconos y un
+sistema de sombras duras y bordes de 2 px sin radios. Dos lecturas independientes de la portada
+coinciden en lo mismo: se percibe como identidad ilustrada, no como lenguaje de interfaz completo.
+
+Eso no es un defecto técnico y no se ha tocado: la coherencia es alta (paleta reducida, mayúsculas
+con tracking, cero radios, sombra desplazada, tarjetas de palo con estado textual «En juego / En el
+mazo»). Llevarlo a pixel art nativo —tipografía bitmap, bordes escalonados, iconos a múltiplos
+enteros en toda la interfaz— es una decisión de dirección de arte, no una corrección, y afecta a la
+percepción de marca. Queda como propuesta aparte, no mezclada con esta entrega.
+
+Lo que sí se ha corregido en esta pasada: legibilidad y estructura (títulos, un solo `h1`, jerarquía
+de encabezados), portadas de vídeo accesibles y pósters que ya no se quedan en 404.
+
+## 6. Pendiente (necesita decisión o acceso)
 
 1. **Search Console y Bing Webmaster Tools.** Sin verificar propiedad no hay datos de búsqueda ni se
    puede pedir indexación. IndexNow ya se ha avisado con las 62 URLs (`scripts/indexnow.py`), y la

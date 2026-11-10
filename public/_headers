@@ -9,6 +9,9 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/*
+  # Cloudflare Pages ya sirve los ficheros estáticos con un año inmutable e ignora este valor
+  # para /assets/*: se deja escrito para que no sorprenda. Un asset pedido antes de existir
+  # queda con el 404 cacheado un año, así que las miniaturas llevan ?v=<fecha>.
   Cache-Control: public, max-age=31536000, immutable
 
 /llms.txt
