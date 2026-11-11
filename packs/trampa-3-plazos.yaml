@@ -1,0 +1,76 @@
+# 4 Sotas · pack editorial de «3 plazos sin intereses: la cuota de 380 € que no ves».
+#
+# Fuente: máster V8 aprobado (out/v8/trampa-3-plazos-v8-FINAL.mp4), SRT revisado
+# (out/trampa-3-plazos.srt), guion y fuentes verificadas de la pieza.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: viernes 13-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "3 plazos sin intereses: la cuota de 380 € que no ves"
+slug: trampa-3-plazos
+
+descripcion_corta: "Tres compras de 600, 240 y 300 € acaban coincidiendo en 380 € por vencimiento: 1.140 € de precio total y tres cuotas que comprometen tu nómina."
+
+seo_descripcion: "Comprar en 3 plazos sin intereses puede esconder 380 € por vencimiento. Suma las cuotas, revisa las fechas y mira la TAE antes de financiar."
+
+resumen_editorial: "Tres compras de 600, 240 y 300 € parecen manejables, pero coinciden en el calendario: 380 € en cada vencimiento. En 3 cuotas el compromiso total es de 1.140 €, el precio de los productos, no un extra. Si cobras 1.500 € al mes, la cuota se lleva el 25,33 % de la nómina. El Banco de España advierte de que acumular compras aplazadas puede dar una falsa sensación de ahorro; un TIN del 0 % no siempre implica coste cero."
+
+que_cubre:
+  - "Cómo tres cuotas pequeñas se convierten en 380 € por pago y 1.140 € de compromiso total."
+  - "Por qué el 25,33 % de una nómina de 1.500 € cambia la percepción del gasto."
+  - "Qué advierte el Banco de España sobre el pago aplazado y por qué un TIN del 0 % no siempre es coste cero."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni una regla universal: el ejemplo supone calendarios coincidentes y ningún gasto adicional."
+  - "No afirma que todas las financiaciones sin intereses cobren comisiones ni que comprar a plazos sea siempre mala idea."
+
+para_quien: "Para quien compra online, usa el pago aplazado o quiere entender cuánto dinero compromete antes de aceptar una financiación."
+
+temas:
+  - tema-ahorro
+  - tema-banca
+  - tema-nomina
+
+keywords:
+  - finanzas personales
+  - pago aplazado
+  - comprar a plazos
+  - buy now pay later
+  - BNPL
+  - cuotas sin intereses
+  - educación financiera
+  - ahorro
+  - presupuesto
+  - Banco de España
+  - Black Friday
+  - Sota de Oros
+
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+
+fuentes:
+  - "Banco de España — Buy Now, Pay Later: el auge del compra ahora y paga después (25-05-2023): https://clientebancario.bde.es/pcb/es/blog/la-proliferacion-de-la-nueva-tendencia-de-pago-%E2%80%9Cbuy-now--pay-later%E2%80%9D.html"
+  - "Banco de España — La financiación sin intereses: https://clientebancario.bde.es/pcb/es/blog/La_financiacion_1a121490865c461.html"
+  - "Banco de España — Panorama 2026: riesgos actuales para las personas consumidoras de servicios financieros (07-04-2026): https://clientebancario.bde.es/pcb/es/blog/panorama-2026-riesgos-actuales-para-las-personas-consumidoras-de-servicios-financieros.html"
+  - "Cálculos propios: 600 + 240 + 300 = 1.140 €; 200 + 80 + 100 = 380 €; 380 × 3 = 1.140 €; 380 / 1.500 = 25,33 %."
+  - "Ejemplo hipotético: tres pagos iguales, calendarios coincidentes, sin intereses ni gastos; el salario de 1.500 € no es una estadística."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. El ejemplo supone tres pagos iguales, calendarios coincidentes y ningún gasto adicional; el salario de 1.500 € es hipotético."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/trampa-3-plazos/out/trampa-3-plazos.srt
+
+publicar_en: "2026-11-13T15:30:00+01:00"
+
+miniatura: public/assets/videos/trampa-3-plazos-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/trampa-3-plazos/out/v8/trampa-3-plazos-v8-FINAL.mp4
+duracion_iso: PT48S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
