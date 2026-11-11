@@ -1,5 +1,5 @@
 id: vid-bLMAIMAOXY0
-status: revision
+status: publicado
 universo: oros
 creado: 2026-11-10
 publicado: 2026-11-10
@@ -11,24 +11,22 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Con una subida del 3 % y un IPC del 4,9 %, cobras 60 € más pero
-    necesitas 98 € más: pierdes un 1,8 % de poder adquisitivo."
+  descripcion: "Con una subida del 3 % y un IPC del 4,9 %, cobras 60 € más pero necesitas 98 € más: pierdes un 1,8 % de poder adquisitivo."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: bLMAIMAOXY0
 slug: te-suben-el-sueldo-3
 titulo: Te suben el sueldo un 3 %, pero eres más pobre
-descripcion_corta: "Te suben el sueldo un 3 %, pero con un IPC del 4,9 %
-  necesitas 98 € más al mes: cobras 60 € y pierdes 38 € de poder adquisitivo."
+descripcion_corta: "Te suben el sueldo un 3 %, pero con un IPC del 4,9 % necesitas 98 € más al mes: cobras 60 € y pierdes 38 € de poder adquisitivo."
 publicado_en: 2026-11-10
 duracion_iso: PT46S
 miniatura: https://i9.ytimg.com/vi/bLMAIMAOXY0/maxresdefault.jpg?sqp=CLydzdcG&rs=AOn4CLA9rbz6ISek6aPbXsAkSRlSBmtoiA
 miniatura_local: /assets/videos/bLMAIMAOXY0.webp
 insercion: disponible
-estado_youtube: programado
-privacidad_api: private
-verificado_en: 2026-11-10
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-11
 idioma: es
 temas:
   - tema-nomina
@@ -40,24 +38,15 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Te suben el sueldo un 3 %: pasas de 2.000 € a 2.060 € netos. Con el
-    IPC interanual en el 4,9 %, mantener tu nivel de vida costaría 2.098 €, así
-    que te faltan 38 € al mes. Aunque cobras 60 € más, tu poder adquisitivo cae
-    alrededor de un 1,8 %. El vídeo separa la subida nominal del coste real y
-    recuerda que el 4,9 % es el dato de avance del INE de octubre de 2026."
+  resumen: "Te suben el sueldo un 3 %: pasas de 2.000 € a 2.060 € netos. Con el IPC interanual en el 4,9 %, mantener tu nivel de vida costaría 2.098 €, así que te faltan 38 € al mes. Aunque cobras 60 € más, tu poder adquisitivo cae alrededor de un 1,8 %. El vídeo separa la subida nominal del coste real y recuerda que el 4,9 % es el dato de avance del INE de octubre de 2026."
   que_cubre:
-    - "La diferencia entre subida nominal y poder adquisitivo: 2.000 € → 2.060 €
-      frente a una cesta de 2.098 €."
-    - De dónde salen los 38 € que faltan y por qué equivalen a una pérdida real
-      del 1,8 %.
-    - Cómo comparar una subida salarial con el IPC y por qué el dato de avance
-      del INE importa.
+    - "La diferencia entre subida nominal y poder adquisitivo: 2.000 € → 2.060 € frente a una cesta de 2.098 €."
+    - De dónde salen los 38 € que faltan y por qué equivalen a una pérdida real del 1,8 %.
+    - Cómo comparar una subida salarial con el IPC y por qué el dato de avance del INE importa.
   que_no_cubre:
-    - "No es asesoramiento financiero ni una predicción de inflación: usa un
-      ejemplo hipotético."
+    - "No es asesoramiento financiero ni una predicción de inflación: usa un ejemplo hipotético."
     - No entra en salarios por sector, convenios, IRPF ni en la subida del bruto.
-  para_quien: Para quien ha recibido una subida y quiere entender por qué el
-    recibo no siempre se traduce en más capacidad de compra.
+  para_quien: Para quien ha recibido una subida y quiere entender por qué el recibo no siempre se traduce en más capacidad de compra.
   origen: paquete-publicacion
   faltan: []
   heredado: false
