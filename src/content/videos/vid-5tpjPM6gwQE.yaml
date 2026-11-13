@@ -1,0 +1,81 @@
+id: vid-5tpjPM6gwQE
+status: revision
+universo: oros
+creado: 2026-11-13
+publicado: 2026-11-13
+revisado_factual: 2026-11-13
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: El Nasdaq cayó un 77 % tras las puntocom. Hoy las tecnológicas invierten 720.000 millones en IA. Qué dicen los datos y qué no.
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: 5tpjPM6gwQE
+slug: burbuja-ia-2000
+titulo: ¿Burbuja de la IA? Los datos que recuerdan a 2000
+descripcion_corta: "Internet cambió el mundo y el Nasdaq cayó un 77 %. Veintiséis años después, 720.000 millones al año en IA: ¿oportunidad histórica o pago de más por el futuro?"
+publicado_en: 2026-11-15
+duracion_iso: PT13M4S
+miniatura: https://i.ytimg.com/vi/5tpjPM6gwQE/maxresdefault.jpg
+miniatura_local: /assets/videos/5tpjPM6gwQE.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-11-13
+idioma: es
+temas:
+  - tema-burbujas
+  - tema-inversion
+relacionados: []
+transcripcion: false
+capitulos:
+  - titulo: La promesa de 1999
+    segundo: 0
+  - titulo: La revolución de la IA
+    segundo: 43
+  - titulo: Cómo nace una burbuja
+    segundo: 65
+  - titulo: El precio descuenta el futuro
+    segundo: 98
+  - titulo: La montaña de dinero
+    segundo: 129
+  - titulo: El recorrido del dinero
+    segundo: 172
+  - titulo: La demanda existe
+    segundo: 217
+  - titulo: ¿No son puntocom?
+    segundo: 261
+  - titulo: Flujo de caja libre
+    segundo: 291
+  - titulo: ¿Quién paga esta revolución?
+    segundo: 367
+  - titulo: ¿Es como el año 2000?
+    segundo: 442
+  - titulo: Tres futuros posibles
+    segundo: 516
+  - titulo: Tu cartera
+    segundo: 636
+  - titulo: Tres preguntas
+    segundo: 705
+  - titulo: La respuesta
+    segundo: 765
+informacion:
+  estado: completo
+  resumen: Internet cambió el mundo y el Nasdaq cayó un 77,4 % entre 2000 y 2002. 26 años después, las tecnológicas prevén invertir 720.000–740.000 millones en un año para liderar la IA. El documental sigue el dinero —capex, centros de datos, ingresos, flujo de caja y financiación— y compara las valoraciones de 1999 con las de 2026. La pregunta no es si la IA cambiará la economía, sino cuánto futuro descuenta su precio.
+  que_cubre:
+    - "La comparación entre la burbuja puntocom y el ciclo de inversión en IA: qué se parece y qué no."
+    - "El destino del dinero: 720.000–740.000 millones de capex anual, centros de datos, chips y energía."
+    - "La demanda real: crecimiento de Azure, Google Cloud y AWS, y el flujo de caja libre de las grandes tecnológicas."
+    - Quién financia la expansión y qué tres escenarios podrían darse entre 2027 y 2030.
+  que_no_cubre:
+    - "No es una predicción ni una recomendación de inversión: los escenarios son hipotéticos y sin probabilidades."
+    - No entra en fiscalidad, selección de valores concretos ni en el momento de entrada o salida.
+  para_quien: Para quien invierte en tecnología o fondos indexados y quiere entender si el gasto en IA está creando valor o solo expectativas.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false
