@@ -1,0 +1,99 @@
+# 4 Sotas · pack editorial de «¿Burbuja de la IA? Los datos que recuerdan a 2000».
+#
+# Fuente: guion definitivo (docs/guion-definitivo.md), dossier de fuentes y timeline real del
+# máster V7c (src/timeline.json). Capítulos agrupados por bloque narrativo con segundos reales.
+# Máster: out/burbuja-ia-v7c.mp4 · 23.526 frames · 784,199 s.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+
+titulo: "¿Burbuja de la IA? Los datos que recuerdan a 2000"
+slug: burbuja-ia-2000
+
+descripcion_corta: "Internet cambió el mundo y el Nasdaq cayó un 77 %. Veintiséis años después, 720.000 millones al año en IA: ¿oportunidad histórica o pago de más por el futuro?"
+
+seo_descripcion: "El Nasdaq cayó un 77 % tras las puntocom. Hoy las tecnológicas invierten 720.000 millones en IA. Qué dicen los datos y qué no."
+
+resumen_editorial: "Internet cambió el mundo y el Nasdaq cayó un 77,4 % entre 2000 y 2002. 26 años después, las tecnológicas prevén invertir 720.000–740.000 millones en un año para liderar la IA. El documental sigue el dinero —capex, centros de datos, ingresos, flujo de caja y financiación— y compara las valoraciones de 1999 con las de 2026. La pregunta no es si la IA cambiará la economía, sino cuánto futuro descuenta su precio."
+
+que_cubre:
+  - "La comparación entre la burbuja puntocom y el ciclo de inversión en IA: qué se parece y qué no."
+  - "El destino del dinero: 720.000–740.000 millones de capex anual, centros de datos, chips y energía."
+  - "La demanda real: crecimiento de Azure, Google Cloud y AWS, y el flujo de caja libre de las grandes tecnológicas."
+  - "Quién financia la expansión y qué tres escenarios podrían darse entre 2027 y 2030."
+
+que_no_cubre:
+  - "No es una predicción ni una recomendación de inversión: los escenarios son hipotéticos y sin probabilidades."
+  - "No entra en fiscalidad, selección de valores concretos ni en el momento de entrada o salida."
+
+para_quien: "Para quien invierte en tecnología o fondos indexados y quiere entender si el gasto en IA está creando valor o solo expectativas."
+
+temas:
+  - tema-burbujas
+  - tema-inversion
+
+keywords:
+  - burbuja de la IA
+  - inteligencia artificial
+  - burbuja puntocom
+  - Nasdaq
+  - invertir en tecnología
+  - NVIDIA
+  - centros de datos
+  - capex
+  - flujo de caja libre
+  - fondos indexados
+  - Sota de Oros
+  - documental económico
+
+fuentes:
+  - "Goldman Sachs · historia de la burbuja puntocom: https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble"
+  - "Amazon Investor Relations: https://ir.aboutamazon.com/ · Alphabet: https://abc.xyz/investor/ · Microsoft: https://www.microsoft.com/en-us/Investor/ · Meta: https://investor.atmeta.com/"
+  - "Forrester (5-nov-2026): https://www.forrester.com/blogs/the-ai-bubble-isnt-bursting-yet-heres-what-to-watch-using-our-model/"
+  - "Nasdaq / FactSet · valoración del Nasdaq-100: https://www.nasdaq.com/articles/is-ai-another-bubble-for-the-nasdaq-100"
+  - "Siblis Research · PER del Nasdaq-100: https://siblisresearch.com/data/nasdaq-100-pe-ratio/"
+  - "Fotografías: Luca Marfè, Tony Webster, Chad Davis, Pal Danyi, Derrick Coetzee, Alexis Lê-Quôc, SimonWaldherr, Guillaume Paumier, PantheraLeo1359531, Jan Beránek, ZMASLO, Rob Bulmahn, IBM Research y Wikimedia Foundation, vía Wikimedia Commons (CC BY, CC BY-SA, CC0 o dominio público)."
+  - "Vídeo de archivo: the Dronalist, Kai3952, Xpda, Andrew nyr, PiDatacenters, Robert.Harker, Rolf Brink, Peter Potrowl, ENERGY.GOV, Raysonho, Lawrence Systems, Fernando Moital y Aérovue, vía Wikimedia Commons (CC BY, CC BY-SA, CC0 o dominio público)."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero ni una recomendación de compra o venta. Las cifras son una foto con fecha (11-nov-2026) y los escenarios son hipotéticos, sin probabilidades asignadas."
+
+# 15 capítulos con los segundos reales del máster (inicios de bloque en src/timeline.json).
+capitulos:
+  - titulo: "La promesa de 1999"
+    segundo: 0
+  - titulo: "La revolución de la IA"
+    segundo: 43
+  - titulo: "Cómo nace una burbuja"
+    segundo: 65
+  - titulo: "El precio descuenta el futuro"
+    segundo: 98
+  - titulo: "La montaña de dinero"
+    segundo: 129
+  - titulo: "El recorrido del dinero"
+    segundo: 172
+  - titulo: "La demanda existe"
+    segundo: 217
+  - titulo: "¿No son puntocom?"
+    segundo: 261
+  - titulo: "Flujo de caja libre"
+    segundo: 291
+  - titulo: "¿Quién paga esta revolución?"
+    segundo: 367
+  - titulo: "¿Es como el año 2000?"
+    segundo: 442
+  - titulo: "Tres futuros posibles"
+    segundo: 516
+  - titulo: "Tu cartera"
+    segundo: 636
+  - titulo: "Tres preguntas"
+    segundo: 705
+  - titulo: "La respuesta"
+    segundo: 765
+
+transcripcion:
+  estado: automatica
+  fuente: /home/hermesiarco/Escritorio/Proyectos/burbuja-ia-largo/out/burbuja-ia-v7-es.srt
+
+publicar_en: "2026-11-15T11:00:00+01:00"
+miniatura: public/assets/videos/burbuja-ia-2000-poster.webp
+video: /home/hermesiarco/Escritorio/Proyectos/burbuja-ia-largo/out/burbuja-ia-v7c.mp4
+duracion_iso: PT13M4S
+idioma: es
