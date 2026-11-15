@@ -1,5 +1,5 @@
 id: vid-5tpjPM6gwQE
-status: revision
+status: publicado
 universo: oros
 creado: 2026-11-13
 publicado: 2026-11-13
@@ -24,9 +24,9 @@ duracion_iso: PT13M4S
 miniatura: https://i.ytimg.com/vi/5tpjPM6gwQE/maxresdefault.jpg
 miniatura_local: /assets/videos/5tpjPM6gwQE.webp
 insercion: disponible
-estado_youtube: programado
-privacidad_api: private
-verificado_en: 2026-11-13
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-15
 idioma: es
 temas:
   - tema-burbujas
