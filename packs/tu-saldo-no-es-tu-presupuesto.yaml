@@ -1,0 +1,73 @@
+# 4 Sotas · pack editorial de «Tu saldo no es tu presupuesto».
+#
+# Fuente: máster V2 aprobado (out/SHORT-02-TU-SALDO-NO-ES-TU-PRESUPUESTO-v2.mp4),
+# guion de 15 líneas y SRT revisado (out/SHORT-02-TU-SALDO-NO-ES-TU-PRESUPUESTO-v2.srt).
+# Aritmética verificada: 1.500 − 1.100 − 100 = 300; 300 / 30 = 10; 300 − 80 = 220;
+# 220 / 29 = 7,5862 → 7,59; 10 − 7,59 = 2,41.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: miércoles 18-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "Tu saldo no es tu presupuesto: de 1.500 € a 7,59 €/día"
+slug: tu-saldo-no-es-tu-presupuesto
+
+descripcion_corta: "Cobras 1.500 €, pero solo 300 € son tuyos: 1.100 € ya están comprometidos y 100 € se apartan. Reparte 10 €/día y mira qué pasa si el día 1 gastas 80 €."
+
+seo_descripcion: "De 1.500 € de nómina a 7,59 €/día: descuenta compromisos y ahorro, divide entre los días que quedan y sabrás cuánto puedes gastar de verdad."
+
+resumen_editorial: "Una nómina de 1.500 € no es dinero disponible: 1.100 € ya están comprometidos en vivienda, facturas, comida y transporte, y 100 € se apartan para ahorrar. Quedan 300 €, que entre 30 días son 10 € diarios de media. Si el primer día gastas 80 €, quedan 220 € para 29 días: 7,59 € al día. El saldo de la cuenta no es el presupuesto que puedes gastar."
+
+que_cubre:
+  - "Por qué 1.500 € de nómina dejan solo 300 € disponibles tras compromisos y ahorro."
+  - "Cómo se pasa de 300 € en 30 días a 10 €/día y a 7,59 €/día tras una compra de 80 €."
+  - "La diferencia entre saldo y presupuesto: lo que hay en la cuenta no es lo que puedes gastar."
+
+que_no_cubre:
+  - "No es asesoramiento financiero: el reparto 1.100/100/300 es un ejemplo, no una regla universal."
+  - "No promete que apartar 100 € sea posible en cualquier nómina de 1.500 € ni tiene en cuenta gastos imprevistos."
+
+para_quien: "Para quien cobra una nómina fija, quiere saber cuánto puede gastar de verdad cada día y se lleva sustos a mitad de mes."
+
+temas:
+  - tema-nomina
+  - tema-ahorro
+
+keywords:
+  - saldo no es presupuesto
+  - presupuesto mensual
+  - margen diario
+  - gasto diario
+  - nomina 1500 euros
+  - cuanto puedo gastar
+  - compromisos mensuales
+  - ahorro
+  - educacion financiera
+  - finanzas personales
+  - Sota de Oros
+
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+
+fuentes:
+  - "Cálculos propios: 1.500 − 1.100 − 100 = 300 €; 300 / 30 = 10 €/día; 300 − 80 = 220 €; 220 / 29 = 7,5862 → 7,59 €/día; 10 − 7,59 = 2,41 €."
+  - "Ejemplo hipotético: nómina neta de 1.500 €, compromisos de 1.100 € y 100 € de ahorro; no es una estadística ni un caso real."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. El reparto de la nómina es un ejemplo hipotético y las medias diarias son orientativas, no una regla."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/saldo-presupuesto/out/SHORT-02-TU-SALDO-NO-ES-TU-PRESUPUESTO-v2.srt
+
+publicar_en: "2026-11-18T15:30:00+01:00"
+
+miniatura: public/assets/videos/tu-saldo-no-es-tu-presupuesto-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/saldo-presupuesto/out/SHORT-02-TU-SALDO-NO-ES-TU-PRESUPUESTO-v2.mp4
+duracion_iso: PT47S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
