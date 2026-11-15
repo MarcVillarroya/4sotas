@@ -1,0 +1,51 @@
+id: vid-9gtjuYIdBg4
+status: revision
+universo: oros
+creado: 2026-11-15
+publicado: 2026-11-15
+revisado_factual: 2026-11-15
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "El reto del céntimo: guarda 1 céntimo más cada día y reúne 667,95 € en 365 días. En los últimos 30 apartas 105,15 €, 22,6 veces más."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: 9gtjuYIdBg4
+slug: reto-centimo
+titulo: "El reto del céntimo: 667,95 € en un año (y su trampa)"
+descripcion_corta: "Empiezas guardando 1 céntimo y subes uno cada día: 667,95 € en un año. La letra pequeña está en los últimos 30 días."
+publicado_en: 2026-11-16
+duracion_iso: PT55S
+miniatura: https://i.ytimg.com/vi/9gtjuYIdBg4/maxresdefault.jpg
+miniatura_local: /assets/videos/9gtjuYIdBg4.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-11-15
+idioma: es
+temas:
+  - tema-ahorro
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+transcripcion: false
+capitulos: []
+informacion:
+  estado: completo
+  resumen: "El reto del céntimo consiste en apartar 1 céntimo el día 1, 2 el día 2 y uno más cada jornada hasta el 365. La suma es 667,95 €, pero el esfuerzo no es plano: los primeros 30 días solo reúnen 4,65 € y los últimos 30 exigen 105,15 €, más de 22 veces lo mismo. La alternativa es preparar las 365 cantidades y tacharlas en el orden que convenga, sin cambiar el total."
+  que_cubre:
+    - "Cómo funciona el reto: 1 céntimo más cada día y 667,95 € al terminar el año."
+    - Por qué los últimos 30 días concentran 105,15 € frente a los 4,65 € de los primeros.
+    - La alternativa de las 365 cantidades tachadas para quien el orden diario no le encaje.
+  que_no_cubre:
+    - "No es asesoramiento financiero ni promete que el dinero salga de la nada: sale del presupuesto."
+    - No tiene en cuenta la inflación, los intereses ni la rentabilidad de ese dinero parado.
+  para_quien: Para quien quiere empezar a ahorrar con una regla simple y entender por qué el último mes es el que rompe el reto.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false

@@ -1,0 +1,70 @@
+# 4 Sotas · pack editorial de «El reto del céntimo: 667,95 € en un año (y su trampa)».
+#
+# Fuente: máster V9 aprobado (out/reto-centimo-v9-FINAL.mp4), guion de la V2 y SRT revisado
+# (out/reto-centimo-es.srt). Cifras verificadas con A(n)=n(n+1)/200.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: lunes 16-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "El reto del céntimo: 667,95 € en un año (y su trampa)"
+slug: reto-centimo
+
+descripcion_corta: "Empiezas guardando 1 céntimo y subes uno cada día: 667,95 € en un año. La letra pequeña está en los últimos 30 días."
+
+seo_descripcion: "El reto del céntimo: guarda 1 céntimo más cada día y reúne 667,95 € en 365 días. En los últimos 30 apartas 105,15 €, 22,6 veces más."
+
+resumen_editorial: "El reto del céntimo consiste en apartar 1 céntimo el día 1, 2 el día 2 y uno más cada jornada hasta el 365. La suma es 667,95 €, pero el esfuerzo no es plano: los primeros 30 días solo reúnen 4,65 € y los últimos 30 exigen 105,15 €, más de 22 veces lo mismo. La alternativa es preparar las 365 cantidades y tacharlas en el orden que convenga, sin cambiar el total."
+
+que_cubre:
+  - "Cómo funciona el reto: 1 céntimo más cada día y 667,95 € al terminar el año."
+  - "Por qué los últimos 30 días concentran 105,15 € frente a los 4,65 € de los primeros."
+  - "La alternativa de las 365 cantidades tachadas para quien el orden diario no le encaje."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni promete que el dinero salga de la nada: sale del presupuesto."
+  - "No tiene en cuenta la inflación, los intereses ni la rentabilidad de ese dinero parado."
+
+para_quien: "Para quien quiere empezar a ahorrar con una regla simple y entender por qué el último mes es el que rompe el reto."
+
+temas:
+  - tema-ahorro
+
+keywords:
+  - reto del céntimo
+  - 667,95 euros
+  - ahorro progresivo
+  - reto de ahorro
+  - 365 días
+  - guardar un centimo al dia
+  - educación financiera
+  - ahorro
+  - presupuesto
+  - Sota de Oros
+
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+
+fuentes:
+  - "Cálculo propio de la serie: A(n)=n(n+1)/200 euros; A(30)=4,65 €; A(335)=562,80 €; A(365)=667,95 €; últimos 30 días = 667,95 − 562,80 = 105,15 €."
+  - "Último depósito: día 365 = 3,65 €."
+  - "Comparación: 105,15 / 4,65 = 22,61 veces."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. El reto supone apartar cada día el importe indicado y no tocar el dinero hasta el final; sale del presupuesto de cada uno."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/reto-centimo/out/reto-centimo-es.srt
+
+publicar_en: "2026-11-16T15:30:00+01:00"
+
+miniatura: public/assets/videos/reto-centimo-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/reto-centimo/out/reto-centimo-v9-FINAL.mp4
+duracion_iso: PT55S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
