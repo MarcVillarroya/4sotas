@@ -1,0 +1,71 @@
+# 4 Sotas · pack editorial de «Black Friday: ¿seguro que estás ahorrando?».
+#
+# Fuente: máster V7 aprobado por Marc el 16-nov-2026 (out/black-friday-V7-FINAL.mp4),
+# guion de 7 líneas y SRT revisado (out/black-friday.srt).
+# Aritmética: 150 − 27 % = 109,5 → 110 €; 110 − 100 = 10 € de sobrecoste contra el mínimo de hace 20 días.
+# Los precios son un ejemplo ficticio; los datos de OCU 2025 son reales.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: viernes 20-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "Black Friday: ¿seguro que estás ahorrando?"
+slug: black-friday
+
+descripcion_corta: "Unos auriculares a 110 € con un 27 % de descuento parecen un chollo, hasta que miras el historial: hace 20 días costaban 100 €. El descuento existe; el ahorro, no."
+
+seo_descripcion: "Cómo saber si una oferta de Black Friday es real: historial de precios, precio final con gastos y la regla legal de los 30 días."
+
+resumen_editorial: "Un descuento del 27 % sobre 150 € deja el precio en 110 €, pero si hace 20 días el mismo producto costaba 100 €, la rebaja esconde 10 € de sobrecoste. En el Black Friday de 2025, OCU analizó más de 14.000 precios de 60 tiendas online: el 35 % bajó, el 37 % subió y el 28 % quedó igual. La ley exige además tomar como referencia el precio más bajo de los 30 días anteriores."
+
+que_cubre:
+  - "Por qué un 27 % de descuento puede esconder un pago de 10 € más que hace 20 días."
+  - "Qué dicen los datos de OCU del Black Friday 2025: 35 % bajó, 37 % subió y 28 % quedó igual."
+  - "La regla legal de los 30 días y las tres comprobaciones antes de comprar: historial, precio final y necesidad."
+
+que_no_cubre:
+  - "No señala a ninguna empresa ni producto real: los 100 €, 150 € y 110 € son un ejemplo ficticio."
+  - "No es asesoramiento de consumo ni financiero, ni promete que todas las ofertas sean falsas."
+
+para_quien: "Para quien compra en Black Friday y quiere distinguir una rebaja real de un descuento sobre un precio inflado."
+
+temas:
+  - tema-ahorro
+
+keywords:
+  - black friday
+  - ahorro
+  - historial de precios
+  - precio anterior
+  - comparar precios
+  - OCU
+  - compras online
+  - Sota de Oros
+
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+
+fuentes:
+  - "OCU — Black Friday: habrá más subidas que bajadas de precios: https://www.ocu.org/organizacion/prensa/notas-de-prensa/2026/blackfriday1nov2026"
+  - "OCU — Black Friday 2025, evolución de precios: https://www.ocu.org/consumo-familia/compras-online/noticias/precios-black-friday-25"
+  - "BOE — Ley 7/1996 de Ordenación del Comercio Minorista, art. 20: https://www.boe.es/buscar/act.php?id=BOE-A-1996-1072"
+  - "Centro Europeo del Consumidor en España — Recomendaciones para el Black Friday: https://portal-cec.consumo.gob.es/es/comunicacion/noticias/2026/recomendaciones-de-cec-espana-para-consumir-de-forma-responsable-durante"
+
+disclaimer: "Contenido educativo. Los importes de 100 €, 150 € y 110 € son un ejemplo ficticio y no describen ningún producto, tienda ni marca real. Los datos de OCU corresponden al Black Friday de 2025. No es asesoramiento de consumo ni financiero."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/black-friday/out/black-friday.srt
+
+publicar_en: "2026-11-20T15:30:00+01:00"
+
+miniatura: public/assets/videos/black-friday-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/black-friday/out/black-friday-V7-FINAL.mp4
+duracion_iso: PT52S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa

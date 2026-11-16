@@ -1,0 +1,51 @@
+id: vid-yu2GeN2Jgd8
+status: revision
+universo: oros
+creado: 2026-11-16
+publicado: 2026-11-16
+revisado_factual: 2026-11-16
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "Cómo saber si una oferta de Black Friday es real: historial de precios, precio final con gastos y la regla legal de los 30 días."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: yu2GeN2Jgd8
+slug: black-friday
+titulo: "Black Friday: ¿seguro que estás ahorrando?"
+descripcion_corta: "Unos auriculares a 110 € con un 27 % de descuento parecen un chollo, hasta que miras el historial: hace 20 días costaban 100 €. El descuento existe; el ahorro, no."
+publicado_en: 2026-11-20
+duracion_iso: PT52S
+miniatura: https://i.ytimg.com/vi/yu2GeN2Jgd8/maxresdefault.jpg
+miniatura_local: /assets/videos/yu2GeN2Jgd8.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-11-16
+idioma: es
+temas:
+  - tema-ahorro
+relacionados:
+  - vid-t1zPAoZV05M
+  - vid-u0AKp6bpdGo
+transcripcion: false
+capitulos: []
+informacion:
+  estado: completo
+  resumen: "Un descuento del 27 % sobre 150 € deja el precio en 110 €, pero si hace 20 días el mismo producto costaba 100 €, la rebaja esconde 10 € de sobrecoste. En el Black Friday de 2025, OCU analizó más de 14.000 precios de 60 tiendas online: el 35 % bajó, el 37 % subió y el 28 % quedó igual. La ley exige además tomar como referencia el precio más bajo de los 30 días anteriores."
+  que_cubre:
+    - Por qué un 27 % de descuento puede esconder un pago de 10 € más que hace 20 días.
+    - "Qué dicen los datos de OCU del Black Friday 2025: 35 % bajó, 37 % subió y 28 % quedó igual."
+    - "La regla legal de los 30 días y las tres comprobaciones antes de comprar: historial, precio final y necesidad."
+  que_no_cubre:
+    - "No señala a ninguna empresa ni producto real: los 100 €, 150 € y 110 € son un ejemplo ficticio."
+    - No es asesoramiento de consumo ni financiero, ni promete que todas las ofertas sean falsas.
+  para_quien: Para quien compra en Black Friday y quiere distinguir una rebaja real de un descuento sobre un precio inflado.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false
