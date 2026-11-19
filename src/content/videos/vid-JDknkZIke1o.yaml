@@ -1,0 +1,66 @@
+id: vid-JDknkZIke1o
+status: revision
+universo: oros
+creado: 2026-11-19
+publicado: 2026-11-19
+revisado_factual: 2026-11-19
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: El precio de la vivienda sube más que los salarios. Ahorro, alquiler e hipoteca con datos para entender por qué trabajar ya no basta para comprar casa.
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: JDknkZIke1o
+slug: trabajar-ya-no-basta-comprar-casa
+titulo: ¿Por qué trabajar ya no basta para comprar casa en España?
+descripcion_corta: Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada tarda 12,5 años. La cuenta completa.
+publicado_en: 2026-11-22
+duracion_iso: PT12M26S
+miniatura: https://i.ytimg.com/vi/JDknkZIke1o/maxresdefault.jpg
+miniatura_local: /assets/videos/JDknkZIke1o.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-11-19
+idioma: es
+temas:
+  - tema-vivienda
+  - tema-nomina
+  - tema-ahorro
+relacionados:
+  - vid-xOBQ8cZPguU
+  - vid-gIfkNboEZdI
+  - vid-3xz04lRAW0k
+transcripcion: false
+capitulos:
+  - titulo: La trampa de los 75.000 euros
+    segundo: 0
+  - titulo: Cuando el precio avanza más que tú
+    segundo: 89
+  - titulo: ¿Por qué no se construyen suficientes casas?
+    segundo: 196
+  - titulo: ¿Estamos repitiendo la burbuja de 2008?
+    segundo: 335
+  - titulo: Tres compradores, tres realidades
+    segundo: 461
+  - titulo: ¿Qué tendría que cambiar?
+    segundo: 592
+informacion:
+  estado: completo
+  resumen: "Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada lleva 12,5 años. La hipoteca de 200.000 € a 30 años y 3,5 % se queda en 898,09 € al mes, el 44,9 % de la nómina, por encima del 40 % recomendado. El precio sube un 12,2 % y el salario medio no sigue: no es falta de esfuerzo, es la relación entre salarios, vivienda y crédito."
+  que_cubre:
+    - Por qué un piso de 250.000 € necesita unos 75.000 € de entrada y gastos, y cuánto tarda alguien que ahorra 500 € al mes.
+    - "La hipoteca de 200.000 € a 30 años y 3,5 %: 898,09 € al mes, el 44,9 % de una nómina de 2.000 €."
+    - Qué dicen el IPV, el salario medio y la emancipación juvenil sobre la brecha entre precios y sueldos.
+  que_no_cubre:
+    - No es asesoramiento financiero ni una predicción de precios; la simulación usa supuestos fijos de tipo, plazo y ahorro.
+    - No compara todas las ciudades ni recoge ayudas, avales o tipos autonómicos caso por caso.
+  para_quien: Para quien trabaja, ahorra y siente que comprar casa se aleja; para separar qué parte es esfuerzo personal y qué parte es el mercado.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false

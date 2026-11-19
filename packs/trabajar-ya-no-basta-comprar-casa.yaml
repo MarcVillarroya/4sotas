@@ -1,0 +1,88 @@
+# 4 Sotas · pack editorial de «¿Por qué trabajar ya no basta para comprar casa en España?».
+#
+# Fuente: máster V4.2.1 aprobado (out/v421/documental-v4.2.1.mp4), SRT de 78 cues
+# (out/documental-v4.2.1.srt), guion V4 y dossier de fuentes verificado.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: domingo 22-nov-2026, 11:00 Europe/Madrid (CET, UTC+1) = 10:00Z.
+
+titulo: "¿Por qué trabajar ya no basta para comprar casa en España?"
+slug: trabajar-ya-no-basta-comprar-casa
+
+descripcion_corta: "Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada tarda 12,5 años. La cuenta completa."
+
+seo_descripcion: "El precio de la vivienda sube más que los salarios. Ahorro, alquiler e hipoteca con datos para entender por qué trabajar ya no basta para comprar casa."
+
+resumen_editorial: "Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada lleva 12,5 años. La hipoteca de 200.000 € a 30 años y 3,5 % se queda en 898,09 € al mes, el 44,9 % de la nómina, por encima del 40 % recomendado. El precio sube un 12,2 % y el salario medio no sigue: no es falta de esfuerzo, es la relación entre salarios, vivienda y crédito."
+
+que_cubre:
+  - "Por qué un piso de 250.000 € necesita unos 75.000 € de entrada y gastos, y cuánto tarda alguien que ahorra 500 € al mes."
+  - "La hipoteca de 200.000 € a 30 años y 3,5 %: 898,09 € al mes, el 44,9 % de una nómina de 2.000 €."
+  - "Qué dicen el IPV, el salario medio y la emancipación juvenil sobre la brecha entre precios y sueldos."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni una predicción de precios; la simulación usa supuestos fijos de tipo, plazo y ahorro."
+  - "No compara todas las ciudades ni recoge ayudas, avales o tipos autonómicos caso por caso."
+
+para_quien: "Para quien trabaja, ahorra y siente que comprar casa se aleja; para separar qué parte es esfuerzo personal y qué parte es el mercado."
+
+temas:
+  - tema-vivienda
+  - tema-nomina
+  - tema-ahorro
+
+keywords:
+  - vivienda
+  - precio de la vivienda
+  - salario medio
+  - comprar casa
+  - hipoteca
+  - ahorro
+  - España
+  - Sota de Oros
+
+relacionados:
+  - vid-xOBQ8cZPguU
+  - vid-gIfkNboEZdI
+  - vid-3xz04lRAW0k
+
+fuentes:
+  - "INE — Índice de Precios de Vivienda, 2T 2026 (+12,2 % anual): https://www.ine.es/dyngs/Prensa/IPV2T26.htm"
+  - "INE — Encuesta Anual de Estructura Salarial 2024 (29.540,26 € brutos): https://www.ine.es/dyngs/Prensa/EAES2024.htm"
+  - "INE — Encuesta Continua de Hogares, 3T 2026 (19.953.529 hogares): https://www.ine.es/dyngs/Prensa/ECP3T26.htm"
+  - "Ministerio de Transportes — Observatorio de Vivienda y Suelo, viviendas terminadas 2T 2026 (25.907): https://publicaciones.transportes.gob.es/downloadcustom/sample/4201"
+  - "Banco de España — Informe Anual 2025 (suelo, oferta y criterios de crédito): https://www.bde.es/wbe/es/publicaciones/informes-memorias-anuales/informe-anual/informe-anual-2025.html · Endeudamiento recomendado máximo del 40 %: https://clientebancario.bde.es/pcb/es/menu-horizontal/podemosayudarte/consultasreclama/consultasreclama/?producto=/webcb/ServiciosProductosBancarios/Financiacion/Hipotecas"
+  - "Tinsa — IMIE octubre 2026 (+3,5 % nominal sobre el máximo de 2007; −31,6 % real): https://www.tinsa.es/sala-de-prensa/notas-de-prensa/imie-octubre-2026/"
+  - "CJE — Observatorio de emancipación 2025 (14,5 %): https://www.cje.org/ca/observatorio_2025/"
+  - "Cálculos propios: 250.000 × 20 % = 50.000; 250.000 × 10 % = 25.000; 50.000 + 25.000 = 75.000; 75.000 / 500 = 150 meses = 12,5 años; cuota de 200.000 € a 3,5 % y 360 meses = 898,09 €; 898,09 / 2.000 = 44,9 %."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. La simulación usa un piso de 250.000 €, una entrada del 20 %, gastos del 10 %, un tipo fijo del 3,5 % a 30 años y un ahorro de 500 € al mes; cambiar cualquier supuesto cambia el resultado."
+
+capitulos:
+  - titulo: "La trampa de los 75.000 euros"
+    segundo: 0
+  - titulo: "Cuando el precio avanza más que tú"
+    segundo: 89
+  - titulo: "¿Por qué no se construyen suficientes casas?"
+    segundo: 196
+  - titulo: "¿Estamos repitiendo la burbuja de 2008?"
+    segundo: 335
+  - titulo: "Tres compradores, tres realidades"
+    segundo: 461
+  - titulo: "¿Qué tendría que cambiar?"
+    segundo: 592
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/crisis-vivienda-largo/out/documental-v4.2.1.srt
+
+publicar_en: "2026-11-22T11:00:00+01:00"
+
+miniatura: public/assets/videos/trabajar-ya-no-basta-comprar-casa-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/crisis-vivienda-largo/out/v421/documental-v4.2.1.mp4
+duracion_iso: PT12M26S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa

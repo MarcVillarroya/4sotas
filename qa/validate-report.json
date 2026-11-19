@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T01:02:25.182Z",
+  "generated_at": "2026-11-19T17:32:24.940Z",
   "root": "/home/hermesiarco/Escritorio/Proyectos/4sotas",
   "site": "https://4sotas.com",
   "base": "",
@@ -7,7 +7,7 @@
     "sotas": 4,
     "temas": 8,
     "articulos": 9,
-    "videos": 25,
+    "videos": 28,
     "series": 1,
     "herramientas": 5,
     "glosario": 14,
@@ -15,8 +15,8 @@
     "autores": 2
   },
   "dist": {
-    "htmls": 65,
-    "sitemapLocs": 64
+    "htmls": 68,
+    "sitemapLocs": 67
   },
   "blockers": [],
   "warnings": [],

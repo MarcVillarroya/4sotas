@@ -1,13 +1,13 @@
 {
   "videos": [
     {
-      "videoId": "9gtjuYIdBg4",
-      "title": "El reto del céntimo: 667,95 € en un año (y su trampa)",
-      "privacy_status": "public",
-      "publish_at": null,
-      "published_at": "2026-11-15T01:01:54Z",
-      "duration_iso8601": "PT55S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/9gtjuYIdBg4/hqdefault.jpg?sqp=CJCI5NcG&rs=AOn4CLCyxxCdXgeetgPG24dJ8TtFEvXe4Q",
+      "videoId": "JDknkZIke1o",
+      "title": "¿Por qué trabajar ya no basta para comprar casa en España?",
+      "privacy_status": "private",
+      "publish_at": "2026-11-22T10:00:00Z",
+      "published_at": "2026-11-19T17:30:18Z",
+      "duration_iso8601": "PT12M26S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/JDknkZIke1o/hqdefault.jpg?sqp=CJjk_NcG&rs=AOn4CLCF_MJcwLy96hgyk_2AA56KIXx8vw",
       "default_language": "es",
       "stats": {
         "viewCount": "0",
@@ -18,17 +18,85 @@
       }
     },
     {
-      "videoId": "5tpjPM6gwQE",
-      "title": "¿Burbuja de la IA? Los datos que recuerdan a 2000",
+      "videoId": "xOBQ8cZPguU",
+      "title": "Tu saldo no es tu presupuesto: de 1.500 € a 7,59 €/día",
       "privacy_status": "public",
       "publish_at": null,
-      "published_at": "2026-11-13T13:20:56Z",
-      "duration_iso8601": "PT13M5S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/5tpjPM6gwQE/hqdefault.jpg?sqp=CICd3NcG&rs=AOn4CLAzcDemnxxg168YtSSew8bGkzSi4Q",
+      "published_at": "2026-11-18T14:30:37Z",
+      "duration_iso8601": "PT48S",
+      "thumbnail_url": "https://i.ytimg.com/vi/xOBQ8cZPguU/maxresdefault.jpg",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "160",
+        "likeCount": "4",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "yu2GeN2Jgd8",
+      "title": "Black Friday: ¿seguro que estás ahorrando?",
+      "privacy_status": "private",
+      "publish_at": "2026-11-20T14:30:00Z",
+      "published_at": "2026-11-16T21:10:31Z",
+      "duration_iso8601": "PT53S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/yu2GeN2Jgd8/maxresdefault.jpg?sqp=CJjk_NcG&rs=AOn4CLBE7e-dvzH8sSDz-36k92vzvzkUwA",
       "default_language": "es",
       "stats": {
         "viewCount": "0",
         "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "9gtjuYIdBg4",
+      "title": "El reto del céntimo: 667,95 € en un año (y su trampa)",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-11-16T14:30:13Z",
+      "duration_iso8601": "PT55S",
+      "thumbnail_url": "https://i.ytimg.com/vi/9gtjuYIdBg4/maxresdefault.jpg",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "194",
+        "likeCount": "6",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "5tpjPM6gwQE",
+      "title": "¿Burbuja de la IA? Los datos que recuerdan a 2000",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-11-15T10:00:34Z",
+      "duration_iso8601": "PT13M5S",
+      "thumbnail_url": "https://i.ytimg.com/vi/5tpjPM6gwQE/maxresdefault.jpg",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "33",
+        "likeCount": "1",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "LfMVmUW9Hq0",
+      "title": "3 plazos sin intereses: la cuota de 380 € que no ves",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-11-13T14:30:32Z",
+      "duration_iso8601": "PT49S",
+      "thumbnail_url": "https://i.ytimg.com/vi/LfMVmUW9Hq0/maxresdefault.jpg",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "244",
+        "likeCount": "6",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -44,25 +112,8 @@
       "thumbnail_url": "https://i.ytimg.com/vi/bLMAIMAOXY0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "86",
+        "viewCount": "89",
         "likeCount": "7",
-        "dislikeCount": "0",
-        "favoriteCount": "0",
-        "commentCount": "0"
-      }
-    },
-    {
-      "videoId": "LfMVmUW9Hq0",
-      "title": "3 plazos sin intereses: la cuota de 380 € que no ves",
-      "privacy_status": "public",
-      "publish_at": null,
-      "published_at": "2026-11-11T14:28:35Z",
-      "duration_iso8601": "PT49S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/LfMVmUW9Hq0/maxresdefault.jpg?sqp=CICd3NcG&rs=AOn4CLA9lRSGNpTAG-NfirJLeflbZ0BASw",
-      "default_language": "es",
-      "stats": {
-        "viewCount": "0",
-        "likeCount": "0",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -78,7 +129,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/PM9vFKQeZak/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "319",
+        "viewCount": "322",
         "likeCount": "8",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -95,8 +146,8 @@
       "thumbnail_url": "https://i.ytimg.com/vi/TT9vvDgV5m0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "65",
-        "likeCount": "3",
+        "viewCount": "112",
+        "likeCount": "4",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -146,7 +197,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/2aepHTLOjIQ/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "1257",
+        "viewCount": "1262",
         "likeCount": "9",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -197,7 +248,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "285",
+        "viewCount": "288",
         "likeCount": "5",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -231,7 +282,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/LL1EJttJPrs/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "124",
+        "viewCount": "125",
         "likeCount": "3",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -282,7 +333,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/1ztXsY1hwNA/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "270",
+        "viewCount": "271",
         "likeCount": "6",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -299,7 +350,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/3xz04lRAW0k/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "292",
+        "viewCount": "310",
         "likeCount": "1",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -367,8 +418,8 @@
       "thumbnail_url": "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "151",
-        "likeCount": "4",
+        "viewCount": "167",
+        "likeCount": "5",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -384,7 +435,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/SrvXlAVnDog/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "25",
+        "viewCount": "27",
         "likeCount": "3",
         "dislikeCount": "0",
         "favoriteCount": "0",
