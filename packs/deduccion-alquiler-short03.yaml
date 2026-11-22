@@ -1,0 +1,68 @@
+# 4 Sotas · pack editorial de «¿Pagas 800 € de alquiler? Podrías deducirte 960 €» (Short 03, V2).
+#
+# Fuente: máster V2 aprobado (out/sota-short-03-deduccion-alquiler-v2.mp4), SRT con cifras
+# revisado, guion de 8 tomas y normativa verificada en el BOE y en la sede de la AEAT.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: viernes 27-nov-2026, 14:30 Europe/Madrid (CET, UTC+1) = 13:30Z.
+
+titulo: "¿Pagas 800 € de alquiler? Podrías deducirte 960 €"
+slug: deduccion-alquiler-short03
+
+descripcion_corta: "La nueva deducción estatal por alquiler es del 10 %, pero depende de tu base imponible: con el mismo alquiler de 800 € al mes puedes deducirte 960 € o solo unos 350 €."
+
+seo_descripcion: "Deducción por alquiler 2026: 10 % del alquiler con límites según tu base imponible. Con 800 €/mes, de 960 € a 350 € según tu caso."
+
+resumen_editorial: "Dos personas pagan 800 € de alquiler al mes. Una tiene una base imponible de 23.000 € y puede deducirse 960 €; la otra llega a 30.000 € y su deducción baja a 349,74 €, unos 350 €. La nueva deducción estatal del 10 % solo se aplica por debajo de 33.007,20 € de base imponible, y su base máxima se reduce 1,163 € por cada euro que supera los 23.007,20 €. No es dinero que Hacienda ingrese: reduce el IRPF."
+
+que_cubre:
+  - "Por qué dos personas con el mismo alquiler deducen 960 € y 350 €: la base imponible decide la base máxima de la deducción."
+  - "Cómo se calcula el 10 % del alquiler anual y por qué 9.600 € se convierten en 960 € solo en el tramo sin reducción."
+  - "Los requisitos que no salen en el titular: vivienda habitual, otra vivienda a menos de 50 km y cuota estatal suficiente."
+
+que_no_cubre:
+  - "No es una ayuda ni un ingreso: es una deducción que reduce la cuota del IRPF y depende de cada declaración."
+  - "No cubre deducciones autonómicas ni casos con alquiler parcial, varias personas o bases distintas a las del ejemplo."
+
+para_quien: "Para quien paga alquiler y ha visto titulares sobre los 960 €: sirve para entender de qué depende la cifra antes de darla por segura."
+
+temas:
+  - tema-vivienda
+  - tema-nomina
+
+keywords:
+  - deduccion alquiler
+  - IRPF 2026
+  - base imponible
+  - vivienda habitual
+  - fiscalidad
+  - educacion financiera
+  - Sota de Oros
+
+relacionados:
+  - vid-JDknkZIke1o
+  - vid-xOBQ8cZPguU
+
+fuentes:
+  - "BOE — Real Decreto-ley 29/2026, de 6 de octubre, que introduce el art. 68.6 de la Ley 35/2006: https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823"
+  - "AEAT — Novedades normativas 2026, deducción por arrendamiento de vivienda habitual: https://sede.agenciatributaria.gob.es/"
+  - "Cálculos propios: 800 × 12 = 9.600 €; 9.600 × 10 % = 960 €; base máxima a 30.000 € = 11.630 − 1,163 × 6.992,80 = 3.497,37 €; × 10 % = 349,74 €."
+
+disclaimer: "Contenido educativo; no es asesoramiento fiscal. Simulación con doce mensualidades completas, una persona contribuyente y cuota estatal suficiente. Comprueba tu caso concreto."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/deduccion-alquiler/out/SOTA-Short03-Deduccion-Alquiler-V2_es-ES.srt
+
+publicar_en: "2026-11-27T14:30:00+01:00"
+
+miniatura: public/assets/videos/deduccion-alquiler-short03-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/deduccion-alquiler/out/sota-short-03-deduccion-alquiler-v2.mp4
+duracion_iso: PT42S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
