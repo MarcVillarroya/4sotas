@@ -1,0 +1,67 @@
+# 4 Sotas · pack editorial de «GTA 6: 3.790 millones de dólares en su primer día».
+#
+# Fuente: guion canónico del proyecto gta6-primer-dia (public/audio/lineas.txt),
+# cifras del comunicado de Take-Two (20/11/2026) y Box Office Mojo (Avatar, 2009).
+# Máster: out/gta6-primer-dia-v2.mp4 · 1129 frames · 37,633 s · 1080×1920.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+
+titulo: "GTA 6: 3.790 millones de dólares en su primer día"
+slug: gta6-primer-dia
+
+descripcion_corta: "GTA 6 vendió 3.790 millones en su primer día según Take-Two. Lo que esa cifra no dice: no es beneficio, y hay que restar desarrollo, distribución y publicidad."
+
+seo_descripcion: "GTA 6 vendió 3.790 M US$ el primer día, pero eso no es beneficio. Ventas, ingresos y beneficio explicados en 38 segundos."
+
+resumen_editorial: "Take-Two estima 3.790 millones de dólares en ventas del primer día de GTA 6, por encima de los 2.924 millones que Avatar acumuló en cines con reestrenos. El vídeo separa tres conceptos que se confunden: lo que paga el jugador, lo que ingresa la empresa y lo que le queda como beneficio tras desarrollo, distribución y publicidad. Take-Two no ha publicado el beneficio neto de ese primer día."
+
+que_cubre:
+  - "Qué significa la cifra de 3.790 M US$: ventas estimadas del primer día, no beneficio ni ingresos netos."
+  - "La comparación con Avatar: 2.924 M US$ acumulados en cines con reestrenos, superados por GTA 6 en un día."
+  - "Los gastos que separan ventas de beneficio: desarrollo, distribución, publicidad y comisiones."
+
+que_no_cubre:
+  - "No estima el beneficio neto de Take-Two: la empresa no lo ha comunicado desglosado por primer día."
+  - "No ajusta las cifras de Avatar (2009) a dólares de 2026 ni compara por inflación."
+
+para_quien: "Para quien ha visto la cifra récord de GTA 6 y quiere entender qué parte es negocio real y qué parte solo es dinero que pasa por caja."
+
+temas:
+  - tema-burbujas
+
+keywords:
+  - GTA 6
+  - Take-Two
+  - 3790 millones
+  - ventas vs beneficio
+  - industria del videojuego
+  - Avatar taquilla
+  - economia del entretenimiento
+  - educacion financiera
+
+fuentes:
+  - "Take-Two Interactive · comunicado de 20/11/2026: ventas estimadas de GTA VI en su primer día (3.790 M US$). https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"
+  - "Take-Two Interactive · formulario 8-K ante la SEC, 20/11/2026. https://www.sec.gov/Archives/edgar/data/946581/000162828026075217/exhibit9918k.htm"
+  - "Box Office Mojo · Avatar (2009), taquilla mundial acumulada con reestrenos: 2.923.710.708 USD. https://www.boxofficemojo.com/title/tt0499549/"
+  - "Take-Two Interactive · 10-K del ejercicio 2026, gastos de desarrollo, distribución y publicidad. https://www.sec.gov/Archives/edgar/data/946581/000162828026037434/ttwo-20260331.htm"
+  - "Take-Two Interactive · GTA V, primer día de 2013 (término de comparación histórico). https://www.sec.gov/Archives/edgar/data/946581/000110465913070819/a13-20938_1ex99d1.htm"
+
+disclaimer: "Contenido educativo. Las cifras son ventas estimadas y taquilla acumulada, no beneficios; pertenecen a industrias y periodos distintos y no están ajustadas por inflación."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/gta6-primer-dia/out/gta6-primer-dia.srt
+
+# lunes 23-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+publicar_en: "2026-11-23T15:30:00+01:00"
+
+miniatura: public/assets/videos/gta6-primer-dia-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/gta6-primer-dia/out/gta6-primer-dia-v2.mp4
+duracion_iso: PT38S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
