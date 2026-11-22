@@ -1,10 +1,44 @@
 {
   "videos": [
     {
+      "videoId": "y9QDuHan4x0",
+      "title": "Salario mínimo 2027: 1.286 € o 1.500 €, mismo bruto",
+      "privacy_status": "private",
+      "publish_at": "2026-11-25T14:30:00Z",
+      "published_at": "2026-11-22T15:48:59Z",
+      "duration_iso8601": "PT42S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/y9QDuHan4x0/maxresdefault.jpg?sqp=CKiejNgG&rs=AOn4CLBMsgLwxa6LEL8t8_WYtIjZdjayOA",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "PcRKexlRmvQ",
+      "title": "GTA 6: 3.790 millones de dólares en su primer día",
+      "privacy_status": "private",
+      "publish_at": "2026-11-23T14:30:00Z",
+      "published_at": "2026-11-22T12:34:05Z",
+      "duration_iso8601": "PT38S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/PcRKexlRmvQ/maxresdefault.jpg?sqp=CNCZjNgG&rs=AOn4CLDlDnftqnGHrxTfSr3xByqGKB3m_A",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
       "videoId": "JDknkZIke1o",
       "title": "¿Por qué trabajar ya no basta para comprar casa en España?",
-      "privacy_status": "private",
-      "publish_at": "2026-11-22T10:00:00Z",
+      "privacy_status": "public",
+      "publish_at": null,
       "published_at": "2026-11-19T17:30:18Z",
       "duration_iso8601": "PT12M26S",
       "thumbnail_url": "https://i9.ytimg.com/vi/JDknkZIke1o/hqdefault.jpg?sqp=CJjk_NcG&rs=AOn4CLCF_MJcwLy96hgyk_2AA56KIXx8vw",

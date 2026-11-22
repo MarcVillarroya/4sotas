@@ -1,0 +1,71 @@
+# 4 Sotas · pack editorial de «Salario mínimo 2027: 1.286 € o 1.500 €, mismo bruto».
+#
+# Fuente: máster V3 aprobado (out/SMI-2027-v3.mp4), guion de 8 bloques y SRT revisado
+# (out/SMI-2027-v3.srt). Todas las cifras son BRUTAS: no hay netos en la pieza.
+# Aritmética verificada: 1.286 × 14 = 18.004; 18.004 / 12 = 1.500,333… → 1.500,33;
+# 12 × 1.500,33 = 18.003,96 (4 céntimos de redondeo). 2026: 1.221 × 14 = 17.094;
+# incremento 910 € = 5,3235 % (el RD lo anuncia como 5,3 %).
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: miércoles 25-nov-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "Salario mínimo 2027: 1.286 € o 1.500 €, mismo bruto"
+slug: salario-minimo-2027-14-o-12-pagas
+
+descripcion_corta: "Cobras lo mismo de dos maneras: 1.286 € en 14 pagas o 1.500,33 € en 12. El bruto anual no cambia: 18.004 €. Lo enseño con la máquina que reparte las pagas."
+
+seo_descripcion: "El salario mínimo de 2027 son 18.004 € brutos al año: 1.286 € en 14 pagas o 1.500,33 € en 12. No es un sueldo mayor, es otro reparto."
+
+resumen_editorial: "El salario mínimo de 2027 sube a 1.286 € en 14 pagas, pero al repartir las dos extras en doce meses sale 1.500,33 € al mes. No son dos sueldos distintos: 14 × 1.286 = 18.004 € y 12 × 1.500,33 = 18.003,96 €, cuatro céntimos de redondeo. Mismo bruto anual, distinto reparto. El prorrateo de las pagas extras exige acuerdo y no lo decide la empresa por su cuenta."
+
+que_cubre:
+  - "Por qué 1.286 € en 14 pagas y 1.500,33 € en 12 pagas son el mismo bruto anual de 18.004 €."
+  - "De dónde salen los 214,33 € al mes que añaden las dos extras al repartirlas en doce pagas."
+  - "Los cuatro céntimos de 12 × 1.500,33: redondeo, no una diferencia de salario."
+  - "Que el prorrateo de las extras requiere acuerdo y no es una decisión unilateral."
+
+que_no_cubre:
+  - "No calcula nóminas netas ni retenciones: todas las cifras del vídeo son brutas."
+  - "No analiza convenios concretos ni qué empresas prorratean: el importe de 2027 es el mínimo legal."
+
+para_quien: "Para quien ha visto 1.286 € y 1.500 € en la misma noticia del salario mínimo y quiere saber cuál cobra de verdad."
+
+temas:
+  - tema-nomina
+
+keywords:
+  - salario minimo 2027
+  - SMI 2027
+  - 14 pagas o 12 pagas
+  - prorrateo pagas extras
+  - nomina bruta
+  - salario minimo interprofesional
+  - 18004 euros
+  - educacion financiera
+
+relacionados: []
+
+fuentes:
+  - "RD 1013/2026, de 18 de noviembre (BOE 19/11/2026), por el que se fija el salario mínimo interprofesional para 2027: https://www.boe.es/eli/es/rd/2026/11/18/1013"
+  - "Aritmética propia: 1.286 × 14 = 18.004 €; 18.004 / 12 = 1.500,333… → 1.500,33 €; 12 × 1.500,33 = 18.003,96 € (4 céntimos de redondeo)."
+  - "Art. 31 del Estatuto de los Trabajadores: el prorrateo de las pagas extraordinarias requiere acuerdo."
+  - "2026: 1.221 × 14 = 17.094 €; incremento de 910 €, un 5,32 % (el RD lo redondea al 5,3 %)."
+
+disclaimer: "Contenido educativo. Todas las cifras son brutas y no incluyen retenciones ni cotizaciones. El prorrateo de las pagas extras requiere acuerdo; no es una opción unilateral de la empresa."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/smi-2027-pagas/out/SMI-2027-v3.srt
+
+publicar_en: "2026-11-25T15:30:00+01:00"
+
+miniatura: public/assets/videos/smi-2027-pagas-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/smi-2027-pagas/out/SMI-2027-v3.mp4
+duracion_iso: PT42S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
