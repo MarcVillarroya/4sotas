@@ -29,7 +29,7 @@ miniatura_local: /assets/videos/PM9vFKQeZak.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-16
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-ahorro
@@ -64,4 +64,4 @@ informacion:
   origen: paquete-publicacion
   faltan: []
   heredado: false
-vistas_al_verificar: 320
+vistas_al_verificar: 323

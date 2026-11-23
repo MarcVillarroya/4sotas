@@ -29,7 +29,7 @@ miniatura_local: /assets/videos/5tpjPM6gwQE.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-16
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-burbujas
@@ -94,4 +94,4 @@ informacion:
   origen: paquete-publicacion
   faltan: []
   heredado: false
-vistas_al_verificar: 17
+vistas_al_verificar: 33

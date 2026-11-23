@@ -11,14 +11,17 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "De 1.500 € de nómina a 7,59 €/día: descuenta compromisos y ahorro, divide entre los días que quedan y sabrás cuánto puedes gastar de verdad."
+  descripcion: "De 1.500 € de nómina a 7,59 €/día: descuenta compromisos y ahorro,
+    divide entre los días que quedan y sabrás cuánto puedes gastar de verdad."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: xOBQ8cZPguU
 slug: tu-saldo-no-es-tu-presupuesto
 titulo: "Tu saldo no es tu presupuesto: de 1.500 € a 7,59 €/día"
-descripcion_corta: "Cobras 1.500 €, pero solo 300 € son tuyos: 1.100 € ya están comprometidos y 100 € se apartan. Reparte 10 €/día y mira qué pasa si el día 1 gastas 80 €."
+descripcion_corta: "Cobras 1.500 €, pero solo 300 € son tuyos: 1.100 € ya están
+  comprometidos y 100 € se apartan. Reparte 10 €/día y mira qué pasa si el día 1
+  gastas 80 €."
 publicado_en: 2026-11-18
 duracion_iso: PT48S
 miniatura: https://i.ytimg.com/vi/xOBQ8cZPguU/maxresdefault.jpg
@@ -26,7 +29,7 @@ miniatura_local: /assets/videos/xOBQ8cZPguU.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-18
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-nomina
@@ -38,16 +41,26 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Una nómina de 1.500 € no es dinero disponible: 1.100 € ya están comprometidos en vivienda, facturas, comida y transporte, y 100 € se apartan para ahorrar. Quedan 300 €, que entre 30 días son 10 € diarios de media. Si el primer día gastas 80 €, quedan 220 € para 29 días: 7,59 € al día. El saldo de la cuenta no es el presupuesto que puedes gastar."
+  resumen: "Una nómina de 1.500 € no es dinero disponible: 1.100 € ya están
+    comprometidos en vivienda, facturas, comida y transporte, y 100 € se apartan
+    para ahorrar. Quedan 300 €, que entre 30 días son 10 € diarios de media. Si
+    el primer día gastas 80 €, quedan 220 € para 29 días: 7,59 € al día. El
+    saldo de la cuenta no es el presupuesto que puedes gastar."
   que_cubre:
-    - Por qué 1.500 € de nómina dejan solo 300 € disponibles tras compromisos y ahorro.
-    - Cómo se pasa de 300 € en 30 días a 10 €/día y a 7,59 €/día tras una compra de 80 €.
-    - "La diferencia entre saldo y presupuesto: lo que hay en la cuenta no es lo que puedes gastar."
+    - Por qué 1.500 € de nómina dejan solo 300 € disponibles tras compromisos y
+      ahorro.
+    - Cómo se pasa de 300 € en 30 días a 10 €/día y a 7,59 €/día tras una compra
+      de 80 €.
+    - "La diferencia entre saldo y presupuesto: lo que hay en la cuenta no es lo
+      que puedes gastar."
   que_no_cubre:
-    - "No es asesoramiento financiero: el reparto 1.100/100/300 es un ejemplo, no una regla universal."
-    - No promete que apartar 100 € sea posible en cualquier nómina de 1.500 € ni tiene en cuenta gastos imprevistos.
-  para_quien: Para quien cobra una nómina fija, quiere saber cuánto puede gastar de verdad cada día y se lleva sustos a mitad de mes.
+    - "No es asesoramiento financiero: el reparto 1.100/100/300 es un ejemplo,
+      no una regla universal."
+    - No promete que apartar 100 € sea posible en cualquier nómina de 1.500 € ni
+      tiene en cuenta gastos imprevistos.
+  para_quien: Para quien cobra una nómina fija, quiere saber cuánto puede gastar
+    de verdad cada día y se lleva sustos a mitad de mes.
   origen: paquete-publicacion
   faltan: []
   heredado: false
-vistas_al_verificar: 0
+vistas_al_verificar: 172

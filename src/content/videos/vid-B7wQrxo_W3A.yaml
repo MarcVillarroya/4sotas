@@ -11,14 +11,17 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: "Deducción por alquiler 2026: 10 % del alquiler con límites según tu base imponible. Con 800 €/mes, de 960 € a 350 € según tu caso."
+  descripcion: "Deducción por alquiler 2026: 10 % del alquiler con límites según
+    tu base imponible. Con 800 €/mes, de 960 € a 350 € según tu caso."
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: B7wQrxo_W3A
 slug: deduccion-alquiler-short03
 titulo: ¿Pagas 800 € de alquiler? Podrías deducirte 960 €
-descripcion_corta: "La nueva deducción estatal por alquiler es del 10 %, pero depende de tu base imponible: con el mismo alquiler de 800 € al mes puedes deducirte 960 € o solo unos 350 €."
+descripcion_corta: "La nueva deducción estatal por alquiler es del 10 %, pero
+  depende de tu base imponible: con el mismo alquiler de 800 € al mes puedes
+  deducirte 960 € o solo unos 350 €."
 publicado_en: 2026-11-27
 duracion_iso: PT42S
 miniatura: https://i.ytimg.com/vi/B7wQrxo_W3A/maxresdefault.jpg
@@ -26,7 +29,7 @@ miniatura_local: /assets/videos/B7wQrxo_W3A.webp
 insercion: disponible
 estado_youtube: programado
 privacidad_api: private
-verificado_en: 2026-11-22
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-vivienda
@@ -38,15 +41,27 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Dos personas pagan 800 € de alquiler al mes. Una tiene una base imponible de 23.000 € y puede deducirse 960 €; la otra llega a 30.000 € y su deducción baja a 349,74 €, unos 350 €. La nueva deducción estatal del 10 % solo se aplica por debajo de 33.007,20 € de base imponible, y su base máxima se reduce 1,163 € por cada euro que supera los 23.007,20 €. No es dinero que Hacienda ingrese: reduce el IRPF."
+  resumen: "Dos personas pagan 800 € de alquiler al mes. Una tiene una base
+    imponible de 23.000 € y puede deducirse 960 €; la otra llega a 30.000 € y su
+    deducción baja a 349,74 €, unos 350 €. La nueva deducción estatal del 10 %
+    solo se aplica por debajo de 33.007,20 € de base imponible, y su base máxima
+    se reduce 1,163 € por cada euro que supera los 23.007,20 €. No es dinero que
+    Hacienda ingrese: reduce el IRPF."
   que_cubre:
-    - "Por qué dos personas con el mismo alquiler deducen 960 € y 350 €: la base imponible decide la base máxima de la deducción."
-    - Cómo se calcula el 10 % del alquiler anual y por qué 9.600 € se convierten en 960 € solo en el tramo sin reducción.
-    - "Los requisitos que no salen en el titular: vivienda habitual, otra vivienda a menos de 50 km y cuota estatal suficiente."
+    - "Por qué dos personas con el mismo alquiler deducen 960 € y 350 €: la base
+      imponible decide la base máxima de la deducción."
+    - Cómo se calcula el 10 % del alquiler anual y por qué 9.600 € se convierten
+      en 960 € solo en el tramo sin reducción.
+    - "Los requisitos que no salen en el titular: vivienda habitual, otra
+      vivienda a menos de 50 km y cuota estatal suficiente."
   que_no_cubre:
-    - "No es una ayuda ni un ingreso: es una deducción que reduce la cuota del IRPF y depende de cada declaración."
-    - No cubre deducciones autonómicas ni casos con alquiler parcial, varias personas o bases distintas a las del ejemplo.
-  para_quien: "Para quien paga alquiler y ha visto titulares sobre los 960 €: sirve para entender de qué depende la cifra antes de darla por segura."
+    - "No es una ayuda ni un ingreso: es una deducción que reduce la cuota del
+      IRPF y depende de cada declaración."
+    - No cubre deducciones autonómicas ni casos con alquiler parcial, varias
+      personas o bases distintas a las del ejemplo.
+  para_quien: "Para quien paga alquiler y ha visto titulares sobre los 960 €:
+    sirve para entender de qué depende la cifra antes de darla por segura."
   origen: paquete-publicacion
   faltan: []
   heredado: false
+vistas_al_verificar: 0

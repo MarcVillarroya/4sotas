@@ -29,7 +29,7 @@ miniatura_local: /assets/videos/TT9vvDgV5m0.webp
 insercion: disponible
 estado_youtube: publico
 privacidad_api: public
-verificado_en: 2026-11-16
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-inversion
@@ -82,4 +82,4 @@ informacion:
   origen: paquete-publicacion
   faltan: []
   heredado: false
-vistas_al_verificar: 99
+vistas_al_verificar: 112

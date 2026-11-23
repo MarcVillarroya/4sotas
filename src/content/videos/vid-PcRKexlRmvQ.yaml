@@ -11,14 +11,17 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: GTA 6 vendió 3.790 M US$ el primer día, pero eso no es beneficio. Ventas, ingresos y beneficio explicados en 38 segundos.
+  descripcion: GTA 6 vendió 3.790 M US$ el primer día, pero eso no es beneficio.
+    Ventas, ingresos y beneficio explicados en 38 segundos.
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: PcRKexlRmvQ
 slug: gta6-primer-dia
 titulo: "GTA 6: 3.790 millones de dólares en su primer día"
-descripcion_corta: "GTA 6 vendió 3.790 millones en su primer día según Take-Two. Lo que esa cifra no dice: no es beneficio, y hay que restar desarrollo, distribución y publicidad."
+descripcion_corta: "GTA 6 vendió 3.790 millones en su primer día según Take-Two.
+  Lo que esa cifra no dice: no es beneficio, y hay que restar desarrollo,
+  distribución y publicidad."
 publicado_en: 2026-11-23
 duracion_iso: PT38S
 miniatura: https://i.ytimg.com/vi/PcRKexlRmvQ/maxresdefault.jpg
@@ -26,7 +29,7 @@ miniatura_local: /assets/videos/PcRKexlRmvQ.webp
 insercion: disponible
 estado_youtube: programado
 privacidad_api: private
-verificado_en: 2026-11-22
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-burbujas
@@ -35,15 +38,27 @@ transcripcion: false
 capitulos: []
 informacion:
   estado: completo
-  resumen: "Take-Two estima 3.790 millones de dólares en ventas del primer día de GTA 6, por encima de los 2.924 millones que Avatar acumuló en cines con reestrenos. El vídeo separa tres conceptos que se confunden: lo que paga el jugador, lo que ingresa la empresa y lo que le queda como beneficio tras desarrollo, distribución y publicidad. Take-Two no ha publicado el beneficio neto de ese primer día."
+  resumen: "Take-Two estima 3.790 millones de dólares en ventas del primer día de
+    GTA 6, por encima de los 2.924 millones que Avatar acumuló en cines con
+    reestrenos. El vídeo separa tres conceptos que se confunden: lo que paga el
+    jugador, lo que ingresa la empresa y lo que le queda como beneficio tras
+    desarrollo, distribución y publicidad. Take-Two no ha publicado el beneficio
+    neto de ese primer día."
   que_cubre:
-    - "Qué significa la cifra de 3.790 M US$: ventas estimadas del primer día, no beneficio ni ingresos netos."
-    - "La comparación con Avatar: 2.924 M US$ acumulados en cines con reestrenos, superados por GTA 6 en un día."
-    - "Los gastos que separan ventas de beneficio: desarrollo, distribución, publicidad y comisiones."
+    - "Qué significa la cifra de 3.790 M US$: ventas estimadas del primer día,
+      no beneficio ni ingresos netos."
+    - "La comparación con Avatar: 2.924 M US$ acumulados en cines con
+      reestrenos, superados por GTA 6 en un día."
+    - "Los gastos que separan ventas de beneficio: desarrollo, distribución,
+      publicidad y comisiones."
   que_no_cubre:
-    - "No estima el beneficio neto de Take-Two: la empresa no lo ha comunicado desglosado por primer día."
-    - No ajusta las cifras de Avatar (2009) a dólares de 2026 ni compara por inflación.
-  para_quien: Para quien ha visto la cifra récord de GTA 6 y quiere entender qué parte es negocio real y qué parte solo es dinero que pasa por caja.
+    - "No estima el beneficio neto de Take-Two: la empresa no lo ha comunicado
+      desglosado por primer día."
+    - No ajusta las cifras de Avatar (2009) a dólares de 2026 ni compara por
+      inflación.
+  para_quien: Para quien ha visto la cifra récord de GTA 6 y quiere entender qué
+    parte es negocio real y qué parte solo es dinero que pasa por caja.
   origen: paquete-publicacion
   faltan: []
   heredado: false
+vistas_al_verificar: 0

@@ -1,5 +1,5 @@
 id: vid-JDknkZIke1o
-status: revision
+status: publicado
 universo: oros
 creado: 2026-11-19
 publicado: 2026-11-19
@@ -11,22 +11,26 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
-  descripcion: El precio de la vivienda sube más que los salarios. Ahorro, alquiler e hipoteca con datos para entender por qué trabajar ya no basta para comprar casa.
+  descripcion: El precio de la vivienda sube más que los salarios. Ahorro,
+    alquiler e hipoteca con datos para entender por qué trabajar ya no basta
+    para comprar casa.
   noindex: false
 actualizacion:
   politica: revision-anual
 youtube_id: JDknkZIke1o
 slug: trabajar-ya-no-basta-comprar-casa
 titulo: ¿Por qué trabajar ya no basta para comprar casa en España?
-descripcion_corta: Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada tarda 12,5 años. La cuenta completa.
+descripcion_corta: Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con
+  2.000 € netos y 500 € de ahorro al mes, la entrada tarda 12,5 años. La cuenta
+  completa.
 publicado_en: 2026-11-22
 duracion_iso: PT12M26S
 miniatura: https://i.ytimg.com/vi/JDknkZIke1o/maxresdefault.jpg
 miniatura_local: /assets/videos/JDknkZIke1o.webp
 insercion: disponible
-estado_youtube: programado
-privacidad_api: private
-verificado_en: 2026-11-19
+estado_youtube: publico
+privacidad_api: public
+verificado_en: 2026-11-23
 idioma: es
 temas:
   - tema-vivienda
@@ -52,15 +56,27 @@ capitulos:
     segundo: 592
 informacion:
   estado: completo
-  resumen: "Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 € netos y 500 € de ahorro al mes, la entrada lleva 12,5 años. La hipoteca de 200.000 € a 30 años y 3,5 % se queda en 898,09 € al mes, el 44,9 % de la nómina, por encima del 40 % recomendado. El precio sube un 12,2 % y el salario medio no sigue: no es falta de esfuerzo, es la relación entre salarios, vivienda y crédito."
+  resumen: "Un piso de 250.000 € exige unos 75.000 € antes de firmar. Con 2.000 €
+    netos y 500 € de ahorro al mes, la entrada lleva 12,5 años. La hipoteca de
+    200.000 € a 30 años y 3,5 % se queda en 898,09 € al mes, el 44,9 % de la
+    nómina, por encima del 40 % recomendado. El precio sube un 12,2 % y el
+    salario medio no sigue: no es falta de esfuerzo, es la relación entre
+    salarios, vivienda y crédito."
   que_cubre:
-    - Por qué un piso de 250.000 € necesita unos 75.000 € de entrada y gastos, y cuánto tarda alguien que ahorra 500 € al mes.
-    - "La hipoteca de 200.000 € a 30 años y 3,5 %: 898,09 € al mes, el 44,9 % de una nómina de 2.000 €."
-    - Qué dicen el IPV, el salario medio y la emancipación juvenil sobre la brecha entre precios y sueldos.
+    - Por qué un piso de 250.000 € necesita unos 75.000 € de entrada y gastos, y
+      cuánto tarda alguien que ahorra 500 € al mes.
+    - "La hipoteca de 200.000 € a 30 años y 3,5 %: 898,09 € al mes, el 44,9 % de
+      una nómina de 2.000 €."
+    - Qué dicen el IPV, el salario medio y la emancipación juvenil sobre la
+      brecha entre precios y sueldos.
   que_no_cubre:
-    - No es asesoramiento financiero ni una predicción de precios; la simulación usa supuestos fijos de tipo, plazo y ahorro.
-    - No compara todas las ciudades ni recoge ayudas, avales o tipos autonómicos caso por caso.
-  para_quien: Para quien trabaja, ahorra y siente que comprar casa se aleja; para separar qué parte es esfuerzo personal y qué parte es el mercado.
+    - No es asesoramiento financiero ni una predicción de precios; la simulación
+      usa supuestos fijos de tipo, plazo y ahorro.
+    - No compara todas las ciudades ni recoge ayudas, avales o tipos autonómicos
+      caso por caso.
+  para_quien: Para quien trabaja, ahorra y siente que comprar casa se aleja; para
+    separar qué parte es esfuerzo personal y qué parte es el mercado.
   origen: paquete-publicacion
   faltan: []
   heredado: false
+vistas_al_verificar: 23

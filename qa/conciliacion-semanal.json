@@ -1,207 +1,242 @@
 {
-  "hoy": "2026-11-16",
+  "hoy": "2026-11-23",
   "cambios": [
     {
       "id": "vid-1ztXsY1hwNA",
       "archivo": "vid-1ztXsY1hwNA.yaml",
       "parches": {
-        "vistas_al_verificar": 271,
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-2aepHTLOjIQ",
       "archivo": "vid-2aepHTLOjIQ.yaml",
       "parches": {
-        "vistas_al_verificar": 1260,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 1270,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-3xz04lRAW0k",
       "archivo": "vid-3xz04lRAW0k.yaml",
       "parches": {
-        "vistas_al_verificar": 298,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 333,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-5tpjPM6gwQE",
       "archivo": "vid-5tpjPM6gwQE.yaml",
       "parches": {
-        "duracion_iso": "PT13M5S",
-        "vistas_al_verificar": 17,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 33,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-6dp6Y6nTreY",
       "archivo": "vid-6dp6Y6nTreY.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-9gtjuYIdBg4",
       "archivo": "vid-9gtjuYIdBg4.yaml",
       "parches": {
+        "vistas_al_verificar": 194,
+        "verificado_en": "2026-11-23"
+      }
+    },
+    {
+      "id": "vid-B7wQrxo_W3A",
+      "archivo": "vid-B7wQrxo_W3A.yaml",
+      "parches": {
         "vistas_al_verificar": 0,
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-DzH02NfDqM4",
       "archivo": "vid-DzH02NfDqM4.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
+      }
+    },
+    {
+      "id": "vid-JDknkZIke1o",
+      "archivo": "vid-JDknkZIke1o.yaml",
+      "parches": {
+        "vistas_al_verificar": 23,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-LL1EJttJPrs",
       "archivo": "vid-LL1EJttJPrs.yaml",
       "parches": {
-        "vistas_al_verificar": 124,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 125,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-LarTT_rvCGM",
       "archivo": "vid-LarTT_rvCGM.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-LfMVmUW9Hq0",
       "archivo": "vid-LfMVmUW9Hq0.yaml",
       "parches": {
-        "duracion_iso": "PT49S",
-        "vistas_al_verificar": 243,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 244,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-M9EhU06FlUA",
       "archivo": "vid-M9EhU06FlUA.yaml",
       "parches": {
-        "vistas_al_verificar": 157,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 186,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-O1V9_of7g1w",
       "archivo": "vid-O1V9_of7g1w.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-PM9vFKQeZak",
       "archivo": "vid-PM9vFKQeZak.yaml",
       "parches": {
-        "vistas_al_verificar": 320,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 323,
+        "verificado_en": "2026-11-23"
+      }
+    },
+    {
+      "id": "vid-PcRKexlRmvQ",
+      "archivo": "vid-PcRKexlRmvQ.yaml",
+      "parches": {
+        "vistas_al_verificar": 0,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-SrvXlAVnDog",
       "archivo": "vid-SrvXlAVnDog.yaml",
       "parches": {
-        "vistas_al_verificar": 26,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 27,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-TT9vvDgV5m0",
       "archivo": "vid-TT9vvDgV5m0.yaml",
       "parches": {
-        "vistas_al_verificar": 99,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 112,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-bLMAIMAOXY0",
       "archivo": "vid-bLMAIMAOXY0.yaml",
       "parches": {
-        "publicado_en": "2026-11-11",
-        "vistas_al_verificar": 88,
-        "miniatura": "https://i.ytimg.com/vi/bLMAIMAOXY0/maxresdefault.jpg",
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 91,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-gIfkNboEZdI",
       "archivo": "vid-gIfkNboEZdI.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-i5fe580iFqk",
       "archivo": "vid-i5fe580iFqk.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 281,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-iat5xP27vqo",
       "archivo": "vid-iat5xP27vqo.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-mu4mTE_ouJ0",
       "archivo": "vid-mu4mTE_ouJ0.yaml",
       "parches": {
-        "vistas_al_verificar": 287,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 291,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-t1zPAoZV05M",
       "archivo": "vid-t1zPAoZV05M.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-u0AKp6bpdGo",
       "archivo": "vid-u0AKp6bpdGo.yaml",
       "parches": {
-        "vistas_al_verificar": 423,
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-vefjjmzDHyY",
       "archivo": "vid-vefjjmzDHyY.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-wsseghAWiMw",
       "archivo": "vid-wsseghAWiMw.yaml",
       "parches": {
-        "vistas_al_verificar": 8,
-        "verificado_en": "2026-11-16"
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-xOBQ8cZPguU",
       "archivo": "vid-xOBQ8cZPguU.yaml",
       "parches": {
-        "duracion_iso": "PT48S",
-        "vistas_al_verificar": 0,
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 172,
+        "verificado_en": "2026-11-23"
       }
     },
     {
       "id": "vid-xZhIn2gYPJQ",
       "archivo": "vid-xZhIn2gYPJQ.yaml",
       "parches": {
-        "verificado_en": "2026-11-16"
+        "vistas_al_verificar": 1230,
+        "verificado_en": "2026-11-23"
+      }
+    },
+    {
+      "id": "vid-y9QDuHan4x0",
+      "archivo": "vid-y9QDuHan4x0.yaml",
+      "parches": {
+        "vistas_al_verificar": 0,
+        "verificado_en": "2026-11-23"
+      }
+    },
+    {
+      "id": "vid-yu2GeN2Jgd8",
+      "archivo": "vid-yu2GeN2Jgd8.yaml",
+      "parches": {
+        "duracion_iso": "PT53S",
+        "vistas_al_verificar": 595,
+        "verificado_en": "2026-11-23"
       }
     }
   ],
@@ -210,14 +245,19 @@
   "pendientes": [],
   "avisos": [
     {
-      "id": "vid-9gtjuYIdBg4",
-      "archivo": "vid-9gtjuYIdBg4.yaml",
-      "mensaje": "publicado_en y miniatura de la API no aplicados: el vídeo sigue programado (publish_at 2026-11-16T14:30:00Z) y published_at es la fecha de subida, no la de publicación"
+      "id": "vid-B7wQrxo_W3A",
+      "archivo": "vid-B7wQrxo_W3A.yaml",
+      "mensaje": "publicado_en y miniatura de la API no aplicados: el vídeo sigue programado (privado) y published_at (2026-11-22) es la fecha de subida, no la de publicación; se conserva la fecha programada 2026-11-27"
     },
     {
-      "id": "vid-xOBQ8cZPguU",
-      "archivo": "vid-xOBQ8cZPguU.yaml",
-      "mensaje": "publicado_en y miniatura de la API no aplicados: el vídeo sigue programado (publish_at 2026-11-18T14:30:00Z) y published_at es la fecha de subida, no la de publicación"
+      "id": "vid-PcRKexlRmvQ",
+      "archivo": "vid-PcRKexlRmvQ.yaml",
+      "mensaje": "publicado_en y miniatura de la API no aplicados: el vídeo sigue programado (privado) y published_at (2026-11-22) es la fecha de subida, no la de publicación; se conserva la fecha programada 2026-11-23"
+    },
+    {
+      "id": "vid-y9QDuHan4x0",
+      "archivo": "vid-y9QDuHan4x0.yaml",
+      "mensaje": "publicado_en y miniatura de la API no aplicados: el vídeo sigue programado (privado) y published_at (2026-11-22) es la fecha de subida, no la de publicación; se conserva la fecha programada 2026-11-25"
     }
   ],
   "aplicado": true,
@@ -228,13 +268,16 @@
     "vid-5tpjPM6gwQE.yaml",
     "vid-6dp6Y6nTreY.yaml",
     "vid-9gtjuYIdBg4.yaml",
+    "vid-B7wQrxo_W3A.yaml",
     "vid-DzH02NfDqM4.yaml",
+    "vid-JDknkZIke1o.yaml",
     "vid-LL1EJttJPrs.yaml",
     "vid-LarTT_rvCGM.yaml",
     "vid-LfMVmUW9Hq0.yaml",
     "vid-M9EhU06FlUA.yaml",
     "vid-O1V9_of7g1w.yaml",
     "vid-PM9vFKQeZak.yaml",
+    "vid-PcRKexlRmvQ.yaml",
     "vid-SrvXlAVnDog.yaml",
     "vid-TT9vvDgV5m0.yaml",
     "vid-bLMAIMAOXY0.yaml",
@@ -247,6 +290,8 @@
     "vid-vefjjmzDHyY.yaml",
     "vid-wsseghAWiMw.yaml",
     "vid-xOBQ8cZPguU.yaml",
-    "vid-xZhIn2gYPJQ.yaml"
+    "vid-xZhIn2gYPJQ.yaml",
+    "vid-y9QDuHan4x0.yaml",
+    "vid-yu2GeN2Jgd8.yaml"
   ]
 }
