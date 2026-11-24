@@ -1,0 +1,90 @@
+# 4 Sotas · pack editorial de «¿Está desapareciendo la clase media en España?».
+#
+# Fuente: guion canónico y SRT de 226 cues del máster V2.3.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+
+titulo: "¿Está DESAPARECIENDO la CLASE MEDIA en España?"
+slug: clase-media-espana
+
+descripcion_corta: "Cobras 2.000 € netos y aun así no avanzas. El documental separa ingresos, ahorro y patrimonio para entender qué le está pasando a la clase media española."
+
+seo_descripcion: "¿Está desapareciendo la clase media en España? La nómina no basta: renta equivalente, ahorro y patrimonio explican por qué 2.000 € ya no dan estabilidad."
+
+resumen_editorial: "Dos hogares con los mismos 2.000 € netos pueden pertenecer a clases estadísticas distintas. El documental recorre la renta equivalente y los límites de la OCDE, la diferencia entre salario medio y mediano, el gasto real de los hogares, el ahorro, la riqueza y la evolución de la clase media entre 2007 y 2022. La conclusión: no se está desplomando demográficamente, pero pertenecer a ella ya no garantiza estabilidad."
+
+que_cubre:
+  - "Por qué 2.000 € netos no significan lo mismo en un hogar de una persona que en uno de cuatro: renta equivalente y escala OCDE."
+  - "La diferencia entre salario medio y mediano, y por qué la media engaña."
+  - "Qué pasa con el dinero después de cobrarlo: gasto, ahorro y patrimonio."
+  - "La clase media no desaparece: pasa del 59,2 % en 2007 al 61,1 % en 2022, pero la estabilidad se estrecha."
+
+que_no_cubre:
+  - "No es asesoramiento financiero ni una predicción económica."
+  - "No trata la vivienda como mercado: solo como componente de gasto y patrimonio."
+
+para_quien: "Para quien cobra una nómina normal y quiere entender por qué la sensación de no avanzar no es solo suya."
+
+temas:
+  - tema-clase-media
+  - tema-salarios
+  - tema-economia
+
+keywords:
+  - clase media
+  - salarios España
+  - poder adquisitivo
+  - renta equivalente
+  - sueldo mediano
+  - salario medio
+  - ahorro familiar
+  - patrimonio
+  - inflacion
+  - economia española
+  - desigualdad
+  - documental
+
+fuentes:
+  - "INE · Encuesta de Condiciones de Vida 2025 (rentas de 2024): mediana equivalente y límites OCDE."
+  - "INE · Encuesta Anual de Estructura Salarial 2024: salario bruto medio 29.540,26 € y mediano 24.497,17 €."
+  - "INE · Encuesta de Presupuestos Familiares 2025: alimentación 16,0 %, transporte 11,5 %, vivienda 33,2 %."
+  - "OCDE · Under Pressure: The Squeezed Middle Class (2019) y Employment Outlook 2026: Spain."
+  - "Banco de España · Encuesta Financiera de las Familias 2024 (DO 2610): riqueza mediana 160.800 €."
+  - "CaixaBank Research · clase media (dic. 2024): 59,2 % en 2007 y 61,1 % en 2022."
+  - "Los ejemplos de los dos hogares de 2.000 € y de la subida de precios del 10 % son simulaciones editoriales, no estadísticas."
+
+disclaimer: "Contenido educativo; no es asesoramiento financiero. Los ejemplos de los dos hogares y del +10 % son simulaciones editoriales, no estadísticas."
+
+capitulos:
+  - titulo: "Dos mil euros, dos realidades"
+    segundo: 0
+  - titulo: "La etiqueta de clase media"
+    segundo: 66
+  - titulo: "¿Cuánto es un buen salario?"
+    segundo: 169
+  - titulo: "La nómina sube, pero ¿y tu dinero?"
+    segundo: 249
+  - titulo: "¿Por qué cuesta tanto ahorrar?"
+    segundo: 351
+  - titulo: "¿Vivían mejor nuestros padres?"
+    segundo: 442
+  - titulo: "Dos sueldos iguales, dos futuros distintos"
+    segundo: 550
+  - titulo: "¿Está desapareciendo la clase media?"
+    segundo: 702
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/clase-media-largo/entrega-v2/Clase-media_ESPANA_V2.es.srt
+
+# domingo 29-nov-2026, 11:00 Europe/Madrid (CET, UTC+1) = 10:00Z.
+publicar_en: "2026-11-29T11:00:00+01:00"
+
+miniatura: public/assets/videos/clase-media-espana-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/clase-media-largo/entrega-v2/Clase-media_ESPANA_V2_1080p.mp4
+duracion_iso: PT14M3S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa

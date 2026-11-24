@@ -1,0 +1,68 @@
+id: vid-yNzk0Yr7504
+status: revision
+universo: oros
+creado: 2026-11-24
+publicado: 2026-11-29
+revisado_factual: 2026-11-24
+sensibilidad: baja
+procedencia: original
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa
+fuentes: []
+seo:
+  descripcion: "¿Está desapareciendo la clase media en España? La nómina no basta: renta equivalente, ahorro y patrimonio explican por qué 2.000 € ya no dan estabilidad."
+  noindex: false
+actualizacion:
+  politica: revision-anual
+youtube_id: yNzk0Yr7504
+slug: clase-media-espana
+titulo: ¿Está DESAPARECIENDO la CLASE MEDIA en España?
+descripcion_corta: Cobras 2.000 € netos y aun así no avanzas. El documental separa ingresos, ahorro y patrimonio para entender qué le está pasando a la clase media española.
+publicado_en: 2026-11-29
+duracion_iso: PT14M3S
+miniatura: https://i.ytimg.com/vi/yNzk0Yr7504/maxresdefault.jpg
+miniatura_local: /assets/videos/yNzk0Yr7504.webp
+insercion: disponible
+estado_youtube: programado
+privacidad_api: private
+verificado_en: 2026-11-24
+idioma: es
+temas:
+  - tema-clase-media
+  - tema-salarios
+  - tema-economia
+relacionados: []
+transcripcion: false
+capitulos:
+  - titulo: Dos mil euros, dos realidades
+    segundo: 0
+  - titulo: La etiqueta de clase media
+    segundo: 66
+  - titulo: ¿Cuánto es un buen salario?
+    segundo: 169
+  - titulo: La nómina sube, pero ¿y tu dinero?
+    segundo: 249
+  - titulo: ¿Por qué cuesta tanto ahorrar?
+    segundo: 351
+  - titulo: ¿Vivían mejor nuestros padres?
+    segundo: 442
+  - titulo: Dos sueldos iguales, dos futuros distintos
+    segundo: 550
+  - titulo: ¿Está desapareciendo la clase media?
+    segundo: 702
+informacion:
+  estado: completo
+  resumen: "Dos hogares con los mismos 2.000 € netos pueden pertenecer a clases estadísticas distintas. El documental recorre la renta equivalente y los límites de la OCDE, la diferencia entre salario medio y mediano, el gasto real de los hogares, el ahorro, la riqueza y la evolución de la clase media entre 2007 y 2022. La conclusión: no se está desplomando demográficamente, pero pertenecer a ella ya no garantiza estabilidad."
+  que_cubre:
+    - "Por qué 2.000 € netos no significan lo mismo en un hogar de una persona que en uno de cuatro: renta equivalente y escala OCDE."
+    - La diferencia entre salario medio y mediano, y por qué la media engaña.
+    - "Qué pasa con el dinero después de cobrarlo: gasto, ahorro y patrimonio."
+    - "La clase media no desaparece: pasa del 59,2 % en 2007 al 61,1 % en 2022, pero la estabilidad se estrecha."
+  que_no_cubre:
+    - No es asesoramiento financiero ni una predicción económica.
+    - "No trata la vivienda como mercado: solo como componente de gasto y patrimonio."
+  para_quien: Para quien cobra una nómina normal y quiere entender por qué la sensación de no avanzar no es solo suya.
+  origen: paquete-publicacion
+  faltan: []
+  heredado: false
