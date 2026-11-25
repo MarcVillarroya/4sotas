@@ -1,0 +1,69 @@
+# 4 Sotas · pack editorial de «¿Tu coche te cuesta 333 € al mes aunque esté pagado?».
+#
+# Fuente: guion canónico de coche-333 (public/audio/lineas.txt), SRT revisado
+# (out/coche-333-es.srt) y aritmética propia sobre las cifras del guion.
+# Máster: out/coche-333-short02-v4.mp4 · 1.327 frames · 44,245 s · 1080×1920.
+# La miniatura de YouTube la sube Marc en Studio; `miniatura` es el PÓSTER WEB.
+# Programación: miércoles 2-dic-2026, 15:30 Europe/Madrid (CET, UTC+1) = 14:30Z.
+
+titulo: "¿Tu coche te cuesta 333 € al mes aunque esté pagado?"
+slug: coche-333
+
+descripcion_corta: "Tener un coche pagado no es gratis: 200 €/mes de uso y 133 €/mes de depreciación. En cinco años, 20.000 €, casi como comprarlo otra vez."
+
+seo_descripcion: "Un coche pagado sigue costando 333 €/mes: 200 € de uso y 133 € de depreciación. En cinco años, 20.000 €. Cifras y fuentes."
+
+resumen_editorial: "Compras un coche por 20.000 € al contado y parece que ya está todo pagado. Pero usarlo cuesta unos 200 € al mes entre gasolina, seguro, mantenimiento e impuestos. A los cinco años lo vendes por 12.000 €: ha perdido 8.000 €, es decir, 133 € al mes. Sumado, ese coche te cuesta 333 € al mes, 20.000 € en cinco años, tanto como su precio de compra."
+
+que_cubre:
+  - "Por qué un coche pagado sigue teniendo un coste mensual de 333 €: uso más pérdida de valor."
+  - "Cómo se calcula la depreciación: 20.000 € de compra menos 12.000 € de venta, 8.000 € en 60 meses."
+  - "Qué incluye el coste de uso (gasolina, seguro, mantenimiento e impuestos) y qué deja fuera."
+
+que_no_cubre:
+  - "No incluye aparcamiento, peajes, financiación ni coste de oportunidad; es una simulación ilustrativa."
+  - "No compara modelos concretos ni prevé el valor de venta real de un coche determinado."
+
+para_quien: "Para quien cree que un coche pagado ya no cuesta nada y quiere ver el gasto real que sigue saliendo cada mes."
+
+temas:
+  - tema-ahorro
+
+keywords:
+  - coche pagado
+  - coste coche
+  - depreciacion coche
+  - 333 euros al mes
+  - gastos coche
+  - 20000 euros
+  - educacion financiera
+  - sota de oros
+
+relacionados: []
+
+fuentes:
+  - "EFE Comunica · «Mantener un coche en España cuesta entre 2.000 y 3.000 euros al año sin contar su compra». https://efecomunica.efe.com/mantener-un-coche-en-espana-cuesta-entre-2-000-y-3-000-euros-al-ano-sin-contar-su-compra/"
+  - "Allianz Direct · «¿Cuánto cuesta tener coche?». https://www.allianzdirect.es/blog/cuanto-cuesta-tener-coche/"
+  - "RACE · «¿Cuánto cuesta mantener un coche?». https://www.race.es/cuanto-cuesta-mantener-coche"
+  - "Carwow · «Coste de un coche parado en España y depreciación». https://www.carwow.es/editorial/contenido-carwow/estudios-mercado-investigacion-coches/coste-coche-parado-espana-depreciacion"
+  - "Aritmética propia: 20.000 − 12.000 = 8.000 €; 8.000 / 60 = 133,33 €/mes; 200 + 133,33 = 333,33 €/mes; 333,33 × 60 = 20.000 €."
+
+disclaimer: "Simulación ilustrativa con cifras medias. No incluye aparcamiento, peajes, financiación ni coste de oportunidad; el coste real depende del coche, los kilómetros y el seguro."
+
+capitulos: []
+
+transcripcion:
+  estado: revisada
+  fuente: /home/hermesiarco/Escritorio/Proyectos/coche-333/out/coche-333-es.srt
+
+publicar_en: "2026-12-02T15:30:00+01:00"
+
+miniatura: public/assets/videos/coche-333-poster.webp
+miniatura_youtube: pendiente_marc
+
+video: /home/hermesiarco/Escritorio/Proyectos/coche-333/out/coche-333-short02-v4.mp4
+duracion_iso: PT45S
+
+autorias:
+  redactor: aut-marc-villarroya
+  revisor: aut-revision-factual-qa

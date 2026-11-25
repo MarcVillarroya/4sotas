@@ -3,11 +3,11 @@
     {
       "videoId": "y9QDuHan4x0",
       "title": "Salario mínimo 2027: 1.286 € o 1.500 €, mismo bruto",
-      "privacy_status": "private",
-      "publish_at": "2026-11-25T14:30:00Z",
-      "published_at": "2026-11-22T15:48:59Z",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-11-25T14:30:07Z",
       "duration_iso8601": "PT42S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/y9QDuHan4x0/maxresdefault.jpg?sqp=CKiejNgG&rs=AOn4CLBMsgLwxa6LEL8t8_WYtIjZdjayOA",
+      "thumbnail_url": "https://i.ytimg.com/vi/y9QDuHan4x0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
         "viewCount": "0",
@@ -20,15 +20,15 @@
     {
       "videoId": "PcRKexlRmvQ",
       "title": "GTA 6: 3.790 millones de dólares en su primer día",
-      "privacy_status": "private",
-      "publish_at": "2026-11-23T14:30:00Z",
-      "published_at": "2026-11-22T12:34:05Z",
+      "privacy_status": "public",
+      "publish_at": null,
+      "published_at": "2026-11-23T14:30:30Z",
       "duration_iso8601": "PT38S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/PcRKexlRmvQ/maxresdefault.jpg?sqp=CNCZjNgG&rs=AOn4CLDlDnftqnGHrxTfSr3xByqGKB3m_A",
+      "thumbnail_url": "https://i.ytimg.com/vi/PcRKexlRmvQ/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "0",
-        "likeCount": "0",
+        "viewCount": "68",
+        "likeCount": "3",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -39,16 +39,16 @@
       "title": "¿Por qué trabajar ya no basta para comprar casa en España?",
       "privacy_status": "public",
       "publish_at": null,
-      "published_at": "2026-11-19T17:30:18Z",
+      "published_at": "2026-11-22T10:00:25Z",
       "duration_iso8601": "PT12M26S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/JDknkZIke1o/hqdefault.jpg?sqp=CJjk_NcG&rs=AOn4CLCF_MJcwLy96hgyk_2AA56KIXx8vw",
+      "thumbnail_url": "https://i.ytimg.com/vi/JDknkZIke1o/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "0",
-        "likeCount": "0",
+        "viewCount": "331",
+        "likeCount": "7",
         "dislikeCount": "0",
         "favoriteCount": "0",
-        "commentCount": "0"
+        "commentCount": "2"
       }
     },
     {
@@ -61,8 +61,8 @@
       "thumbnail_url": "https://i.ytimg.com/vi/xOBQ8cZPguU/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "160",
-        "likeCount": "4",
+        "viewCount": "174",
+        "likeCount": "6",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -73,13 +73,13 @@
       "title": "Black Friday: ¿seguro que estás ahorrando?",
       "privacy_status": "public",
       "publish_at": null,
-      "published_at": "2026-11-16T21:10:31Z",
+      "published_at": "2026-11-20T14:30:22Z",
       "duration_iso8601": "PT53S",
-      "thumbnail_url": "https://i9.ytimg.com/vi/yu2GeN2Jgd8/maxresdefault.jpg?sqp=CJjk_NcG&rs=AOn4CLBE7e-dvzH8sSDz-36k92vzvzkUwA",
+      "thumbnail_url": "https://i.ytimg.com/vi/yu2GeN2Jgd8/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "0",
-        "likeCount": "0",
+        "viewCount": "597",
+        "likeCount": "6",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -95,7 +95,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/9gtjuYIdBg4/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "194",
+        "viewCount": "195",
         "likeCount": "6",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -146,7 +146,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/bLMAIMAOXY0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "89",
+        "viewCount": "91",
         "likeCount": "7",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -163,7 +163,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/PM9vFKQeZak/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "322",
+        "viewCount": "327",
         "likeCount": "8",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -231,7 +231,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/2aepHTLOjIQ/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "1262",
+        "viewCount": "1271",
         "likeCount": "9",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -265,7 +265,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/xZhIn2gYPJQ/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "1229",
+        "viewCount": "1230",
         "likeCount": "21",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -282,7 +282,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/mu4mTE_ouJ0/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "288",
+        "viewCount": "291",
         "likeCount": "5",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -384,8 +384,8 @@
       "thumbnail_url": "https://i.ytimg.com/vi/3xz04lRAW0k/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "310",
-        "likeCount": "1",
+        "viewCount": "333",
+        "likeCount": "2",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
@@ -435,7 +435,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/i5fe580iFqk/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "280",
+        "viewCount": "281",
         "likeCount": "7",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -452,7 +452,7 @@
       "thumbnail_url": "https://i.ytimg.com/vi/M9EhU06FlUA/maxresdefault.jpg",
       "default_language": "es",
       "stats": {
-        "viewCount": "167",
+        "viewCount": "190",
         "likeCount": "5",
         "dislikeCount": "0",
         "favoriteCount": "0",
@@ -505,6 +505,91 @@
       "stats": {
         "viewCount": "235",
         "likeCount": "4",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "yD5Xexc_Vbw",
+      "title": "¿Cuánto cobrarás de pensión en 2027?",
+      "privacy_status": "private",
+      "publish_at": "2026-11-30T13:30:00Z",
+      "published_at": "2026-11-25T13:32:36Z",
+      "duration_iso8601": "PT38S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/yD5Xexc_Vbw/maxresdefault.jpg?sqp=CJTkm9gG&rs=AOn4CLB3DqEIBTZGCUOmWEC1b9N05zCqdQ",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "ABFr92T17Ts",
+      "title": "¿Y si nadie vota? Voto en blanco, nulo y abstención",
+      "privacy_status": "private",
+      "publish_at": "2026-11-28T09:00:00Z",
+      "published_at": "2026-11-24T17:23:57Z",
+      "duration_iso8601": "PT1M3S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/ABFr92T17Ts/maxresdefault.jpg?sqp=CJTkm9gG&rs=AOn4CLDoH1tGTIDveZO-xBakM3p45kKyWA",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "yNzk0Yr7504",
+      "title": "¿Está DESAPARECIENDO la CLASE MEDIA en España?",
+      "privacy_status": "private",
+      "publish_at": "2026-11-29T10:00:00Z",
+      "published_at": "2026-11-24T17:02:37Z",
+      "duration_iso8601": "PT14M3S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/yNzk0Yr7504/maxresdefault.jpg?sqp=CJTkm9gG&rs=AOn4CLCEzFrFmV_k9nKt1XAUUmqQlbiArA",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "B7wQrxo_W3A",
+      "title": "¿Pagas 800 € de alquiler? Podrías deducirte 960 €",
+      "privacy_status": "private",
+      "publish_at": "2026-11-27T13:30:00Z",
+      "published_at": "2026-11-22T22:36:38Z",
+      "duration_iso8601": "PT42S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/B7wQrxo_W3A/maxresdefault.jpg?sqp=CJTkm9gG&rs=AOn4CLBalNig2v-PlwMhbs-ItDL5PJHnfg",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
+        "dislikeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      }
+    },
+    {
+      "videoId": "ucYOQNzK6E0",
+      "title": "¿Tu coche te cuesta 333 € al mes aunque esté pagado?",
+      "privacy_status": "private",
+      "publish_at": "2026-12-02T14:30:00Z",
+      "published_at": "2026-11-25T14:35:56Z",
+      "duration_iso8601": "PT45S",
+      "thumbnail_url": "https://i9.ytimg.com/vi/ucYOQNzK6E0/hqdefault.jpg?sqp=CJTkm9gG&rs=AOn4CLDFk5vKWeTtrauQ4KNNcCo2CmRjRQ",
+      "default_language": "es",
+      "stats": {
+        "viewCount": "0",
+        "likeCount": "0",
         "dislikeCount": "0",
         "favoriteCount": "0",
         "commentCount": "0"
