@@ -161,7 +161,7 @@ const hayRelacionados =
       <h2 id="indice-guia" style="font-size:var(--text-h3)">En esta guía</h2>
       {secciones.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
       <a href="#supuestos">Supuestos y límites</a>
-      {hayFuentes && <a href="#fuentes">Fuentes ({fuentesPropias.length})</a>}
+      {hayFuentes && <a href="#fuentes-citadas">Fuentes ({fuentesPropias.length})</a>}
       {hayRelacionados && <a href="#relacionados">Sigue aprendiendo</a>}
     </aside>
 
@@ -186,7 +186,7 @@ const hayRelacionados =
 
       {
         hayFuentes && (
-          <section id="fuentes">
+          <section id="fuentes-citadas">
             <h2>Fuentes.</h2>
             <div class="table-wrap">
               <table class="fuentes">
