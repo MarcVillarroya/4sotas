@@ -621,3 +621,44 @@ test('B6 no omite checks de canónica y enlaces rotos de la salida', () => {
   assert.equal(status, 1);
   assert.deepEqual(report.blockers.map((b) => b.code), ['B-CANONICA', 'B-ENLACE-ROTO']);
 });
+
+/* ─────────────── ids únicos por documento (B-ID-DUPLICADO) ─────────────── */
+
+/**
+ * Regresión del defecto real de /oros/guias/<slug>/: el `## Fuentes` del Markdown genera
+ * `<h2 id="fuentes">` y la plantilla añadía otro `<section id="fuentes">`, así que el
+ * documento tenía dos anclas iguales y el enlace «Fuentes (N)» del índice caía en el primero.
+ */
+test('id repetido en una página de guía: B-ID-DUPLICADO', () => {
+  const { status, report } = ejecutar({}, {
+    'oros/guias/prueba/index.html': `${htmlSalida('/oros/guias/prueba/')}
+      <aside><a href="#fuentes">Fuentes (2)</a></aside>
+      <article><h2 id="fuentes">Fuentes</h2><ul><li>una</li></ul></article>
+      <section id="fuentes"><h2>Fuentes.</h2><table><tr><td>tabla</td></tr></table></section>`,
+  });
+  assert.equal(status, 1);
+  assert.deepEqual(report.blockers, [{
+    code: 'B-ID-DUPLICADO',
+    where: 'oros/guias/prueba/index.html',
+    msg: 'id="fuentes" repetido 2 veces en el documento',
+  }]);
+});
+
+test('secciones distintas con ids distintos: sin B-ID-DUPLICADO', () => {
+  const { status, report } = ejecutar({}, {
+    'oros/guias/prueba/index.html': `${htmlSalida('/oros/guias/prueba/')}
+      <aside><a href="#fuentes">Fuentes</a><a href="#fuentes-citadas">Fuentes (2)</a></aside>
+      <article><h2 id="fuentes">Fuentes</h2></article>
+      <section id="fuentes-citadas"><h2>Fuentes.</h2></section>`,
+  });
+  assertSinBloqueantes(report, status);
+});
+
+test('ids repetidos dentro de <script> no cuentan como duplicados del documento', () => {
+  const { status, report } = ejecutar({}, {
+    'index.html': `${htmlSalida('/')}
+      <div id="app"></div>
+      <script type="application/json" id="datos">{"a":{"id":"app"},"b":{"id":"app"}}</script>`,
+  });
+  assertSinBloqueantes(report, status);
+});

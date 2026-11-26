@@ -412,6 +412,11 @@ if (DIST) {
           B('B-JSONLD-INVALIDO', rel, 'bloque JSON-LD no parseable');
         }
       }
+      // ids únicos por documento: un id repetido invalida el HTML y desvía las anclas internas
+      const sinScripts = html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<style[\s\S]*?<\/style>/g, '');
+      const idVeces = new Map();
+      for (const m of sinScripts.matchAll(/\sid="([^"]+)"/g)) idVeces.set(m[1], (idVeces.get(m[1]) ?? 0) + 1);
+      for (const [id, veces] of idVeces) if (veces > 1) B('B-ID-DUPLICADO', rel, `id="${id}" repetido ${veces} veces en el documento`);
       // enlaces internos
       for (const m of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
         const href = m[1];

@@ -123,6 +123,7 @@ git push origin main            # el job build revalida y deploy republica
 | `B-PUB-*` (`SIN-FECHA`, `SIN-REVISION`, `SIN-FUENTES`, `SIN-DESC`, `SIN-REVISOR`) | falta un requisito de publicación | completar frontmatter con datos reales; no inventar fechas |
 | `B-ENLACE-SIN-BASE` / `W-ENLACE-RELATIVO` | enlace escrito a mano fuera del base path | usar ruta raíz `/oros/...` en Markdown o `ruta.*()` en plantillas |
 | `B-DRAFT-EN-DIST` | borrador con página en `dist/` | comprobar `publicados()`/`visibles()`; nunca filtrar con `getCollection` sin filtro |
+| `B-ID-DUPLICADO` | dos elementos con el mismo `id` en una página (HTML inválido; el ancla interna cae en el primero) | renombrar el `id` de la plantilla para que no choque con el que genera el Markdown (`rehype-slug`); no duplicar secciones con el mismo ancla |
 | `B-CANONICA*` | `SITE_ORIGIN`/`SITE_BASE` distintos del build | reconstruir con las dos variables correctas |
 | `B-VIDEO-NO-PUBLICO` / `B-VIDEO-ESTADO` | ficha publicada de vídeo privado/oculto o discrepancia con la API | corregir `estado_youtube`/`privacidad_api` o despublicar la ficha |
 | `B-VIDEO-INVENTADO` | `youtube_id` ausente del snapshot | añadir el vídeo real al snapshot o retirar la ficha |
