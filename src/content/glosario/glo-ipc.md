@@ -14,6 +14,7 @@ fuentes:
   - fuente: src-ine-ipc-septiembre-2026
     dato: IPC general 4,9 % anual en septiembre de 2026
 seo:
+  titulo: "IPC: qué es y cómo se calcula el índice de precios"
   descripcion: "IPC: índice que mide la variación de precios de una cesta de consumo representativa; sirve para medir inflación, no el coste de vida de un hogar concreto."
   noindex: false
 actualizacion:

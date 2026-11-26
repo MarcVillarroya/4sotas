@@ -16,7 +16,7 @@ import { SECCION, embedYouTube, ruta, url, verEnYouTube } from '../../../lib/rut
 import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
 import { grafo, sitioWeb, videoObjeto } from '../../../lib/jsonld.ts';
-import { duracionLegible, fechaISO, fechaLarga, marcaTiempo } from '../../../lib/format.ts';
+import { fechaISO, fechaLarga, marcaTiempo } from '../../../lib/format.ts';
 import { SIZES_PORTADA, conVersion, duracionReloj, formatoLegible, srcsetMiniatura } from '../../../lib/videos.ts';
 import { iconoDeCluster } from '../../../lib/iconos.ts';
 
@@ -85,7 +85,6 @@ const continuaciones = [
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
-const duracion = duracionLegible(video.data.duracion_iso);
 const reloj = duracionReloj(video.data.duracion_iso);
 const etiquetaFormato = formatoLegible(video.data.duracion_iso);
 const miniLocal = video.data.miniatura_local ?? `/assets/videos/${video.data.youtube_id}.webp`;
@@ -142,7 +141,7 @@ const jsonLd = grafo([
 >
   <article>
   <div class="wrap">
-    <Breadcrumbs migas={visual} />
+    <Breadcrumbs migas={visual.slice(0, -1)} />
   </div>
 
   <div class="wrap v2-watch">
@@ -153,7 +152,7 @@ const jsonLd = grafo([
       <h1>{video.data.titulo}</h1>
       <p class="v2-meta">
         {SECCION} en YouTube · Publicado el{' '}
-        <time datetime={fechaISO(video.data.publicado_en)}>{fechaLarga(video.data.publicado_en)}</time> · {duracion}
+        <time datetime={fechaISO(video.data.publicado_en)}>{fechaLarga(video.data.publicado_en)}</time>
       </p>
     </header>
 

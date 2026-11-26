@@ -47,6 +47,7 @@ const novedades = resto.slice(0, 3);
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Vídeos';
+const tituloDocumento = 'Vídeos de economía y finanzas personales';
 const descripcion =
   'Videoteca de Sota de Oros: todos los vídeos del canal con su ficha, su duración real y la guía o calculadora con la que seguir.';
 
@@ -61,7 +62,7 @@ const { visual, jsonld } = prepararMigas(
 
 const jsonLd = grafo([
   sitioWeb(origen),
-  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  paginaWeb({ url: canonica, nombre: `${tituloDocumento} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
   lista({
     url: canonica,
     nombre: titulo,
@@ -71,7 +72,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
@@ -105,7 +106,7 @@ const jsonLd = grafo([
             class="v2-poster"
             href={url(ruta.video(portada.data.slug))}
           >
-            <span class="sr-only">Ver la ficha: {portada.data.titulo}.</span>
+            <span class="sr-only">Ver la ficha: {portada.data.titulo}</span>
             <img
               src={conVersion(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
               srcset={srcsetMiniatura(url(portada.data.miniatura_local ?? `/assets/videos/${portada.data.youtube_id}.webp`))}
@@ -216,7 +217,7 @@ const jsonLd = grafo([
                   class="v2-poster"
                   href={url(ruta.video(video.data.slug))}
                 >
-                  <span class="sr-only">Ver la ficha: {video.data.titulo}.</span>
+                  <span class="sr-only">Ver la ficha: {video.data.titulo}</span>
                   <img
                     src={conVersion(url(mini))}
                     srcset={srcsetMiniatura(url(mini))}

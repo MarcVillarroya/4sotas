@@ -18,6 +18,7 @@ const terminos = visibles(todos).sort((a, b) => a.data.termino.localeCompare(b.d
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Glosario';
+const tituloDocumento = 'Glosario de economía y finanzas en España';
 const descripcion =
   'Glosario de Sota de Oros: cada término con definición corta, un ejemplo y los términos con los que se relaciona, sin jerga innecesaria.';
 
@@ -50,7 +51,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>

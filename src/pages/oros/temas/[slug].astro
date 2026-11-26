@@ -8,6 +8,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Sprite from '../../../components/Sprite.astro';
+import TocActivo from '../../../components/TocActivo.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
@@ -43,6 +44,20 @@ const pilar = resolver([tema.data.pilar], disponibles.articulos)[0];
 const vids = resolver(tema.data.videos_destacados, disponibles.videos);
 const tools = resolver(tema.data.herramientas, disponibles.herramientas);
 const relacionados = resolver(tema.data.temas_relacionados, disponibles.temas);
+
+/**
+ * Todos los vídeos publicados que declaran este tema, no solo los destacados.
+ * El hub es la página que reparte autoridad: si no enlaza sus fichas, nadie lo hace.
+ */
+const videosDelTema = disponibles.videos
+  .filter(
+    (v) =>
+      v.data.estado_youtube === 'publico' &&
+      v.data.privacidad_api === 'public' &&
+      resolver(v.data.temas, disponibles.temas).some((t) => t.id === tema.id),
+  )
+  .sort((a, b) => b.data.publicado_en.getTime() - a.data.publicado_en.getTime());
+const videosFueraDelRecorrido = videosDelTema.filter((v) => !vids.some((d) => d.id === v.id));
 
 const { Content, headings } = await render(tema);
 
@@ -89,6 +104,7 @@ const pendiente = !pilar && vids.length === 0 && tools.length === 0;
 const mapa = [
   { id: 'introduccion', titulo: 'Introducción' },
   { id: 'recorrido', titulo: 'En este orden' },
+  ...(videosFueraDelRecorrido.length > 0 ? [{ id: 'videos', titulo: 'Vídeos del tema' }] : []),
   ...(tools.length > 0 ? [{ id: 'herramientas', titulo: 'Herramientas' }] : []),
   ...(relacionados.length > 0 ? [{ id: 'relacionados', titulo: 'Temas relacionados' }] : []),
 ];
@@ -130,8 +146,8 @@ const jsonLd = grafo([
   </div>
 
   <div class="wrap topic-layout">
-    <aside class="route-map" aria-labelledby="mapa-tema">
-      <h2 id="mapa-tema" style="font-size:var(--text-h3)">En este tema</h2>
+    <aside class="route-map" aria-labelledby="mapa-tema" data-toc>
+      <h2 id="mapa-tema">En este tema</h2>
       {
         mapa.map((paso, i) => (
           <a href={`#${paso.id}`}>
@@ -197,6 +213,27 @@ const jsonLd = grafo([
       </section>
 
       {
+        videosFueraDelRecorrido.length > 0 && (
+          <section id="videos" aria-labelledby="titulo-videos" style="margin-bottom:3rem">
+            <h2 id="titulo-videos" style="font-size:var(--text-h2);margin-bottom:1.5rem">
+              Más vídeos de este tema.
+            </h2>
+            <p class="muted">Fichas con su contexto, su duración real y la guía o calculadora con la que seguir.</p>
+            <ul class="link-list">
+              {videosFueraDelRecorrido.map((v) => (
+                <li>
+                  <a href={url(ruta.video(v.data.slug))}>{v.data.titulo}</a>
+                  <p class="video-meta">
+                    {duracionLegible(v.data.duracion_iso)} · {fechaLarga(v.data.publicado_en)}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
         tools.length > 0 && (
           <section id="herramientas" aria-labelledby="titulo-herramientas" style="margin-bottom:3rem">
             <h2 id="titulo-herramientas" style="font-size:var(--text-h2);margin-bottom:1.5rem">
@@ -242,4 +279,5 @@ const jsonLd = grafo([
       }
     </div>
   </div>
+  <TocActivo />
 </Base>

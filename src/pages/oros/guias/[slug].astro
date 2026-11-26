@@ -8,10 +8,11 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Sprite from '../../../components/Sprite.astro';
+import TocActivo from '../../../components/TocActivo.astro';
 import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
-import { resolver, visibles } from '../../../lib/publicacion.ts';
+import { idRef, resolver, visibles } from '../../../lib/publicacion.ts';
 import { prepararMigas } from '../../../lib/migas.ts';
-import { articulo as articuloJsonLd, grafo, sitioWeb } from '../../../lib/jsonld.ts';
+import { articulo as articuloJsonLd, grafo, preguntasFrecuentes, sitioWeb } from '../../../lib/jsonld.ts';
 import { duracionLegible, fechaISO, fechaLarga } from '../../../lib/format.ts';
 
 interface Props {
@@ -47,6 +48,22 @@ const terminos = resolver(articulo.data.glosario, visibles(glosario));
 const tools = resolver(articulo.data.herramientas, visibles(herramientas));
 const temasPropios = resolver(articulo.data.temas, visibles(temas));
 
+/**
+ * Vídeos del mismo tema que la guía todavía no declaraba. Da una segunda vía de entrada
+ * a fichas que, si no, solo reciben el enlace del listado general.
+ */
+const idsTemas = new Set(articulo.data.temas.map(idRef));
+const videosDelTema = visibles(videos)
+  .filter(
+    (v) =>
+      v.data.estado_youtube === 'publico' &&
+      v.data.privacidad_api === 'public' &&
+      v.data.temas.some((r) => idsTemas.has(idRef(r))) &&
+      !vids.some((d) => d.id === v.id),
+  )
+  .sort((a, b) => b.data.publicado_en.getTime() - a.data.publicado_en.getTime())
+  .slice(0, 3);
+
 const { Content, headings } = await render(articulo);
 
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
@@ -63,7 +80,19 @@ const { visual, jsonld } = prepararMigas(
 );
 
 const actualizado = articulo.data.actualizado ?? articulo.data.publicado;
+/** Solo se repite la fecha cuando de verdad cambia algo: tres fechas idénticas parecen plantilla. */
+const actualizadoVisible =
+  fechaISO(actualizado) !== fechaISO(articulo.data.publicado) ? actualizado : undefined;
+const revisadoVisible =
+  articulo.data.revisado_factual &&
+  fechaISO(articulo.data.revisado_factual) !== fechaISO(actualizado)
+    ? articulo.data.revisado_factual
+    : undefined;
 const esAnalisis = articulo.data.tipo === 'analisis';
+
+/** Etiquetas legibles: los enums no llevan tilde y en pantalla se nota. */
+const ETIQUETA_TIPO: Record<string, string> = { guia: 'Guía', explicador: 'Explicador', analisis: 'Análisis' };
+const ETIQUETA_NIVEL: Record<string, string> = { basico: 'Básico', intermedio: 'Intermedio', avanzado: 'Avanzado' };
 
 const jsonLd = grafo([
   sitioWeb(origen),
@@ -79,6 +108,9 @@ const jsonLd = grafo([
     citas: fuentesPropias.map((f) => f.fuente.data.url),
   }),
   jsonld,
+  ...(articulo.data.preguntas.length >= 2
+    ? [preguntasFrecuentes({ url: canonica, preguntas: articulo.data.preguntas })]
+    : []),
 ]);
 
 const secciones = headings.filter((h) => h.depth === 2 || h.depth === 3);
@@ -95,7 +127,8 @@ const videosExtra = vids.slice(1);
 const herramientaPrincipal = tools[0];
 const terminosVisibles = terminos.slice(0, 3);
 const hayRelacionados =
-  Boolean(videoPrincipal) || Boolean(herramientaPrincipal) || terminosVisibles.length > 0 || temasPropios.length > 0;
+  Boolean(videoPrincipal) || Boolean(herramientaPrincipal) || terminosVisibles.length > 0 ||
+  temasPropios.length > 0 || videosDelTema.length > 0;
 ---
 
 <Base
@@ -105,12 +138,12 @@ const hayRelacionados =
   ogType="article"
   jsonLd={jsonLd}
 >
-  <div class="wrap">
-    <Breadcrumbs migas={visual} />
+  <div class="wrap article-crumbs">
+    <Breadcrumbs migas={visual.slice(0, -1)} />
   </div>
 
   <header class="wrap article-header">
-    <p class="eyebrow">{articulo.data.tipo} · {articulo.data.nivel} · {SECCION}</p>
+    <p class="eyebrow">{ETIQUETA_TIPO[articulo.data.tipo] ?? articulo.data.tipo} · {ETIQUETA_NIVEL[articulo.data.nivel] ?? articulo.data.nivel} · {SECCION}</p>
     <h1>{articulo.data.titulo}</h1>
     <div class="callout" id="respuesta-corta">
       <strong>Respuesta corta</strong>
@@ -119,23 +152,20 @@ const hayRelacionados =
     <div class="metadata">
       <span>Publicada: <time datetime={fechaISO(articulo.data.publicado)}>{fechaLarga(articulo.data.publicado)}</time></span>
       {
-        actualizado && (
+        actualizadoVisible && (
           <span>
-            Actualizada: <time datetime={fechaISO(actualizado)}>{fechaLarga(actualizado)}</time>
+            Actualizada: <time datetime={fechaISO(actualizadoVisible)}>{fechaLarga(actualizadoVisible)}</time>
           </span>
         )
       }
       {
-        articulo.data.revisado_factual && (
+        revisadoVisible && (
           <span>
-            Revisado: <time datetime={fechaISO(articulo.data.revisado_factual)}>
-              {fechaLarga(articulo.data.revisado_factual)}
-            </time>
+            Revisión factual: <time datetime={fechaISO(revisadoVisible)}>{fechaLarga(revisadoVisible)}</time>
           </span>
         )
       }
       {redactor && <span>Redacción: {redactor.data.nombre_publico}</span>}
-      {revisor && <span>Revisión: {revisor.data.nombre_publico}</span>}
       {articulo.data.autorias.revision_externa && <span>Revisión externa: {articulo.data.autorias.revision_externa}</span>}
     </div>
   </header>
@@ -157,11 +187,11 @@ const hayRelacionados =
   }
 
   <div class="wrap article-layout">
-    <aside class="route-map" aria-labelledby="indice-guia">
-      <h2 id="indice-guia" style="font-size:var(--text-h3)">En esta guía</h2>
+    <aside class="route-map" aria-labelledby="indice-guia" data-toc>
+      <h2 id="indice-guia">En esta guía</h2>
       {secciones.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
       <a href="#supuestos">Supuestos y límites</a>
-      {hayFuentes && <a href="#fuentes-citadas">Fuentes ({fuentesPropias.length})</a>}
+      {hayFuentes && <a href="#fuentes-citadas">Tabla de fuentes ({fuentesPropias.length})</a>}
       {hayRelacionados && <a href="#relacionados">Sigue aprendiendo</a>}
     </aside>
 
@@ -187,7 +217,7 @@ const hayRelacionados =
       {
         hayFuentes && (
           <section id="fuentes-citadas">
-            <h2>Fuentes.</h2>
+            <h2>Tabla de fuentes.</h2>
             <div class="table-wrap">
               <table class="fuentes">
                 <caption>
@@ -274,6 +304,11 @@ const hayRelacionados =
                     <a href={url(ruta.video(v.data.slug))}>Vídeo: {v.data.titulo}</a>
                   </li>
                 ))}
+                {videosDelTema.map((v) => (
+                  <li>
+                    <a href={url(ruta.video(v.data.slug))}>Vídeo: {v.data.titulo}</a>
+                  </li>
+                ))}
               </ul>
             )}
           </section>
@@ -293,6 +328,29 @@ const hayRelacionados =
           </section>
         )
       }
+
+      <section class="article-credits" id="creditos" aria-labelledby="creditos-titulo">
+        <h2 id="creditos-titulo">Quién lo escribe y quién lo revisa.</h2>
+        <dl>
+          {redactor && (
+            <div>
+              <dt>Redacción</dt>
+              <dd>{redactor.data.nombre_publico}</dd>
+            </div>
+          )}
+          {revisor && (
+            <div>
+              <dt>Revisión factual</dt>
+              <dd>
+                {revisor.data.nombre_publico}. Comprobación de fuentes, citas y recálculo de las cifras antes de
+                publicar.
+              </dd>
+            </div>
+          )}
+        </dl>
+        <p><a class="text-link" href={url('/metodologia/')}>Cómo verificamos cada cifra</a></p>
+      </section>
     </article>
   </div>
+  <TocActivo />
 </Base>

@@ -1,0 +1,29 @@
+---
+/**
+ * Marca la sección que se está leyendo en cualquier índice `.route-map` con `data-toc`.
+ * Se usa en guías y temas; Astro deduplica el script al bundlear.
+ */
+---
+
+<script>
+  const toc = document.querySelector('[data-toc]');
+  if (toc) {
+    const enlaces = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+    const destinos = enlaces
+      .map((a) => document.getElementById(a.hash.slice(1)))
+      .filter((el): el is HTMLElement => el !== null);
+    if ('IntersectionObserver' in window && destinos.length > 0) {
+      const observador = new IntersectionObserver(
+        (entradas) => {
+          for (const entrada of entradas) {
+            if (!entrada.isIntersecting) continue;
+            const activo = `#${entrada.target.id}`;
+            for (const a of enlaces) a.classList.toggle('is-active', a.hash === activo);
+          }
+        },
+        { rootMargin: '-15% 0px -70% 0px' },
+      );
+      destinos.forEach((el) => observador.observe(el));
+    }
+  }
+</script>

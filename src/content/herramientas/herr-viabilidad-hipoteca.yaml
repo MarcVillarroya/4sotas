@@ -19,6 +19,7 @@ fuentes:
   - fuente: src-s7-06
     dato: IVA del 10 % en obra nueva y 4 % en vivienda de protección oficial de régimen especial; la segunda mano tributa por ITP autonómico.
 seo:
+  titulo: "¿Puedo permitirme esta casa? Calculadora"
   descripcion: "Calcula si una compra encaja con tu ahorro e ingresos: hipoteca necesaria, LTV, cuota, DTI, prueba con +2 puntos y efectivo restante."
 actualizacion:
   politica: revision-anual

@@ -6,7 +6,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import { MARCA, SECCION, ruta, url } from '../../../lib/rutas.ts';
+import { SECCION, ruta, url } from '../../../lib/rutas.ts';
 import { porFechaDesc, resolver, visibles } from '../../../lib/publicacion.ts';
 import { absoluta, prepararMigas } from '../../../lib/migas.ts';
 import { grafo, lista, paginaWeb, sitioWeb } from '../../../lib/jsonld.ts';
@@ -19,8 +19,16 @@ const temasVisibles = visibles(temas);
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Guías';
+const tituloDocumento = 'Guías de finanzas personales en España';
 const descripcion =
   'Guías de Sota de Oros sobre nómina, IRPF, inflación, ahorro y vivienda: qué dicen los datos, con qué fuente y con qué límites.';
+
+/** Tiempo de lectura derivado del Markdown real, no de un campo que pueda quedar desfasado. */
+const minutos = (body: string) => Math.max(1, Math.round(body.trim().split(/\s+/).length / 220));
+
+/** Enums sin tilde en el modelo; en pantalla se muestran legibles. */
+const ETIQUETA_TIPO: Record<string, string> = { guia: 'Guía', explicador: 'Explicador', analisis: 'Análisis' };
+const ETIQUETA_NIVEL: Record<string, string> = { basico: 'Básico', intermedio: 'Intermedio', avanzado: 'Avanzado' };
 
 const { visual, jsonld } = prepararMigas(
   [
@@ -33,7 +41,7 @@ const { visual, jsonld } = prepararMigas(
 
 const jsonLd = grafo([
   sitioWeb(origen),
-  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  paginaWeb({ url: canonica, nombre: `${tituloDocumento} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
   lista({
     url: canonica,
     nombre: titulo,
@@ -43,7 +51,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
@@ -54,7 +62,10 @@ const jsonLd = grafo([
     <p class="lead">
       Cada guía responde primero, explica después y separa el dato con fuente del ejemplo y de la hipótesis.
     </p>
-    <p class="muted">Orden por fecha de publicación, de la más reciente a la más antigua.</p>
+    <p class="muted">
+      {articulos.length} {articulos.length === 1 ? 'guía publicada' : 'guías publicadas'} · orden por fecha, de la más
+      reciente a la más antigua.
+    </p>
   </div>
 
   <div class="wrap section">
@@ -76,13 +87,14 @@ const jsonLd = grafo([
             const suyos = resolver(art.data.temas, temasVisibles);
             return (
               <li>
-                <p class="orden">{art.data.tipo} · {art.data.nivel}</p>
+                <p class="orden">{ETIQUETA_TIPO[art.data.tipo] ?? art.data.tipo} · {ETIQUETA_NIVEL[art.data.nivel] ?? art.data.nivel}</p>
                 <h2>
                   <a href={url(ruta.guia(art.data.slug))}>{art.data.titulo}</a>
                 </h2>
                 <p>{art.data.resumen}</p>
                 <p class="video-meta">
                   <span>Publicada: {fechaLarga(art.data.publicado)}</span>
+                  <span>{minutos(art.body ?? '')} min de lectura</span>
                   {suyos.length > 0 && (
                     <span>
                       Temas:{' '}
@@ -94,6 +106,11 @@ const jsonLd = grafo([
                       ))}
                     </span>
                   )}
+                </p>
+                <p>
+                  <a class="text-link" href={url(ruta.guia(art.data.slug))}>
+                    Leer la guía<span class="sr-only">: {art.data.titulo}</span> →
+                  </a>
                 </p>
               </li>
             );

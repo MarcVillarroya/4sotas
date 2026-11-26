@@ -1,0 +1,726 @@
+/*
+ * V3 · capa de composición y lectura.
+ * No cambia la identidad: misma paleta (#0B1526 + oro/ámbar/teal), mismo arte.
+ * Su trabajo es el ritmo vertical, la jerarquía tipográfica y las plantillas editoriales.
+ */
+
+:root {
+  --v3-gap: clamp(2.5rem, 5vw, 4.5rem);
+  --v3-reading: 640px;
+  --v3-toc: 18rem;
+  --v3-col-gap: clamp(2rem, 4vw, 4rem);
+  --v3-radius: 2px;
+}
+
+/* ── 1 · Ritmo y jerarquía global ─────────────────────────────────────────── */
+
+.section {
+  padding-block: var(--v3-gap);
+  border-top: 1px solid var(--border-decorative);
+}
+
+.section-head {
+  margin-bottom: 1.25rem;
+  align-items: end;
+}
+
+.section-head h2 {
+  max-width: 24ch;
+}
+
+.section-head .muted,
+.section > .muted {
+  max-width: 68ch;
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+}
+
+.text-link {
+  font-weight: 650;
+}
+
+/* Cabecera: el canal deja de competir como cuarto enlace de navegación. */
+.header-channel {
+  border: 1px solid var(--border-color);
+  border-radius: var(--v3-radius);
+  padding-inline: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease);
+}
+
+.header-channel:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.desktop-nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.35rem;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-normal) var(--ease);
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a[aria-current='page']::after,
+.desktop-nav a.section-active::after {
+  transform: scaleX(1);
+}
+
+.desktop-nav a[aria-current='page'] {
+  text-decoration: none;
+  color: var(--gold);
+}
+
+/* ── 2 · Portada ──────────────────────────────────────────────────────────── */
+
+.hero-v3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero-v3 h1 {
+  font-size: clamp(2.7rem, 5.6vw, 5.2rem);
+  line-height: 1.02;
+  max-width: 12ch;
+  margin-bottom: 0;
+}
+
+.hero-v3 .lead {
+  margin-top: 1.35rem;
+  max-width: 47ch;
+  color: var(--text-muted);
+}
+
+.hero-v3 .actions {
+  margin-top: 1.75rem;
+}
+
+.hero-v3 .actions .text-link {
+  color: var(--text);
+  text-decoration-color: var(--gold);
+}
+
+.hero-v3 .v21-character {
+  max-width: 380px;
+  justify-self: end;
+}
+
+.hero-v3 .v21-character > .sprite-personaje {
+  width: 224px;
+  height: 280px;
+}
+
+/* Etiqueta de carta: el tamaño mínimo legible también aplica a los rótulos. */
+.v21-card-label {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+/* Tres garantías: banda de confianza, en una sola línea de rejilla. */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.trust li {
+  display: block;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--teal);
+  line-height: 1.35;
+}
+
+/* Entradas por pregunta: navegación real, no escaparate. */
+.v3-questions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.v3-question {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  height: 100%;
+  padding: 1.4rem 1.5rem 1.3rem;
+  background: var(--surface);
+  border: 1px solid var(--border-decorative);
+  border-top: 3px solid var(--gold);
+  text-decoration: none;
+  transition: border-color var(--motion-normal) var(--ease), transform var(--motion-normal) var(--ease),
+    box-shadow var(--motion-normal) var(--ease);
+}
+
+.v3-question:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-pixel);
+}
+
+.v3-question__tipo {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.v3-question h3 {
+  font: 700 1.3rem/1.3 var(--font-body);
+  letter-spacing: -0.01em;
+}
+
+.v3-question p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.v3-question span:last-child {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: var(--gold);
+  font-weight: 650;
+}
+
+/* La baraja es contexto de marca: va después del contenido útil. */
+.suits-v3 {
+  margin-top: 0;
+}
+
+/* ── 3 · Artículo y guía ──────────────────────────────────────────────────── */
+
+.article-header {
+  max-width: calc(var(--v3-reading) + var(--v3-toc) + var(--v3-col-gap));
+  margin-inline: auto;
+  padding-block: 1.25rem 2.5rem;
+  padding-left: calc(var(--v3-toc) + var(--v3-col-gap));
+  padding-right: 0;
+}
+
+/* Migas en el mismo eje que la cabecera y el cuerpo, no en el borde global. */
+.article-crumbs {
+  max-width: calc(var(--v3-reading) + var(--v3-toc) + var(--v3-col-gap));
+  margin-inline: auto;
+  padding-left: calc(var(--v3-toc) + var(--v3-col-gap));
+  padding-right: 0;
+}
+
+.article-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3.45rem);
+  line-height: 1.1;
+  max-width: 24ch;
+  margin-bottom: 0;
+}
+
+.article-header .callout {
+  margin-top: 1.6rem;
+  padding: 1.15rem 1.4rem;
+  border: 0;
+  border-left: 4px solid var(--gold);
+  background: var(--surface-warm);
+}
+
+.article-header .callout strong {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.article-header .callout p {
+  margin: 0;
+  color: var(--text);
+}
+
+.article-header .metadata {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-decorative);
+  gap: 0.4rem 1.4rem;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: var(--v3-toc) minmax(0, var(--v3-reading));
+  justify-content: center;
+  gap: var(--v3-col-gap);
+  padding-bottom: 5rem;
+  align-items: start;
+}
+
+.route-map {
+  position: sticky;
+  top: 1.25rem;
+  align-self: start;
+  max-height: calc(100vh - 2.5rem);
+  overflow: auto;
+  padding: 0.25rem 0.5rem 0.25rem 1.15rem;
+  background: none;
+  border: 0;
+  border-left: 2px solid var(--border-decorative);
+}
+
+.route-map h2 {
+  margin-bottom: 0.6rem;
+  font-family: var(--font-label);
+  font-size: 1rem !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.route-map a {
+  display: block;
+  padding: 0.35rem 0;
+  min-height: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--ease);
+}
+
+.route-map a:hover {
+  color: var(--gold);
+}
+
+.route-map a.is-active {
+  color: var(--gold);
+  font-weight: 650;
+}
+
+.prose {
+  max-width: var(--v3-reading);
+  font-size: 1.1875rem;
+  line-height: 1.72;
+  overflow-wrap: break-word;
+}
+
+.prose > * + * {
+  margin-top: 1.15rem;
+}
+
+.prose p {
+  max-width: var(--v3-reading);
+}
+
+.prose h2 {
+  margin-top: 3.25rem;
+  font-size: clamp(1.6rem, 2.3vw, 2.05rem);
+  scroll-margin-top: 6rem;
+}
+
+.prose h3 {
+  margin-top: 2.25rem;
+  font-size: clamp(1.25rem, 1.7vw, 1.45rem);
+  scroll-margin-top: 6rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.2rem;
+}
+
+.prose li + li {
+  margin-top: 0.45rem;
+}
+
+.prose blockquote {
+  margin: 1.75rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid var(--teal);
+  color: var(--text-muted);
+}
+
+.prose table {
+  font-size: 1rem;
+}
+
+.prose > section + section {
+  margin-top: 3.25rem;
+}
+
+.prose > section > h2:first-child {
+  margin-top: 0;
+}
+
+.prose .callout {
+  border-left: 4px solid var(--gold);
+}
+
+/* Créditos: quién escribe y quién revisa, con el proceso real. */
+.article-credits {
+  margin-top: 3.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-decorative);
+}
+
+.article-credits h2 {
+  font-size: var(--text-h3);
+}
+
+.article-credits dl {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.article-credits dl > div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.article-credits dt {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.article-credits dd {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.article-credits .creditos-bio {
+  max-width: 68ch;
+}
+
+/* ── 4 · Índices y tarjetas ───────────────────────────────────────────────── */
+
+.v2-tools-group h2 {
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  letter-spacing: -0.02em;
+}
+
+.v2-tools-group + .v2-tools-group {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-decorative);
+}
+
+.link-list a {
+  font-size: 1.15rem;
+}
+
+.link-list li {
+  padding-block: 1.15rem;
+}
+
+.v2-tools-entry {
+  border-left: 2px solid var(--teal);
+  padding-left: 0.85rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.v2-tools-entry a {
+  color: var(--gold);
+}
+
+.page-intro {
+  max-width: 60rem;
+  padding-block: 1rem 2.25rem;
+}
+
+/* Videoteca: el catálogo debe empezar antes; el arte acompaña, no preside. */
+.v2-hub-head {
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) 1.5rem;
+  align-items: flex-end;
+}
+
+.v2-hub-head h1 {
+  font-size: clamp(2.4rem, 4.4vw, 3.9rem);
+  line-height: 1.04;
+}
+
+.v2-hub-art img:first-child {
+  width: 80px;
+  height: 80px;
+}
+
+.v2-hub-art img:last-child {
+  width: 48px;
+  height: 48px;
+}
+
+.v2-queue {
+  border-top: 3px solid var(--gold);
+}
+
+.page-intro h1 {
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  line-height: 1.04;
+  margin-bottom: 1rem;
+}
+
+.catalog > li {
+  padding-block: 1.9rem;
+}
+
+/* Evita viudas de una palabra en los bloques de texto corrido. */
+.prose p,
+.callout p,
+.lead {
+  text-wrap: pretty;
+}
+
+.catalog h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+}
+
+.catalog h2 a {
+  text-decoration: none;
+}
+
+.catalog h2 a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.catalog .orden {
+  color: var(--teal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.catalog p {
+  font-size: 1rem;
+}
+
+.catalog .video-meta {
+  color: var(--text-muted);
+  gap: 0.35rem 1.1rem;
+}
+
+/* Términos y enlaces de catálogo: alto táctil real, no solo el texto. */
+.v2-terms dt a,
+ul.catalog h3 a,
+.link-list a {
+  min-height: 44px;
+}
+
+.mobile-nav nav a {
+  min-height: 44px;
+  padding-inline: 0.35rem;
+}
+
+.v2-guides a {
+  transition: background var(--motion-fast) var(--ease);
+}
+
+.v2-guides a:hover {
+  background: var(--surface);
+}
+
+.v2-videos a > .text-link {
+  font-weight: 400;
+}
+
+.v2-videos h3 a,
+.v2-videos a:hover h3 {
+  text-decoration: none;
+}
+
+.v2-videos a:hover h3 {
+  text-decoration: underline;
+}
+
+.v2-poster {
+  border: 1px solid var(--border-decorative);
+  transition: border-color var(--motion-normal) var(--ease);
+}
+
+.v2-videos a:hover .v2-poster,
+.v2-feature a:hover .v2-poster {
+  border-color: var(--gold);
+}
+
+/* ── 5 · Responsive ───────────────────────────────────────────────────────── */
+
+@media (max-width: 1000px) {
+  .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .article-header {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .article-crumbs {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .route-map {
+    position: static;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0 1.25rem;
+    padding: 1rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--border-decorative);
+  }
+
+  .route-map a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: underline;
+    text-decoration-color: var(--border-decorative);
+    text-underline-offset: 0.35em;
+  }
+
+  .route-map a:hover,
+  .route-map a.is-active {
+    text-decoration-color: var(--gold);
+  }
+
+  .route-map h2 {
+    grid-column: 1 / -1;
+  }
+
+  .hero-v3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-v3 .v21-character {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .v3-questions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-v3 {
+    padding-block: 2rem 2.5rem;
+    gap: 1.75rem;
+  }
+
+  .trust {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .hero-v3 h1 {
+    font-size: clamp(2.35rem, 10.5vw, 3rem);
+    max-width: 15ch;
+  }
+
+  .hero-v3 .lead {
+    font-size: 1.125rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.06em;
+  }
+
+  .hero-v3 .v21-character {
+    max-width: none;
+  }
+
+  .article-header {
+    padding-block: 1rem 1.75rem;
+  }
+
+  .article-header h1 {
+    font-size: clamp(1.95rem, 8.4vw, 2.5rem);
+  }
+
+  .prose {
+    font-size: 1.125rem;
+  }
+
+  .prose h2 {
+    margin-top: 2.4rem;
+  }
+
+  .route-map {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .article-layout {
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-v3 h1 {
+    font-size: 2.1rem;
+  }
+
+  .v3-question {
+    padding: 1.15rem 1.2rem;
+  }
+}
+
+@media print {
+  .route-map,
+  .article-credits a,
+  .hero-v3 .v21-character {
+    display: none;
+  }
+
+  .article-layout {
+    display: block;
+  }
+
+  .prose {
+    max-width: none;
+    font-size: 11.5pt;
+  }
+}

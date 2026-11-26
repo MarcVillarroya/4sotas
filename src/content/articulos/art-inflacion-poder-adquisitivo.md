@@ -132,7 +132,7 @@ Es la forma correcta de decir "me han bajado el sueldo sin tocarlo". Que la infl
 
 Si el problema es que el dinero quieto pierde, el siguiente paso no es buscar la rentabilidad más alta: es ordenar las prioridades en [ahorro y primeros 1.000 €](/oros/temas/ahorro/). Y si lo que te interesa es cuánto de tu nómina se va antes de llegarte, empieza por la [nómina](/oros/temas/nomina/).
 
-## Fuentes
+## Fuentes citadas en el texto
 
 - INE. *IPC septiembre 2026*. Publicada el 15-oct-2026. https://ine.es/dyngs/Prensa/IPC0926.htm
 - INE. *Indicador adelantado del IPC, septiembre 2026*. Publicado el 30-sep-2026. https://ine.es/dyngs/Prensa/adIPC0926.htm

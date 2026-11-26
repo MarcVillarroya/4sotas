@@ -21,7 +21,7 @@ const srcset = (v: CollectionEntry<'videos'>) => srcsetMiniatura(url(v.data.mini
 ---
 {destacado && <section class="wrap section v2-feature" aria-labelledby="destacado-titulo">
   <a class="v2-poster" href={url(ruta.video(destacado.data.slug))}>
-    <span class="sr-only">Ver la ficha: {destacado.data.titulo}.</span>
+    <span class="sr-only">Ver la ficha: {destacado.data.titulo}</span>
     <img src={miniatura(destacado)} srcset={srcset(destacado)} sizes="(max-width: 1000px) 100vw, 640px" width="640" height="360" alt="" loading="lazy" decoding="async" />
     <span class="v2-play" aria-hidden="true"><Sprite familia="functional" nombre="reproducir" size={32} /></span>
     <span class="v2-duration">{duracionLegible(destacado.data.duracion_iso)}</span>
@@ -38,7 +38,7 @@ const srcset = (v: CollectionEntry<'videos'>) => srcsetMiniatura(url(v.data.mini
     <a class="text-link" href={url(ruta.herramientas())}>Ver todas las herramientas</a></div>
   <p class="muted">Calculadoras locales con fórmula, supuestos y límites publicados. El cálculo ocurre en tu navegador.</p>
   <ol class="v2-guides">{listaHerramientas.map(h => <li><a href={url(ruta.herramienta(h.data.slug))}>
-    <h3>{h.data.titulo}</h3><p>{h.data.descripcion}</p><span class="text-link">Abrir la calculadora</span>
+    <h3>{h.data.titulo}</h3><p>{h.data.descripcion}</p><span class="text-link">Abrir la calculadora<span class="sr-only">: {h.data.titulo}</span></span>
   </a></li>)}</ol>
 </section>}
 {listaHerramientas.length === 0 && calculadora && <section class="wrap section" aria-labelledby="calculadora-titulo">

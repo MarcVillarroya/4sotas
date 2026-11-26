@@ -57,6 +57,7 @@ const sueltas = herramientas.filter((h) => !usadas.has(h.data.slug));
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Herramientas';
+const tituloDocumento = 'Calculadoras de hipoteca, préstamo y ahorro';
 const descripcion =
   'Herramientas de Sota de Oros: calculadoras locales con fórmula, supuestos y límites publicados. Sin envío de datos y sin promesas de rentabilidad.';
 
@@ -71,7 +72,7 @@ const { visual, jsonld } = prepararMigas(
 
 const jsonLd = grafo([
   sitioWeb(origen),
-  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  paginaWeb({ url: canonica, nombre: `${tituloDocumento} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
   lista({
     url: canonica,
     nombre: titulo,
@@ -91,7 +92,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
@@ -127,6 +128,11 @@ const jsonLd = grafo([
               <section class="v2-tools-group" aria-labelledby={`grupo-${grupo.clave}`}>
                 <h2 id={`grupo-${grupo.clave}`}>{grupo.titulo}</h2>
                 <p class="muted">{grupo.descripcion}</p>
+                {grupo.clave === 'vivienda' && (
+                  <p class="v2-tools-entry">
+                    ¿Solo quieres saber la cuota? <a href={url(ruta.herramienta('hipoteca'))}>Cuánto pagarás al mes por tu hipoteca</a>
+                  </p>
+                )}
                 <ul class="link-list">
                   {grupo.herramientas.map((h) => (
                     <li>
@@ -165,6 +171,9 @@ const jsonLd = grafo([
 </Base>
 
 <style>
+  .v2-tools-entry {
+    margin-top: 0.5rem;
+  }
   .v2-tools-group + .v2-tools-group {
     margin-top: 2.5rem;
   }

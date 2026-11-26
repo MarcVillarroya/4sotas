@@ -153,6 +153,25 @@ export const articulo = (params: {
   };
 };
 
+/* ─────────────────────────── preguntas frecuentes ─────────────────────────── */
+
+/**
+ * FAQPage a partir de las preguntas que la página ya muestra. No inventa preguntas:
+ * si el bloque visible no existe, no se emite el nodo.
+ */
+export const preguntasFrecuentes = (params: {
+  url: string;
+  preguntas: readonly { pregunta: string; respuesta: string }[];
+}): Nodo => ({
+  '@type': 'FAQPage',
+  '@id': `${params.url}#preguntas`,
+  mainEntity: params.preguntas.map((p) => ({
+    '@type': 'Question',
+    name: p.pregunta,
+    acceptedAnswer: { '@type': 'Answer', text: p.respuesta },
+  })),
+});
+
 /* ─────────────────────────── vídeo ─────────────────────────── */
 
 export const videoObjeto = (params: {

@@ -24,7 +24,7 @@ fuentes:
   - fuente: src-aeat-novedades-normativa-irpf-2026
     dato: Sin modificación de la escala general estatal en 2026
 seo:
-  titulo: "Tramos del IRPF: marginal, medio y por qué no pierdes el sueldo"
+  titulo: "Tramos del IRPF 2026 y cuánto se paga con 30.000 €"
   descripcion: "Cómo funciona la escala por tramos del IRPF con la escala estatal de 2026, el cálculo de un sueldo de 30.000 euros y la diferencia entre tipo marginal y medio."
   noindex: false
 actualizacion:
@@ -119,7 +119,7 @@ Conviene añadir que los cambios de retención del **10-sep-2026 no son una refo
 
 Si quieres ver de dónde sale el bruto antes de llegar a la escala, la guía [Bruto y neto, paso a paso](/oros/guias/bruto-a-neto/) recorre la nómina completa, incluida la cotización del 6,50 %. Si ya tienes claro el impuesto y la duda es qué hacer con lo que queda, el itinerario sigue en [ahorro y primeros 1.000 €](/oros/temas/ahorro/).
 
-## Fuentes
+## Fuentes citadas en el texto
 
 - AEAT. *Gravamen estatal del IRPF (escala general, art. 63 LIRPF)*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c15-calculo-impuesto-determinacion-cuotas-integras/gravamen-base-liquidable-general/gravamen-estatal.html
 - AEAT. *Mínimo del contribuyente*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/ciudadanos-familias-personas-discapacidad/minimo-personal-familiar/minimo-contribuyente.html

@@ -12,18 +12,24 @@ const contenido = await contenidoPortadas();
 /** CTA principal del hero: la primera herramienta publicada (hoy, la hipoteca). */
 const ctaHerramienta = contenido.herramientas[0] ?? contenido.calculadora;
 const titulo = 'Tu dinero, con las cartas claras';
+const tituloDocumento = 'Finanzas personales en España, con datos oficiales';
 const descripcion = 'Sota de Oros explica la economía cotidiana en España: nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas.';
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const jsonLd = grafoSeccion({ origen: new URL(canonica).origin, url: canonica, nombre: titulo, descripcion });
 const iconos: Record<string, string> = { nomina: 'nomina', fiscal: 'impuestos', inflacion: 'inflacion', ahorro: 'ahorro', inversion: 'inversion', banca: 'banca', vivienda: 'vivienda', historia: 'historia' };
 ---
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
-  <section class="wrap hero v21-cover v21-oros" aria-labelledby="titulo-principal">
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+  <section class="wrap hero-v3" aria-labelledby="titulo-principal">
     <div><p class="eyebrow">Sota de Oros · economía cotidiana</p><h1 id="titulo-principal">{titulo}.</h1>
       <p class="lead">{sota.data.promesa}</p>
       <div class="actions"><a class="button" href={url(ruta.videos())}>Ver los vídeos</a>
-        {ctaHerramienta && <a class="button secondary" href={url(ruta.herramienta(ctaHerramienta.data.slug))}>{ctaHerramienta.data.titulo}</a>}
+        {ctaHerramienta && <a class="button secondary" href={url(ruta.herramienta(ctaHerramienta.data.slug))}>Calcular mi hipoteca</a>}
       </div>
+      <ul class="trust">
+        <li>{contenido.guias.length} guías</li>
+        <li>{contenido.videos.length} vídeos</li>
+        <li>{contenido.herramientas.length} calculadoras</li>
+      </ul>
     </div>
     <figure class="v21-character"><div class="v21-card-label"><Sprite familia="functional" nombre="guia" size={40} inmediato /><span>TUS CARTAS, CLARAS</span></div>
       <Sprite familia="sota-oros" nombre="sota-guia" personaje inmediato />

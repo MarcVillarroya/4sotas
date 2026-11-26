@@ -15,6 +15,7 @@ fuentes:
   - fuente: src-bde-comparador-tipos-comisiones
     dato: El Banco de España publica un comparador de tipos y comisiones de préstamos hipotecarios y personales, y simuladores de cuota y TAE.
 seo:
+  titulo: "Calculadora de préstamo personal: cuota y TAE"
   descripcion: Calculadora de préstamo personal con cuota francesa, intereses, total, TAE desde el flujo y tabla anual. Fórmula, supuestos y límites publicados.
 actualizacion:
   politica: revision-anual

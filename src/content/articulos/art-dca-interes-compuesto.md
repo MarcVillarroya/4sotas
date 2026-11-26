@@ -17,6 +17,7 @@ fuentes:
   - fuente: src-ine-ipc-septiembre-2026
     dato: IPC general de septiembre de 2026 en el 4,9 % anual, con la subyacente en el 3,1 %.
 seo:
+  titulo: "Aportar cada mes o de golpe: interés compuesto"
   descripcion: "El interés compuesto con aportación mensual, tres escenarios de tasa y la corrección por inflación y por impuestos."
   noindex: false
 actualizacion:

@@ -11,6 +11,7 @@ autorias:
   revisor: aut-revision-factual-qa
 fuentes: []
 seo:
+  titulo: "Calculadora de interés compuesto con inflación"
   descripcion: Calculadora de interés compuesto con aportaciones periódicas, tabla anual y valor real tras inflación. Fórmula y límites publicados.
 actualizacion:
   politica: revision-anual

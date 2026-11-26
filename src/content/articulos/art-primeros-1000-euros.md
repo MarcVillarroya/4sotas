@@ -130,7 +130,7 @@ Con un IPC del 4,9 % en septiembre de 2026, 1.000 € parados pierden **46,71 �
 
 Calcula tus gastos fijos de los últimos tres meses y multiplica por tres. Ese es tu primer objetivo. Para la parte del impuesto que se va antes de llegar a tu cuenta, mira la [guía de bruto a neto](/oros/guias/bruto-a-neto/); para entender cuánto pierde el dinero quieto, la de [inflación y poder adquisitivo](/oros/guias/inflacion-poder-adquisitivo/).
 
-## Fuentes
+## Fuentes citadas en el texto
 
 - Banco de España. *Encuesta de competencias financieras 2021: principales resultados*. Publicado el 14-nov-2023. https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/IntervencionesPublicas/DirectoresGenerales/economia/Arc/Fic/IIPP-2023-11-14-gavilan-or.pdf
 - Banco de España. *Encuesta de Competencias Financieras: presentación y ediciones*. https://www.bde.es/wbe/es/publicaciones/analisis-economico-investigacion/encuesta-de-competencias-financieras/

@@ -7,11 +7,16 @@ import '../styles/global.css';
 import '../styles/plantillas.css';
 import '../styles/v2.css';
 import '../styles/v2-1.css';
+import '../styles/v3.css';
 import { MARCA, url } from '../lib/rutas.ts';
 import { ogAbsoluta, tituloDocumento } from '../lib/seo.ts';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
+/* URLs hasheadas por Vite: precargar a mano una ruta fija rompe el build. */
+import fuenteTexto from '../assets/fonts/inter-latin-400-normal.woff2?url';
+import fuenteTextoNegrita from '../assets/fonts/inter-latin-700-normal.woff2?url';
+import fuenteTitular from '../assets/fonts/archivo-black-latin-400-normal.woff2?url';
 
 interface Props {
   titulo: string;
@@ -67,6 +72,11 @@ const imagenSocial = ogAbsoluta(canonica, url(ogImagen));
     <link rel="icon" href={url('/assets/mark.svg')} type="image/svg+xml" />
     <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
     <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
+    {/* Precarga de las tres caras que se usan sobre el pliegue: sin ella, font-display:swap
+        provoca un intercambio tardío y CLS medido de 0,184 en la guía a 768 px. */}
+    <link rel="preload" href={fuenteTexto} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fuenteTextoNegrita} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fuenteTitular} as="font" type="font/woff2" crossorigin />
     <link rel="alternate" type="application/rss+xml" title={`${MARCA} · novedades`} href={url('/rss.xml')} />
     <link rel="sitemap" type="application/xml" href={url('/sitemap-index.xml')} />
     {jsonLd && <JsonLd data={jsonLd} />}

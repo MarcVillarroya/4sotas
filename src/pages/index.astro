@@ -1,49 +1,76 @@
 ---
 /**
  * Home 4 Sotas. Todo dato visible sale de las colecciones o de decisiones editoriales reales.
- * El friso de palos se genera desde `sotas`; solo el palo activo enlaza.
+ * Estructura V3: promesa → garantías → entrada por pregunta → contenido del momento → baraja.
  */
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { MARCA, url } from '../lib/rutas.ts';
+import { MARCA, ruta, url } from '../lib/rutas.ts';
 import { grafoInicio } from '../lib/jsonld.ts';
 import PortadaModulos from '../components/PortadaModulos.astro';
 import Sprite from '../components/Sprite.astro';
 import { contenidoPortadas } from '../lib/portadas.ts';
-const contenido = await contenidoPortadas();
 
+const contenido = await contenidoPortadas();
 const sotas = await getCollection('sotas');
 
 const ORDEN = ['oros', 'copas', 'espadas', 'bastos'];
-
 const palos = [...sotas].sort((a, b) => ORDEN.indexOf(a.data.palo) - ORDEN.indexOf(b.data.palo));
 
-
+/** El H1 conserva el claim de marca; el título del documento carga la consulta real. */
 const titulo = 'La vida no viene con instrucciones';
+const tituloDocumento = 'Economía cotidiana en España, con datos oficiales';
 const descripcion =
-  '4 Sotas abre la baraja de la economía cotidiana en España: empezamos por Sota de Oros, con fuentes fechadas y sin promesas de rentabilidad.';
+  'Nómina, IRPF, inflación, ahorro y vivienda con fuentes oficiales fechadas. Guías, calculadoras y vídeos para entender tu dinero en España.';
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 
 const jsonLd = grafoInicio({
   origen: new URL(canonica).origin,
   url: canonica,
-  nombre: `${MARCA} · ${titulo}`,
+  nombre: `${MARCA} · Economía cotidiana en España`,
   descripcion,
 });
+
+/** Tres preguntas reales, cada una con su recurso ya publicado. */
+const entradas = [
+  {
+    tipo: 'Guía · nómina',
+    pregunta: '¿Cuánto me queda de la nómina?',
+    respaldo: 'Del bruto al neto: cotización, retención de IRPF y los errores que más se repiten.',
+    href: ruta.guia('bruto-a-neto'),
+  },
+  {
+    tipo: 'Calculadora · vivienda',
+    pregunta: '¿Puedo comprar esta casa?',
+    respaldo: 'Hipoteca necesaria, entrada, LTV, cuota y prueba con dos puntos más de tipo.',
+    href: ruta.herramienta('viabilidad-hipoteca'),
+  },
+  {
+    tipo: 'Guía · inflación',
+    pregunta: '¿Cuánto pierdo con la inflación?',
+    respaldo: 'Convierte la tasa del IPC en euros que desaparecen de tu bolsillo cada año.',
+    href: ruta.guia('inflacion-poder-adquisitivo'),
+  },
+];
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
-  <section class="wrap hero v21-cover" aria-labelledby="titulo-principal">
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={MARCA} jsonLd={jsonLd}>
+  <section class="wrap hero-v3" aria-labelledby="titulo-principal">
     <div>
-      <p class="eyebrow">4 Sotas · una baraja para entender el mundo</p>
+      <p class="eyebrow">Sota de Oros · economía cotidiana</p>
       <h1 id="titulo-principal">{titulo}.</h1>
       <p class="lead">
-        Nómina, IRPF, inflación, ahorro y vivienda, explicados con datos oficiales, fecha de consulta y sin promesas de rentabilidad. Empezamos por Oros.
+        Nómina, IRPF, inflación, ahorro y vivienda, con datos oficiales y fecha de consulta. Cada cifra lleva su fuente.
       </p>
       <div class="actions">
-        <a class="button" href={url('/oros/')}>Empezar por Oros</a>
-        <a class="text-link" href={url('/oros/videos/')}>Ver los vídeos</a>
+        <a class="button" href={url(ruta.guia('bruto-a-neto'))}>Empezar por la nómina</a>
+        <a class="text-link" href={url(ruta.videos())}>Ver los vídeos</a>
       </div>
+      <ul class="trust">
+        <li>Fuentes primarias fechadas</li>
+        <li>Cálculos con sus supuestos</li>
+        <li>Sin promesas de rentabilidad</li>
+      </ul>
     </div>
     <figure class="v21-character">
       <div class="v21-card-label"><Sprite familia="emblems" nombre="oros" size={40} inmediato /><span>SOTA DE OROS</span></div>
@@ -52,10 +79,39 @@ const jsonLd = grafoInicio({
     </figure>
   </section>
 
-  <section class="wrap section" id="universos" aria-labelledby="titulo-palos">
+  <section class="wrap section" id="empieza" aria-labelledby="titulo-empieza">
     <div class="section-head">
-      <h2 id="titulo-palos">Una baraja por descubrir.</h2>
-      <p class="muted">Oros abre la partida.</p>
+      <div>
+        <p class="eyebrow">Empieza por tu pregunta</p>
+        <h2 id="titulo-empieza">Tres formas de entrar.</h2>
+      </div>
+      <a class="text-link" href={url(ruta.guias())}>Ver todas las guías</a>
+    </div>
+    <ul class="v3-questions">
+      {
+        entradas.map((e) => (
+          <li>
+            <a class="v3-question" href={url(e.href)}>
+              <span class="v3-question__tipo">{e.tipo}</span>
+              <h3>{e.pregunta}</h3>
+              <p>{e.respaldo}</p>
+              <span>Abrir →</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <PortadaModulos {...contenido} />
+
+  <section class="wrap section suits-v3" id="universos" aria-labelledby="titulo-palos">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Cuatro palos, una baraja</p>
+        <h2 id="titulo-palos">Una baraja por descubrir.</h2>
+      </div>
+      <p class="muted">Oros abre la partida. Los demás palos entran cuando su contenido está verificado.</p>
     </div>
     <div class="suits">
       {
@@ -68,16 +124,12 @@ const jsonLd = grafoInicio({
               {p.data.estado === 'activa' ? <a class="text-link" href={url('/oros/')}>{p.data.nombre}</a> : p.data.nombre}
             </h3>
             <p>{p.data.lema}</p>
-            <span class="badge">
-              {p.data.estado === 'activa' ? 'En juego' : 'En el mazo'}
-            </span>
+            <span class="badge">{p.data.estado === 'activa' ? 'En juego' : 'En el mazo'}</span>
           </article>
         ))
       }
     </div>
   </section>
-
-  <PortadaModulos {...contenido} />
 
   <section class="wrap section editorial-grid" id="criterio" aria-labelledby="titulo-criterio">
     <div>
@@ -90,5 +142,4 @@ const jsonLd = grafoInicio({
       <p><a class="text-link" href={url('/metodologia/')}>Cómo trabajamos</a></p>
     </div>
   </section>
-
 </Base>

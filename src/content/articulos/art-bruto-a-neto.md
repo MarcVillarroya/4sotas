@@ -28,7 +28,7 @@ fuentes:
   - fuente: src-boe-la-rioja-ley-9-2025
     dato: Ejemplo de deflactación del tramo autonómico por ley propia
 seo:
-  titulo: "Bruto y neto: cómo se calcula tu nómina en España"
+  titulo: "Bruto a neto 2026: cuánto te queda de tu sueldo"
   descripcion: "Del salario bruto al neto con las cifras de 2026: base de cotización, 6,50 % de Seguridad Social y retención de IRPF, con el cálculo a la vista."
   noindex: false
 actualizacion:
@@ -134,7 +134,7 @@ Añade a eso que **no estás obligado a declarar** por debajo de determinados um
 
 Coge tu última nómina, localiza la **base de cotización** y comprueba que la suma de tus descuentos coincide con el 6,50 %. Después aplica la escala por tramos de la [guía de tramos](/oros/guias/tramos-irpf-y-retencion/) para saber cuánto de tu retención es pago a cuenta y cuánto, previsiblemente, te devolverán.
 
-## Fuentes
+## Fuentes citadas en el texto
 
 - AEAT. *Retenciones 2026*. Consultada el 26-oct-2026. https://sede.agenciatributaria.gob.es/Sede/Retenciones.shtml
 - BOE. *Orden PJC/297/2026, de 30 de marzo*, normas de cotización 2026. Publicada el 31-mar-2026. https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296

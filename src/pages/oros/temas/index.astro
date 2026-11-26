@@ -19,6 +19,7 @@ const temas = visibles(todos).sort((a, b) => a.data.orden - b.data.orden);
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
 const origen = new URL(canonica).origin;
 const titulo = 'Temas troncales';
+const tituloDocumento = 'Temas de economía cotidiana';
 const descripcion =
   'Mapa editorial de Sota de Oros: qué cubre cada tema, por qué guía empezar y qué vídeos y calculadoras lo acompañan.';
 
@@ -33,7 +34,7 @@ const { visual, jsonld } = prepararMigas(
 
 const jsonLd = grafo([
   sitioWeb(origen),
-  paginaWeb({ url: canonica, nombre: `${titulo} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
+  paginaWeb({ url: canonica, nombre: `${tituloDocumento} · ${SECCION}`, descripcion, tipo: 'CollectionPage' }),
   lista({
     url: canonica,
     nombre: titulo,
@@ -43,7 +44,7 @@ const jsonLd = grafo([
 ]);
 ---
 
-<Base titulo={titulo} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
+<Base titulo={tituloDocumento} descripcion={descripcion} sufijo={SECCION} jsonLd={jsonLd}>
   <div class="wrap">
     <Breadcrumbs migas={visual} />
   </div>
